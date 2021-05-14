@@ -63,6 +63,9 @@ body {
 .sidebar-search.active{
     left: 60px;
 }
+.sidebar-search.active2{
+    left: 60px;
+}
 
 .sidebar-search ul{
     list-style: none;
@@ -92,9 +95,7 @@ background-color: rgb(131, 131, 131);
 
 }
 
-.sidebar-search ul li h3{
-    color: rgb(255, 255, 255);
-}
+
 
 
 .sidebar-search ul li p{
@@ -144,6 +145,68 @@ main .sidebar {
     margin-left: 85px;
     transition: margin-left 0.5s;
   }
+  #sub-menu-search2 {
+    margin-left: 350px;
+  }
+
+  /*Elementos menu 2*/
+
+.sidebar-search ul li {
+    padding: 0px 14px 21px 10px;
+    transition: all 300ms linear;
+}
+i {
+    color:white;
+}
+.sidebar-search ul #menuBop1 {
+    background-color:RGB(174, 201, 11);
+    text-align: center; 
+    padding-top: 15px;
+    padding:5%;
+    margin-bottom: 15px;
+    height: 50px;
+}
+.sidebar-search ul #menuBop2 {
+    border-left:solid 10px RGB(238, 125, 0);
+    padding:auto;
+
+}
+.sidebar-search ul #menuBop3 {
+    border-left:solid 10px RGB(64, 191, 239);
+    padding:auto;
+
+}
+.sidebar-search ul #menuBop4 {
+    border-left:solid 10px RGB(255, 211, 0);
+    padding:auto;
+
+}
+.sidebar-search ul li:hover {
+background-color: rgb(131, 131, 131);
+
+}
+
+.sidebar-search ul li h3{
+    color: rgb(255, 255, 255);
+}
+
+
+.sidebar-search ul li p{
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+}
+
+
+.sidebar-search ul li a{
+    text-decoration: none;
+}
+
+.sidebar-search ul li h4{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    margin:0px;
+    padding:0px 0px 0px 3px;
+}
 
   @media screen and (max-height: 450px) {
     .sidebar {
