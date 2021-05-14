@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar - cenope</title>
+    <!--CDN - bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <!--CDN font aweson-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+    <!--Inicio del navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Escudo_del_Ej%C3%A9rcito_Argentino.png" style="width: 50px;" alt="">
+          <a class="navbar-brand" href="#" style="position: absolute; left: 70px;">Cenope</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse " id="navbarSupportedContent">
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!--Fin del navbar-->
+
+        <div class="wrapper-sidebar">
+            <nav id="mySidebar" class="sidebar ">
+                <ul>
+                    <li>
+                        <a href="#" id="persona"><i class="fas fa-running" style="font-size: 25px;"></i> <i id="triangle1"  class="fas fa-caret-left"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" id="search"><i class="fas fa-search pulsado"></i><i id="triangle2" class="fas fa-caret-left"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" id="service"><i class="fas fa-layer-group"></i><i id="triangle3" class="fas fa-caret-left"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" id="monetizar"><i class="fas fa-info-circle"><i id="triangle4" class="fas fa-caret-left"></i></i></a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!--Primer sub menu "search"-->
+            <div id="sub-menu-search" class="sidebar-search">
+                 <!--start Buscador sub-menu
+                 <div class="filtro">
+                    <form id="buscador-form">
+                      <div class="form-group">
+                          <div class="input-group add-on">
+                            <input type="text" class="form-control search-query" placeholder="Buscar lugares" name="buscar_lugares" title="Buscar lugares">
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-primary">
+                                    <i class="fas fa-search"></i>
+                                  </button>
+                            </div>
+                          </div>
+                      </div>
+                    </form>
+                </div>-->
+                  <!--end Buscador sub-menu-->
+                <ul id="subMenuB">
+                    <li id="covid-19">
+                        <a href="#">
+                            <h3>Covid-19</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci laborum ab excepturi.</p>
+                        </a>
+                    </li>
+                    <li id="transporte">
+                        <a href="#">
+                            <h3>Transporte</h3>
+                            <p>Lorem ipsum dolor, orum ab excepturi.</p>
+                        </a>
+                    </li>
+                    <li id="urbanismo">
+                        <a href="#">
+                            <h3>Urbanismo</h3>
+                            <p>Lorem ipsum dolor,  adipisicing elit. Adipisci laborum ab excepturi.</p>
+                        </a>
+                    </li>
+                    <li id="servicios">
+                        <a href="#">
+                            <h3>Servicios</h3>
+                            <p>Lorem ipsum dolor, setur adipisicing elit. Adipisci laborum ab excepturi.</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--Primer sub menu "search"-->
+        </div>
+
+
+     <!--Script-->
+    <!--Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/sidebar.js"></script>
+</body>
+
+</html>
