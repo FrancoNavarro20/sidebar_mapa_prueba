@@ -54,21 +54,24 @@ $(document).ready(function () {
     $("#sub-menu-search4").hide();
     //$("#sub-menu-lupa").hide();
 
-    //Boton de capas - funcionalidades
+    //-------------------------Boton de capas - funcionalidades---------------------//
     $("#search").on('click', function () {
         //Apagar color de botones del sidebar principal
 
-        $(".sidebar-search-info").hide(); // esconder sub-menu del boton de 
+        $(".sidebar-search-info").hide(); // esconder sub-menu del boton de lupa
+        $(".sidebar-search-lupa").hide(); 
         $("#sub-menu-search").show();
         $(".sidebar-search").toggleClass('active'); //aparecer y desaparecer sidebar 
         $(".sidebar-search-info").removeClass('active2');
+        $(".sidebar-search-lupa").removeClass('active3');
 
 
         $(".sidebar #search i").toggleClass('pulsado'); // pintar y despintar boton
         $("#info i").removeClass('pulsado');
+        $("#lupa i").removeClass('pulsado');
         $("#info #triangle4").hide();
+        $("#lupa #triangle3").hide();
         flag1 = 2;
-
 
         //Aparecer y desaparecer triangulito
         if(bandera == 1)
@@ -136,16 +139,20 @@ $(document).ready(function () {
 
     //--------------- Boton de informacion----------------------------//
     $("#info").click(function () { 
+
         $(".sidebar-search").hide(); //escondiendo capas
         $(".sidebar-search-lupa").hide(); // escondiendo lupa
         $(".sidebar-search-info").show();
         $(".sidebar-search-info").toggleClass('active2');
         $(".sidebar-search").removeClass('active');
+        $(".sidebar-search-lupa").removeClass('active3');
 
         //pintar , mostrar opcion del sidebar principal , y quitar estilos de los otros botones
         $("#info i").toggleClass('pulsado');
         $("#search i").removeClass('pulsado');
+        $("#lupa i").removeClass('pulsado');
         $("#search #triangle2").hide(); 
+        $("#lupa #triangle3").hide(); 
         flag2 = 2;
 
         //Aparecer y desaparecer triangulito
@@ -158,6 +165,7 @@ $(document).ready(function () {
         {
             $("#info #triangle4").show('slow');
             flag1 = 0;
+            flag3 = 0;
         }
         else
         {
@@ -203,12 +211,16 @@ $(document).ready(function () {
         $(".sidebar-search").hide(); // esconder sub-menu del boton de capas
         $(".sidebar-search-info").hide(); // esconder sub-menu del boton de info
         $(".sidebar-search-lupa").toggleClass('active3');   
-        
+        $(".sidebar-search-lupa").show();   
+        $(".sidebar-search").removeClass('active');
+        $(".sidebar-search-info").removeClass('active2');
+
         $("#lupa i").toggleClass('pulsado');
         $("#search i").removeClass('pulsado');
         $("#info i").removeClass('pulsado');
         $("#search #triangle2").hide(); 
-        $("#search #triangle4").hide(); 
+        $("#info #triangle4").hide(); 
+        flag3 = 2;
 
           //Aparecer y desaparecer triangulito
           if(bandera3 == 1)
@@ -220,11 +232,11 @@ $(document).ready(function () {
           {
               $("#lupa #triangle3").show('slow');
               flag1 = 0;
+              flag2 = 0;
           }
           else
           {
               $("#lupa #triangle3").hide('slow');
-              //$("#search").toggleClass('pulsado'); 
               bandera3 = 1;
           }
           
@@ -234,7 +246,7 @@ $(document).ready(function () {
 
 
 
-
+//Esta es la ultima actualizacion
 
 
 

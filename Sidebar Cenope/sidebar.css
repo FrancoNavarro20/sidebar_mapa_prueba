@@ -62,6 +62,14 @@ body {
     color: rgb(255, 255, 255);
 }
 
+.sidebar li a #triangle3{
+    position: absolute;
+    left: 47px;
+    top: 55px;
+    padding-left: 4px;
+    color: rgb(255, 255, 255);
+}
+
 /*sub menu*/
 .sidebar-search{
     position: absolute;
@@ -285,7 +293,7 @@ background-color: rgb(131, 131, 131);
 /*sub-menu-lupa*/
 .sidebar-search-lupa{
     position: absolute;
-    left: 60px;
+    left: -290px;
     width: 290px;
     top: 66px;
     height: 900px;
@@ -293,7 +301,7 @@ background-color: rgb(131, 131, 131);
     display: none;
 }
 .sidebar-search-lupa.active3{
-    display: block;
+    left: 60px;
 }
 
 
@@ -340,6 +348,7 @@ background-color: rgb(131, 131, 131);
     margin-left: 10px;
 }
 
+/*Esta es la ultima actualizacion*/
 
 /* page Responsive*/
 
