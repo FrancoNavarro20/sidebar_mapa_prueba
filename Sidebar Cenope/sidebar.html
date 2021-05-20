@@ -7,6 +7,9 @@
     <title>Sidebar - cenope</title>
     <!--CDN - bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <!--CDN font aweson-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -16,8 +19,8 @@
     <!--Inicio del navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Escudo_del_Ej%C3%A9rcito_Argentino.png" style="width: 50px;" alt="">
-          <a class="navbar-brand" href="#" style="position: absolute; left: 70px;">Cenope</a>
+          <img src="img/Escudo_del_Ejército_Argentino.png" style="width: 50px;" alt="">
+          <a class="navbar-brand" href="#" style="position: absolute; left: 70px;">Visializador de informacion geografico EA</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -31,101 +34,132 @@
       </nav>
       <!--Fin del navbar-->
 
-        <div class="wrapper-sidebar" id="wrapper-sidebar">
-            <nav id="mySidebar" class="sidebar ">
+        <div class="wrapper-sidebar">
+            <nav id="mySidebar" class="sidebar">
                 <ul>
                     <li>
-                        <a href="#" id="persona"><i class="fas fa-running" style="font-size: 25px;"></i> <i id="triangle1"  class="fas fa-caret-left"></i></a>
+                        <a href="#" id="lupa"><i class="fas fa-search"></i><i id="triangle3" class="fas fa-caret-left"></i></a>
                     </li>
                     <li>
-                        <a href="#" id="search"><i class="fas fa-search pulsado"></i><i id="triangle2" class="fas fa-caret-left"></i></a>
+                        <a href="#" id="search"><i class="fas fa-layer-group"></i><i id="triangle2" class="fas fa-caret-left"></i></a>
                     </li>
                     <li>
-                        <a href="#" id="service"><i class="fas fa-layer-group"></i><i id="triangle3" class="fas fa-caret-left"></i></a>
-                    </li>
-                    <li>
-                        <a href="#" id="monetizar"><i class="fas fa-info-circle"><i id="triangle4" class="fas fa-caret-left"></i></i></a>
+                        <a href="#" id="info"><i class="fas fa-info-circle"></i><i id="triangle4" class="fas fa-caret-left"></i></a>
                     </li>
                 </ul>
             </nav>
 
             <!--Primer sub menu "search"-->
             <div id="sub-menu-search" class="sidebar-search">
-                 <!--start Buscador sub-menu
-                 <div class="filtro">
-                    <form id="buscador-form">
-                      <div class="form-group">
-                          <div class="input-group add-on">
-                            <input type="text" class="form-control search-query" placeholder="Buscar lugares" name="buscar_lugares" title="Buscar lugares">
-                            <div class="input-group-btn">
-                                <button type="button" class="btn btn-primary">
-                                    <i class="fas fa-search"></i>
-                                  </button>
-                            </div>
-                          </div>
-                      </div>
-                    </form>
-                </div>-->
-                  <!--end Buscador sub-menu-->
                 <ul id="subMenuB">
-                    <li id="covid-19">
+                    <li id="uni-militares">
                         <a href="#">
-                            <h3>Covid-19</h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci laborum ab excepturi.</p>
+                            <h4>Unidades militares</h4>
+                            <p>Aqui podra visualizar las instalaciones militares del Ejército Argenino , la Armada Argentina y la Fuerza aérea Argentina .</p>
                         </a>
                     </li>
-                    <li id="transporte">
+                    <li id="universidades">
                         <a href="#">
-                            <h3>Transporte</h3>
-                            <p>Lorem ipsum dolor, orum ab excepturi.</p>
+                            <h4>Universidades</h4>
+                            <p>Aqui podra visualizar las universidades publicas y privadas que estan alrededor del país .</p>
                         </a>
                     </li>
-                    <li id="urbanismo">
+                    <li id="limite-arg">
                         <a href="#">
-                            <h3>Urbanismo</h3>
-                            <p>Lorem ipsum dolor,  adipisicing elit. Adipisci laborum ab excepturi.</p>
-                        </a>
-                    </li>
-                    <li id="servicios">
-                        <a href="#">
-                            <h3>Servicios</h3>
-                            <p>Lorem ipsum dolor, setur adipisicing elit. Adipisci laborum ab excepturi.</p>
+                            <h4>Límite internacional</h4>
+                            <p>Aqui podra visualizar podra visualisar el limite internacional argentino .</p>
                         </a>
                     </li>
                 </ul>
             </div>
             <!--Primer sub menu "search"-->
-             <!--Primer sub menu "search"-->
-             <div id="sub-menu-search2" class="sidebar-search">
-               <ul id="subMenuB">
-                   <li id="menuBop1">
-                       <a href="#" id="Item1">
-                           <h4>Titulo Seg Menu<i class="fas fa-times" style="padding-left: 45px;" id="crossicon"></i></h4>
-                       </a>
-                   </li>
-                   <li id="menuBop2">
-                       <a href="#">
-                            
-                           <p><i class="fas fa-archway"></i>   Texto del segundo menu TEST1.</p>
-                       </a>
-                   </li>
-                   <li id="menuBop3">
-                       <a href="#">
-                            
-                           <p><i class="fas fa-archway"></i>   Texto del segundo menu TEST2.</p>
-                       </a>
-                   </li>
-                   <li id="menuBop4">
-                       <a href="#">
-                            
-                           <p><i class="fas fa-archway"></i>   Texto del segundo menu TEST3.</p>
-                       </a>
-                   </li>
-               </ul>
-           </div>
-           <!--Primer sub menu "search"-->
-        </div>
 
+            <!--Segundo sub menu "search" / Unidades militares-->
+            <div id="sub-menu-search2" class="sidebar-search">
+                <ul id="subMenuB">
+                    <li id="uni-mil-title">
+                        <a href="#" id="Item1">
+                            <h4>Unidades militares<i class="fas fa-times" style="padding-left: 45px;" id="crossicon"></i></h4>
+                        </a>
+                    </li>
+                    <li id="EA" class="borde prueba" data-fuerza="EA">
+                        <a href="#" >
+                            <img id="logo" src="img/Escudo_del_Ejército_Argentino.png" alt="EA" style="width: 25px;">
+                            <p>Ejército Argentino</p>
+                        </a>
+                    </li>
+                    <li id="arm-arg" class="borde prueba" data-fuerza="Armada">
+                        <a href="#">
+                            <img id="logo" src="img/Escudo_armada_argentina_banderolas.png" alt="EA" style="width: 25px;">
+                            <p>Armada Argentina</p>
+                        </a>
+                    </li>
+                    <li id="FFAA" class="borde prueba" data-fuerza="Aerea">
+                        <a href="#">
+                            <img id="logo" src="img/Logo_Fuerza-Aerea.png" alt="EA" style="width: 32px;">
+                            <p>Fuerza aérea Argentina</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--Segundo sub menu "search" / Unidades militares-->
+
+            <!--tercero sub menu "search" / Universidades-->
+            <div id="sub-menu-search3" class="sidebar-search">
+                <ul id="subMenuB">
+                    <li id="universidad">
+                        <a href="#" id="Item1">
+                            <h4>Universidades<i class="fas fa-times" style="padding-left: 45px;" id="crossicon-univer"></i></h4>
+                        </a>
+                    </li>
+                    <li id="publica" class="borde">
+                        <a href="#">
+                            <p><i id="uni-icon" class="fas fa-university" style="color: rgb(199, 56, 56);"></i>Universidades públicas</p>
+                        </a>
+                    </li>
+                    <li id="privada" class="borde">
+                        <a href="#">
+                            <p><i id="uni-icon" class="fas fa-university" style="color: rgb(70, 95, 170);"></i>Universidades privadas</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--tercero sub menu "search" / Universidades-->
+
+            <!--cuarto sub menu "search" / limite internacional-->
+            <div id="sub-menu-search4" class="sidebar-search">
+                <ul id="subMenuB">
+                    <li id="lim-intern">
+                        <a href="#" id="Item1">
+                            <h4>Límite internacional<i class="fas fa-times" style="padding-left: 45px;" id="crossicon-lim"></i></h4>
+                        </a>
+                    </li>
+                    <li id="bt-lim-intern" class="borde">
+                        <a href="#">
+                            <p><i id="lim-icon" class="fas fa-map-marked-alt"></i> Visualizar límite internacional</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--cuarto sub menu "search" / limite internacional-->
+
+            <!--primer sub menu "info" / buscador-->
+            <div id="sub-menu-info" class="sidebar-search-info">
+                <div class="help">
+                    <h1 class="text-center"><i class="fas fa-info-circle"></i></h1>
+                    <hr/>
+                    <p class="desktop">Puede acceder a información haciendo <strong>click derecho</strong> sobre el mapa y seleccionando <strong>Más información...</strong> o bien a través del menú que aparece al hacer click sobre los marcadores en el mapa.</p>
+                </div>
+            </div>
+            <!--FIN primer sub menu "info" / buscador-->
+
+            <!--Mostrar info de EA / AA / FFAA-->
+            <div id="ejer-arg" class="uni-mil" ><h1>Ejército Argentino</h1></div>
+            <div id="armada-arg" class="uni-mil" ><h1>Armada Argentina</h1></div>
+            <div id="fuerza-aerea" class="uni-mil" ><h1>Fuerza aérea Argentina</h1></div>
+            <!--fin mostrar info de EA / AA / FFAA-->
+            
+        </div> <!--Fin del wrapper-sidebar-->
 
      <!--Script-->
     <!--Bootstrap JavaScript Bundle with Popper -->

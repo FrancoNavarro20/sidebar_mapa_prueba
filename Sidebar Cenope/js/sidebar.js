@@ -1,43 +1,260 @@
 'use strict'
 
-$("#sub-menu-search2").hide();  // Esta linea oculta el sub menu 2
+//Boton de capas
+
+/*
 var search = document.querySelector("#search");
-var bandera = 1;
+var trianguloCapas = document.querySelector("#search #triangle2");
 search.addEventListener('click', () =>{
     //Sacar y poner el sub-menu search
     console.log("Esto entra!!");
+    /*
     if(bandera){
-        document.querySelector("#search i").style.color = "#fff";
+        //document.querySelector("#search i").style.color = "#fff";
         //document.querySelector("#search i").style.fontSize = "30px";
         document.querySelector("#search #triangle2").style.display = "block";
         bandera = 0;
     }else{
-        document.querySelector("#search i").style.color = "#495057";
+        //document.querySelector("#search i").style.color = "#818181";
         document.querySelector("#search i").style.fontSize = "25px";
         document.querySelector("#search #triangle2").style.display = "none";
         bandera = 1;
     }
+    
+    //Para aparecer y desaparecer el sidebar-search y coloriar el boton si esta pulsado o no
+    //document.querySelector(".sidebar-search").classList.toggle('active');
+    //search.classList.toggle('pulsado');
+}); */
 
-    //Para aparecer y desaparecer el sidebar-search
-    document.querySelector(".sidebar-search").classList.toggle('active');
-    //document.querySelector("#sub-menu-search2").classList.toggle('active2');
-});
+//Generando un evento over in
 
+
+//codigo jquery
 $(document).ready(function () {
 
-    $("#covid-19").click(function (e) { 
-        $("#sub-menu-search").hide();
-        $("#sub-menu-search2").show(); //Esta linea vuelve a mostrar el submenu2
+    //variables
+    var bandera;
+    var bandera2;
+    var flag1;
+    var flag2;
+
+    bandera = 1;
+    bandera2 = 1;
+    flag1 = 0
+    flag2 = 0;
+
+
+    //Ocultar sub-menu al cargar la pagina
+    $(".sidebar-search-info").hide();
+    $("#sub-menu-search2").hide();
+    $("#sub-menu-search3").hide();
+    $("#sub-menu-search4").hide();
+    //$("#sub-menu-lupa").hide();
+
+    //Boton de capas - funcionalidades
+    $("#search").on('click', function () {
+        //Apagar color de botones del sidebar principal
+
+        $(".sidebar-search-info").hide(); // esconder sub-menu del boton de 
+        $("#sub-menu-search").show();
+        $(".sidebar-search").toggleClass('active'); //aparecer y desaparecer sidebar 
+        $(".sidebar-search-info").removeClass('active2');
+
+
+        $(".sidebar #search i").toggleClass('pulsado'); // pintar y despintar boton
+        $("#info i").removeClass('pulsado');
+        $("#info #triangle4").hide();
+        flag1 = 2;
+
+
+        //Aparecer y desaparecer triangulito
+        if(bandera == 1)
+        {   
+          $("#search #triangle2").show('slow');
+          bandera = 0;
+        }
+        else if(flag2 == 2)
+        {
+            $("#search #triangle2").show('slow');
+            flag2 = 0;
+        }
+        else
+        {
+            $("#search #triangle2").hide('slow');
+            bandera = 1;
+        }
     });
-     
+
+    //Click unidades militares
+    $("#uni-militares").click(function () { 
+        $("#sub-menu-search").hide(); 
+        $("#sub-menu-search2 #subMenuB").slideDown();
+        $("#sub-menu-search2").show();
+      
+        console.log("Se produjo correctamente.");
+    });
+
+    //Click cerrar unidades militares
+    $("#sub-menu-search2 #crossicon").click(function () { 
+        $("#sub-menu-search2").hide();
+        $("#sub-menu-search").show(); 
+        console.log("Unidades militares se cerro correctamente");
+        
+    });
+
+    //Click universidades
+    $("#universidades").click(function () { 
+        $("#sub-menu-search").hide(); 
+        $("#sub-menu-search3").show();
+        console.log("Universidades se abrio correctamente .");
+    });
+
+    //Click cerrar Universidades
+    $("#sub-menu-search3 #crossicon-univer").click(function () { 
+        $("#sub-menu-search3").hide();
+        $("#sub-menu-search").show(); 
+        console.log("Universidades se cerro correctamente .");
+    });
+
+    //Click limite internacional
+    $("#limite-arg").click(function () { 
+        $("#sub-menu-search").hide(); 
+        $("#sub-menu-search4").show();
+        console.log("Límite internacional se abrio correctamente .");
+    });
+
+    //Click cerrar Universidades
+    $("#sub-menu-search4 #crossicon-lim").click(function () { 
+        $("#sub-menu-search4").hide();
+        $("#sub-menu-search").show(); 
+        console.log("Límite internacional se cerro correctamente .");
+    });
+
+    //--------------- Boton de informacion----------------------------//
+    $("#info").click(function () { 
+        $(".sidebar-search").hide(); 
+        $(".sidebar-search-info").show();
+        $(".sidebar-search-info").toggleClass('active2');
+        $(".sidebar-search").removeClass('active');
+
+        //pintar , mostrar opcion del sidebar principal , y quitar estilos de los otros botones
+        $("#info i").toggleClass('pulsado');
+        $("#search i").removeClass('pulsado');
+        $("#search #triangle2").hide(); 
+        flag2 = 2;
+
+        //Aparecer y desaparecer triangulito
+        if(bandera2 == 1)
+        {   
+          $("#info #triangle4").show('slow');
+          bandera2 = 0;
+        }
+        else if(flag1 == 2)
+        {
+            $("#info #triangle4").show('slow');
+            flag1 = 0;
+        }
+        else
+        {
+            $("#info #triangle4").hide('slow');
+            //$("#search").toggleClass('pulsado'); 
+            bandera2 = 1;
+        }
+        
+    });
+
+
+    //--------Mostrar informacion al apretar las unidades militares - EA - AA - FFAA
+
+    /*Toggle EA
+    $("#sub-menu-search2 #EA").click(function () { 
+        $("#ejer-arg").toggleClass('mostrar');
+        $("#armada-arg").removeClass('mostrar');
+        $("#fuerza-aerea").removeClass('mostrar');
+    });
+
+
+    //Toggle armada argentina
+    $("#sub-menu-search2 #arm-arg").click(function () { 
+        $("#armada-arg").toggleClass('mostrar');
+        $("#ejer-arg").removeClass('mostrar');
+        $("#fuerza-aerea").removeClass('mostrar');
+    });
+
+    //Toggle FFAA
+    $("#sub-menu-search2 #FFAA").click(function () { 
+        $("#fuerza-aerea").toggleClass('mostrar');
+        $("#armada-arg").removeClass('mostrar');
+        $("#ejer-arg").removeClass('mostrar');
+    });
+
+
+
+    $(".uni-mil").click(function () { 
+
+        $("#ejer-arg").toggleClass('mostrar');
+        $("#armada-arg").removeClass('mostrar');
+        $("#fuerza-aerea").removeClass('mostrar');
+    });
+
+   
+
+    $("#sub-menu-search2 #FFAA").click(function () { 
+        $("#fuerza-aerea").toggleClass('mostrar');
+        $("#armada-arg").removeClass('mostrar');
+        $("#ejer-arg").removeClass('mostrar');
+    });
+ */
+
+    $('.prueba').click(function () { 
+        
+        var origen = $(this);
+        var fuerza = origen.data('fuerza');
+
+        //Ocultar los 3
+        $("#ejer-arg").removeClass('mostrar');
+        $("#fuerza-aerea").removeClass('mostrar');
+        $("#armada-arg").removeClass('mostrar');
+        switch(fuerza)
+        {
+            case "EA" :
+                $("#ejer-arg").toggleClass('mostrar');
+                break;   
+            case "Armada" :
+                $("#armada-arg").toggleClass('mostrar');
+                 break; 
+            case "Aerea" :
+                $("#fuerza-aerea").toggleClass('mostrar');
+                 break; 
+        }
+        
+    });
+
+    /*
+    $('.uni-mil').on('click', function() {
+        //e.preventDefault();
+        var origen = $(this);
+        var fuerza = origen.data('fuerza');
+
+        //Ocultar los 3
+        $("#ejer-arg").removeClass('mostrar');
+        $("#fuerza-aerea").removeClass('mostrar');
+        $("#armada-arg").removeClass('mostrar');
+        switch(fuerza)
+        {
+            case "EA" :
+                $("#ejer-arg").toggleClass('mostrar');
+                break;   
+            case "Armada" :
+                $("#armada-arg").toggleClass('mostrar');
+                 break; 
+            case "Aerea" :
+                $("#fuerza-aerea").toggleClass('mostrar');
+                 break; 
+        }
+    });
+    */
 });
 
-$("#crossicon").click(function (e) { 
-    $("#sub-menu-search2").hide();   
-    $("#sub-menu-search").show(); 
-});
-$("#search").click(function (e) { 
-    $("#sub-menu-search2").hide();
-});
 
 
