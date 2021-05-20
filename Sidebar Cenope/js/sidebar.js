@@ -35,14 +35,17 @@ $(document).ready(function () {
     //variables
     var bandera;
     var bandera2;
+    var bandera3;
     var flag1;
     var flag2;
+    var flag3;
 
     bandera = 1;
     bandera2 = 1;
-    flag1 = 0
+    bandera3 = 1;
+    flag1 = 0;
     flag2 = 0;
-
+    flag3 = 0;
 
     //Ocultar sub-menu al cargar la pagina
     $(".sidebar-search-info").hide();
@@ -73,10 +76,11 @@ $(document).ready(function () {
           $("#search #triangle2").show('slow');
           bandera = 0;
         }
-        else if(flag2 == 2)
+        else if(flag2 == 2 || flag3 == 2)
         {
             $("#search #triangle2").show('slow');
             flag2 = 0;
+            flag3 = 0;
         }
         else
         {
@@ -132,7 +136,8 @@ $(document).ready(function () {
 
     //--------------- Boton de informacion----------------------------//
     $("#info").click(function () { 
-        $(".sidebar-search").hide(); 
+        $(".sidebar-search").hide(); //escondiendo capas
+        $(".sidebar-search-lupa").hide(); // escondiendo lupa
         $(".sidebar-search-info").show();
         $(".sidebar-search-info").toggleClass('active2');
         $(".sidebar-search").removeClass('active');
@@ -149,7 +154,7 @@ $(document).ready(function () {
           $("#info #triangle4").show('slow');
           bandera2 = 0;
         }
-        else if(flag1 == 2)
+        else if(flag1 == 2 || flag3 == 2)
         {
             $("#info #triangle4").show('slow');
             flag1 = 0;
@@ -166,7 +171,80 @@ $(document).ready(function () {
 
     //--------Mostrar informacion al apretar las unidades militares - EA - AA - FFAA
 
-    /*Toggle EA
+    $('.prueba').click(function () { 
+        
+        var origen = $(this);
+        var fuerza = origen.data('fuerza');
+
+        //Ocultar los 3
+        $("#ejer-arg").removeClass('mostrar');
+        $("#fuerza-aerea").removeClass('mostrar');
+        $("#armada-arg").removeClass('mostrar');
+        switch(fuerza)
+        {
+            case "EA" :
+                $("#ejer-arg").toggleClass('mostrar');
+                break;   
+            case "Armada" :
+                $("#armada-arg").toggleClass('mostrar');
+                 break; 
+            case "Aerea" :
+                $("#fuerza-aerea").toggleClass('mostrar');
+                 break; 
+        }
+        
+    });
+
+
+
+    //---------------------Mostrar sidebar del boton lupa---------------------//
+    $("#lupa").click(function () {  
+
+        $(".sidebar-search").hide(); // esconder sub-menu del boton de capas
+        $(".sidebar-search-info").hide(); // esconder sub-menu del boton de info
+        $(".sidebar-search-lupa").toggleClass('active3');   
+        
+        $("#lupa i").toggleClass('pulsado');
+        $("#search i").removeClass('pulsado');
+        $("#info i").removeClass('pulsado');
+        $("#search #triangle2").hide(); 
+        $("#search #triangle4").hide(); 
+
+          //Aparecer y desaparecer triangulito
+          if(bandera3 == 1)
+          {   
+            $("#lupa #triangle3").show('slow');
+            bandera3 = 0;
+          }
+          else if(flag1 == 2 || flag2 == 2)
+          {
+              $("#lupa #triangle3").show('slow');
+              flag1 = 0;
+          }
+          else
+          {
+              $("#lupa #triangle3").hide('slow');
+              //$("#search").toggleClass('pulsado'); 
+              bandera3 = 1;
+          }
+          
+         
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*Toggle EA
     $("#sub-menu-search2 #EA").click(function () { 
         $("#ejer-arg").toggleClass('mostrar');
         $("#armada-arg").removeClass('mostrar');
@@ -205,56 +283,3 @@ $(document).ready(function () {
         $("#ejer-arg").removeClass('mostrar');
     });
  */
-
-    $('.prueba').click(function () { 
-        
-        var origen = $(this);
-        var fuerza = origen.data('fuerza');
-
-        //Ocultar los 3
-        $("#ejer-arg").removeClass('mostrar');
-        $("#fuerza-aerea").removeClass('mostrar');
-        $("#armada-arg").removeClass('mostrar');
-        switch(fuerza)
-        {
-            case "EA" :
-                $("#ejer-arg").toggleClass('mostrar');
-                break;   
-            case "Armada" :
-                $("#armada-arg").toggleClass('mostrar');
-                 break; 
-            case "Aerea" :
-                $("#fuerza-aerea").toggleClass('mostrar');
-                 break; 
-        }
-        
-    });
-
-    /*
-    $('.uni-mil').on('click', function() {
-        //e.preventDefault();
-        var origen = $(this);
-        var fuerza = origen.data('fuerza');
-
-        //Ocultar los 3
-        $("#ejer-arg").removeClass('mostrar');
-        $("#fuerza-aerea").removeClass('mostrar');
-        $("#armada-arg").removeClass('mostrar');
-        switch(fuerza)
-        {
-            case "EA" :
-                $("#ejer-arg").toggleClass('mostrar');
-                break;   
-            case "Armada" :
-                $("#armada-arg").toggleClass('mostrar');
-                 break; 
-            case "Aerea" :
-                $("#fuerza-aerea").toggleClass('mostrar');
-                 break; 
-        }
-    });
-    */
-});
-
-
-
