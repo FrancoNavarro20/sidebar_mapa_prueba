@@ -76,18 +76,18 @@ $(document).ready(function () {
         //Aparecer y desaparecer triangulito
         if(bandera == 1)
         {   
-          $("#search #triangle2").show('slow');
+          $("#search #triangle2").show();
           bandera = 0;
         }
         else if(flag2 == 2 || flag3 == 2)
         {
-            $("#search #triangle2").show('slow');
+            $("#search #triangle2").show();
             flag2 = 0;
             flag3 = 0;
         }
         else
         {
-            $("#search #triangle2").hide('slow');
+            $("#search #triangle2").hide();
             bandera = 1;
         }
     });
@@ -158,18 +158,18 @@ $(document).ready(function () {
         //Aparecer y desaparecer triangulito
         if(bandera2 == 1)
         {   
-          $("#info #triangle4").show('slow');
+          $("#info #triangle4").show();
           bandera2 = 0;
         }
         else if(flag1 == 2 || flag3 == 2)
         {
-            $("#info #triangle4").show('slow');
+            $("#info #triangle4").show();
             flag1 = 0;
             flag3 = 0;
         }
         else
         {
-            $("#info #triangle4").hide('slow');
+            $("#info #triangle4").hide();
             //$("#search").toggleClass('pulsado'); 
             bandera2 = 1;
         }
@@ -207,22 +207,18 @@ $(document).ready(function () {
     });
 
     //-------------Universidades-----------Publicas y privadas -----------------//
-    $('.sub-menu-search3 .universidades').click(function () { 
+    $(".pulsar-universidades").click(function () { 
         
         var origen = $(this);
         var universidad = origen.data('universidad');
-
         //Ocultar los 3
-        $("#publica-mil").removeClass('active5');
-        $("#privada-mil").removeClass('active5');
         switch(universidad)
         {
             case "publica" :
                 $("#publica-mil").toggleClass('active5');
                 break;   
             case "privada" :
-                $("#armada-arg").toggleClass('mostrar');
-                $("#sub-menu-search2 #arm-arg").toggleClass("active4");
+                $("#privada-mil").toggleClass('active5');
                  break;
             default :
                 console.log("Hubo un error, no se selecciono una universidad pública o privada .");
@@ -255,18 +251,18 @@ $(document).ready(function () {
           //Aparecer y desaparecer triangulito
           if(bandera3 == 1)
           {   
-            $("#lupa #triangle3").show('slow');
+            $("#lupa #triangle3").show();
             bandera3 = 0;
           }
           else if(flag1 == 2 || flag2 == 2)
           {
-              $("#lupa #triangle3").show('slow');
+              $("#lupa #triangle3").show();
               flag1 = 0;
               flag2 = 0;
           }
           else
           {
-              $("#lupa #triangle3").hide('slow');
+              $("#lupa #triangle3").hide();
               bandera3 = 1;
           }
           

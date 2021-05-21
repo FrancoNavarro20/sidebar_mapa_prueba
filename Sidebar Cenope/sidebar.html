@@ -9,6 +9,37 @@
     <link rel="icon" href="img/Escudo_del_Ejército_Argentino.png">
     <!--CDN - bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    
+    <!--1-->
+    <!-- 1 Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <!-- Fin Leaflet -->
+
+    <!--2-->
+    <!-- 2 Leaflet Zoom Home -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="js/leaflet.zoomhome.min.js" />
+    <script src="js/leaflet.zoomhome.min.js"></script>
+    <!-- Fin Zoom Home -->
+
+    <!--3-->
+    <!-- 3 Leaflet.PolylineMeasure -->
+    <link rel="stylesheet" href="https://ppete2.github.io/Leaflet.PolylineMeasure/Leaflet.PolylineMeasure.css"/>
+    <script src="https://ppete2.github.io/Leaflet.PolylineMeasure/Leaflet.PolylineMeasure.js"></script>
+    <!-- Fin Leaflet.PolylineMeasure -->
+
+    <!--4-->
+    <!-- L.Draw -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.js"></script>
+    <!-- Fin L.Draw -->
+    
+    <!-- Geocoder -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"/>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <!-- Fin Geocoder -->
+
     <!--Google font-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
@@ -95,7 +126,7 @@
                     <li id="FFAA" class="borde prueba" data-fuerza="Aerea">
                         <a href="#">
                             <img id="logo" src="img/Logo_Fuerza-Aerea.png" alt="EA" style="width: 32px;">
-                            <p>Fuerza aérea Argentina</p>
+                            <p>Fuerza Aérea Argentina</p>
                         </a>
                     </li>
                 </ul>
@@ -110,14 +141,16 @@
                             <h4>Universidades<i class="fas fa-times" style="padding-left: 45px;" id="crossicon-univer"></i></h4>
                         </a>
                     </li>
-                    <li id="publica-mil" class="borde universidades" data-universidad="publica">
+                    <li id="publica-mil" class="borde pulsar-universidades" data-universidad="publica">
                         <a href="#">
-                            <p><i id="uni-icon" class="fas fa-university" style="color: rgb(199, 56, 56);"></i>Universidades públicas</p>
+                            <img src="img/universidad_nac.svg" alt="Universidades Nacionales">
+                            <p class="mover-universidades">Universidades públicas</p>
                         </a>
                     </li>
-                    <li id="privada-mil" class="borde universidades" data-universidad="privada">
+                    <li id="privada-mil" class="borde pulsar-universidades" data-universidad="privada">
                         <a href="#">
-                            <p><i id="uni-icon" class="fas fa-university" style="color: rgb(70, 95, 170);"></i>Universidades privadas</p>
+                            <img src="img/universidad_otras.svg" alt="Universidades Privadas" style="width: 25px;">
+                            <p class="mover-universidades">Universidades privadas</p>
                         </a>
                     </li>
                 </ul>
@@ -175,6 +208,16 @@
 
         <!--Esta es la ultima actualizacion-->
 
+
+    
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+              <div id="mapa"></div>
+              <div id="resultado"></div>
+              <button id="conversion" style="display: none;">Obtener datos</button>
+            </div>
+          </div>
+
      <!--Script-->
     <!--Bootstrap JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
@@ -182,6 +225,28 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/sidebar.js"></script>
+
+    <!--Script del MAPA-->
+    <script>
+      var map = L.map("mapa", { zoomControl: false }).setView(
+        [-34.609547, -58.3710067],
+        4
+      );
+
+      L.tileLayer(
+        "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG%3A3857@png/{z}/{x}/{-y}.png",
+        {
+          attribution:
+            '<a href="http://www.ign.gob.ar/AreaServicios/Argenmap/IntroduccionV2" target="_blank">Instituto Geográfico Nacional</a>',
+          minZoom: 3,
+          maxZoom: 18,
+        }
+      ).addTo(map);
+    </script>
+
+
+
+
 </body>
 
 </html>

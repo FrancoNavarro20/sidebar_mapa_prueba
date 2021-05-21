@@ -3,7 +3,7 @@ body {
   }
 
 .sidebar {
-    height: 900px;
+    height: 100%;
     width: 60px;
     background-color: rgb(17, 17, 17);
     transition: 0.5s;
@@ -11,7 +11,7 @@ body {
     padding-top: 60px;
     white-space: nowrap;
     position: absolute;
-    z-index: 1;
+    z-index: 0;
 }
 .sidebar ul{
     position: absolute;
@@ -76,9 +76,10 @@ body {
     left: -290px;
     width: 290px;
     top: 66px;
-    height: 900px;
+    height: 100%;
     background: #333333;
-    transition:all 300ms linear;
+    /*transition:all 300ms linear;*/
+    z-index: 1;
 }
 
 .sidebar-search.active{
@@ -172,7 +173,7 @@ body {
 
 .active4{
     background-color: rgb(131, 131, 131);
-    border-left:5px solid RGB(64, 191, 239);
+    border-left:5px solid RGB(174, 201, 11);
 }
 
 
@@ -210,9 +211,15 @@ body {
     margin-right: 10px;
 }
 
+#sub-menu-search3 li .mover-universidades{
+    position: relative;
+    top: -25px;
+    left: 30px;
+}
+
 .active5{
     background-color: rgb(131, 131, 131);
-    border-left:5px solid RGB(64, 191, 239);
+    border-left:5px solid RGB(238, 125, 0);
 }
 
 /*sub-sidebar 4 - estilos - limite internacional*/
@@ -258,9 +265,10 @@ body {
     left: -290px;
     width: 290px;
     top: 66px;
-    height: 900px;
+    height: 100%;
     background: #333333;
-    transition:all 300ms linear;
+    /*transition:all 300ms linear;*/
+    z-index: 1;
 }
 
 .sidebar-search-info.active2{
@@ -310,6 +318,7 @@ body {
     height: 900px;
     background: #333333;
     display: none;
+    z-index: 1;
 }
 .sidebar-search-lupa.active3{
     left: 60px;
@@ -360,6 +369,20 @@ body {
 }
 
 /*Esta es la ultima actualizacion*/
+
+
+/*------Stylos del mapa ---------*/
+#mapa{
+    position: absolute;
+    top: 66px;
+    left: 60px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
 
 /* page Responsive*/
 
