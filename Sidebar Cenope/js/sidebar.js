@@ -192,16 +192,46 @@ $(document).ready(function () {
         {
             case "EA" :
                 $("#ejer-arg").toggleClass('mostrar');
+                $("#sub-menu-search2 #EA-mil ").toggleClass("active4");
                 break;   
             case "Armada" :
                 $("#armada-arg").toggleClass('mostrar');
+                $("#sub-menu-search2 #arm-arg").toggleClass("active4");
                  break; 
             case "Aerea" :
                 $("#fuerza-aerea").toggleClass('mostrar');
+                $("#sub-menu-search2 #FFAA ").toggleClass("active4");
                  break; 
         }
         
     });
+
+    //-------------Universidades-----------Publicas y privadas -----------------//
+    $('.sub-menu-search3 .universidades').click(function () { 
+        
+        var origen = $(this);
+        var universidad = origen.data('universidad');
+
+        //Ocultar los 3
+        $("#publica-mil").removeClass('active5');
+        $("#privada-mil").removeClass('active5');
+        switch(universidad)
+        {
+            case "publica" :
+                $("#publica-mil").toggleClass('active5');
+                break;   
+            case "privada" :
+                $("#armada-arg").toggleClass('mostrar');
+                $("#sub-menu-search2 #arm-arg").toggleClass("active4");
+                 break;
+            default :
+                console.log("Hubo un error, no se selecciono una universidad pública o privada .");
+                break;
+        }
+        
+    });
+
+
 
 
 
