@@ -92,24 +92,14 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <img
-          src="img/Escudo_del_Ejército_Argentino.png"
+          src="img/TACOIN.png"
           style="width: 50px"
           alt=""
         />
         <a class="navbar-brand" href="#" style="position: absolute; left: 70px"
-          >Visualizador de información Geográfico EA</a
+          >TACOIN EA</a
         >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <div id="geosidebar"></div>
         <div class="collapse" id="navbarSupportedContent"></div>
       </div>
     </nav>
@@ -119,7 +109,7 @@
       <nav id="mySidebar" class="sidebar">
         <ul>
           <li>
-            <a href="#" id="lupa"
+            <a href="#" id="lupa-fuera"
               ><i class="fas fa-search"></i
               ><i id="triangle3" class="fas fa-caret-left"></i
             ></a>
@@ -131,7 +121,7 @@
             ></a>
           </li>
           <li>
-            <a href="#" id="info"
+            <a href="#" id="info-fuera"
               ><i class="fas fa-info-circle"></i
               ><i id="triangle4" class="fas fa-caret-left"></i
             ></a>
@@ -141,32 +131,70 @@
 
       <!--Primer sub menu "search"-->
       <div id="sub-menu-search" class="sidebar-search">
-        <ul id="subMenuB">
-          <li id="uni-militares" class="uni-mili">
-            <a href="#">
-              <h4>Unidades militares</h4>
-              <p>
-                Aquí podrá visualizar las instalaciones militares del Ejército
-                Argentino , la Armada Argentina y la Fuerza Aérea Argentina .
-              </p>
-            </a>
-          </li>
-          <li id="universidades" class="univers">
-            <a href="#">
-              <h4>Universidades</h4>
-              <p>
-                Aquí podrá visualizar las universidades públicas y privadas que
-                estan alrededor del país .
-              </p>
-            </a>
-          </li>
-          <li id="limite-arg" class="linea-ferr">
-            <a href="#">
-              <h4>Líneas de ferrocarril</h4>
-              <p>Aquí podrá visualizar las Líneas de ferrocarril .</p>
-            </a>
-          </li>
-        </ul>
+        <div class="title-organic">
+            <h3>Estructura Orgánica</h3>
+        </div>
+        <div class="scroll_A">
+          <ul id="subMenuB" >
+            <li id="uni-militares" class="uni-mili">
+              <a href="#">
+                <h4>Unidades militares</h4>
+                <p>
+                  Aquí podrá visualizar las instalaciones militares del Ejército
+                  Argentino, la Armada Argentina y la Fuerza Aérea Argentina .
+                </p>
+              </a>
+            </li>
+            <li id="universidades" class="univers">
+              <a href="#">
+                <h4>Universidades</h4>
+                <p>
+                  Aquí podrá visualizar las universidades públicas y privadas que
+                  están alrededor del país .
+                </p>
+              </a>
+            </li>
+            <li id="limite-arg" class="linea-ferr">
+              <a href="#">
+                <h4>Líneas de ferrocarril</h4>
+                <p>Aquí podrá visualizar las lineas de ferrocarril </p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="title-conduc">
+          <h3>Áreas de la Conducción</h3>
+        </div>
+        <div class="scroll_B">
+          <ul id="submenu2">
+            <li id="personal">
+              <a href="#">
+                <h4>Personal</h4>
+              </a>
+            </li>
+            <li id="inteligencia">
+              <a href="#">
+                <h4>Inteligencia</h4>
+              </a>
+            </li>
+            <li id="operaciones">
+              <a href="#">
+                <h4>Operaciones</h4>
+              </a>
+            </li>
+            <li id="material">
+              <a href="#">
+                <h4>Material</h4>
+              </a>
+            </li>
+            <li id="finanzas">
+              <a href="#">
+                <h4>Finanzas</h4>
+              </a>
+            </li>
+          </ul>
+        </div>
+         
       </div>
       <!--Primer sub menu "search"-->
 
@@ -311,7 +339,6 @@
       <!--primer sub menu "info" / buscador-->
       <div id="sub-menu-lupa" class="sidebar-search-lupa">
         <div class="buscador">
-          <div id="geosidebar"></div>
           <div class="text">
             <p>
               Aquí puede buscar lugares de interés dentro de la República
@@ -327,13 +354,25 @@
 
     <!--Esta es la ultima actualizacion-->
 
+    <!--Aca esta el mapa-->
     <div id="page-content-wrapper">
-      <div class="container-fluid">
+      <div id="map-cenope" class="container-fluid ">
         <div id="mapa"></div>
         <!-- <div id="resultado"></div>
               <button id="conversion" style="display: none;">Obtener datos</button> -->
       </div>
     </div>
+    <!--Fin del mapa-->
+
+    <div class="clase-prueba">
+      <h1>prueba de scroll</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Ea error nisi libero quod id itaque asperiores dolorem in. Lorem ipsum dolor, 
+        sit amet consectetur adipisicing elit. Officia dolorem, ipsum consequuntur voluptatum eaque sit necessitatibus nemo officiis reiciendis omnis error soluta ducimus hic illo esse. Iusto perspiciatis inventore omnis?
+      </p>
+    </div>
+
 
     <!--Script-->
     <!--Bootstrap JavaScript Bundle with Popper -->
