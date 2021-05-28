@@ -436,8 +436,8 @@ button.leaflet-control-geocoder-icon {
   font-size: 10px;
 }
 
-#detalles{
-    background-color: white;
+div.leaflet-sidebar.right.visible{
+  padding: 0;
 }
 
 

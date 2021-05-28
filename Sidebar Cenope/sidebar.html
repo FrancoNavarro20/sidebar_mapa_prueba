@@ -53,6 +53,12 @@
     <script src="https://ppete2.github.io/Leaflet.PolylineMeasure/Leaflet.PolylineMeasure.js"></script>
     <!-- Fin Leaflet.PolylineMeasure -->
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/leaflet-sidebar@0.2.4/src/L.Control.Sidebar.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-sidebar@0.2.4/src/L.Control.Sidebar.min.js"></script>
+
     <!--4-->
     <!-- L.Draw -->
     <link
@@ -334,7 +340,6 @@
             aparece al hacer click sobre los marcadores en el mapa.
           </p>
         </div>
-        <div id="detalles"></div>
       </div>
       <!--FIN primer sub menu "info" / buscador-->
 
@@ -359,6 +364,11 @@
     <!--Aca esta el mapa-->
     <div id="page-content-wrapper">
       <div id="map-cenope" class="container-fluid ">
+        <div id="sidebar">
+          <h1>Detalles Unidades</h1>
+          <hr/>
+          <p id="detalles"></p>
+        </div>
         <div id="mapa"></div>
         <!-- <div id="resultado"></div>
               <button id="conversion" style="display: none;">Obtener datos</button> -->
@@ -453,6 +463,16 @@
         })
       );
 
+      var sidebar = L.control.sidebar("sidebar", {
+        position: "right",
+        closeButton: false
+      });
+      map.addControl(sidebar);
+
+      map.on('click', function () {
+            sidebar.hide();
+        })
+
       //ZOOM HOME
       var zoomHome = L.Control.zoomHome();
       zoomHome.addTo(map);
@@ -498,6 +518,11 @@
       //Fin Leaflet Draw
 
       //WFS
+      var linea_frc = {
+        color: "black",
+        weight: 1,
+      };
+
       var frc_url =
         "https://wms.ign.gob.ar/geoserver/ign/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ign:lineas_de_transporte_ferroviario_AN010&outputFormat=application/json";
 
@@ -506,7 +531,7 @@
         var clicks = $(this).data("clicks");
         if (!clicks) {
           $.getJSON(frc_url).then((res) => {
-            ferrocarril = L.geoJSON(res).addTo(map);
+            ferrocarril = L.geoJSON(res, linea_frc).addTo(map);
           });
         } else {
           map.removeLayer(ferrocarril);
@@ -618,19 +643,24 @@
         },
       });
 
+      function openSidebar(){
+        sidebar.show();
+      }
       function masInfo(info) {
         document.getElementById("detalles").innerHTML =
-          //   "ID: " +
-          //   $(info).data("id") +
-          "Fuerza: " +
-          $(info).data("fuerza") +
-          "<br/>Tipo: " +
-          $(info).data("objeto") +
-          "<br/>Nombre: " +
-          $(info).data("nombre") +
-          "<br/>Fuente: " +
-          $(info).data("fuente");
+        //   "ID: " +
+        //   $(info).data("id") +
+        "Fuerza: " +
+        $(info).data("fuerza") +
+        "<br/>Tipo: " +
+        $(info).data("objeto") +
+        "<br/>Nombre: " +
+        $(info).data("nombre") +
+        "<br/>Fuente: " +
+        $(info).data("fuente");
+        openSidebar();
       }
+      
 
       var fuerza_aerea;
       $("#FFAA").click(function () {
