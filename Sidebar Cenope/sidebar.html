@@ -69,11 +69,8 @@
     <!-- Fin L.Draw -->
 
     <!-- Geocoder -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"
-    />
-    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <link rel="stylesheet" href="./style/leaflet-control-geocoder.css">
+    <script src="./js/leaflet-control-geocoder.js"></script>
     <!-- Fin Geocoder -->
 
     <!--Google font-->
@@ -96,13 +93,13 @@
   <body>
     <!--Inicio del navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
+      <div class="container-fluid" style="justify-content: flex-start;">
         <img
           src="img/TACOIN.png"
           style="width: 50px"
           alt=""
         />
-        <a class="navbar-brand" href="#" style="position: absolute; left: 70px"
+        <a class="navbar-brand" href="#"
           >TACOIN EA</a
         >
         <div id="geosidebar"></div>
@@ -464,8 +461,7 @@
       );
 
       var sidebar = L.control.sidebar("sidebar", {
-        position: "right",
-        closeButton: false
+        position: "right"
       });
       map.addControl(sidebar);
 

@@ -390,11 +390,6 @@ body {
   margin-left: 10px;
 }
 
-
-#geosidebar{
-  position: absolute;
-  left:700px;
-}
 /*Esta es la ultima actualizacion*/
 
 /*------Stylos del mapa ---------*/
@@ -418,28 +413,13 @@ body {
   left: 289px;
 }
 
-.leaflet-control-geocoder {
-  border-radius: 0px;
-}
-.leaflet-bar {
-  box-shadow: none;
-  border-radius: 0px;
-}
-.leaflet-control-geocoder-alternatives {
-  font-size: 10px;
-}
-button.leaflet-control-geocoder-icon {
-  width: 100%;
-  border: 0.5px #b3b3b3 solid !important;
-}
-.leaflet-control-geocoder-form-no-error {
-  font-size: 10px;
-}
-
 div.leaflet-sidebar.right.visible{
   padding: 0;
 }
 
+.leaflet-control-geocoder-options-open{
+  z-index: 1;
+}
 
 /*Prueba de scroll*/
 
