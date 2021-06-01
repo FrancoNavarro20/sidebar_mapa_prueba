@@ -361,9 +361,7 @@
     <!--Aca esta el mapa-->
     <div id="page-content-wrapper">
       <div id="map-cenope" class="container-fluid ">
-        <div id="sidebar">
-          <h1>Detalles Unidades</h1>
-          <hr/>
+        <div id="sidebar">          
           <p id="detalles"></p>
         </div>
         <div id="mapa"></div>
@@ -468,6 +466,10 @@
       map.on('click', function () {
             sidebar.hide();
         })
+
+      map.on('popupclose', function() {
+            sidebar.hide();
+      });
 
       //ZOOM HOME
       var zoomHome = L.Control.zoomHome();
@@ -646,9 +648,10 @@
         document.getElementById("detalles").innerHTML =
         //   "ID: " +
         //   $(info).data("id") +
-        "Fuerza: " +
+        $(info).data("img") +
+        '<h1 style="text-align: center;">' +
         $(info).data("fuerza") +
-        "<br/>Tipo: " +
+        "</h1><hr/>Tipo: " +
         $(info).data("objeto") +
         "<br/>Nombre: " +
         $(info).data("nombre") +
@@ -671,7 +674,7 @@
                 },
                 onEachFeature: function (feature, layer) {
                   layer.bindPopup(
-                    '<b style="font-size: 14px;"><img src="./img/Logo_Fuerza-Aerea.png" style="width: 24px; height: 24px"/> ' +
+                    '<b style="font-size: 14px;"><img src="./img/Logo_Fuerza-Aerea.png" style="width: 24px; height: 24px"/>' +
                       feature.properties.fdc +
                       "<br><b>Nombre</b>: " +
                       feature.properties.fna +
@@ -685,6 +688,8 @@
                       feature.properties.fna +
                       "' data-fuente='" +
                       feature.properties.sag +
+                      "' data-img='" +
+                      '<img src="./img/Logo_Fuerza-Aerea.png" style="max-width: 100%; height: auto;"/>' + 
                       "' onclick='masInfo(this)'>Mas información</a>"
                   );
                 },
@@ -726,6 +731,8 @@
                       feature.properties.fna +
                       "' data-fuente='" +
                       feature.properties.sag +
+                      "' data-img='" +
+                      '<img src="./img/Escudo_armada_argentina_banderolas.png" style="max-width: 100%; height: auto;"/>' + 
                       "' onclick='masInfo(this)'>Mas información</a>"
                   );
                 },
@@ -767,6 +774,8 @@
                       feature.properties.fna +
                       "' data-fuente='" +
                       feature.properties.sag +
+                      "' data-img='" +
+                      '<img src="./img/Escudo_del_Ejército_Argentino.png" style="max-width: 100%; height: auto;"/>' + 
                       "' onclick='masInfo(this)'>Mas información</a>"
                   );
                 },
