@@ -62,6 +62,8 @@ $(document).ready(function () {
         $(".sidebar-search-lupa").hide(); 
         $("#sub-menu-search").show();
         $(".sidebar-search").toggleClass('active'); //aparecer y desaparecer sidebar 
+        $(".graficos").toggleClass("mover-grafic");
+        //$("#mapa").toggleClass("mapa-completo");
         $(".sidebar-search-info").removeClass('active2');
         $(".sidebar-search-lupa").removeClass('active3');
 
@@ -97,7 +99,7 @@ $(document).ready(function () {
 
     //Click unidades militares
     $("#uni-militares").click(function () { 
-        $("#sub-menu-search").hide(); 
+        //$("#sub-menu-search").hide(); 
         $("#sub-menu-search2 #subMenuB").slideDown();
         $("#sub-menu-search2").show();
       
@@ -114,7 +116,7 @@ $(document).ready(function () {
 
     //Click universidades
     $("#universidades").click(function () { 
-        $("#sub-menu-search").hide(); 
+        //$("#sub-menu-search").hide(); 
         $("#sub-menu-search3").show();
         console.log("Universidades se abrio correctamente .");
     });
@@ -128,7 +130,7 @@ $(document).ready(function () {
 
     //Click limite internacional
     $("#limite-arg").click(function () { 
-        $("#sub-menu-search").hide(); 
+        //$("#sub-menu-search").hide(); 
         $("#sub-menu-search4").show();
         console.log("Límite internacional se abrio correctamente .");
     });
@@ -268,9 +270,71 @@ $(document).ready(function () {
               $("#lupa #triangle3").hide();
               bandera3 = 1;
           }
-          
-         
+            
     });
+
+    //Onclick de los Personal !!!
+    $("#personal").click(function () { 
+        $("#sub-menu-search5").show();
+        console.log("Personal abierto correctamente .");
+    });
+
+    //Click cerrar Personal
+    $("#title-person #crossicon").click(function () { 
+       $("#sub-menu-search5").hide(); 
+       console.log("Personal se cerro correctamente");    
+    });
+
+    //Click inteligencia
+    $("#inteligencia").click(function () { 
+        $("#sub-menu-search6").show();
+        console.log("Inteligencia abierto correctamente .");
+    });
+
+    //Click cerrar Inteligencia
+    $("#title-intel #crossicon").click(function () { 
+        $("#sub-menu-search6").hide(); 
+        console.log("Inteligencia se cerro correctamente");    
+    });
+
+     //Click Operaciones
+     $("#operaciones").click(function () { 
+        $("#sub-menu-search7").show();
+        console.log("Inteligencia abierto correctamente .");
+    });
+
+    //Click cerrar Operaciones
+    $("#title-opera #crossicon").click(function () { 
+        $("#sub-menu-search7").hide(); 
+        console.log("Operaciones se cerro correctamente");    
+    });
+
+     //Click Materiales
+     $("#material").click(function () { 
+        $("#sub-menu-search8").show();
+        console.log("Materiales abierto correctamente .");
+    });
+
+    //Click cerrar Materiales
+    $("#title-mate #crossicon").click(function () { 
+        $("#sub-menu-search8").hide(); 
+        console.log("Operaciones se cerro correctamente");    
+    });
+ 
+     //Click Finanzas
+     $("#finanzas").click(function () { 
+        $("#sub-menu-search9").show();
+        console.log("Finanzas abierto correctamente .");
+    });
+
+    //Click cerrar Finanzas
+    $("#title-fina #crossicon").click(function () { 
+        $("#sub-menu-search9").hide(); 
+        console.log("Finanzas se cerro correctamente");    
+    });
+ 
+ 
+
 });
 
 
