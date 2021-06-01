@@ -442,13 +442,10 @@ body {
 }
 
 div.leaflet-sidebar.right.visible{
-  position: absolute;
   padding: 0;
-  z-index: 1;
 }
 
 .leaflet-control-geocoder-options-open{
-  position: absolute;
   z-index: 1;
 }
 
