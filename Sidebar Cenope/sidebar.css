@@ -680,7 +680,6 @@ div.leaflet-sidebar.right.visible {
   width: calc(76vw - 290px);
   margin-right: 0px;
 }
-
 @media only screen and (max-width: 992px) {
   .tamanoA {
     margin-left: 100px;

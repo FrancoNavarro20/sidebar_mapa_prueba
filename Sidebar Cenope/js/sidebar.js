@@ -41,11 +41,13 @@ $(document).ready(function () {
     var flag3;
     var banderaGraficos;
     var banderaActive;
+    var ajustarse_Search;
 
     bandera = 1;
     bandera2 = 1;
     bandera3 = 1;
     banderaGraficos = false;
+    ajustarse_Search = 0;
     flag1 = 0;
     flag2 = 0;
     flag3 = 0;
@@ -84,7 +86,11 @@ $(document).ready(function () {
         if($("#mapa").hasClass("tamanoA")){
            $("#mapa").removeClass("tamanoA")
            $("#mapa").addClass("tamanoB");
-        }else{
+        }else if(ajustarse_Search == 1){
+            $("#mapa").removeClass("tamanoC")
+            $("#mapa").addClass("tamanoA"); 
+        }
+        else{
             $("#mapa").removeClass("tamanoB")
             $("#mapa").addClass("tamanoA"); 
         }
@@ -232,7 +238,7 @@ $(document).ready(function () {
                     $("#mapa").removeClass("tamanoC")
                     $("#mapa").addClass("tamanoB"); 
                 }
-
+                ajustarse_Search = 1;
                 break;   
             case "Armada" :
                 if (!$(".graficos").hasClass("mover-grafic")){
