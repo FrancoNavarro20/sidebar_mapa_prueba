@@ -62,7 +62,7 @@ $(document).ready(function () {
         $(".sidebar-search-lupa").hide(); 
         $("#sub-menu-search").show();
         $(".sidebar-search").toggleClass('active'); //aparecer y desaparecer sidebar 
-        $(".graficos").toggleClass("mover-grafic");
+        //$(".graficos").toggleClass("mover-grafic");
         //$("#mapa").toggleClass("mapa-completo");
         $(".sidebar-search-info").removeClass('active2');
         $(".sidebar-search-lupa").removeClass('active3');
@@ -198,14 +198,17 @@ $(document).ready(function () {
             case "EA" :
                 $("#ejer-arg").toggleClass('mostrar');
                 $("#sub-menu-search2 #EA-mil ").toggleClass("active4");
+                $(".graficos").toggleClass("mover-grafic");
                 break;   
             case "Armada" :
                 $("#armada-arg").toggleClass('mostrar');
                 $("#sub-menu-search2 #arm-arg").toggleClass("active4");
+                $(".graficos").toggleClass("mover-grafic");
                  break; 
             case "Aerea" :
                 $("#fuerza-aerea").toggleClass('mostrar');
                 $("#sub-menu-search2 #FFAA ").toggleClass("active4");
+                $(".graficos").toggleClass("mover-grafic");
                  break; 
         }
         
