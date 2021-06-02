@@ -39,10 +39,13 @@ $(document).ready(function () {
     var flag1;
     var flag2;
     var flag3;
+    var banderaGraficos;
+    var banderaActive;
 
     bandera = 1;
     bandera2 = 1;
     bandera3 = 1;
+    banderaGraficos = false;
     flag1 = 0;
     flag2 = 0;
     flag3 = 0;
@@ -66,10 +69,28 @@ $(document).ready(function () {
         //$("#mapa").toggleClass("mapa-completo");
         $(".sidebar-search-info").removeClass('active2');
         $(".sidebar-search-lupa").removeClass('active3');
+        
+        if(banderaGraficos == true){
+            $(".graficos").removeClass("mover-grafic");
+            banderaGraficos = false;
+        }
+
 
 
         //Achicar mapa
         $("#map-cenope").toggleClass("active-mapa");
+
+        //Para abrir mapa al abrir el primer sidebar responsiado;
+        if($("#mapa").hasClass("tamanoA")){
+           $("#mapa").removeClass("tamanoA")
+           $("#mapa").addClass("tamanoB");
+        }else{
+            $("#mapa").removeClass("tamanoB")
+            $("#mapa").addClass("tamanoA"); 
+        }
+
+    
+        //
 
         $(".sidebar #search i").toggleClass('pulsado'); // pintar y despintar boton
         $("#info i").removeClass('pulsado');
@@ -179,7 +200,9 @@ $(document).ready(function () {
             bandera2 = 1;
         }
         
-    });
+
+        
+    },50);
 
 
     //--------Mostrar informacion al apretar las unidades militares - EA - AA - FFAA
@@ -189,26 +212,49 @@ $(document).ready(function () {
         var origen = $(this);
         var fuerza = origen.data('fuerza');
 
-        //Ocultar los 3
-        $("#ejer-arg").removeClass('mostrar');
-        $("#fuerza-aerea").removeClass('mostrar');
-        $("#armada-arg").removeClass('mostrar');
         switch(fuerza)
         {
             case "EA" :
-                $("#ejer-arg").toggleClass('mostrar');
+                if (!$(".graficos").hasClass("mover-grafic")){
+                    $(".graficos").addClass("mover-grafic");
+                    banderaGraficos = true;
+                } else {
+                    $(".graficos").removeClass("mover-grafic");
+                }
+                //$("#ejer-arg").toggleClass('mostrar');
                 $("#sub-menu-search2 #EA-mil ").toggleClass("active4");
-                $(".graficos").toggleClass("mover-grafic");
+
+                //Para abrir mapa al abrir el primer sidebar responsiado;
+                if($("#mapa").hasClass("tamanoB")){
+                    $("#mapa").removeClass("tamanoB")
+                    $("#mapa").addClass("tamanoC");
+                }else{
+                    $("#mapa").removeClass("tamanoC")
+                    $("#mapa").addClass("tamanoB"); 
+                }
+
                 break;   
             case "Armada" :
-                $("#armada-arg").toggleClass('mostrar');
+                if (!$(".graficos").hasClass("mover-grafic")){
+                    $(".graficos").addClass("mover-grafic");
+                } else {
+                    $(".graficos").removeClass("mover-grafic");
+                    banderaGraficos = false;
+                }
+                 //$("#armada-arg").toggleClass('mostrar');
                 $("#sub-menu-search2 #arm-arg").toggleClass("active4");
-                $(".graficos").toggleClass("mover-grafic");
+                banderaGraficos = true;
                  break; 
             case "Aerea" :
-                $("#fuerza-aerea").toggleClass('mostrar');
+                if (!$(".graficos").hasClass("mover-grafic")){
+                    $(".graficos").addClass("mover-grafic");
+                } else {
+                    $(".graficos").removeClass("mover-grafic");
+                    banderaGraficos = false;
+                }
+                //$("#fuerza-aerea").toggleClass('mostrar');
                 $("#sub-menu-search2 #FFAA ").toggleClass("active4");
-                $(".graficos").toggleClass("mover-grafic");
+                banderaGraficos = true;
                  break; 
         }
         

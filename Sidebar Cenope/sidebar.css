@@ -1,6 +1,6 @@
 body {
   min-height: 100vh;
-  background-color:rgb(99, 150, 216);
+  background-color: rgb(99, 150, 216);
   font-family: "Lato", sans-serif;
   overflow: hidden;
 }
@@ -132,21 +132,21 @@ body {
   text-decoration: none;
 }
 
-#personal{
-  border-left:5px solid #798dd4 ;
+#personal {
+  border-left: 5px solid #798dd4;
 }
 
-#inteligencia{
-  border-left:5px solid #79c6d4 ;
+#inteligencia {
+  border-left: 5px solid #79c6d4;
 }
-#operaciones{
-  border-left:5px solid #ca4057 ;
+#operaciones {
+  border-left: 5px solid #ca4057;
 }
-#material{
-  border-left:5px solid #66cc54 ;
+#material {
+  border-left: 5px solid #66cc54;
 }
-#finanzas{
-  border-left:5px solid #e7b202 ;
+#finanzas {
+  border-left: 5px solid #e7b202;
 }
 /*
 .sidebar-search .scroll_B::-webkit-scrollbar {
@@ -157,7 +157,7 @@ body {
 	background: #ff9d00;
 	border-radius: 5px;
 }
-*/ 
+*/
 
 /*sub-sidebar 2 - estilos - unidades militares*/
 
@@ -211,7 +211,7 @@ body {
 }
 
 /*sub-sidebar 3 - estilos - Universidades*/
-#sub-menu-search3{
+#sub-menu-search3 {
   height: 45vh;
 }
 #sub-menu-search3 ul li {
@@ -224,7 +224,7 @@ body {
   height: 50px;
 }
 
-#logo-unis{
+#logo-unis {
   position: relative;
   top: 6px;
 }
@@ -267,7 +267,7 @@ body {
 }
 
 /*sub-sidebar 4 - estilos - limite ferrocarril*/
-#sub-menu-search4{
+#sub-menu-search4 {
   height: 45vh;
 }
 #sub-menu-search4 ul li {
@@ -422,18 +422,19 @@ body {
 #mapa {
   position: absolute;
   top: 66px;
-  left: -39px;
+  /*left: -39px;*/
   height: 93vh;
-  width: 76.2%;
+  /*width: 76.2%;*/
   transition: 0.5s;
   z-index: 0;
 }
 
-#map-cenope{
+#map-cenope {
   position: absolute;
   top: 0px;
 }
-.active-mapa{
+
+.active-mapa {
   position: absolute;
   height: 100%;
   width: 84%;
@@ -441,28 +442,28 @@ body {
   left: 289px;
 }
 
-div.leaflet-sidebar.right.visible{
+div.leaflet-sidebar.right.visible {
   padding: 0;
 }
 
-.leaflet-control-geocoder-options-open{
+.leaflet-control-geocoder-options-open {
   z-index: 1;
 }
 
 /*Prueba de scroll*/
 
-.centrar-1{
+.centrar-1 {
   height: 50vh;
   width: 100%;
   /*border: 3px solid yellow;*/
 }
-.centrar-2{
+.centrar-2 {
   height: 50vh;
   width: 100%;
   /*border: 3px solid violet;*/
 }
 
-.scroll_A{
+.scroll_A {
   position: absolute;
   top: 35px;
   overflow: scroll;
@@ -470,12 +471,12 @@ div.leaflet-sidebar.right.visible{
   width: 100%;
 }
 
-.title-organic{
+.title-organic {
   background-color: #ffffff;
   color: #2f4491;
   height: 35px;
 }
-.title-organic h3{
+.title-organic h3 {
   position: absolute;
   top: 2px;
   left: 2px;
@@ -485,25 +486,23 @@ div.leaflet-sidebar.right.visible{
 }
 
 .sidebar-search .scroll_A::-webkit-scrollbar {
-	width: 7px;
+  width: 7px;
 }
 
 .sidebar-search .scroll_A::-webkit-scrollbar-thumb {
-	background: #7a7a7a;
-	border-radius: 5px;
+  background: #7a7a7a;
+  border-radius: 5px;
 }
 
-
-.scroll_B{
+.scroll_B {
   position: absolute;
   top: 49.3vh;
   overflow: scroll;
   height: 50vh;
   width: 290px;
-  
 }
 
-.title-conduc{
+.title-conduc {
   background-color: #ffffff;
   color: #2f4491;
   position: absolute;
@@ -514,7 +513,7 @@ div.leaflet-sidebar.right.visible{
   z-index: 1;
 }
 
-.title-conduc h3{
+.title-conduc h3 {
   position: absolute;
   font-size: 24px;
   text-align: center;
@@ -523,107 +522,101 @@ div.leaflet-sidebar.right.visible{
 }
 
 .sidebar-search .scroll_B::-webkit-scrollbar {
-	width: 7px;
+  width: 7px;
 }
 
 .sidebar-search .scroll_B::-webkit-scrollbar-thumb {
-	background: #7a7a7a;
-	border-radius: 5px;
+  background: #7a7a7a;
+  border-radius: 5px;
 }
 
-.clase-prueba{
+.clase-prueba {
   width: 200px;
   height: 250px;
   overflow: scroll;
   z-index: 1;
-
 }
-
 
 /* .sidebar-search5 Personal*/
 
-#sub-menu-search5{
+#sub-menu-search5 {
   position: absolute;
   top: 52vh;
   height: 48vh;
 }
 
-#title-person{
+#title-person {
   background-color: #798dd4;
 }
-#title-person #crossicon{
+#title-person #crossicon {
   position: absolute;
   left: 210px;
   top: 22px;
 }
 
-#sub-menu-search6{
+#sub-menu-search6 {
   position: absolute;
   top: 52vh;
   height: 48vh;
 }
 
-#sub-menu-search6 #title-intel{
+#sub-menu-search6 #title-intel {
   background-color: #79c6d4;
 }
 
-
-#title-intel #crossicon{
+#title-intel #crossicon {
   position: absolute;
   left: 210px;
   top: 22px;
 }
 
-
-#sub-menu-search7{
+#sub-menu-search7 {
   position: absolute;
   top: 52vh;
   height: 48vh;
 }
 
-#title-opera{
+#title-opera {
   background-color: #ca4057;
 }
-#title-opera #crossicon{
+#title-opera #crossicon {
   position: absolute;
   left: 210px;
   top: 22px;
 }
 /*Materiales*/
-#sub-menu-search8{
+#sub-menu-search8 {
   position: absolute;
   top: 52vh;
   height: 48vh;
 }
 
-#title-mate{
+#title-mate {
   background-color: #66cc54;
 }
-#title-mate #crossicon{
+#title-mate #crossicon {
   position: absolute;
   left: 210px;
   top: 22px;
 }
 /*Finanzas*/
-#sub-menu-search9{
+#sub-menu-search9 {
   position: absolute;
   top: 52vh;
   height: 48vh;
 }
 
-#title-fina{
+#title-fina {
   background-color: #e7b202;
 }
-#title-fina #crossicon{
+#title-fina #crossicon {
   position: absolute;
   left: 210px;
   top: 22px;
 }
 
-
-
 /*Graficos*/
-.graficos{
+.graficos {
   width: 400px;
   height: 100vh;
   border: 5px solid rgb(128, 128, 128);
@@ -632,16 +625,16 @@ div.leaflet-sidebar.right.visible{
   display: none;
 }
 
-.grafic-1{
+.grafic-1 {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 50vh;
+  height: calc(47vh);
   border-bottom: 1px dashed black;
 }
 
-.grafic-2{
+.grafic-2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -651,24 +644,65 @@ div.leaflet-sidebar.right.visible{
   height: 50vh;
 }
 
-.graph{
+.graph {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 60%;
 }
-.mover-grafic{
+.mover-grafic {
   margin-left: 350px;
   display: block;
 }
 
 /* page Responsive*/
 
-@media screen and (max-height: 450px) {
-  .sidebar {
-    padding-top: 15px;
+.tamanoA {
+  margin-left: 100px;
+  width: 97vw;
+  height: 95vh;
+  margin-right: 0px;
+  left: -39px;
+}
+
+.tamanoB {
+  margin-left: 100px;
+  left: -39px;
+  height: 95vh;
+  width: calc(97vw - 290px);
+  margin-right: 0px;
+}
+
+.tamanoC {
+  margin-left: 100px;
+  left: 360px;
+  height: 95vh;
+  width: calc(76vw - 290px);
+  margin-right: 0px;
+}
+
+@media only screen and (max-width: 992px) {
+  .tamanoA {
+    margin-left: 100px;
+    margin-right: 0px;
+    left: -39;
+    width: 96vw;
+    height: 91.5vh;
   }
-  .sidebar a {
-    font-size: 18px;
+
+  .tamanoB {
+    margin-left: 100px;
+    left: -39px;
+    margin-right: 0px;
+    height: 91.5vh;
+    width: 75.5vw;
+  }
+
+  .tamanoC {
+    margin-left: 100px;
+    left: 360px;
+    margin-right: 0px;
+    height: 91.8vh;
+    width: 47.5vw;
   }
 }
