@@ -69,7 +69,7 @@
     <!-- Fin L.Draw -->
 
     <!-- Geocoder -->
-    <link rel="stylesheet" href="./style/leaflet-control-geocoder.css" />
+    <link rel="stylesheet" href="./style/leaflet-control-geocoder.css">
     <script src="./js/leaflet-control-geocoder.js"></script>
     <!-- Fin Geocoder -->
 
@@ -88,32 +88,27 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
+    
 
     <link rel="stylesheet" href="sidebar.css" />
 
     <!--Chart js-->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"
-      type="text/javascript"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js" type="text/javascript"></script>
+
+
   </head>
   <body>
     <!--Inicio del navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div
-        class="container-fluid"
-        style="
-          justify-content: flex-start;
-          padding-left: 6px;
-          padding-top: 0px;
-          margin-top: 0px;
-        "
-      >
-        <a class="navbar-brand" href="#">
-          <img src="img/TACOIN.png" style="width: 45px" alt="" /><span
-            style="padding-left: 5px"
-            >TACOIN EA</span
-          ></a
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+      <div class="container-fluid" style="justify-content: flex-start; padding-left: 6px; padding-top: 0px;
+  margin-top: 0px;">
+        <a class="navbar-brand" href="#"
+          >
+          <img
+          src="img/TACOIN.png"
+          style="width: 45px"
+          alt=""
+        /><span style="padding-left: 5px;">TACOIN EA</span></a
         >
         <div id="geosidebar"></div>
         <div class="collapse" id="navbarSupportedContent"></div>
@@ -121,28 +116,13 @@
     </nav>
     <!--Fin del navbar-->
 
-    <div
-      class="wrapper-sidebar"
-      style="
-        padding-left: 0px;
-        margin-left: 0px;
-        padding-top: 0px;
-        margin-top: 0px;
-      "
-    >
-      <nav
-        id="mySidebar"
-        class="sidebar"
-        style="
-          padding-left: 0px;
-          margin-left: 0px;
-          padding-top: 0px;
-          margin-top: 0px;
-        "
-      >
+    <div class="wrapper-sidebar" style="padding-left: 0px; margin-left: 0px; padding-top: 0px;
+  margin-top: 0px;">
+      <nav id="mySidebar" class="sidebar" style="padding-left: 0px; margin-left: 0px; padding-top: 0px;
+  margin-top: 0px;">
         <ul>
           <li>
-            <a href="#" id="lupa-fuera"
+            <a href="#" id="lupa"
               ><i class="fas fa-home"></i
               ><i id="triangle3" class="fas fa-caret-left"></i
             ></a>
@@ -167,42 +147,62 @@
       <!--Primer sub menu "search"-->
       <div id="sub-menu-search" class="sidebar-search">
         <div class="centrar-1">
-          <div class="title-menu">Estructura Orgánica</div>
+          <div class="title-menu">
+            Estructura Orgánica
+          </div>
           <div class="scroll_A">
             <ul id="subMenuB" class="alto_elemento_menu">
               <li id="uni-militares" class="uni-mili">
-                <a href="#"> Unidades militares </a>
+                <a href="#">
+                  Unidades militares
+                </a>
               </li>
               <li id="universidades" class="univers">
-                <a href="#"> Universidades </a>
+                <a href="#">
+                  Universidades
+                </a>
               </li>
               <li id="limite-arg" class="linea-ferr">
-                <a href="#"> Líneas de ferrocarril </a>
+                <a href="#">
+                  Líneas de ferrocarril
+                </a>
               </li>
             </ul>
           </div>
         </div>
         <div class="centrar-2">
-          <div class="title-menu">Áreas de la Conducción</div>
+          <div class="title-menu">
+            Áreas de la Conducción
+          </div>
           <div class="scroll_B">
             <ul id="submenu2" class="alto_elemento_menu">
               <li id="personal">
-                <a href="#"> Personal </a>
+                <a href="#">
+                  Personal
+                </a>
               </li>
               <li id="inteligencia">
-                <a href="#"> Inteligencia </a>
+                <a href="#">
+                  Inteligencia
+                </a>
               </li>
               <li id="operaciones">
-                <a href="#"> Operaciones </a>
+                <a href="#">
+                  Operaciones
+                </a>
               </li>
               <li id="material">
-                <a href="#"> Material </a>
+                <a href="#">
+                  Material
+                </a>
               </li>
               <li id="finanzas">
-                <a href="#"> Finanzas </a>
+                <a href="#">
+                  Finanzas
+                </a>
               </li>
             </ul>
-          </div>
+          </div>     
         </div>
       </div>
       <!--Primer sub menu "search"-->
@@ -221,12 +221,7 @@
               </h4>
             </a>
           </li>
-          <li
-            id="EA-mil"
-            class="borde prueba"
-            data-fuerza="EA"
-            data-cod_uni="U2240"
-          >
+          <li id="EA-mil" class="borde prueba" data-fuerza="EA" data-cod_uni="U2240">
             <a href="#">
               <img
                 id="logo"
@@ -283,8 +278,7 @@
             data-universidad="publica"
           >
             <a href="#">
-              <img
-                id="logo-unis"
+              <img id="logo-unis"
                 src="img/universidad_nac.svg"
                 alt="Universidades Nacionales"
               />
@@ -297,8 +291,7 @@
             data-universidad="privada"
           >
             <a href="#">
-              <img
-                id="logo-unis"
+              <img id="logo-unis"
                 src="img/universidad_otras.svg"
                 alt="Universidades Privadas"
                 style="width: 25px"
@@ -336,144 +329,144 @@
       </div>
       <!--cuarto sub menu "search" / limite internacional-->
 
-      <!--Quinto sub menu "search" / Personal-->
-      <div id="sub-menu-search5" class="sidebar-search" style="display: none">
-        <ul id="subMenuB">
-          <li id="title-person">
-            <a href="#">
-              <h4>
-                Personal<i
-                  class="fas fa-times"
-                  style="padding-left: 45px"
-                  id="crossicon"
-                ></i>
-              </h4>
-            </a>
-          </li>
-          <li id="personal-1" class="borde prueba">
-            <a href="#">
-              <p>Item 1</p>
-            </a>
-          </li>
-          <li id="personal-2" class="borde prueba">
-            <a href="#">
-              <p>Item 2</p>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!--Quinto sub menu "search" / Unidades militares-->
+        <!--Quinto sub menu "search" / Personal-->
+        <div id="sub-menu-search5" class="sidebar-search" style="display: none;">
+          <ul id="subMenuB">
+            <li id="title-person">
+              <a href="#">
+                <h4>
+                  Personal<i
+                    class="fas fa-times"
+                    style="padding-left: 45px"
+                    id="crossicon"
+                  ></i>
+                </h4>
+              </a>
+            </li>
+            <li id="personal-1" class="borde prueba">
+              <a href="#">
+                <p>Item 1</p>
+              </a>
+            </li>
+            <li id="personal-2" class="borde prueba">
+              <a href="#">
+                <p>Item 2</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!--Quinto sub menu "search" / Unidades militares-->
 
-      <!--Sexto sub menu "search" / Inteligencia-->
-      <div id="sub-menu-search6" class="sidebar-search" style="display: none">
-        <ul id="subMenuB">
-          <li id="title-intel">
-            <a href="#" id="Item1">
-              <h4>
-                Inteligencia<i
-                  class="fas fa-times"
-                  style="padding-left: 45px"
-                  id="crossicon"
-                ></i>
-              </h4>
-            </a>
-          </li>
-          <li id="inteligencia-1" class="borde prueba">
-            <a href="#">
-              <p>Item 1</p>
-            </a>
-          </li>
-          <li id="inteligencia-2" class="borde prueba">
-            <a href="#">
-              <p>Item 2</p>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!--Sexto sub menu "search" / -->
+        <!--Sexto sub menu "search" / Inteligencia-->
+        <div id="sub-menu-search6" class="sidebar-search" style="display: none;">
+          <ul id="subMenuB">
+            <li id="title-intel">
+              <a href="#" id="Item1">
+                <h4>
+                  Inteligencia<i
+                    class="fas fa-times"
+                    style="padding-left: 45px"
+                    id="crossicon"
+                  ></i>
+                </h4>
+              </a>
+            </li>
+            <li id="inteligencia-1" class="borde prueba" >
+              <a href="#">
+                <p>Item 1</p>
+              </a>
+            </li>
+            <li id="inteligencia-2" class="borde prueba">
+              <a href="#">
+                <p>Item 2</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!--Sexto sub menu "search" / -->
 
-      <!--Septimo sub menu "search" / Operaciones-->
-      <div id="sub-menu-search7" class="sidebar-search" style="display: none">
-        <ul id="subMenuB">
-          <li id="title-opera">
-            <a href="#" id="Item1">
-              <h4>
-                Operaciones<i
-                  class="fas fa-times"
-                  style="padding-left: 45px"
-                  id="crossicon"
-                ></i>
-              </h4>
-            </a>
-          </li>
-          <li id="personal-1" class="borde prueba" data-fuerza="EA">
-            <a href="#">
-              <p>Item 1</p>
-            </a>
-          </li>
-          <li id="personal-2" class="borde prueba" data-fuerza="Armada">
-            <a href="#">
-              <p>Item 2</p>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!--Septimo sub menu "search" /-->
-      <!--Septimo sub menu "search" / Material-->
-      <div id="sub-menu-search8" class="sidebar-search" style="display: none">
-        <ul id="subMenuB">
-          <li id="title-mate">
-            <a href="#" id="Item1">
-              <h4>
-                Material<i
-                  class="fas fa-times"
-                  style="padding-left: 45px"
-                  id="crossicon"
-                ></i>
-              </h4>
-            </a>
-          </li>
-          <li id="personal-1" class="borde prueba" data-fuerza="EA">
-            <a href="#">
-              <p>Item 1</p>
-            </a>
-          </li>
-          <li id="personal-2" class="borde prueba" data-fuerza="Armada">
-            <a href="#">
-              <p>Item 2</p>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!--Octavo sub menu "search" /-->
-      <!--noveno sub menu "search" / -->
-      <div id="sub-menu-search9" class="sidebar-search" style="display: none">
-        <ul id="subMenuB">
-          <li id="title-fina">
-            <a href="#" id="Item1">
-              <h4>
-                Finanzas
-                <i
-                  class="fas fa-times"
-                  style="padding-left: 45px"
-                  id="crossicon"
-                ></i>
-              </h4>
-            </a>
-          </li>
-          <li id="personal-1" class="borde prueba" data-fuerza="EA">
-            <a href="#">
-              <p>Item 1</p>
-            </a>
-          </li>
-          <li id="personal-2" class="borde prueba" data-fuerza="Armada">
-            <a href="#">
-              <p>Item 2</p>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!--Septimo sub menu "search" /-->
+        <!--Septimo sub menu "search" / Operaciones-->
+        <div id="sub-menu-search7" class="sidebar-search" style="display:none">
+          <ul id="subMenuB">
+            <li id="title-opera">
+              <a href="#" id="Item1">
+                <h4>
+                  Operaciones<i
+                    class="fas fa-times"
+                    style="padding-left: 45px"
+                    id="crossicon"
+                  ></i>
+                </h4>
+              </a>
+            </li>
+            <li id="personal-1" class="borde prueba" data-fuerza="EA">
+              <a href="#">
+                <p>Item 1</p>
+              </a>
+            </li>
+            <li id="personal-2" class="borde prueba" data-fuerza="Armada">
+              <a href="#">
+                <p>Item 2</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!--Septimo sub menu "search" /-->
+         <!--Septimo sub menu "search" / Material-->
+         <div id="sub-menu-search8" class="sidebar-search" style="display: none;">
+          <ul id="subMenuB">
+            <li id="title-mate">
+              <a href="#" id="Item1">
+                <h4>
+                  Material<i
+                    class="fas fa-times"
+                    style="padding-left: 45px"
+                    id="crossicon"
+                  ></i>
+                </h4>
+              </a>
+            </li>
+            <li id="personal-1" class="borde prueba" data-fuerza="EA">
+              <a href="#">
+                <p>Item 1</p>
+              </a>
+            </li>
+            <li id="personal-2" class="borde prueba" data-fuerza="Armada">
+              <a href="#">
+                <p>Item 2</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!--Octavo sub menu "search" /-->
+         <!--noveno sub menu "search" / -->
+         <div id="sub-menu-search9" class="sidebar-search" style="display: none;">
+          <ul id="subMenuB">
+            <li id="title-fina">
+              <a href="#" id="Item1">
+                <h4>
+                  Finanzas
+                  <i
+                    class="fas fa-times"
+                    style="padding-left: 45px"
+                    id="crossicon"
+                  ></i>
+                </h4>
+              </a>
+            </li>
+            <li id="personal-1" class="borde prueba" data-fuerza="EA">
+              <a href="#">
+                <p>Item 1</p>
+              </a>
+            </li>
+            <li id="personal-2" class="borde prueba" data-fuerza="Armada">
+              <a href="#">
+                <p>Item 2</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!--Septimo sub menu "search" /-->
 
       <!--primer sub menu "info" / buscador-->
       <div id="sub-menu-info" class="sidebar-search-info">
@@ -507,14 +500,14 @@
     <!--Fin del wrapper-sidebar-->
 
     <!--Graficos-->
-    <div class="graficos" style="position: absolute; z-index: 1">
+    <div class="graficos" style="position: absolute; z-index: 1;">
       <div class="grafic-1">
-        <img class="graph" src="img/graph.svg" alt="Diagrama" />
+        
         <!--<canvas id="myChart" width="100" height="100" style="z-index: 1;position: absolute;"></canvas>-->
       </div>
       <div class="grafic-2">
-        <img class="graph" src="img/diagram.svg" alt="Diagrama-torta" />
-        <!-- <canvas id="myChart2" width="100" height="100" style="z-index: 1;position: absolute;"></canvas>-->
+        
+       <!-- <canvas id="myChart2" width="100" height="100" style="z-index: 1;position: absolute;"></canvas>-->
       </div>
     </div>
 
@@ -523,26 +516,11 @@
     <!--Esta es la ultima actualizacion-->
 
     <!--Aca esta el mapa-->
-    <div
-      id="page-content-wrapper"
-      style="
-        padding-left: 0px;
-        margin-left: 0px;
-        padding-top: 0px;
-        margin-top: 0px;
-      "
-    >
-      <div
-        id="map-cenope"
-        class="container-fluid"
-        style="
-          padding-left: 0px;
-          margin-left: 0px;
-          padding-top: 0px;
-          margin-top: 0px;
-        "
-      >
-        <div id="sidebar" style="overflow-y: hidden;">
+    <div id="page-content-wrapper" style="padding-left: 0px; margin-left: 0px; padding-top: 0px;
+  margin-top: 0px;">
+      <div id="map-cenope" class="container-fluid" style="padding-left: 0px; margin-left: 0px; padding-top: 0px;
+  margin-top: 0px;">
+        <div id="sidebar">          
           <p id="detalles"></p>
         </div>
         <div id="mapa" class="tamanoA"></div>
@@ -571,11 +549,14 @@
 
     <!--Script del MAPA-->
     <script type="text/javascript">
-      $(document).ready(function () {
+      $(document).ready(function() {
         mostrar_marcadores("TODOS");
       });
 
-      var map = L.map("mapa", { zoomControl: false }).setView([-40, -59], 4);
+      var map = L.map("mapa", { zoomControl: false }).setView(
+        [-40, -59],
+        4
+      );
       L.tileLayer(
         "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG%3A3857@png/{z}/{x}/{-y}.png",
         {
@@ -623,16 +604,16 @@
       );
 
       var sidebar = L.control.sidebar("sidebar", {
-        position: "right",
+        position: "right"
       });
       map.addControl(sidebar);
 
-      map.on("click", function () {
-        sidebar.hide();
-      });
+      map.on('click', function () {
+            sidebar.hide();
+        })
 
-      map.on("popupclose", function () {
-        sidebar.hide();
+        map.on('popupclose', function() {
+            sidebar.hide();
       });
 
       //ZOOM HOME
@@ -805,36 +786,29 @@
         },
       });
 
-      function openSidebar() {
+      function openSidebar(){
         sidebar.show();
       }
       function masInfo(info) {
-        //var cod_uni = $(info).data("cod_uni");
-        //var cod_unisup = $(info).data("cod_unisup");
+        var cod_uni = $(info).data("cod_uni");
+        var cod_unisup = $(info).data("cod_unisup");
         //alert ("Cod Uni: "+cod_uni);
         document.getElementById("detalles").innerHTML =
-          //   "ID: " +
-          $(info).data("img") +
-          '<h1 style="text-align: center;">' +
-          $(info).data("fuerza") +
-          "</h1><hr/>Tipo: " +
-          $(info).data("objeto") +
-          "<br/>Nombre: " +
-          $(info).data("nombre") +
-          "<br/>Fuente: " +
-          $(info).data("fuente");
+        //   "ID: " +
+        $(info).data("img") +
+        '<h4 style="text-align: center; padding-top: 10px; margin-bottom: 10px; text-transform: uppercase;">' +
+        $(info).data("nombre") +
+        "</h4><div style='padding-top:10px; border-top: 1px solid gray; font-size:14px;'><div class='row' style='background-color:#eeeeee; min-height: 30px; margin-left: 0px; margin-right:0px; padding-left:1px; padding-right:1px; align-content: center;'><div class='col-md-6' style='font-weight:bold;'>Localidad</div><div class='col-md-6' style='text-transform: uppercase;'>" +
+        $(info).data("localidad") +
+        "</div></div><div class='row' style='min-height: 30px; margin-left: 0px; margin-right:0px; padding-left:1px; padding-right:1px; align-content: center;'><div class='col-md-6' style='font-weight:bold;'>Nodo</div><div class='col-md-6' style='text-transform: uppercase;'>" +
+        $(info).data("nodo") +
+        "</div></div><div class='row' style='background-color:#eeeeee; min-height: 30px; margin-left: 0px; margin-right:0px; padding-left:1px; padding-right:1px; align-content: center;'><div class='col-md-6' style='font-weight:bold;'>Arma</div><div class='col-md-6' style='text-transform: uppercase;'>" +
+        $(info).data("arma") +
+        "</div></div><div class='row' style='min-height: 30px; margin-left: 0px; margin-right:0px; padding-left:1px; padding-right:1px; align-content: center;'><div class='col-md-6' style='font-weight:bold;'>Fuente de información</div><div class='col-md-6'>" +
+        $(info).data("fuente") + "</div></div></div>";
         openSidebar();
       }
-
-      var toPrintGraphics = "<div style='height:calc(48vh - 35.5px); overflow:hidden'><img src='img/toPrintSideA.svg' alt='graphB' style='width:100%;height:auto;'></div><br/><div style='height:calc(48vh - 35.5px); overflow-y:hidden' class='punteado'><img src='img/toPrintSideB.svg' alt='graphB' style='width:100%;height:auto'>"
-
-      function graficosSidebar() {
-        //var cod_uni = $(info).data("cod_uni");
-        //var cod_unisup = $(info).data("cod_unisup");
-        //alert ("Cod Uni: "+cod_uni);
-        document.getElementById("detalles").innerHTML = toPrintGraphics;
-        openSidebar();
-      }
+      
 
       var fuerza_aerea;
       $("#FFAA").click(function () {
@@ -864,7 +838,7 @@
                       "' data-fuente='" +
                       feature.properties.sag +
                       "' data-img='" +
-                      '<center><img src="./img/Logo_Fuerza-Aerea.png" style="max-width: 20%; height: auto;"/></center>' +
+                      '<center><img src="./img/Logo_Fuerza-Aerea.png" style="max-width: 20%; height: auto;"/></center>' + 
                       "' onclick='masInfo(this)'>Mas información</a>"
                   );
                 },
@@ -907,7 +881,7 @@
                       "' data-fuente='" +
                       feature.properties.sag +
                       "' data-img='" +
-                      '<center><img src="./img/Escudo_armada_argentina_banderolas.png" style="max-width: 20%; height: auto;"/></center>' +
+                      '<center><img src="./img/Escudo_armada_argentina_banderolas.png" style="max-width: 20%; height: auto;"/></center>' + 
                       "' onclick='masInfo(this)'>Mas información</a>"
                   );
                 },
@@ -923,51 +897,51 @@
       });
 
       /*
-        var ejercito;
-        $("#EA-mil").click(function () {
-          var clicks = $(this).data("clicks");
-          if (!clicks) {
-            fetch("./geojson/instalacion_militar.geojson")
-              .then((response) => response.json())
-              .then((data) => {
-                ejercito = L.geoJSON(data, {
-                  pointToLayer: function (feature, latlng) {
-                    return L.marker(latlng, { icon: new EjercitoSvg() });
-                  },
-                  onEachFeature: function (feature, layer) {
-                    layer.bindPopup(
-                      '<b style="font-size: 14px;"><img src="./img/Escudo_del_Ejército_Argentino.png" style="width: 24px; height: 24px"/> ' +
-                        feature.properties.fdc +
-                        "<br><b>Nombre</b>: " +
-                        feature.properties.fna +
-                        "<br><a href=# data-id='" +
-                        feature.properties.gid +
-                        "' data-fuerza='" +
-                        feature.properties.fdc +
-                        "' data-objeto='" +
-                        feature.properties.objeto +
-                        "' data-nombre='" +
-                        feature.properties.fna +
-                        "' data-fuente='" +
-                        feature.properties.sag +
-                        "' data-img='" +
-                        '<center><img src="./img/Escudo_del_Ejército_Argentino.png" style="max-width: 20%; height: auto;"/></center>' +
-                        "' onclick='masInfo(this)'>Mas información</a>"
-                    );
-                  },
-                  filter: function (feature) {
-                    return feature.properties.fdc == "Ejército Argentino";
-                  },
-                }).addTo(map);
-              });
-          } else {
-            map.removeLayer(ejercito);
-          }
-          $(this).data("clicks", !clicks);
-        });
-        */
+      var ejercito;
+      $("#EA-mil").click(function () {
+        var clicks = $(this).data("clicks");
+        if (!clicks) {
+          fetch("./geojson/instalacion_militar.geojson")
+            .then((response) => response.json())
+            .then((data) => {
+              ejercito = L.geoJSON(data, {
+                pointToLayer: function (feature, latlng) {
+                  return L.marker(latlng, { icon: new EjercitoSvg() });
+                },
+                onEachFeature: function (feature, layer) {
+                  layer.bindPopup(
+                    '<b style="font-size: 14px;"><img src="./img/Escudo_del_Ejército_Argentino.png" style="width: 24px; height: 24px"/> ' +
+                      feature.properties.fdc +
+                      "<br><b>Nombre</b>: " +
+                      feature.properties.fna +
+                      "<br><a href=# data-id='" +
+                      feature.properties.gid +
+                      "' data-fuerza='" +
+                      feature.properties.fdc +
+                      "' data-objeto='" +
+                      feature.properties.objeto +
+                      "' data-nombre='" +
+                      feature.properties.fna +
+                      "' data-fuente='" +
+                      feature.properties.sag +
+                      "' data-img='" +
+                      '<center><img src="./img/Escudo_del_Ejército_Argentino.png" style="max-width: 20%; height: auto;"/></center>' + 
+                      "' onclick='masInfo(this)'>Mas información</a>"
+                  );
+                },
+                filter: function (feature) {
+                  return feature.properties.fdc == "Ejército Argentino";
+                },
+              }).addTo(map);
+            });
+        } else {
+          map.removeLayer(ejercito);
+        }
+        $(this).data("clicks", !clicks);
+      });
+      */
       //Fin GeoJSON
     </script>
-    <script src="js/graficos.js" type="text/javascript"></script>
-  </body>
+    <!--<script src="js/graficos.js" type="text/javascript"></script>-->
+</body>
 </html>
