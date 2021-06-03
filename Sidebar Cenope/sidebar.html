@@ -1,139 +1,97 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TACOIN EA</title>
-    <!--Favicon-->
-    <link rel="icon" href="img/Escudo_del_Ejército_Argentino.png" />
-    <!--CDN - bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
-      crossorigin="anonymous"
-    />
 
-    <!--1-->
-    <!-- 1 Leaflet -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-    />
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
-    <!-- Fin Leaflet -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TACOIN EA</title>
+  <!--Favicon-->
+  <link rel="icon" href="img/Escudo_del_Ejército_Argentino.png" />
+  <!--CDN - bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous" />
 
-    <!--2-->
-    <!-- 2 Leaflet Zoom Home -->
-    <link
-      rel="stylesheet"
-      href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="js/leaflet.zoomhome.min.js" />
-    <script src="js/leaflet.zoomhome.min.js"></script>
-    <!-- Fin Zoom Home -->
-    <!-- Locate Control -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.73.0/dist/L.Control.Locate.min.css"
-    />
+  <!--1-->
+  <!-- 1 Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+  <!-- Fin Leaflet -->
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.73.0/dist/L.Control.Locate.min.js"
-      charset="utf-8"
-    ></script>
-    <!-- Fin Locate Control s-->
-    <!--3-->
-    <!-- 3 Leaflet.PolylineMeasure -->
-    <link
-      rel="stylesheet"
-      href="https://ppete2.github.io/Leaflet.PolylineMeasure/Leaflet.PolylineMeasure.css"
-    />
-    <script src="https://ppete2.github.io/Leaflet.PolylineMeasure/Leaflet.PolylineMeasure.js"></script>
-    <!-- Fin Leaflet.PolylineMeasure -->
+  <!--2-->
+  <!-- 2 Leaflet Zoom Home -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="js/leaflet.zoomhome.min.js" />
+  <script src="js/leaflet.zoomhome.min.js"></script>
+  <!-- Fin Zoom Home -->
+  <!-- Locate Control -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.73.0/dist/L.Control.Locate.min.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/leaflet-sidebar@0.2.4/src/L.Control.Sidebar.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/leaflet-sidebar@0.2.4/src/L.Control.Sidebar.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.73.0/dist/L.Control.Locate.min.js"
+    charset="utf-8"></script>
+  <!-- Fin Locate Control s-->
+  <!--3-->
+  <!-- 3 Leaflet.PolylineMeasure -->
+  <link rel="stylesheet" href="https://ppete2.github.io/Leaflet.PolylineMeasure/Leaflet.PolylineMeasure.css" />
+  <script src="https://ppete2.github.io/Leaflet.PolylineMeasure/Leaflet.PolylineMeasure.js"></script>
+  <!-- Fin Leaflet.PolylineMeasure -->
 
-    <!--4-->
-    <!-- L.Draw -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.js"></script>
-    <!-- Fin L.Draw -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-sidebar@0.2.4/src/L.Control.Sidebar.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/leaflet-sidebar@0.2.4/src/L.Control.Sidebar.min.js"></script>
 
-    <!-- Geocoder -->
-    <link rel="stylesheet" href="./style/leaflet-control-geocoder.css">
-    <script src="./js/leaflet-control-geocoder.js"></script>
-    <!-- Fin Geocoder -->
+  <!--4-->
+  <!-- L.Draw -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.js"></script>
+  <!-- Fin L.Draw -->
 
-    <!--Google font-->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <!--CDN font aweson-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    
+  <!-- Geocoder -->
+  <link rel="stylesheet" href="./style/leaflet-control-geocoder.css">
+  <script src="./js/leaflet-control-geocoder.js"></script>
+  <!-- Fin Geocoder -->
 
-    <link rel="stylesheet" href="sidebar.css" />
-
-    <!--Chart js-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js" type="text/javascript"></script>
+  <!--Google font-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
+  <!--CDN font aweson-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
 
-  </head>
-  <body> 
-    <!--Inicio del navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
-      <div class="container-fluid" style="justify-content: flex-start; padding-left: 6px; padding-top: 0px;
+  <link rel="stylesheet" href="sidebar.css" />
+
+  <!--Chart js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js" type="text/javascript"></script>
+
+
+</head>
+
+<body>
+  <!--Inicio del navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid" style="justify-content: flex-start; padding-left: 6px; padding-top: 0px;
       margin-top: 0px;">
-        <a class="navbar-brand" href="#"
-          >
-          <img
-          src="img/TACOIN.png"
-          style="width: 45px"
-          alt=""
-        /><span style="padding-left: 5px;">TACOIN EA</span></a
-        >
-        <div id="geosidebar"></div>
-        <div class="collapse" id="navbarSupportedContent"></div>
-      </div>
-    </nav>
-    <!--Fin del navbar-->
+      <a class="navbar-brand" href="#">
+        <img src="img/TACOIN.png" style="width: 45px" alt="" /><span style="padding-left: 5px;">TACOIN EA</span></a>
+      <div id="geosidebar"></div>
+      <div class="collapse" id="navbarSupportedContent"></div>
+    </div>
+  </nav>
+  <!--Fin del navbar-->
 
-    <div class="wrapper-sidebar" style="padding-left: 0px; margin-left: 0px; padding-top: 0px;
+  <div class="wrapper-sidebar" style="padding-left: 0px; margin-left: 0px; padding-top: 0px;
        margin-top: 0px;">
-      <nav id="mySidebar" class="sidebar" style="padding-left: 0px; margin-left: 0px; padding-top: 0px;
+    <nav id="mySidebar" class="sidebar" style="padding-left: 0px; margin-left: 0px; padding-top: 0px;
          margin-top: 0px;">
-        <ul>
-          <li>
-            <a href="#" id="lupa"
-              ><i class="fas fa-home"></i
-              ><i id="triangle3" class="fas fa-caret-left"></i
-            ></a>
-          </li>
-          <li>
-            <a href="#" id="search"
-              ><i class="fas fa-layer-group"></i
-              ><i id="triangle2" class="fas fa-caret-left"></i
-            ></a>
-          </li>
-          <!--
+      <ul>
+        <li>
+          <a href="#" id="lupa"><i class="fas fa-home"></i><i id="triangle3" class="fas fa-caret-left"></i></a>
+        </li>
+        <li>
+          <a href="#" id="search"><i class="fas fa-layer-group"></i><i id="triangle2" class="fas fa-caret-left"></i></a>
+        </li>
+        <!--
           <li>
             <a href="#" id="info-fuera"
               ><i class="fas fa-info-circle"></i
@@ -141,26 +99,21 @@
             ></a>
           </li>
           -->
-        </ul>
-      </nav>
+      </ul>
+    </nav>
 
-      <!--Primer sub menu "search"-->
-      <div id="sub-menu-search" class="sidebar-search">
-        <div class="centrar-1">
-          <div class="title-menu">
-            Estructura Orgánica
-          </div>
-          <div class="scroll_A">
-            <ul id="subMenuB" class="alto_elemento_menu">
-            <div id="click-EA">
+    <!--Primer sub menu "search"-->
+    <div id="sub-menu-search" class="sidebar-search">
+      <div class="centrar-1">
+        <div class="title-menu">
+          Estructura Orgánica
+        </div>
+        <div class="scroll_A">
+          <ul id="subMenuB" class="alto_elemento_menu">
+            <div id="click-EA" onclick="graficosSidebar()">
               <li id="EA-mil" class="borde prueba" data-fuerza="EA" data-cod_uni="U2240">
-                <a href="#">
-                  <img
-                    id="logo"
-                    src="img/Escudo_del_Ejército_Argentino.png"
-                    alt="EA"
-                    style="width: 25px"
-                  />
+                <a href="#" >
+                  <img id="logo" src="img/Escudo_del_Ejército_Argentino.png" alt="EA" style="width: 25px" />
                   <p>Ejército Argentino</p>
 
                 </a>
@@ -168,74 +121,64 @@
             </div>
             <li id="arm-arg" class="borde prueba" data-fuerza="Armada">
               <a href="#">
-                <img
-                  id="logo"
-                  src="img/Escudo_armada_argentina_banderolas.png"
-                  alt="EA"
-                  style="width: 25px"
-                />
+                <img id="logo" src="img/Escudo_armada_argentina_banderolas.png" alt="EA" style="width: 25px" />
                 <p>Armada Argentina</p>
               </a>
             </li>
             <li id="FFAA" class="borde prueba" data-fuerza="Aerea">
               <a href="#">
-                <img
-                  id="logo"
-                  src="img/Logo_Fuerza-Aerea.png"
-                  alt="EA"
-                  style="width: 32px"
-                />
+                <img id="logo" src="img/Logo_Fuerza-Aerea.png" alt="EA" style="width: 32px" />
                 <p>Fuerza Aérea Argentina</p>
               </a>
             </li>
-            </ul>
-          </div>
-        </div>
-        <div class="centrar-2">
-          <div class="title-menu">
-            Áreas de la Conducción
-          </div>
-          <div class="scroll_B">
-            <ul id="submenu2" class="alto_elemento_menu">
-              <li id="personal">
-                <a href="#">
-                  Personal
-                </a>
-              </li>
-              <li id="inteligencia">
-                <a href="#">
-                  Inteligencia
-                </a>
-              </li>
-              <li id="operaciones">
-                <a href="#">
-                  Operaciones
-                </a>
-              </li>
-              <li id="material">
-                <a href="#">
-                  Material
-                </a>
-              </li>
-              <li id="finanzas">
-                <a href="#">
-                  Finanzas
-                </a>
-              </li>
-            </ul>
-          </div>     
+          </ul>
         </div>
       </div>
-      <!--Primer sub menu "search"-->
-
-      <!--Segundo sub menu "search" / Unidades militares-->
-      <div id="sub-menu-ejer-arg" class="sidebar-search">
+      <div class="centrar-2">
         <div class="title-menu">
-          Estructura Orgánica
+          Áreas de la Conducción
         </div>
-        <ul id="subMenuB">
-          <li id="title-ejer-arg">
-            <!--
+        <div class="scroll_B">
+          <ul id="submenu2" class="alto_elemento_menu">
+            <li id="personal">
+              <a href="#">
+                Personal
+              </a>
+            </li>
+            <li id="inteligencia">
+              <a href="#">
+                Inteligencia
+              </a>
+            </li>
+            <li id="operaciones">
+              <a href="#">
+                Operaciones
+              </a>
+            </li>
+            <li id="material">
+              <a href="#">
+                Material
+              </a>
+            </li>
+            <li id="finanzas">
+              <a href="#">
+                Finanzas
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--Primer sub menu "search"-->
+
+    <!--Segundo sub menu "search" / Unidades militares-->
+    <div id="sub-menu-ejer-arg" class="sidebar-search">
+      <div class="title-menu">
+        Estructura Orgánica
+      </div>
+      <ul id="subMenuB">
+        <li id="title-ejer-arg">
+          <!--
             <a href="#">
               <h4>
                 Ejército Argentino<i
@@ -246,463 +189,402 @@
               </h4>
             </a>
             -->
-            <a href="#">
-              <img id="logo" src="img/Escudo_del_Ejército_Argentino.png" alt="EA" style="width: 25px">
-              <p>Ejército Argentino</p>
-              <i class="fas fa-times" style="padding-left: 45px" id="crossicon-ejer"></i> <!--Boton x-->
-            </a>
-          </li>
-          <li id="cond-sup" class="ejer-items">
-            <p>Conducción Superior</p>
-          </li>
+          <a href="#">
+            <img id="logo" src="img/Escudo_del_Ejército_Argentino.png" alt="EA" style="width: 25px">
+            <p>Ejército Argentino</p>
+            <i class="fas fa-times" style="padding-left: 45px" id="crossicon-ejer"></i>
+            <!--Boton x-->
+          </a>
+        </li>
+        <li id="cond-sup" class="ejer-items">
+          <p>Conducción Superior</p>
+        </li>
+        <li id="fuerza-ope" class="ejer-items">
+          <p>Fuerza Operativa</p>
+        </li>
+        <li id="fuerza-sost" class="ejer-items">
+          <p>Fuerza de sostenimiento</p>
+        </li>
+        <li id="sist-edu" class="ejer-items">
+          <p>Sistema Educativo</p>
+        </li>
+      </ul>
+    </div>
+
+    <!--Sub-menu Conduccion superior-->
+
+    <div id="sub-menu-conduc-sup" class="sidebar-search">
+      <div class="title-menu">
+        Estructura Orgánica
+      </div>
+      <ul id="subMenuB">
+        <li id="title-ejer-arg">
+
+          <a href="#">
+            <img id="logo" src="img/Escudo_del_Ejército_Argentino.png" alt="EA" style="width: 25px">
+            <p>Ejército Argentino</p>
+          </a>
+        </li>
+        <li id="cond-sup" class="ejer-items">
+          <p>Conducción Superior</p>
+          <a href="#">
+            <i class="fas fa-times" style="padding-left: 45px" id="crossicon-conduc"></i>
+          </a>
+        </li>
+        <div id="items-conduccion">
           <li id="fuerza-ope" class="ejer-items">
-            <p>Fuerza Operativa</p>
+            <p>Dir Gral Pers Bien</p>
           </li>
-          <li id="fuerza-sost" class="ejer-items">
-            <p>Fuerza de sostenimiento</p>
+          <li id="direc1" class="ejer-items">
+            <p>Dir Gral Inves Dllo</p>
           </li>
-          <li id="sist-edu" class="ejer-items">
-            <p>Sistema Educativo</p>
+          <li id="direc2" class="ejer-items">
+            <p>Dir Gral Icia</p>
           </li>
-        </ul>
+          <li id="direc3" class="ejer-items">
+            <p>Dir Gral Adm Fin</p>
+          </li>
+          <li id="direc4" class="ejer-items">
+            <p>Dir Gral Mat</p>
+          </li>
+          <li id="direc5" class="ejer-items">
+            <p>Dir Gral Com Info</p>
+          </li>
+          <li id="direc6" class="ejer-items">
+            <p>Dir Gral As Jur</p>
+          </li>
+          <li id="direc7" class="ejer-items">
+            <p>Dir Gral Educ</p>
+          </li>
+          <li id="direc8" class="ejer-items">
+            <p>Dir Gral Org Doct</p>
+          </li>
+          <li id="direc9" class="ejer-items">
+            <p>Dir Gral Pl(S) Prog(S) Presup</p>
+          </li>
+          <li id="direc10" class="ejer-items">
+            <p>Dir Gral Sal</p>
+          </li>
+          <li id="direc11" class="ejer-items">
+            <p>Secr A y Te JEMGE</p>
+          </li>
+          <li id="direc12" class="ejer-items">
+            <p>Secr Coord SUBJEMGE</p>
+          </li>
+          <li id="direc13" class="ejer-items">
+            <p>SGE</p>
+          </li>
+          <li id="direc14" class="ejer-items">
+            <p>IGE</p>
+          </li>
+        </div>
+      </ul>
+    </div>
+
+    <!--fin Sub-menu Conduccion superior-->
+
+    <div id="sub-menu-search2" class="sidebar-search">
+      <ul id="subMenuB">
+        <li id="uni-mil-title">
+          <a href="#" id="Item1">
+            <h4>
+              Unidades militares<i class="fas fa-times" style="padding-left: 45px" id="crossicon"></i>
+            </h4>
+          </a>
+        </li>
+        <li id="EA-mil" class="borde prueba" data-fuerza="EA" data-cod_uni="U2240">
+          <a href="#">
+            <img id="logo" src="img/Escudo_del_Ejército_Argentino.png" alt="EA" style="width: 25px" />
+            <p>Ejército Argentino</p>
+          </a>
+        </li>
+        <li id="arm-arg" class="borde prueba" data-fuerza="Armada">
+          <a href="#">
+            <img id="logo" src="img/Escudo_armada_argentina_banderolas.png" alt="EA" style="width: 25px" />
+            <p>Armada Argentina</p>
+          </a>
+        </li>
+        <li id="FFAA" class="borde prueba" data-fuerza="Aerea">
+          <a href="#">
+            <img id="logo" src="img/Logo_Fuerza-Aerea.png" alt="EA" style="width: 32px" />
+            <p>Fuerza Aérea Argentina</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!--Segundo sub menu "search" / Unidades militares-->
+
+    <!--tercero sub menu "search" / Universidades-->
+    <div id="sub-menu-search3" class="sidebar-search">
+      <ul id="subMenuB">
+        <li id="universidad">
+          <a href="#" id="Item1">
+            <h4>
+              Universidades<i class="fas fa-times" style="padding-left: 45px" id="crossicon-univer"></i>
+            </h4>
+          </a>
+        </li>
+        <li id="publica-mil" class="borde pulsar-universidades" data-universidad="publica">
+          <a href="#">
+            <img id="logo-unis" src="img/universidad_nac.svg" alt="Universidades Nacionales" />
+            <p class="mover-universidades">Universidades públicas</p>
+          </a>
+        </li>
+        <li id="privada-mil" class="borde pulsar-universidades" data-universidad="privada">
+          <a href="#">
+            <img id="logo-unis" src="img/universidad_otras.svg" alt="Universidades Privadas" style="width: 25px" />
+            <p class="mover-universidades">Universidades privadas</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!--tercero sub menu "search" / Universidades-->
+
+    <!--cuarto sub menu "search" / limite internacional-->
+    <div id="sub-menu-search4" class="sidebar-search">
+      <ul id="subMenuB">
+        <li id="lim-intern">
+          <a href="#" id="Item1">
+            <h4>
+              Líneas de Ferrocarril<i class="fas fa-times" style="padding-left: 45px" id="crossicon-lim"></i>
+            </h4>
+          </a>
+        </li>
+        <li id="bt-lim-intern" class="borde">
+          <a href="#">
+            <p>
+              <i id="lim-icon" class="fas fa-map-marked-alt"></i> Visualizar
+              Líneas de Ferrocarril
+            </p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!--cuarto sub menu "search" / limite internacional-->
+    <div>
+
+    </div>
+    <!--Quinto sub menu "search" / Personal-->
+    <div id="sub-menu-search5" class="sidebar-search" style="display: none;">
+      <ul id="subMenuB">
+        <li id="title-person" style="background-color: white; font-weight: bold;">
+          <a href="#">
+            <h4>
+              Áreas de la Conducción
+            </h4>
+          </a>
+        </li>
+      </ul>
+      <ul id="sidebar456">
+        <li id="personal-1" class="borde prueba" style="background-color: white;">
+          <a href="#">
+            <h4>
+              Personal <i class="fas fa-times pers" style="padding-left: 130px" id="crossicon"></i>
+            </h4>
+        </li>
+        <div id="items-personal">
+          <li id="personal-1" class="borde prueba">
+            <a href="#">
+              <p>Fuerza Ejecutiva</p>
+            </a>
+          </li>
+          <li id="personal-2" class="borde prueba">
+            <a href="#">
+              <p>Proyección de Bajas</p>
+            </a>
+          </li>
+          <li id="personal-4" class="borde prueba">
+            <a href="#">
+              <p>Oficios judiciales</p>
+            </a>
+          </li>
+          <li id="personal-5" class="borde prueba">
+            <a href="#">
+              <p>Causas de Género</p>
+            </a>
+          </li>
+          <li id="personal-6" class="borde prueba">
+            <a href="#">
+              <p>Control Toxicológico </p>
+            </a>
+          </li>
+          <li id="personal-7" class="borde prueba">
+            <a href="#">
+              <p>Anexo 27 </p>
+            </a>
+          </li>
+          <li id="personal-8" class="borde prueba">
+            <a href="#">
+              <p>Faltas Disciplinarias</p>
+            </a>
+          </li>
+          <li id="personal-9" class="borde prueba">
+            <a href="#">
+              <p>Deserción </p>
+            </a>
+          </li>
+          <li id="personal-10" class="borde prueba">
+            <a href="#">
+              <p>Actuaciones de Justicia Militar </p>
+            </a>
+          </li>
+          <li id="personal-11" class="borde prueba">
+            <a href="#">
+              <p>Situación de Vivienda </p>
+            </a>
+          </li>
+          <li id="personal-12" class="borde prueba">
+            <a href="#">
+              <p>Evacuaciones </p>
+            </a>
+          </li>
+          <li id="personal-13" class="borde prueba">
+            <a href="#">
+              <p>Acciones </p>
+            </a>
+          </li>
+          <li id="personal-14" class="borde prueba">
+            <a href="#">
+              <p>Partes de Sanidad </p>
+            </a>
+          </li>
+          <li id="personal-15" class="borde prueba">
+            <a href="#">
+              <p>Estado Civil </p>
+            </a>
+          </li>
+        </div>
+      </ul>
+    </div>
+    <!--Quinto sub menu "search" / Unidades militares-->
+
+    <!--Sexto sub menu "search" / Inteligencia-->
+    <div id="sub-menu-search6" class="sidebar-search" style="display: none;">
+      <ul id="subMenuB">
+        <li id="title-intel">
+          <a href="#" id="Item1">
+            <h4>
+              Inteligencia<i class="fas fa-times" style="padding-left: 45px" id="crossicon"></i>
+            </h4>
+          </a>
+        </li>
+        <li id="inteligencia-1" class="borde prueba">
+          <a href="#">
+            <p>Item 1</p>
+          </a>
+        </li>
+        <li id="inteligencia-2" class="borde prueba">
+          <a href="#">
+            <p>Item 2</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!--Sexto sub menu "search" / -->
+
+    <!--Septimo sub menu "search" / Operaciones-->
+    <div id="sub-menu-search7" class="sidebar-search" style="display:none">
+      <ul id="subMenuB">
+        <li id="title-opera">
+          <a href="#" id="Item1">
+            <h4>
+              Operaciones<i class="fas fa-times" style="padding-left: 45px" id="crossicon"></i>
+            </h4>
+          </a>
+        </li>
+        <li id="personal-1" class="borde prueba" data-fuerza="EA">
+          <a href="#">
+            <p>Item 1</p>
+          </a>
+        </li>
+        <li id="personal-2" class="borde prueba" data-fuerza="Armada">
+          <a href="#">
+            <p>Item 2</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!--Septimo sub menu "search" /-->
+    <!--Septimo sub menu "search" / Material-->
+    <div id="sub-menu-search8" class="sidebar-search" style="display: none;">
+      <ul id="subMenuB">
+        <li id="title-mate">
+          <a href="#" id="Item1">
+            <h4>
+              Material<i class="fas fa-times" style="padding-left: 45px" id="crossicon"></i>
+            </h4>
+          </a>
+        </li>
+        <li id="personal-1" class="borde prueba" data-fuerza="EA">
+          <a href="#">
+            <p>Item 1</p>
+          </a>
+        </li>
+        <li id="personal-2" class="borde prueba" data-fuerza="Armada">
+          <a href="#">
+            <p>Item 2</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!--Octavo sub menu "search" /-->
+    <!--noveno sub menu "search" / -->
+    <div id="sub-menu-search9" class="sidebar-search" style="display: none;">
+      <ul id="subMenuB">
+        <li id="title-fina">
+          <a href="#" id="Item1">
+            <h4>
+              Finanzas
+              <i class="fas fa-times" style="padding-left: 45px" id="crossicon"></i>
+            </h4>
+          </a>
+        </li>
+        <li id="personal-1" class="borde prueba" data-fuerza="EA">
+          <a href="#">
+            <p>Item 1</p>
+          </a>
+        </li>
+        <li id="personal-2" class="borde prueba" data-fuerza="Armada">
+          <a href="#">
+            <p>Item 2</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!--Septimo sub menu "search" /-->
+
+    <!--primer sub menu "info" / buscador-->
+    <div id="sub-menu-info" class="sidebar-search-info">
+      <div class="help">
+        <h1 class="text-center"><i class="fas fa-info-circle"></i></h1>
+        <hr />
+        <p class="desktop">
+          Puede acceder a información haciendo
+          <strong>click derecho</strong> sobre el mapa y seleccionando
+          <strong>Más información...</strong> o bien a través del menú que
+          aparece al hacer click sobre los marcadores en el mapa.
+        </p>
       </div>
+    </div>
+    <!--FIN primer sub menu "info" / buscador-->
 
-      <!--Sub-menu Conduccion superior-->
-
-      <div id="sub-menu-conduc-sup" class="sidebar-search">
-        <div class="title-menu">
-          Estructura Orgánica
-        </div>
-        <ul id="subMenuB">
-          <li id="title-ejer-arg">
-
-            <a href="#">
-              <img id="logo" src="img/Escudo_del_Ejército_Argentino.png" alt="EA" style="width: 25px">
-              <p>Ejército Argentino</p>
-            </a>
-          </li>
-          <li id="cond-sup" class="ejer-items">
-            <p>Conducción Superior</p>
-            <a href="#">
-              <i class="fas fa-times" style="padding-left: 45px" id="crossicon-conduc"></i> 
-            </a>
-          </li>
-          <div id="items-conduccion">
-            <li id="fuerza-ope" class="ejer-items">
-              <p>Dir Gral Pers Bien</p>
-            </li>
-            <li id="direc1" class="ejer-items">
-              <p>Dir Gral Inves Dllo</p>
-            </li>
-            <li id="direc2" class="ejer-items">
-              <p>Dir Gral Icia</p>
-            </li>
-            <li id="direc3" class="ejer-items">
-              <p>Dir Gral Adm Fin</p>
-            </li>
-            <li id="direc4" class="ejer-items">
-              <p>Dir Gral Mat</p>
-            </li>
-            <li id="direc5" class="ejer-items">
-              <p>Dir Gral Com Info</p>
-            </li>
-            <li id="direc6" class="ejer-items">
-              <p>Dir Gral As Jur</p>
-            </li>
-            <li id="direc7" class="ejer-items">
-              <p>Dir Gral Educ</p>
-            </li>
-            <li id="direc8" class="ejer-items">
-              <p>Dir Gral Org Doct</p>
-            </li>
-            <li id="direc9" class="ejer-items">
-              <p>Dir Gral Pl(S) Prog(S) Presup</p>
-            </li>
-            <li id="direc10" class="ejer-items">
-              <p>Dir Gral Sal</p>
-            </li>
-            <li id="direc11" class="ejer-items">
-              <p>Secr A y Te JEMGE</p>
-            </li>
-            <li id="direc12" class="ejer-items">
-              <p>Secr Coord SUBJEMGE</p>
-            </li>
-            <li id="direc13" class="ejer-items">
-              <p>SGE</p>
-            </li>
-            <li id="direc14" class="ejer-items">
-              <p>IGE</p>
-            </li>
-          </div>
-        </ul>
-      </div>
-
-      <!--fin Sub-menu Conduccion superior-->
-
-      <div id="sub-menu-search2" class="sidebar-search">
-        <ul id="subMenuB">
-          <li id="uni-mil-title">
-            <a href="#" id="Item1">
-              <h4>
-                Unidades militares<i
-                  class="fas fa-times"
-                  style="padding-left: 45px"
-                  id="crossicon"
-                ></i>
-              </h4>
-            </a>
-          </li>
-          <li id="EA-mil" class="borde prueba" data-fuerza="EA" data-cod_uni="U2240">
-            <a href="#">
-              <img
-                id="logo"
-                src="img/Escudo_del_Ejército_Argentino.png"
-                alt="EA"
-                style="width: 25px"
-              />
-              <p>Ejército Argentino</p>
-            </a>
-          </li>
-          <li id="arm-arg" class="borde prueba" data-fuerza="Armada">
-            <a href="#">
-              <img
-                id="logo"
-                src="img/Escudo_armada_argentina_banderolas.png"
-                alt="EA"
-                style="width: 25px"
-              />
-              <p>Armada Argentina</p>
-            </a>
-          </li>
-          <li id="FFAA" class="borde prueba" data-fuerza="Aerea">
-            <a href="#">
-              <img
-                id="logo"
-                src="img/Logo_Fuerza-Aerea.png"
-                alt="EA"
-                style="width: 32px"
-              />
-              <p>Fuerza Aérea Argentina</p>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!--Segundo sub menu "search" / Unidades militares-->
-
-      <!--tercero sub menu "search" / Universidades-->
-      <div id="sub-menu-search3" class="sidebar-search">
-        <ul id="subMenuB">
-          <li id="universidad">
-            <a href="#" id="Item1">
-              <h4>
-                Universidades<i
-                  class="fas fa-times"
-                  style="padding-left: 45px"
-                  id="crossicon-univer"
-                ></i>
-              </h4>
-            </a>
-          </li>
-          <li
-            id="publica-mil"
-            class="borde pulsar-universidades"
-            data-universidad="publica"
-          >
-            <a href="#">
-              <img id="logo-unis"
-                src="img/universidad_nac.svg"
-                alt="Universidades Nacionales"
-              />
-              <p class="mover-universidades">Universidades públicas</p>
-            </a>
-          </li>
-          <li
-            id="privada-mil"
-            class="borde pulsar-universidades"
-            data-universidad="privada"
-          >
-            <a href="#">
-              <img id="logo-unis"
-                src="img/universidad_otras.svg"
-                alt="Universidades Privadas"
-                style="width: 25px"
-              />
-              <p class="mover-universidades">Universidades privadas</p>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!--tercero sub menu "search" / Universidades-->
-
-      <!--cuarto sub menu "search" / limite internacional-->
-      <div id="sub-menu-search4" class="sidebar-search">
-        <ul id="subMenuB">
-          <li id="lim-intern">
-            <a href="#" id="Item1">
-              <h4>
-                Líneas de Ferrocarril<i
-                  class="fas fa-times"
-                  style="padding-left: 45px"
-                  id="crossicon-lim"
-                ></i>
-              </h4>
-            </a>
-          </li>
-          <li id="bt-lim-intern" class="borde">
-            <a href="#">
-              <p>
-                <i id="lim-icon" class="fas fa-map-marked-alt"></i> Visualizar
-                Líneas de Ferrocarril
-              </p>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!--cuarto sub menu "search" / limite internacional-->
-     <div>
-
-     </div>
-        <!--Quinto sub menu "search" / Personal-->
-        <div id="sub-menu-search5" class="sidebar-search" style="display: none;">
-          <ul id="subMenuB">
-            <li id="title-person" style="background-color: white; font-weight: bold;">
-              <a href="#">
-                <h4>
-                  Áreas de la Conducción
-                </h4>
-              </a>
-            </li>
-          </ul>
-          <ul id="sidebar456"> 
-            <li id="personal-1" class="borde prueba" style="background-color: white;">
-              <a href="#">
-                <h4>
-                  Personal <i
-                    class="fas fa-times pers"
-                    style="padding-left: 130px"          
-                    id="crossicon" 
-                  ></i>
-                </h4>
-            </li>
-            <div id="items-personal">
-              <li id="personal-1" class="borde prueba">
-                <a href="#">
-                  <p>Fuerza Ejecutiva</p>
-                </a>
-              </li>
-              <li id="personal-2" class="borde prueba">
-                <a href="#">
-                  <p>Proyección de Bajas</p>
-                </a>
-              </li>
-                <li id="personal-4" class="borde prueba">
-                  <a href="#">
-                    <p>Oficios judiciales</p>
-                  </a>
-                  </li>
-                  <li id="personal-5" class="borde prueba">
-                    <a href="#">
-                      <p>Causas de Género</p>
-                    </a>
-                  </li>
-                    <li id="personal-6" class="borde prueba">
-                      <a href="#">
-                        <p>Control Toxicológico </p>
-                      </a>
-                    </li>
-                      <li id="personal-7" class="borde prueba">
-                        <a href="#">
-                          <p>Anexo 27 </p>
-                        </a>
-                      </li>
-                        <li id="personal-8" class="borde prueba">
-                          <a href="#">
-                            <p>Faltas Disciplinarias</p>
-                          </a>
-                        </li>
-                          <li id="personal-9" class="borde prueba">
-                            <a href="#">
-                              <p>Deserción  </p>
-                            </a>
-                          </li>
-                            <li id="personal-10" class="borde prueba">
-                              <a href="#">
-                                <p>Actuaciones de Justicia Militar  </p>
-                              </a>
-                            </li>
-                              <li id="personal-11" class="borde prueba">
-                                <a href="#">
-                                  <p>Situación de Vivienda </p>
-                                </a>
-                              </li>
-                                <li id="personal-12" class="borde prueba">
-                                  <a href="#">
-                                    <p>Evacuaciones </p>
-                                  </a>
-                                </li>
-                                  <li id="personal-13" class="borde prueba">
-                                    <a href="#">
-                                      <p>Acciones </p>
-                                    </a>
-                                  </li>
-                                    <li id="personal-14" class="borde prueba">
-                                      <a href="#">
-                                        <p>Partes de Sanidad </p>
-                                      </a>
-                                    </li>
-                                      <li id="personal-15" class="borde prueba">
-                                        <a href="#">
-                                          <p>Estado Civil </p>
-                                        </a>
-                                      </li>  
-            </div>
-          </ul>
-        </div>
-        <!--Quinto sub menu "search" / Unidades militares-->
-
-        <!--Sexto sub menu "search" / Inteligencia-->
-        <div id="sub-menu-search6" class="sidebar-search" style="display: none;">
-          <ul id="subMenuB">
-            <li id="title-intel">
-              <a href="#" id="Item1">
-                <h4>
-                  Inteligencia<i
-                    class="fas fa-times"
-                    style="padding-left: 45px"
-                    id="crossicon"
-                  ></i>
-                </h4>
-              </a>
-            </li>
-            <li id="inteligencia-1" class="borde prueba" >
-              <a href="#">
-                <p>Item 1</p>
-              </a>
-            </li>
-            <li id="inteligencia-2" class="borde prueba">
-              <a href="#">
-                <p>Item 2</p>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <!--Sexto sub menu "search" / -->
-
-        <!--Septimo sub menu "search" / Operaciones-->
-        <div id="sub-menu-search7" class="sidebar-search" style="display:none">
-          <ul id="subMenuB">
-            <li id="title-opera">
-              <a href="#" id="Item1">
-                <h4>
-                  Operaciones<i
-                    class="fas fa-times"
-                    style="padding-left: 45px"
-                    id="crossicon"
-                  ></i>
-                </h4>
-              </a>
-            </li>
-            <li id="personal-1" class="borde prueba" data-fuerza="EA">
-              <a href="#">
-                <p>Item 1</p>
-              </a>
-            </li>
-            <li id="personal-2" class="borde prueba" data-fuerza="Armada">
-              <a href="#">
-                <p>Item 2</p>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <!--Septimo sub menu "search" /-->
-         <!--Septimo sub menu "search" / Material-->
-         <div id="sub-menu-search8" class="sidebar-search" style="display: none;">
-          <ul id="subMenuB">
-            <li id="title-mate">
-              <a href="#" id="Item1">
-                <h4>
-                  Material<i
-                    class="fas fa-times"
-                    style="padding-left: 45px"
-                    id="crossicon"
-                  ></i>
-                </h4>
-              </a>
-            </li>
-            <li id="personal-1" class="borde prueba" data-fuerza="EA">
-              <a href="#">
-                <p>Item 1</p>
-              </a>
-            </li>
-            <li id="personal-2" class="borde prueba" data-fuerza="Armada">
-              <a href="#">
-                <p>Item 2</p>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <!--Octavo sub menu "search" /-->
-         <!--noveno sub menu "search" / -->
-         <div id="sub-menu-search9" class="sidebar-search" style="display: none;">
-          <ul id="subMenuB">
-            <li id="title-fina">
-              <a href="#" id="Item1">
-                <h4>
-                  Finanzas
-                  <i
-                    class="fas fa-times"
-                    style="padding-left: 45px"
-                    id="crossicon"
-                  ></i>
-                </h4>
-              </a>
-            </li>
-            <li id="personal-1" class="borde prueba" data-fuerza="EA">
-              <a href="#">
-                <p>Item 1</p>
-              </a>
-            </li>
-            <li id="personal-2" class="borde prueba" data-fuerza="Armada">
-              <a href="#">
-                <p>Item 2</p>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <!--Septimo sub menu "search" /-->
-
-      <!--primer sub menu "info" / buscador-->
-      <div id="sub-menu-info" class="sidebar-search-info">
-        <div class="help">
-          <h1 class="text-center"><i class="fas fa-info-circle"></i></h1>
-          <hr />
-          <p class="desktop">
-            Puede acceder a información haciendo
-            <strong>click derecho</strong> sobre el mapa y seleccionando
-            <strong>Más información...</strong> o bien a través del menú que
-            aparece al hacer click sobre los marcadores en el mapa.
+    <!--primer sub menu "info" / buscador-->
+    <div id="sub-menu-lupa" class="sidebar-search-lupa">
+      <div class="buscador">
+        <div class="text">
+          <p>
+            Aquí puede buscar lugares de interés dentro de la República
+            Argentina o bien restringidos al área que está visualizando en el
+            mapa.
           </p>
         </div>
       </div>
-      <!--FIN primer sub menu "info" / buscador-->
-
-      <!--primer sub menu "info" / buscador-->
-      <div id="sub-menu-lupa" class="sidebar-search-lupa">
-        <div class="buscador">
-          <div class="text">
-            <p>
-              Aquí puede buscar lugares de interés dentro de la República
-              Argentina o bien restringidos al área que está visualizando en el
-              mapa.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!--FIN primer sub menu "info" / buscador-->
     </div>
-    <!--Fin del wrapper-sidebar-->
+    <!--FIN primer sub menu "info" / buscador-->
+  </div>
+  <!--Fin del wrapper-sidebar-->
 
-    <!--Graficos
+  <!--Graficos
     <div class="graficos" style="position: absolute; z-index: 1;">
       <div class="grafic-1">
         <img class="graph" src="img/graph.svg" alt="Diagrama">
@@ -714,435 +596,438 @@
       </div>
     </div>-->
 
-    <!--fin de Graficos-->
+  <!--fin de Graficos-->
 
-    <!--Esta es la ultima actualizacion-->
+  <!--Esta es la ultima actualizacion-->
 
-    <!--Aca esta el mapa-->
-    <div id="page-content-wrapper" style="padding-left: 0px; margin-left: 0px; padding-top: 0px;
+  <!--Aca esta el mapa-->
+  <div id="page-content-wrapper" style="padding-left: 0px; margin-left: 0px; padding-top: 0px;
   margin-top: 0px;">
-      <div id="map-cenope" class="container-fluid" style="padding-left: 0px; margin-left: 0px; padding-top: 0px;
+    <div id="map-cenope" class="container-fluid" style="padding-left: 0px; margin-left: 0px; padding-top: 0px;
   margin-top: 0px;">
-        <div id="sidebar">          
-          <p id="detalles"></p>
-        </div>
-        <div id="mapa" class="tamanoA"></div>
-        <!-- <div id="resultado"></div>
-              <button id="conversion" style="display: none;">Obtener datos</button> -->
+      <div id="sidebar">
+        <p id="detalles"></p>
       </div>
+      <div id="mapa" class="tamanoA"></div>
+      <!-- <div id="resultado"></div>
+              <button id="conversion" style="display: none;">Obtener datos</button> -->
     </div>
-    <!--Fin del mapa-->
+  </div>
+  <!--Fin del mapa-->
 
-    <!--Script-->
-    <!--Bootstrap JavaScript Bundle with Popper -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
-      crossorigin="anonymous"
-    ></script>
-    <!--Jquery-->
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/sidebar.js" type="text/javascript"></script>
-    <script src="js/eventos_marcadores_mapa.js" type="text/javascript"></script>
+  <!--Script-->
+  <!--Bootstrap JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+    crossorigin="anonymous"></script>
+  <!--Jquery-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/sidebar.js" type="text/javascript"></script>
+  <script src="js/eventos_marcadores_mapa.js" type="text/javascript"></script>
 
-    <!--Script del MAPA-->
-    <script type="text/javascript">
-      $(document).ready(function() {
-        mostrar_marcadores("TODOS");
-      });
+  <!--Script del MAPA-->
+  <script type="text/javascript">
+    $(document).ready(function () {
+      mostrar_marcadores("TODOS");
+    });
 
-      var map = L.map("mapa", { zoomControl: false }).setView(
-        [-40, -59],
-        4
-      );
-      L.tileLayer(
-        "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG%3A3857@png/{z}/{x}/{-y}.png",
-        {
-          attribution:
-            '<a href="http://www.ign.gob.ar/AreaServicios/Argenmap/IntroduccionV2" target="_blank">Instituto Geográfico Nacional</a>',
-          minZoom: 3,
-          maxZoom: 18,
-        }
-      ).addTo(map);
-
-      //   document
-      //     .getElementById("conversion")
-      //     .addEventListener("click", function () {
-      //       var punto = $("#resultado").html(
-      //         JSON.stringify(drawnItems.toGeoJSON())
-      //       );
-      //     });
-
-      L.control
-        .scale({
-          maxWidth: 240,
-          metric: true,
-          imperial: false,
-          position: "bottomleft",
-        })
-        .addTo(map);
-
-      L.control
-        .polylineMeasure({
-          position: "bottomright",
-          unit: "metres",
-          clearMeasurementsOnStop: false,
-          showClearControl: true,
-          showUnitControl: true,
-        })
-        .addTo(map);
-
-      map.addControl(
-        L.control.locate({
-          locateOptions: {
-            enableHighAccuracy: true,
-          },
-          position: "bottomright",
-        })
-      );
-
-      var sidebar = L.control.sidebar("sidebar", {
-        position: "right"
-      });
-      map.addControl(sidebar);
-
-      map.on('click', function () {
-            sidebar.hide();
-        })
-
-        map.on('popupclose', function() {
-            sidebar.hide();
-      });
-
-      //ZOOM HOME
-      var zoomHome = L.Control.zoomHome();
-      zoomHome.addTo(map);
-      //Fin ZOOM HOME
-
-      var geocoder = L.Control.Geocoder.nominatim({
-        geocodingQueryParams: { countrycodes: "AR" },
-      });
-
-      var control = L.Control.geocoder({
-        geocoder: geocoder,
-        placeholder: "Buscar",
-        errorMessage: "No se encontro ubicación que coincida con su búsqueda.",
-      });
-
-      document.getElementById("geosidebar").appendChild(control.onAdd(map));
-
-      //Leaflet Draw
-      var drawnItems = new L.FeatureGroup();
-      map.addLayer(drawnItems);
-      var drawControl = new L.Control.Draw({
-        draw: {
-          circle: false,
-        },
-        edit: {
-          featureGroup: drawnItems,
-        },
-      });
-      map.addControl(drawControl);
-
-      map.on("draw:created", function (e) {
-        var type = e.layerType,
-          layer = e.layer;
-        console.log(e);
-
-        if (type === "marker") {
-          layer.bindPopup();
-          layer.getPopup().setContent(layer.getLatLng().toString());
-        }
-        drawnItems.addLayer(layer);
-      });
-
-      //Fin Leaflet Draw
-
-      //WFS
-      var linea_frc = {
-        color: "black",
-        weight: 1,
-      };
-
-      var frc_url =
-        "https://wms.ign.gob.ar/geoserver/ign/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ign:lineas_de_transporte_ferroviario_AN010&outputFormat=application/json";
-
-      var ferrocarril;
-      $("#bt-lim-intern").click(function () {
-        var clicks = $(this).data("clicks");
-        if (!clicks) {
-          $.getJSON(frc_url).then((res) => {
-            ferrocarril = L.geoJSON(res, linea_frc).addTo(map);
-          });
-        } else {
-          map.removeLayer(ferrocarril);
-        }
-        $(this).data("clicks", !clicks);
-      });
-
-      var univ_url =
-        "https://wms.ign.gob.ar/geoserver/infraestructura-social/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=infraestructura-social:puntos_de_ciencia_y_educacion_020602&outputFormat=application/json";
-      var UnivSvg = L.Icon.extend({
-        options: {
-          shadowUrl: null,
-          iconAnchor: new L.Point(12, 12),
-          iconSize: new L.Point(24, 24),
-          iconUrl: "./img/universidad_nac.svg",
-        },
-      });
-      var UnivPSvg = L.Icon.extend({
-        options: {
-          shadowUrl: null,
-          iconAnchor: new L.Point(12, 12),
-          iconSize: new L.Point(24, 24),
-          iconUrl: "./img/universidad_otras.svg",
-        },
-      });
-
-      var infraestructura_social;
-      $("#publica-mil").click(function () {
-        var clicks = $(this).data("clicks");
-        if (!clicks) {
-          $.getJSON(univ_url).then((res) => {
-            infraestructura_social = L.geoJSON(res, {
-              pointToLayer: function (feature, latlng) {
-                return L.marker(latlng, { icon: new UnivSvg() });
-              },
-              onEachFeature: function (feature, layer) {
-                layer.bindPopup(
-                  "<h6>Institucion:</h6> " +
-                    feature.properties.nombre_geografico
-                );
-              },
-              filter: function (feature) {
-                return !feature.properties.nombre_geografico.search(
-                  "Universidad Nacional" || "Universidad Tecnológica Nacional"
-                );
-              },
-            }).addTo(map);
-          });
-        } else {
-          map.removeLayer(infraestructura_social);
-        }
-        $(this).data("clicks", !clicks);
-      });
-
-      var infraestructura_privada;
-      $("#privada-mil").click(function () {
-        var clicks = $(this).data("clicks");
-        if (!clicks) {
-          $.getJSON(univ_url).then((res) => {
-            infraestructura_privada = L.geoJSON(res, {
-              pointToLayer: function (feature, latlng) {
-                return L.marker(latlng, { icon: new UnivPSvg() });
-              },
-              onEachFeature: function (feature, layer) {
-                layer.bindPopup(
-                  "<h6>Institucion:</h6> " +
-                    feature.properties.nombre_geografico
-                );
-              },
-              filter: function (feature) {
-                return feature.properties.nombre_geografico.search(
-                  "Universidad Nacional" || "Universidad Tecnológica Nacional"
-                );
-              },
-            }).addTo(map);
-          });
-        } else {
-          map.removeLayer(infraestructura_privada);
-        }
-        $(this).data("clicks", !clicks);
-      });
-
-      //Fin WFS
-
-      //GeoJSON
-
-      var AereaSvg = L.Icon.extend({
-        options: {
-          shadowUrl: null,
-          iconAnchor: new L.Point(12, 12),
-          iconSize: new L.Point(40, 40),
-          iconUrl: "./img/Logo_Fuerza-Aerea.png",
-        },
-      });
-      var ArmadaSvg = L.Icon.extend({
-        options: {
-          shadowUrl: null,
-          iconAnchor: new L.Point(12, 12),
-          iconSize: new L.Point(40, 40),
-          iconUrl: "./img/Escudo_armada_argentina_banderolas.png",
-        },
-      });
-      var EjercitoSvg = L.Icon.extend({
-        options: {
-          shadowUrl: null,
-          iconAnchor: new L.Point(12, 12),
-          iconSize: new L.Point(40, 40),
-          iconUrl: "./img/Escudo_del_Ejército_Argentino.png",
-        },
-      });
-
-      function openSidebar(){
-        sidebar.show();
+    var map = L.map("mapa", { zoomControl: false }).setView(
+      [-40, -59],
+      4
+    );
+    L.tileLayer(
+      "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG%3A3857@png/{z}/{x}/{-y}.png",
+      {
+        attribution:
+          '<a href="http://www.ign.gob.ar/AreaServicios/Argenmap/IntroduccionV2" target="_blank">Instituto Geográfico Nacional</a>',
+        minZoom: 3,
+        maxZoom: 18,
       }
-      function masInfo(info) {
-        //var cod_uni = $(info).data("cod_uni");
-        //var cod_unisup = $(info).data("cod_unisup");
-        //alert ("Cod Uni: "+cod_uni);
-        document.getElementById("detalles").innerHTML =
+    ).addTo(map);
+
+    //   document
+    //     .getElementById("conversion")
+    //     .addEventListener("click", function () {
+    //       var punto = $("#resultado").html(
+    //         JSON.stringify(drawnItems.toGeoJSON())
+    //       );
+    //     });
+
+    L.control
+      .scale({
+        maxWidth: 240,
+        metric: true,
+        imperial: false,
+        position: "bottomleft",
+      })
+      .addTo(map);
+
+    L.control
+      .polylineMeasure({
+        position: "bottomright",
+        unit: "metres",
+        clearMeasurementsOnStop: false,
+        showClearControl: true,
+        showUnitControl: true,
+      })
+      .addTo(map);
+
+    map.addControl(
+      L.control.locate({
+        locateOptions: {
+          enableHighAccuracy: true,
+        },
+        position: "bottomright",
+      })
+    );
+
+    var sidebar = L.control.sidebar("sidebar", {
+      position: "right"
+    });
+    map.addControl(sidebar);
+
+    map.on('click', function () {
+      sidebar.hide();
+    })
+
+    map.on('popupclose', function () {
+      sidebar.hide();
+    });
+
+    //ZOOM HOME
+    var zoomHome = L.Control.zoomHome();
+    zoomHome.addTo(map);
+    //Fin ZOOM HOME
+
+    var geocoder = L.Control.Geocoder.nominatim({
+      geocodingQueryParams: { countrycodes: "AR" },
+    });
+
+    var control = L.Control.geocoder({
+      geocoder: geocoder,
+      placeholder: "Buscar",
+      errorMessage: "No se encontro ubicación que coincida con su búsqueda.",
+    });
+
+    document.getElementById("geosidebar").appendChild(control.onAdd(map));
+
+    //Leaflet Draw
+    var drawnItems = new L.FeatureGroup();
+    map.addLayer(drawnItems);
+    var drawControl = new L.Control.Draw({
+      draw: {
+        circle: false,
+      },
+      edit: {
+        featureGroup: drawnItems,
+      },
+    });
+    map.addControl(drawControl);
+
+    map.on("draw:created", function (e) {
+      var type = e.layerType,
+        layer = e.layer;
+      console.log(e);
+
+      if (type === "marker") {
+        layer.bindPopup();
+        layer.getPopup().setContent(layer.getLatLng().toString());
+      }
+      drawnItems.addLayer(layer);
+    });
+
+    //Fin Leaflet Draw
+
+    //WFS
+    var linea_frc = {
+      color: "black",
+      weight: 1,
+    };
+
+    var frc_url =
+      "https://wms.ign.gob.ar/geoserver/ign/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ign:lineas_de_transporte_ferroviario_AN010&outputFormat=application/json";
+
+    var ferrocarril;
+    $("#bt-lim-intern").click(function () {
+      var clicks = $(this).data("clicks");
+      if (!clicks) {
+        $.getJSON(frc_url).then((res) => {
+          ferrocarril = L.geoJSON(res, linea_frc).addTo(map);
+        });
+      } else {
+        map.removeLayer(ferrocarril);
+      }
+      $(this).data("clicks", !clicks);
+    });
+
+    var univ_url =
+      "https://wms.ign.gob.ar/geoserver/infraestructura-social/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=infraestructura-social:puntos_de_ciencia_y_educacion_020602&outputFormat=application/json";
+    var UnivSvg = L.Icon.extend({
+      options: {
+        shadowUrl: null,
+        iconAnchor: new L.Point(12, 12),
+        iconSize: new L.Point(24, 24),
+        iconUrl: "./img/universidad_nac.svg",
+      },
+    });
+    var UnivPSvg = L.Icon.extend({
+      options: {
+        shadowUrl: null,
+        iconAnchor: new L.Point(12, 12),
+        iconSize: new L.Point(24, 24),
+        iconUrl: "./img/universidad_otras.svg",
+      },
+    });
+
+    var infraestructura_social;
+    $("#publica-mil").click(function () {
+      var clicks = $(this).data("clicks");
+      if (!clicks) {
+        $.getJSON(univ_url).then((res) => {
+          infraestructura_social = L.geoJSON(res, {
+            pointToLayer: function (feature, latlng) {
+              return L.marker(latlng, { icon: new UnivSvg() });
+            },
+            onEachFeature: function (feature, layer) {
+              layer.bindPopup(
+                "<h6>Institucion:</h6> " +
+                feature.properties.nombre_geografico
+              );
+            },
+            filter: function (feature) {
+              return !feature.properties.nombre_geografico.search(
+                "Universidad Nacional" || "Universidad Tecnológica Nacional"
+              );
+            },
+          }).addTo(map);
+        });
+      } else {
+        map.removeLayer(infraestructura_social);
+      }
+      $(this).data("clicks", !clicks);
+    });
+
+    var infraestructura_privada;
+    $("#privada-mil").click(function () {
+      var clicks = $(this).data("clicks");
+      if (!clicks) {
+        $.getJSON(univ_url).then((res) => {
+          infraestructura_privada = L.geoJSON(res, {
+            pointToLayer: function (feature, latlng) {
+              return L.marker(latlng, { icon: new UnivPSvg() });
+            },
+            onEachFeature: function (feature, layer) {
+              layer.bindPopup(
+                "<h6>Institucion:</h6> " +
+                feature.properties.nombre_geografico
+              );
+            },
+            filter: function (feature) {
+              return feature.properties.nombre_geografico.search(
+                "Universidad Nacional" || "Universidad Tecnológica Nacional"
+              );
+            },
+          }).addTo(map);
+        });
+      } else {
+        map.removeLayer(infraestructura_privada);
+      }
+      $(this).data("clicks", !clicks);
+    });
+
+    //Fin WFS
+
+    //GeoJSON
+
+    var AereaSvg = L.Icon.extend({
+      options: {
+        shadowUrl: null,
+        iconAnchor: new L.Point(12, 12),
+        iconSize: new L.Point(40, 40),
+        iconUrl: "./img/Logo_Fuerza-Aerea.png",
+      },
+    });
+    var ArmadaSvg = L.Icon.extend({
+      options: {
+        shadowUrl: null,
+        iconAnchor: new L.Point(12, 12),
+        iconSize: new L.Point(40, 40),
+        iconUrl: "./img/Escudo_armada_argentina_banderolas.png",
+      },
+    });
+    var EjercitoSvg = L.Icon.extend({
+      options: {
+        shadowUrl: null,
+        iconAnchor: new L.Point(12, 12),
+        iconSize: new L.Point(40, 40),
+        iconUrl: "./img/Escudo_del_Ejército_Argentino.png",
+      },
+    });
+
+    var fuerza_aerea;
+    $("#FFAA").click(function () {
+      var clicks = $(this).data("clicks");
+      if (!clicks) {
+        fetch("./geojson/instalacion_militar.geojson")
+          .then((response) => response.json())
+          .then((data) => {
+            fuerza_aerea = L.geoJSON(data, {
+              pointToLayer: function (feature, latlng) {
+                return L.marker(latlng, { icon: new AereaSvg() });
+              },
+              onEachFeature: function (feature, layer) {
+                layer.bindPopup(
+                  '<b style="font-size: 14px;"><img src="./img/Logo_Fuerza-Aerea.png" style="width: 24px; height: 24px"/> ' +
+                  feature.properties.fdc +
+                  "<br><b>Nombre</b>: " +
+                  feature.properties.fna +
+                  "<br><a href=# data-id='" +
+                  feature.properties.gid +
+                  "' data-fuerza='" +
+                  feature.properties.fdc +
+                  "' data-objeto='" +
+                  feature.properties.objeto +
+                  "' data-nombre='" +
+                  feature.properties.fna +
+                  "' data-fuente='" +
+                  feature.properties.sag +
+                  "' data-img='" +
+                  '<center><img src="./img/Logo_Fuerza-Aerea.png" style="max-width: 20%; height: auto;"/></center>' +
+                  "' onclick='masInfo(this)'>Mas información</a>"
+                );
+              },
+              filter: function (feature) {
+                return feature.properties.fdc == "Fuerza Aérea Argentina";
+              },
+            }).addTo(map);
+          });
+      } else {
+        map.removeLayer(fuerza_aerea);
+      }
+      $(this).data("clicks", !clicks);
+    });
+
+    var armada_arg;
+    $("#arm-arg").click(function () {
+      var clicks = $(this).data("clicks");
+      if (!clicks) {
+        fetch("./geojson/instalacion_militar.geojson")
+          .then((response) => response.json())
+          .then((data) => {
+            armada_arg = L.geoJSON(data, {
+              pointToLayer: function (feature, latlng) {
+                return L.marker(latlng, { icon: new ArmadaSvg() });
+              },
+              onEachFeature: function (feature, layer) {
+                layer.bindPopup(
+                  '<b style="font-size: 14px;"><img src="./img/Escudo_armada_argentina_banderolas.png" style="width: 24px; height: 24px"/> ' +
+                  feature.properties.fdc +
+                  "<br><b>Nombre</b>: " +
+                  feature.properties.fna +
+                  "<br><a href=# data-id='" +
+                  feature.properties.gid +
+                  "' data-fuerza='" +
+                  feature.properties.fdc +
+                  "' data-objeto='" +
+                  feature.properties.objeto +
+                  "' data-nombre='" +
+                  feature.properties.fna +
+                  "' data-fuente='" +
+                  feature.properties.sag +
+                  "' data-img='" +
+                  '<center><img src="./img/Escudo_armada_argentina_banderolas.png" style="max-width: 20%; height: auto;"/></center>' +
+                  "' onclick='masInfo(this)'>Mas información</a>"
+                );
+              },
+              filter: function (feature) {
+                return feature.properties.fdc == "Armada Argentina";
+              },
+            }).addTo(map);
+          });
+      } else {
+        map.removeLayer(armada_arg);
+      }
+      $(this).data("clicks", !clicks);
+    });
+
+    /*
+    var ejercito;
+    $("#EA-mil").click(function () {
+      var clicks = $(this).data("clicks");
+      if (!clicks) {
+        fetch("./geojson/instalacion_militar.geojson")
+          .then((response) => response.json())
+          .then((data) => {
+            ejercito = L.geoJSON(data, {
+              pointToLayer: function (feature, latlng) {
+                return L.marker(latlng, { icon: new EjercitoSvg() });
+              },
+              onEachFeature: function (feature, layer) {
+                layer.bindPopup(
+                  '<b style="font-size: 14px;"><img src="./img/Escudo_del_Ejército_Argentino.png" style="width: 24px; height: 24px"/> ' +
+                    feature.properties.fdc +
+                    "<br><b>Nombre</b>: " +
+                    feature.properties.fna +
+                    "<br><a href=# data-id='" +
+                    feature.properties.gid +
+                    "' data-fuerza='" +
+                    feature.properties.fdc +
+                    "' data-objeto='" +
+                    feature.properties.objeto +
+                    "' data-nombre='" +
+                    feature.properties.fna +
+                    "' data-fuente='" +
+                    feature.properties.sag +
+                    "' data-img='" +
+                    '<center><img src="./img/Escudo_del_Ejército_Argentino.png" style="max-width: 20%; height: auto;"/></center>' + 
+                    "' onclick='masInfo(this)'>Mas información</a>"
+                );
+              },
+              filter: function (feature) {
+                return feature.properties.fdc == "Ejército Argentino";
+              },
+            }).addTo(map);
+          });
+      } else {
+        map.removeLayer(ejercito);
+      }
+      $(this).data("clicks", !clicks);
+    });
+    */
+    //Fin GeoJSON
+    function openSidebar() {
+      sidebar.show();
+    }
+    function masInfo(info) {
+      var cod_uni = $(info).data("cod_uni");
+      var cod_unisup = $(info).data("cod_unisup");
+      //alert ("Cod Uni: "+cod_uni);
+      document.getElementById("detalles").innerHTML =
         //   "ID: " +
         $(info).data("img") +
-        '<h1 style="text-align: center;">' +
-        $(info).data("fuerza") +
-        "</h1><hr/>Tipo: " +
-        $(info).data("objeto") +
-        "<br/>Nombre: " +
+        '<h4 style="text-align: center; padding-top: 10px; margin-bottom: 10px; text-transform: uppercase;">' +
         $(info).data("nombre") +
-        "<br/>Fuente: " +
-        $(info).data("fuente");
-        openSidebar();
-      }
-      
+        "</h4><div style='padding-top:10px; border-top: 1px solid gray; font-size:14px;'><div class='row' style='background-color:#eeeeee; min-height: 30px; margin-left: 0px; margin-right:0px; padding-left:1px; padding-right:1px; align-content: center;'><div class='col-md-6' style='font-weight:bold;'>Localidad</div><div class='col-md-6' style='text-transform: uppercase;'>" +
+        $(info).data("localidad") +
+        "</div></div><div class='row' style='min-height: 30px; margin-left: 0px; margin-right:0px; padding-left:1px; padding-right:1px; align-content: center;'><div class='col-md-6' style='font-weight:bold;'>Nodo</div><div class='col-md-6' style='text-transform: uppercase;'>" +
+        $(info).data("nodo") +
+        "</div></div><div class='row' style='background-color:#eeeeee; min-height: 30px; margin-left: 0px; margin-right:0px; padding-left:1px; padding-right:1px; align-content: center;'><div class='col-md-6' style='font-weight:bold;'>Arma</div><div class='col-md-6' style='text-transform: uppercase;'>" +
+        $(info).data("arma") +
+        "</div></div><div class='row' style='min-height: 30px; margin-left: 0px; margin-right:0px; padding-left:1px; padding-right:1px; align-content: center;'><div class='col-md-6' style='font-weight:bold;'>Fuente de información</div><div class='col-md-6'>" +
+        $(info).data("fuente") + "</div></div></div>";
+      openSidebar();
+    }
+    var toPrintGraphics = "<div style='height:calc(48vh - 35.5px); overflow:hidden'><img src='img/toPrintSideA.svg' alt='graphB' style='width:100%;height:auto;'></div><br/><div style='height:calc(48vh - 35.5px); overflow-y:hidden' class='punteado'><img src='img/toPrintSideB.svg' alt='graphB' style='width:100%;height:auto'>"
 
-      var fuerza_aerea;
-      $("#FFAA").click(function () {
-        var clicks = $(this).data("clicks");
-        if (!clicks) {
-          fetch("./geojson/instalacion_militar.geojson")
-            .then((response) => response.json())
-            .then((data) => {
-              fuerza_aerea = L.geoJSON(data, {
-                pointToLayer: function (feature, latlng) {
-                  return L.marker(latlng, { icon: new AereaSvg() });
-                },
-                onEachFeature: function (feature, layer) {
-                  layer.bindPopup(
-                    '<b style="font-size: 14px;"><img src="./img/Logo_Fuerza-Aerea.png" style="width: 24px; height: 24px"/> ' +
-                      feature.properties.fdc +
-                      "<br><b>Nombre</b>: " +
-                      feature.properties.fna +
-                      "<br><a href=# data-id='" +
-                      feature.properties.gid +
-                      "' data-fuerza='" +
-                      feature.properties.fdc +
-                      "' data-objeto='" +
-                      feature.properties.objeto +
-                      "' data-nombre='" +
-                      feature.properties.fna +
-                      "' data-fuente='" +
-                      feature.properties.sag +
-                      "' data-img='" +
-                      '<center><img src="./img/Logo_Fuerza-Aerea.png" style="max-width: 20%; height: auto;"/></center>' + 
-                      "' onclick='masInfo(this)'>Mas información</a>"
-                  );
-                },
-                filter: function (feature) {
-                  return feature.properties.fdc == "Fuerza Aérea Argentina";
-                },
-              }).addTo(map);
-            });
-        } else {
-          map.removeLayer(fuerza_aerea);
-        }
-        $(this).data("clicks", !clicks);
-      });
+    function graficosSidebar() {
+      document.getElementById("detalles").innerHTML = toPrintGraphics;
+      openSidebar();
+    }
 
-      var armada_arg;
-      $("#arm-arg").click(function () {
-        var clicks = $(this).data("clicks");
-        if (!clicks) {
-          fetch("./geojson/instalacion_militar.geojson")
-            .then((response) => response.json())
-            .then((data) => {
-              armada_arg = L.geoJSON(data, {
-                pointToLayer: function (feature, latlng) {
-                  return L.marker(latlng, { icon: new ArmadaSvg() });
-                },
-                onEachFeature: function (feature, layer) {
-                  layer.bindPopup(
-                    '<b style="font-size: 14px;"><img src="./img/Escudo_armada_argentina_banderolas.png" style="width: 24px; height: 24px"/> ' +
-                      feature.properties.fdc +
-                      "<br><b>Nombre</b>: " +
-                      feature.properties.fna +
-                      "<br><a href=# data-id='" +
-                      feature.properties.gid +
-                      "' data-fuerza='" +
-                      feature.properties.fdc +
-                      "' data-objeto='" +
-                      feature.properties.objeto +
-                      "' data-nombre='" +
-                      feature.properties.fna +
-                      "' data-fuente='" +
-                      feature.properties.sag +
-                      "' data-img='" +
-                      '<center><img src="./img/Escudo_armada_argentina_banderolas.png" style="max-width: 20%; height: auto;"/></center>' + 
-                      "' onclick='masInfo(this)'>Mas información</a>"
-                  );
-                },
-                filter: function (feature) {
-                  return feature.properties.fdc == "Armada Argentina";
-                },
-              }).addTo(map);
-            });
-        } else {
-          map.removeLayer(armada_arg);
-        }
-        $(this).data("clicks", !clicks);
-      });
-
-      /*
-      var ejercito;
-      $("#EA-mil").click(function () {
-        var clicks = $(this).data("clicks");
-        if (!clicks) {
-          fetch("./geojson/instalacion_militar.geojson")
-            .then((response) => response.json())
-            .then((data) => {
-              ejercito = L.geoJSON(data, {
-                pointToLayer: function (feature, latlng) {
-                  return L.marker(latlng, { icon: new EjercitoSvg() });
-                },
-                onEachFeature: function (feature, layer) {
-                  layer.bindPopup(
-                    '<b style="font-size: 14px;"><img src="./img/Escudo_del_Ejército_Argentino.png" style="width: 24px; height: 24px"/> ' +
-                      feature.properties.fdc +
-                      "<br><b>Nombre</b>: " +
-                      feature.properties.fna +
-                      "<br><a href=# data-id='" +
-                      feature.properties.gid +
-                      "' data-fuerza='" +
-                      feature.properties.fdc +
-                      "' data-objeto='" +
-                      feature.properties.objeto +
-                      "' data-nombre='" +
-                      feature.properties.fna +
-                      "' data-fuente='" +
-                      feature.properties.sag +
-                      "' data-img='" +
-                      '<center><img src="./img/Escudo_del_Ejército_Argentino.png" style="max-width: 20%; height: auto;"/></center>' + 
-                      "' onclick='masInfo(this)'>Mas información</a>"
-                  );
-                },
-                filter: function (feature) {
-                  return feature.properties.fdc == "Ejército Argentino";
-                },
-              }).addTo(map);
-            });
-        } else {
-          map.removeLayer(ejercito);
-        }
-        $(this).data("clicks", !clicks);
-      });
-      */
-      //Fin GeoJSON
-    </script>
-    <!--<script src="js/graficos.js" type="text/javascript"></script>-->
+  </script>
+  <!--<script src="js/graficos.js" type="text/javascript"></script>-->
 </body>
+
 </html>
