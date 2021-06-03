@@ -341,6 +341,12 @@ $(document).ready(function () {
        console.log("Personal se cerro correctamente");    
     });
 
+
+    $(".pers ").click(function () { 
+        $("#sub-menu-search5").hide(); 
+        console.log("Personal se cerro correctamente");    
+     });
+
     //Click inteligencia
     $("#inteligencia").click(function () { 
         $("#sub-menu-search6").show();
