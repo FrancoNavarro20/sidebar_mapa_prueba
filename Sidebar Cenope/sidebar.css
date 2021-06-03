@@ -746,6 +746,13 @@ div.leaflet-sidebar.right.visible {
   cursor: pointer;
 }
 
+#graficos{
+  border-left: 5px solid rgb(87, 173, 76);
+  cursor: pointer;
+  color: white;
+  font-weight: 550;
+}
+
 #fuerza-ope{
   border-left: 5px solid rgb(1, 161, 189);
 }
