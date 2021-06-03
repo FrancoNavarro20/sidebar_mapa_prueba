@@ -223,11 +223,21 @@ $(document).ready(function () {
         switch(fuerza)
         {
             case "EA" :
+<<<<<<< HEAD
                
+=======
+                if (!$(".graficos").hasClass("mover-grafic")){
+                    $(".graficos").addClass("mover-grafic");
+                    banderaGraficos = true;
+                } else {
+                    $(".graficos").removeClass("mover-grafic");
+                }
+>>>>>>> almiron
                 //$("#ejer-arg").toggleClass('mostrar');
                 $("#sub-menu-search2 #EA-mil ").toggleClass("active4");
 
                 //Para abrir mapa al abrir el primer sidebar responsiado;
+<<<<<<< HEAD
                
                 ajustarse_Search = 1;
                 break;   
@@ -240,6 +250,38 @@ $(document).ready(function () {
                
                 //$("#fuerza-aerea").toggleClass('mostrar');
                 $("#sub-menu-search2 #FFAA ").toggleClass("active4");
+=======
+                if($("#mapa").hasClass("tamanoB")){
+                    $("#mapa").removeClass("tamanoB")
+                    $("#mapa").addClass("tamanoC");
+                }else{
+                    $("#mapa").removeClass("tamanoC")
+                    $("#mapa").addClass("tamanoB"); 
+                }
+                ajustarse_Search = 1;
+                break;   
+            case "Armada" :
+                if (!$(".graficos").hasClass("mover-grafic")){
+                    $(".graficos").addClass("mover-grafic");
+                } else {
+                    $(".graficos").removeClass("mover-grafic");
+                    banderaGraficos = false;
+                }
+                 //$("#armada-arg").toggleClass('mostrar');
+                $("#sub-menu-search2 #arm-arg").toggleClass("active4");
+                banderaGraficos = true;
+                 break; 
+            case "Aerea" :
+                if (!$(".graficos").hasClass("mover-grafic")){
+                    $(".graficos").addClass("mover-grafic");
+                } else {
+                    $(".graficos").removeClass("mover-grafic");
+                    banderaGraficos = false;
+                }
+                //$("#fuerza-aerea").toggleClass('mostrar');
+                $("#sub-menu-search2 #FFAA ").toggleClass("active4");
+                banderaGraficos = true;
+>>>>>>> almiron
                  break; 
         }
         
@@ -268,8 +310,16 @@ $(document).ready(function () {
 
 
 
+<<<<<<< HEAD
     //---------------------Mostrar sidebar del boton lupa---------------------//
     $("#lupa").click(function () {  
+=======
+
+
+    //---------------------Mostrar sidebar del boton lupa---------------------//
+    $("#lupa").click(function () {  
+
+>>>>>>> almiron
         $(".sidebar-search").hide(); // esconder sub-menu del boton de capas
         $(".sidebar-search-info").hide(); // esconder sub-menu del boton de info
         $(".sidebar-search-lupa").toggleClass('active3');   
@@ -316,6 +366,15 @@ $(document).ready(function () {
        console.log("Personal se cerro correctamente");    
     });
 
+<<<<<<< HEAD
+=======
+
+    $(".pers ").click(function () { 
+        $("#sub-menu-search5").hide(); 
+        console.log("Personal se cerro correctamente");    
+     });
+
+>>>>>>> almiron
     //Click inteligencia
     $("#inteligencia").click(function () { 
         $("#sub-menu-search6").show();
@@ -418,9 +477,13 @@ $(document).ready(function () {
         $("#armada-arg").removeClass('mostrar');
         $("#ejer-arg").removeClass('mostrar');
     });
+<<<<<<< HEAD
  */
 
 $("#triangle3").addClass("pulsado");
 $("#search i").addClass("pulsado");
 $("#triangle3").css("display", "inline");
 $("#search i").css("color", "white");
+=======
+ */
+>>>>>>> almiron

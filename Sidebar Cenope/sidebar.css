@@ -100,6 +100,7 @@ body {
   padding: 8px 8px 8px 8px;
   border-top: 1px solid rgb(83, 83, 83);
   transition: all 300ms linear;
+  height: 50px;
 }
 
 .sidebar-search ul #uni-militares {
@@ -118,14 +119,22 @@ body {
 }
 
 .sidebar-search ul li h4 {
-  color: rgb(255, 255, 255);
-  margin-top: 10px;
-  font-size: 20px;
+ 
+    color: #2f4491;
+
+  margin-top: 7px;
+  font-size: 23px;
 }
+
 
 .sidebar-search ul li p {
   color: rgb(255, 255, 255);
-  font-size: 13px;
+  font-size: 16px;
+  margin-top: 0;
+    margin-bottom: 0rem;
+    color: white;
+    padding-top: 8px;
+   min-height:-35px
 }
 
 .sidebar-search ul li a {
@@ -515,10 +524,15 @@ div.leaflet-sidebar.right.visible {
   position: absolute;
   top: 52vh;
   height: 48vh;
+  /*overflow-x: hidden;*/
 }
 
+
+
 #title-person {
-  background-color: #798dd4;
+  background-color: white
+ color #798dd4;
+  height: 50px;
 }
 #title-person #crossicon {
   position: absolute;
@@ -665,6 +679,15 @@ div.leaflet-sidebar.right.visible {
 .alto_elemento_menu li a {
   font-size: 18px;
   color: white;
+}
+#sidebar456{
+  padding-bottom: -20px;
+  height: 44vh;
+}
+
+/* Sidebar5 scrollbar */
+#items-personal{
+  overflow: scroll;
 }
 /*
 @media only screen and (max-width: 992px) {
