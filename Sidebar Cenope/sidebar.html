@@ -807,7 +807,13 @@
         "</div></div><div class='row' style='min-height: 30px; margin-left: 0px; margin-right:0px; padding-left:1px; padding-right:1px; align-content: center;'><div class='col-md-6' style='font-weight:bold;'>Fuente de información</div><div class='col-md-6'>" +
         $(info).data("fuente") + "</div></div></div>";
         openSidebar();
-      }
+        }
+        var toPrintGraphics = "<div style='height:calc(48vh - 35.5px); overflow:hidden'><img src='img/toPrintSideA.svg' alt='graphB' style='width:100%;height:auto;'></div><br/><div style='height:calc(48vh - 35.5px); overflow-y:hidden' class='punteado'><img src='img/toPrintSideB.svg' alt='graphB' style='width:100%;height:auto'>"
+
+        function graficosSidebar() {         
+            document.getElementById("detalles").innerHTML = toPrintGraphics;
+            openSidebar();
+        }
       
 
       var fuerza_aerea;

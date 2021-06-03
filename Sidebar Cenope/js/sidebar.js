@@ -223,46 +223,23 @@ $(document).ready(function () {
         switch(fuerza)
         {
             case "EA" :
-                if (!$(".graficos").hasClass("mover-grafic")){
-                    $(".graficos").addClass("mover-grafic");
-                    banderaGraficos = true;
-                } else {
-                    $(".graficos").removeClass("mover-grafic");
-                }
+               
                 //$("#ejer-arg").toggleClass('mostrar');
                 $("#sub-menu-search2 #EA-mil ").toggleClass("active4");
 
                 //Para abrir mapa al abrir el primer sidebar responsiado;
-                if($("#mapa").hasClass("tamanoB")){
-                    $("#mapa").removeClass("tamanoB")
-                    $("#mapa").addClass("tamanoC");
-                }else{
-                    $("#mapa").removeClass("tamanoC")
-                    $("#mapa").addClass("tamanoB"); 
-                }
+               
                 ajustarse_Search = 1;
                 break;   
             case "Armada" :
-                if (!$(".graficos").hasClass("mover-grafic")){
-                    $(".graficos").addClass("mover-grafic");
-                } else {
-                    $(".graficos").removeClass("mover-grafic");
-                    banderaGraficos = false;
-                }
+                
                  //$("#armada-arg").toggleClass('mostrar');
                 $("#sub-menu-search2 #arm-arg").toggleClass("active4");
-                banderaGraficos = true;
                  break; 
             case "Aerea" :
-                if (!$(".graficos").hasClass("mover-grafic")){
-                    $(".graficos").addClass("mover-grafic");
-                } else {
-                    $(".graficos").removeClass("mover-grafic");
-                    banderaGraficos = false;
-                }
+               
                 //$("#fuerza-aerea").toggleClass('mostrar');
                 $("#sub-menu-search2 #FFAA ").toggleClass("active4");
-                banderaGraficos = true;
                  break; 
         }
         
@@ -293,7 +270,6 @@ $(document).ready(function () {
 
     //---------------------Mostrar sidebar del boton lupa---------------------//
     $("#lupa").click(function () {  
-        alert("este es el home");
         $(".sidebar-search").hide(); // esconder sub-menu del boton de capas
         $(".sidebar-search-info").hide(); // esconder sub-menu del boton de info
         $(".sidebar-search-lupa").toggleClass('active3');   
@@ -443,3 +419,8 @@ $(document).ready(function () {
         $("#ejer-arg").removeClass('mostrar');
     });
  */
+
+$("#triangle3").addClass("pulsado");
+$("#search i").addClass("pulsado");
+$("#triangle3").css("display", "inline");
+$("#search i").css("color", "white");
