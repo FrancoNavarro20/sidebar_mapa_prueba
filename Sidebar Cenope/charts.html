@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    .formato {
+      width: 100%;
+      height: 500px;
+      font-size: 15px;
+    }
+    div{
+    border: 1px solid black;
+    }
+  </style>
+
+  <div class="formato" id="activity"></div>
+  <div class="formato" id="chartdiv2"></div>
+
+  <script src="../../plugins/chart.js/Chart.min.js"></script>
+  <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+  <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+  <script src="https://cdn.amcharts.com/lib/4/themes/moonrisekingdom.js"></script>
+  <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+  <script>
+    am4core.ready(function () {
+      // Themes begin
+      am4core.useTheme(am4themes_moonrisekingdom);
+      am4core.useTheme(am4themes_animated);
+      // Themes end
+
+      // Create chart instance
+      var chart = am4core.create("activity", am4charts.PieChart);
+
+      // Add and configure Series
+      var pieSeries = chart.series.push(new am4charts.PieSeries());
+      pieSeries.dataFields.value = "cases";
+      pieSeries.dataFields.category = "act";
+
+      // Let's cut a hole in our Pie chart the size of 30% the radius
+      chart.innerRadius = am4core.percent(30);
+
+      // Put a thick white border around each Slice
+      pieSeries.slices.template.stroke = am4core.color("#fff");
+      pieSeries.slices.template.strokeWidth = 2;
+      pieSeries.slices.template.strokeOpacity = 1;
+      // change the cursor on hover to make it apparent the object can be interacted with
+      pieSeries.slices.template.cursorOverStyle = [
+        {
+          property: "cursor",
+          value: "pointer",
+        },
+      ];
+
+      pieSeries.ticks.template.disabled = true;
+      pieSeries.alignLabels = false;
+      pieSeries.labels.template.text = "{value.percent.formatNumber('#.0')}%";
+      pieSeries.labels.template.radius = am4core.percent(-40);
+      pieSeries.labels.template.fill = am4core.color("white");
+      pieSeries.labels.template.relativeRotation = 90;
+
+      // Create a base filter effect (as if it's not there) for the hover to return to
+      var shadow = pieSeries.slices.template.filters.push(
+        new am4core.DropShadowFilter()
+      );
+      shadow.opacity = 0;
+
+      // Create hover state
+      var hoverState = pieSeries.slices.template.states.getKey("hover"); // normally we have to create the hover state, in this case it already exists
+
+      // Slightly shift the shadow and make it more prominent on hover
+      var hoverShadow = hoverState.filters.push(new am4core.DropShadowFilter());
+      hoverShadow.opacity = 0.7;
+      hoverShadow.blur = 5;
+
+      // Add a legend
+      chart.legend = new am4charts.Legend();
+      chart.legend.valueLabels.template.text = "{value.value}";
+
+      chart.data = [
+        {
+          act: "Ejercitaciones",
+          cases: 2,
+        },
+
+        {
+          act: "Mov Vehiculos",
+          cases: 1,
+        },
+
+        {
+          act: "Apoyo de Comunicaciones",
+          cases: 2,
+        },
+      ];
+    });
+
+    am4core.useTheme(am4themes_moonrisekingdom);
+    am4core.useTheme(am4themes_animated);
+
+    var chart = am4core.create("chartdiv2", am4charts.XYChart);
+    chart.colors.step = 2;
+
+    chart.legend = new am4charts.Legend();
+    chart.legend.position = "top";
+    chart.legend.paddingBottom = 20;
+    chart.legend.labels.template.maxWidth = 95;
+
+    var xAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+    xAxis.dataFields.category = "category";
+    xAxis.renderer.cellStartLocation = 0.1;
+    xAxis.renderer.cellEndLocation = 0.9;
+    xAxis.renderer.grid.template.location = 0;
+
+    var yAxis = chart.yAxes.push(new am4charts.ValueAxis());
+    yAxis.min = 0;
+
+    function createSeries(value, name) {
+      var series = chart.series.push(new am4charts.ColumnSeries());
+      series.dataFields.valueY = value;
+      series.dataFields.categoryX = "category";
+      series.name = name;
+
+      series.events.on("hidden", arrangeColumns);
+      series.events.on("shown", arrangeColumns);
+
+      var bullet = series.bullets.push(new am4charts.LabelBullet());
+      bullet.interactionsEnabled = false;
+      bullet.dy = 30;
+      bullet.label.text = "{valueY}";
+      bullet.label.fill = am4core.color("#ffffff");
+
+      return series;
+    }
+
+    chart.data = [
+      {
+        category: "Oficiales",
+        first: 20,
+        second: 13,
+      },
+      {
+        category: "Suboficiales",
+        first: 40,
+        second: 28,
+      },
+      {
+        category: "Soldados Voluntarios",
+        first: 35,
+        second: 23,
+      },
+    ];
+
+    createSeries("first", "Efectivo Total");
+    createSeries("second", "Efectivo Empeñado");
+
+    function arrangeColumns() {
+      var series = chart.series.getIndex(0);
+
+      var w =
+        1 -
+        xAxis.renderer.cellStartLocation -
+        (1 - xAxis.renderer.cellEndLocation);
+      if (series.dataItems.length > 1) {
+        var x0 = xAxis.getX(series.dataItems.getIndex(0), "categoryX");
+        var x1 = xAxis.getX(series.dataItems.getIndex(1), "categoryX");
+        var delta = ((x1 - x0) / chart.series.length) * w;
+        if (am4core.isNumber(delta)) {
+          var middle = chart.series.length / 2;
+
+          var newIndex = 0;
+          chart.series.each(function (series) {
+            if (!series.isHidden && !series.isHiding) {
+              series.dummyData = newIndex;
+              newIndex++;
+            } else {
+              series.dummyData = chart.series.indexOf(series);
+            }
+          });
+          var visibleCount = newIndex;
+          var newMiddle = visibleCount / 2;
+
+          chart.series.each(function (series) {
+            var trueIndex = chart.series.indexOf(series);
+            var newIndex = series.dummyData;
+
+            var dx = (newIndex - trueIndex + middle - newMiddle) * delta;
+
+            series.animate(
+              { property: "dx", to: dx },
+              series.interpolationDuration,
+              series.interpolationEasing
+            );
+            series.bulletsContainer.animate(
+              { property: "dx", to: dx },
+              series.interpolationDuration,
+              series.interpolationEasing
+            );
+          });
+        }
+      }
+    }
+  </script>
+</html>

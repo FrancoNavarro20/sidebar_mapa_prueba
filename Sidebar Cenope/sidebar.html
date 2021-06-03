@@ -502,11 +502,11 @@
     <!--Graficos-->
     <div class="graficos" style="position: absolute; z-index: 1;">
       <div class="grafic-1">
-        <img class="graph" src="img/graph.svg" alt="Diagrama">
+        
         <!--<canvas id="myChart" width="100" height="100" style="z-index: 1;position: absolute;"></canvas>-->
       </div>
       <div class="grafic-2">
-        <img  class="graph" src="img/diagram.svg" alt="Diagrama-torta">
+        
        <!-- <canvas id="myChart2" width="100" height="100" style="z-index: 1;position: absolute;"></canvas>-->
       </div>
     </div>
@@ -790,20 +790,22 @@
         sidebar.show();
       }
       function masInfo(info) {
-        //var cod_uni = $(info).data("cod_uni");
-        //var cod_unisup = $(info).data("cod_unisup");
+        var cod_uni = $(info).data("cod_uni");
+        var cod_unisup = $(info).data("cod_unisup");
         //alert ("Cod Uni: "+cod_uni);
         document.getElementById("detalles").innerHTML =
         //   "ID: " +
         $(info).data("img") +
-        '<h1 style="text-align: center;">' +
-        $(info).data("fuerza") +
-        "</h1><hr/>Tipo: " +
-        $(info).data("objeto") +
-        "<br/>Nombre: " +
+        '<h4 style="text-align: center; padding-top: 10px; margin-bottom: 10px; text-transform: uppercase;">' +
         $(info).data("nombre") +
-        "<br/>Fuente: " +
-        $(info).data("fuente");
+        "</h4><div style='padding-top:10px; border-top: 1px solid gray; font-size:14px;'><div class='row' style='background-color:#eeeeee; min-height: 30px; margin-left: 0px; margin-right:0px; padding-left:1px; padding-right:1px; align-content: center;'><div class='col-md-6' style='font-weight:bold;'>Localidad</div><div class='col-md-6' style='text-transform: uppercase;'>" +
+        $(info).data("localidad") +
+        "</div></div><div class='row' style='min-height: 30px; margin-left: 0px; margin-right:0px; padding-left:1px; padding-right:1px; align-content: center;'><div class='col-md-6' style='font-weight:bold;'>Nodo</div><div class='col-md-6' style='text-transform: uppercase;'>" +
+        $(info).data("nodo") +
+        "</div></div><div class='row' style='background-color:#eeeeee; min-height: 30px; margin-left: 0px; margin-right:0px; padding-left:1px; padding-right:1px; align-content: center;'><div class='col-md-6' style='font-weight:bold;'>Arma</div><div class='col-md-6' style='text-transform: uppercase;'>" +
+        $(info).data("arma") +
+        "</div></div><div class='row' style='min-height: 30px; margin-left: 0px; margin-right:0px; padding-left:1px; padding-right:1px; align-content: center;'><div class='col-md-6' style='font-weight:bold;'>Fuente de información</div><div class='col-md-6'>" +
+        $(info).data("fuente") + "</div></div></div>";
         openSidebar();
       }
       

@@ -38,14 +38,18 @@ function mostrar_marcadores(cod_uni) {
               feature.properties.cod_unisup +
               "' data-fuerza='" +
               feature.properties.fdc +
-              "' data-objeto='" +
-              feature.properties.objeto +
+              "' data-localidad='" +
+              feature.properties.localidad +
+              "' data-nodo='" +
+              feature.properties.nodo +
+              "' data-arma='" +
+              feature.properties.arma +
               "' data-nombre='" +
               feature.properties.fna +
               "' data-fuente='" +
               feature.properties.sag +
               "' data-img='" +
-              '<center><img src="./img/Escudo_del_Ejército_Argentino.png" style="max-width: 20%; height: auto;"/></center>' + 
+              '<center><img src="./img/Escudo_del_Ejército_Argentino.png" style="max-width: 15%; height: auto; padding-top: 15px;"/></center>' + 
               "' onclick='masInfo(this)'>Mas información</a>"
           );
         },
