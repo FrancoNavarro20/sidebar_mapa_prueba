@@ -57,6 +57,7 @@ $(document).ready(function () {
     $("#sub-menu-search2").hide();
     $("#sub-menu-search3").hide();
     $("#sub-menu-search4").hide();
+    $("#sub-menu-conduc-sup").hide();
     //$("#sub-menu-lupa").hide();
 
     //-------------------------Boton de capas - funcionalidades---------------------//
@@ -80,9 +81,10 @@ $(document).ready(function () {
 
 
         //Achicar mapa
-        $("#map-cenope").toggleClass("active-mapa");
+        //$("#map-cenope").toggleClass("active-mapa");
 
         //Para abrir mapa al abrir el primer sidebar responsiado;
+        /*
         if($("#mapa").hasClass("tamanoA")){
            $("#mapa").removeClass("tamanoA")
            $("#mapa").addClass("tamanoB");
@@ -94,6 +96,7 @@ $(document).ready(function () {
             $("#mapa").removeClass("tamanoB")
             $("#mapa").addClass("tamanoA"); 
         }
+        */
 
     
         //
@@ -217,7 +220,7 @@ $(document).ready(function () {
         
         var origen = $(this);
         var fuerza = origen.data('fuerza');
-
+        
         switch(fuerza)
         {
             case "EA" :
@@ -289,11 +292,9 @@ $(document).ready(function () {
 
 
 
-
-
     //---------------------Mostrar sidebar del boton lupa---------------------//
     $("#lupa").click(function () {  
-
+        alert("este es el home");
         $(".sidebar-search").hide(); // esconder sub-menu del boton de capas
         $(".sidebar-search-info").hide(); // esconder sub-menu del boton de info
         $(".sidebar-search-lupa").toggleClass('active3');   
@@ -388,7 +389,28 @@ $(document).ready(function () {
         console.log("Finanzas se cerro correctamente");    
     });
  
- 
+    /*abrir ejer-arg principal*/
+    $("#click-EA").click(function () { 
+        $("#sub-menu-ejer-arg").show(); 
+    });
+    
+    //Cerrar ejer-arg principal
+    $("#crossicon-ejer").click(function () { 
+       $("#sub-menu-ejer-arg").hide();
+    });
+
+    /*abrir ejer-arg principal*/ 
+    $("#cond-sup").click(function () { 
+        $("#sub-menu-conduc-sup").show(); 
+    });
+    
+    //Cerrar ejer-arg principal
+    $("#crossicon-conduc").click(function () { 
+       $("#sub-menu-conduc-sup").hide();
+    });
+
+
+
 
 });
 
