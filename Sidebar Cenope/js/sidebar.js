@@ -80,9 +80,10 @@ $(document).ready(function () {
 
 
         //Achicar mapa
-        $("#map-cenope").toggleClass("active-mapa");
+        //$("#map-cenope").toggleClass("active-mapa");
 
         //Para abrir mapa al abrir el primer sidebar responsiado;
+        /*
         if($("#mapa").hasClass("tamanoA")){
            $("#mapa").removeClass("tamanoA")
            $("#mapa").addClass("tamanoB");
@@ -94,6 +95,7 @@ $(document).ready(function () {
             $("#mapa").removeClass("tamanoB")
             $("#mapa").addClass("tamanoA"); 
         }
+        */
 
     
         //
@@ -339,6 +341,12 @@ $(document).ready(function () {
        $("#sub-menu-search5").hide(); 
        console.log("Personal se cerro correctamente");    
     });
+
+
+    $(".pers ").click(function () { 
+        $("#sub-menu-search5").hide(); 
+        console.log("Personal se cerro correctamente");    
+     });
 
     //Click inteligencia
     $("#inteligencia").click(function () { 
