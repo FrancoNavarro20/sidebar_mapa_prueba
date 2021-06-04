@@ -234,11 +234,6 @@ body {
 
 /*sub-sidebar 2 - estilos - unidades militares*/
 
-#sub-menu-lupa {
-  left:60px;
-  z-index: -1;
-}
-
 #sub-menu-capas {
   left:60px;
 }
@@ -295,6 +290,7 @@ body {
 /*sub-sidebar 3 - estilos - Universidades*/
 #sub-menu-search3 {
   height: 45vh;
+  top: 100px;
 }
 #sub-menu-search3 ul li {
   height: 55px;
@@ -351,6 +347,7 @@ body {
 /*sub-sidebar 4 - estilos - limite ferrocarril*/
 #sub-menu-search4 {
   height: 45vh;
+  top: 100px;
 }
 #sub-menu-search4 ul li {
   height: 50px;
@@ -438,21 +435,6 @@ body {
 
 .mostrar {
   display: block;
-}
-
-/*sub-menu-lupa*/
-.sidebar-search-lupa {
-  position: absolute;
-  left: -290px;
-  width: 290px;
-  top: 66px;
-  height: 100%;
-  background: #333333;
-  display: none;
-  z-index: 1;
-}
-.sidebar-search-lupa.active3 {
-  left: 60px;
 }
 
 /*Buscador */
