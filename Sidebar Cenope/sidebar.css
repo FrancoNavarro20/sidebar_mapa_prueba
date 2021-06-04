@@ -860,6 +860,9 @@ div.leaflet-sidebar.right.visible {
 #fuerza_operativa_guc {
   background-color: #AEDE87;
 }
+#fuerza_operativa_gub {
+  background-color: #DEB887;
+}
 #fuerza_sostenimiento {
   background-color: #D37B7B;
 }
@@ -877,6 +880,10 @@ div.leaflet-sidebar.right.visible {
   overflow-x:hidden ;
   height: 31vh;
 }
+#items-fuerza_operativa_gub {
+  overflow-x:hidden ;
+  height: 31vh;
+}
 .click_fuerza_ope {
   cursor: pointer;
 }
@@ -885,6 +892,12 @@ div.leaflet-sidebar.right.visible {
 }
 .click_sist_educ {
   cursor: pointer;
+}
+.crossicon-fuerza_oper_gub{
+  position: absolute;
+  top: 122px;
+  left: 215px;
+  color: #ffffff;
 }
 .crossicon-fuerza_oper_guc{
   position: absolute;

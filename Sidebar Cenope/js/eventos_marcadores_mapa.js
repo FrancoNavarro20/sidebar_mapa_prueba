@@ -69,3 +69,19 @@ function mostrar_marcadores(cod_uni) {
     }
   });
 }
+
+function mostrar_grafico_grados(cod_uni) {
+  $.ajax({
+    data: { "cod_uni" : cod_uni },
+    url: "data_area_personal_grados.php",        // Url to which the request is send
+    //url: "./geojson/data_unidades_ea.geojson",        // Url to which the request is send
+    type: "POST",             // Type of request to be send, called as method
+    cache: true,             // To unable request pages to be cached
+    // el tipo de información que se espera de respuesta
+    dataType : 'json',
+    success: function(data)   // A function to be called if request succeeds
+    {
+      console.log("datos: "+data);
+    }
+  });
+}

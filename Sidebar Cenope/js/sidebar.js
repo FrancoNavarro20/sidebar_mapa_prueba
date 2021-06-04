@@ -61,6 +61,7 @@ $(document).ready(function () {
     $(".elem_fuerza_oper").hide();
     $(".elem_fuerza_sostenim").hide();
     $(".elem_sist_educ").hide();
+    $(".elem_fuerza_oper_gub").hide();
     $(".elem_fuerza_oper_guc").hide();
     $(".areas_personal").hide();
     //$("#sub-menu-lupa").hide();
@@ -354,6 +355,14 @@ $(document).ready(function () {
     
     $(".crossicon-sist_educ").click(function () { 
        $(".elem_sist_educ").hide();
+    });
+
+    $(".click_gub").click(function () { 
+       $(".elem_fuerza_oper_gub").show();
+    });
+    
+    $(".crossicon-fuerza_oper_gub").click(function () { 
+       $(".elem_fuerza_oper_gub").hide();
     });
 
     $(".click_guc").click(function () { 
