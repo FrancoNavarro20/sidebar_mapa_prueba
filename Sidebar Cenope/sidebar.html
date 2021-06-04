@@ -91,6 +91,11 @@
         <li>
           <a href="#" id="search"><i class="fas fa-layer-group"></i><i id="triangle2" class="fas fa-caret-left"></i></a>
         </li>
+        <li>
+          <a href="#" id="capas">
+          <i class="fas fa-university"></i>
+          </a>
+        </li>        
         <!--
           <li>
             <a href="#" id="info-fuera"
@@ -207,10 +212,7 @@
         </li>
         <li id="sist-edu" class="ejer-items">
           <p>Sistema Educativo</p>
-        </li>
-        <li onclick="graficosSidebar()" class="ejer-items" id="graficos">
-          Graficos
-        </li>
+        </li>        
       </ul>
     </div>
 
@@ -317,56 +319,6 @@
     </div>
     <!--Segundo sub menu "search" / Unidades militares-->
 
-    <!--tercero sub menu "search" / Universidades-->
-    <div id="sub-menu-search3" class="sidebar-search">
-      <ul id="subMenuB">
-        <li id="universidad">
-          <a href="#" id="Item1">
-            <h4>
-              Universidades<i class="fas fa-times" style="padding-left: 45px" id="crossicon-univer"></i>
-            </h4>
-          </a>
-        </li>
-        <li id="publica-mil" class="borde pulsar-universidades" data-universidad="publica">
-          <a href="#">
-            <img id="logo-unis" src="img/universidad_nac.svg" alt="Universidades Nacionales" />
-            <p class="mover-universidades">Universidades públicas</p>
-          </a>
-        </li>
-        <li id="privada-mil" class="borde pulsar-universidades" data-universidad="privada">
-          <a href="#">
-            <img id="logo-unis" src="img/universidad_otras.svg" alt="Universidades Privadas" style="width: 25px" />
-            <p class="mover-universidades">Universidades privadas</p>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <!--tercero sub menu "search" / Universidades-->
-
-    <!--cuarto sub menu "search" / limite internacional-->
-    <div id="sub-menu-search4" class="sidebar-search">
-      <ul id="subMenuB">
-        <li id="lim-intern">
-          <a href="#" id="Item1">
-            <h4>
-              Líneas de Ferrocarril<i class="fas fa-times" style="padding-left: 45px" id="crossicon-lim"></i>
-            </h4>
-          </a>
-        </li>
-        <li id="bt-lim-intern" class="borde">
-          <a href="#">
-            <p>
-              <i id="lim-icon" class="fas fa-map-marked-alt"></i> Visualizar
-              Líneas de Ferrocarril
-            </p>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <!--cuarto sub menu "search" / limite internacional-->
-    <div>
-
-    </div>
     <!--Quinto sub menu "search" / Personal-->
     <div id="sub-menu-search5" class="sidebar-search" style="display: none;">
       <ul id="subMenuB">
@@ -555,7 +507,72 @@
       </ul>
     </div>
     <!--Septimo sub menu "search" /-->
-
+    <div id="sub-menu-capas" class="sidebar-capas">    
+      <div class="title-menu">
+        Capas
+      </div>  
+          <div class="scroll_A">
+            <ul id="subMenuB" class="alto_elemento_menu">              
+              <li id="universidades" class="univers">
+                <a href="#">
+                  Universidades
+                </a>
+              </li>
+              <li id="limite-arg" class="linea-ferr">
+                <a href="#">
+                  Líneas de ferrocarril
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+  </div>
+      <div id="sub-menu-search3" class="sidebar-capas">   
+        <ul id="subMenuB">
+          <li id="universidad">
+            <a href="#" id="Item1">
+              <h4>
+                Universidades<i class="fas fa-times" style="padding-left: 45px" id="crossicon-univer"></i>
+              </h4>
+            </a>
+          </li>
+          <li id="publica-mil" class="borde pulsar-universidades" data-universidad="publica">
+            <a href="#">
+              <img id="logo-unis" src="img/universidad_nac.svg" alt="Universidades Nacionales" />
+              <p class="mover-universidades">Universidades públicas</p>
+            </a>
+          </li>
+          <li id="privada-mil" class="borde pulsar-universidades" data-universidad="privada">
+            <a href="#">
+              <img id="logo-unis" src="img/universidad_otras.svg" alt="Universidades Privadas" style="width: 25px" />
+              <p class="mover-universidades">Universidades privadas</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!--tercero sub menu "search" / Universidades-->
+  
+      <!--cuarto sub menu "search" / limite internacional-->
+      <div id="sub-menu-search4" class="sidebar-capas">
+        <ul id="subMenuB">
+          <li id="lim-intern">
+            <a href="#" id="Item1">
+              <h4>
+                Líneas de Ferrocarril<i class="fas fa-times" style="padding-left: 45px" id="crossicon-lim"></i>
+              </h4>
+            </a>
+          </li>
+          <li id="bt-lim-intern" class="borde">
+            <a href="#">
+              <p>
+                <i id="lim-icon" class="fas fa-map-marked-alt"></i> Visualizar
+                Líneas de Ferrocarril
+              </p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <!--primer sub menu "info" / buscador-->
     <div id="sub-menu-info" class="sidebar-search-info">
       <div class="help">
@@ -692,11 +709,11 @@
     map.addControl(sidebar);
 
     map.on('click', function () {
-      sidebar.hide();
+      sidebar.hide();      
     })
 
     map.on('popupclose', function () {
-      sidebar.hide();
+      sidebar.hide();      
     });
 
     //ZOOM HOME
@@ -1000,9 +1017,7 @@
     });
     */
     //Fin GeoJSON
-    function openSidebar() {
-      sidebar.show();
-    }
+   
     function masInfo(info) {
       var cod_uni = $(info).data("cod_uni");
       var cod_unisup = $(info).data("cod_unisup");
@@ -1020,15 +1035,11 @@
         $(info).data("arma") +
         "</div></div><div class='row' style='min-height: 30px; margin-left: 0px; margin-right:0px; padding-left:1px; padding-right:1px; align-content: center;'><div class='col-md-6' style='font-weight:bold;'>Fuente de información</div><div class='col-md-6'>" +
         $(info).data("fuente") + "</div></div></div>";
-      openSidebar();
+      sidebar.show();
     }
     var toPrintGraphics = "<div style='height:calc(48vh - 35.5px); overflow:hidden'><img src='img/toPrintSideA.svg' alt='graphB' style='width:100%;height:auto;'></div><br/><div style='height:calc(48vh - 35.5px); overflow-y:hidden' class='punteado'><img src='img/toPrintSideB.svg' alt='graphB' style='width:100%;height:auto'>"
-
-    function graficosSidebar() {
-      document.getElementById("detalles").innerHTML = toPrintGraphics;
-      openSidebar();
-    }
-
+    
+  
   </script>
   <!--<script src="js/graficos.js" type="text/javascript"></script>-->
 </body>

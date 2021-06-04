@@ -70,8 +70,8 @@ $(document).ready(function () {
         $(".sidebar-search").toggleClass('active'); //aparecer y desaparecer sidebar 
         //$(".graficos").toggleClass("mover-grafic");
         //$("#mapa").toggleClass("mapa-completo");
-        $(".sidebar-search-info").removeClass('active2');
-        $(".sidebar-search-lupa").removeClass('active3');
+        $(".sidebar-capas").removeClass('active');
+        // $(".sidebar-search-lupa").removeClass('active3');
         
         if(banderaGraficos == true){
             $(".graficos").removeClass("mover-grafic");
@@ -100,7 +100,7 @@ $(document).ready(function () {
 
     
         //
-
+        
         $(".sidebar #search i").toggleClass('pulsado'); // pintar y despintar boton
         $("#info i").removeClass('pulsado');
         $("#lupa i").removeClass('pulsado');
@@ -154,7 +154,7 @@ $(document).ready(function () {
     //Click cerrar Universidades
     $("#sub-menu-search3 #crossicon-univer").click(function () { 
         $("#sub-menu-search3").hide();
-        $("#sub-menu-search").show(); 
+        $("#sub-menu-capas").show(); 
         console.log("Universidades se cerro correctamente .");
     });
 
@@ -168,78 +168,20 @@ $(document).ready(function () {
     //Click cerrar Universidades
     $("#sub-menu-search4 #crossicon-lim").click(function () { 
         $("#sub-menu-search4").hide();
-        $("#sub-menu-search").show(); 
+        $("#sub-menu-capas").show(); 
         console.log("Límite internacional se cerro correctamente .");
     });
 
     //--------------- Boton de informacion----------------------------//
-    $("#info").click(function () { 
-
-        $(".sidebar-search").hide(); //escondiendo capas
-        $(".sidebar-search-lupa").hide(); // escondiendo lupa
-        $(".sidebar-search-info").show();
-        $(".sidebar-search-info").toggleClass('active2');
-        $(".sidebar-search").removeClass('active');
-        $(".sidebar-search-lupa").removeClass('active3');
-
-        //pintar , mostrar opcion del sidebar principal , y quitar estilos de los otros botones
-        $("#info i").toggleClass('pulsado');
-        $("#search i").removeClass('pulsado');
-        $("#lupa i").removeClass('pulsado');
-        $("#search #triangle2").hide(); 
-        $("#lupa #triangle3").hide(); 
-        flag2 = 2;
-
-        //Aparecer y desaparecer triangulito
-        if(bandera2 == 1)
-        {   
-          $("#info #triangle4").show();
-          bandera2 = 0;
-        }
-        else if(flag1 == 2 || flag3 == 2)
-        {
-            $("#info #triangle4").show();
-            flag1 = 0;
-            flag3 = 0;
-        }
-        else
-        {
-            $("#info #triangle4").hide();
-            //$("#search").toggleClass('pulsado'); 
-            bandera2 = 1;
-        }
-        
-
-        
-    },50);
-
-
-    //--------Mostrar informacion al apretar las unidades militares - EA - AA - FFAA
-
-    $('.prueba').click(function () { 
-        
-        var origen = $(this);
-        var fuerza = origen.data('fuerza');
-        
-        switch(fuerza)
-        {
-            case "EA" :
-                //$("#ejer-arg").toggleClass('mostrar');
-                $("#sub-menu-search2 #EA-mil ").toggleClass("active4");
-
-                //Para abrir mapa al abrir el primer sidebar responsiado;
-                 //$("#armada-arg").toggleClass('mostrar');
-                $("#sub-menu-search2 #arm-arg").toggleClass("active4");
-                banderaGraficos = true;
-                 break; 
-                //$("#fuerza-aerea").toggleClass('mostrar');
-                $("#sub-menu-search2 #FFAA ").toggleClass("active4");
-                banderaGraficos = true;
-                 break; 
-        }
-        
-    });
-
+    
+    $("#capas").click(function () {
+        $(".sidebar-search").hide(); // esconder sub-menu del boton de capas
+        $(".sidebar-search-lupa").hide(); // esconder sub-menu del boton de info
+        $("#sub-menu-capas").show();  
+        $(".sidebar-capas").toggleClass('active');
+        // $(".sidebar-capas").removeClass('active');
+        $("#capas i").toggleClass('pulsado');
+      });
     //-------------Universidades-----------Publicas y privadas -----------------//
     $(".pulsar-universidades").click(function () { 
         
@@ -265,14 +207,12 @@ $(document).ready(function () {
 
     //---------------------Mostrar sidebar del boton lupa---------------------//
     $("#lupa").click(function () {  
-        alert("este es el home");
         $(".sidebar-search").hide(); // esconder sub-menu del boton de capas
-        $(".sidebar-search-info").hide(); // esconder sub-menu del boton de info
-        $(".sidebar-search-lupa").toggleClass('active3');   
-        $(".sidebar-search-lupa").show();   
+        $(".sidebar-capas").hide(); // esconder sub-menu del boton de info
+        $("#sub-menu-lupa").show();  
         $(".sidebar-search").removeClass('active');
-        $(".sidebar-search-info").removeClass('active2');
 
+        
         $("#lupa i").toggleClass('pulsado');
         $("#search i").removeClass('pulsado');
         $("#info i").removeClass('pulsado');

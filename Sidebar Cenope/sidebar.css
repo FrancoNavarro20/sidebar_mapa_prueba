@@ -73,6 +73,69 @@ body {
   color: rgb(255, 255, 255);
 }
 
+.sidebar-capas {
+  position: absolute;
+  left: 60px;
+  width: 290px;
+  top: 65px;
+  height: 100%;
+  background: #333333;
+  /*transition:all 0.5s linear;*/
+  display: none;
+  /*overflow: scroll;*/
+}
+
+.sidebar-capas.active {
+  left: 60px;
+}
+
+.sidebar-capas ul {
+  list-style: none;
+  margin-top: 0px;
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+/*Elementos li*/
+.sidebar-capas ul li {
+  padding: 8px 8px 8px 8px;
+  border-top: 1px solid rgb(83, 83, 83);
+  transition: all 300ms linear;
+  height: 50px;
+}
+.sidebar-capas ul #universidades {
+  border-left: solid 6px RGB(238, 125, 0);
+}
+.sidebar-capas ul #limite-arg {
+  border-left: solid 6px RGB(64, 191, 239);
+}
+
+.sidebar-capas ul li:hover {
+  background-color: rgb(131, 131, 131);
+}
+
+.sidebar-capas ul li h4 {
+ 
+    color: white;
+
+  margin-top: 7px;
+  font-size: 23px;
+}
+
+
+.sidebar-capas ul li p {
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  margin-top: 0;
+    margin-bottom: 0rem;
+    color: white;
+  /*  padding-top: 8px;*/
+   min-height:-35px
+}
+
+.sidebar-capas ul li a {
+  text-decoration: none;
+}
+
 /*sub menu*/
 .sidebar-search {
   position: absolute;
@@ -170,6 +233,15 @@ body {
 */
 
 /*sub-sidebar 2 - estilos - unidades militares*/
+
+#sub-menu-lupa {
+  left:60px;
+  z-index: -1;
+}
+
+#sub-menu-capas {
+  left:60px;
+}
 
 #sub-menu-search2 {
   display: none;
@@ -374,7 +446,7 @@ body {
   left: -290px;
   width: 290px;
   top: 66px;
-  height: 900px;
+  height: 100%;
   background: #333333;
   display: none;
   z-index: 1;
@@ -482,6 +554,12 @@ div.leaflet-sidebar.right.visible {
 .scroll_B {
   position: absolute;
   overflow: scroll;
+  height: 45vh;
+  width: 100%;
+}
+
+.scroll_C {
+  position: absolute;
   height: 45vh;
   width: 100%;
 }
@@ -687,6 +765,27 @@ div.leaflet-sidebar.right.visible {
 
 /*Nuevo menu ejercito Argentino*/
 
+
+#sub-menu-capas #logo {
+  position: relative;
+  top: -4px;
+  width: 35px;
+}
+#sub-menu-capas ul li {
+  height: 38px;
+  /*border-bottom: 1px solid rgb(144, 144, 144);*/
+}
+
+#sub-menu-capas ul li a p {
+  position: relative;
+  top: -30px;
+  left: 34px;
+  font-size: 18px;
+  /*font-family: "Open Sans", sans-serif;
+  font-weight: 800;*/
+}
+
+
 #sub-menu-search #logo {
   position: relative;
   top: -4px;
@@ -744,13 +843,6 @@ div.leaflet-sidebar.right.visible {
 #cond-sup{
   border-left: 5px solid rgb(123, 123, 211);
   cursor: pointer;
-}
-
-#graficos{
-  border-left: 5px solid rgb(87, 173, 76);
-  cursor: pointer;
-  color: white;
-  font-weight: 550;
 }
 
 #fuerza-ope{
@@ -921,3 +1013,7 @@ div.leaflet-sidebar.right.visible {
   }
 }
 */
+
+.punteado{
+  border-top: dotted 1px black;
+}
