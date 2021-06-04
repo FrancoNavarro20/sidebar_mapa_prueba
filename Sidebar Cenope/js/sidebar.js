@@ -64,14 +64,12 @@ $(document).ready(function () {
     $(".elem_fuerza_oper_gub").hide();
     $(".elem_fuerza_oper_guc").hide();
     $(".areas_personal").hide();
-    //$("#sub-menu-lupa").hide();
 
     //-------------------------Boton de capas - funcionalidades---------------------//
     $("#search").on('click', function () {
         //Apagar color de botones del sidebar principal
 
         $(".sidebar-search-info").hide(); // esconder sub-menu del boton de lupa
-        $(".sidebar-search-lupa").hide(); 
         $("#sub-menu-search").show();
         $(".sidebar-search").toggleClass('active'); //aparecer y desaparecer sidebar 
         //$(".graficos").toggleClass("mover-grafic");
@@ -108,29 +106,28 @@ $(document).ready(function () {
         //
         
         $(".sidebar #search i").toggleClass('pulsado'); // pintar y despintar boton
-        $("#info i").removeClass('pulsado');
-        $("#lupa i").removeClass('pulsado');
+        $("#capas i").removeClass('pulsado');
         $("#info #triangle4").hide();
-        $("#lupa #triangle3").hide();
-        flag1 = 2;
+        $("#capas #triangle2").hide();
+        flag3 = 2;
 
-        //Aparecer y desaparecer triangulito
-        if(bandera == 1)
-        {   
-          $("#search #triangle2").show();
-          bandera = 0;
-        }
-        else if(flag2 == 2 || flag3 == 2)
-        {
-            $("#search #triangle2").show();
-            flag2 = 0;
-            flag3 = 0;
-        }
-        else
-        {
-            $("#search #triangle2").hide();
-            bandera = 1;
-        }
+          //Aparecer y desaparecer triangulito
+          if(bandera3 == 1)
+          {   
+            $("#search #triangle3").show();
+            bandera3 = 0;
+          }
+          else if(flag1 == 2 || flag2 == 2)
+          {
+              $("#search #triangle3").show();
+              flag1 = 0;
+              flag2 = 0;
+          }
+          else
+          {
+              $("#search #triangle3").hide();
+              bandera3 = 1;
+          }
     });
 
     //Click unidades militares
@@ -182,11 +179,32 @@ $(document).ready(function () {
     
     $("#capas").click(function () {
         $(".sidebar-search").hide(); // esconder sub-menu del boton de capas
-        $(".sidebar-search-lupa").hide(); // esconder sub-menu del boton de info
         $("#sub-menu-capas").show();  
         $(".sidebar-capas").toggleClass('active');
         // $(".sidebar-capas").removeClass('active');
         $("#capas i").toggleClass('pulsado');
+        $("#search i").removeClass('pulsado');
+        $("#info #triangle4").hide();
+        $("#search #triangle3").hide();
+        flag1 = 2;
+
+        //Aparecer y desaparecer triangulito
+        if(bandera == 1)
+        {   
+          $("#capas #triangle2").show();
+          bandera = 0;
+        }
+        else if(flag2 == 2 || flag3 == 2)
+        {
+            $("#capas #triangle2").show();
+            flag2 = 0;
+            flag3 = 0;
+        }
+        else
+        {
+            $("#capas #triangle2").hide();
+            bandera = 1;
+        }
       });
     //-------------Universidades-----------Publicas y privadas -----------------//
     $(".pulsar-universidades").click(function () { 
@@ -212,39 +230,7 @@ $(document).ready(function () {
 
 
     //---------------------Mostrar sidebar del boton lupa---------------------//
-    $("#lupa").click(function () {  
-        $(".sidebar-search").hide(); // esconder sub-menu del boton de capas
-        $(".sidebar-capas").hide(); // esconder sub-menu del boton de info
-        $("#sub-menu-lupa").show();  
-        $(".sidebar-search").removeClass('active');
-
-        
-        $("#lupa i").toggleClass('pulsado');
-        $("#search i").removeClass('pulsado');
-        $("#info i").removeClass('pulsado');
-        $("#search #triangle2").hide(); 
-        $("#info #triangle4").hide(); 
-        flag3 = 2;
-
-          //Aparecer y desaparecer triangulito
-          if(bandera3 == 1)
-          {   
-            $("#lupa #triangle3").show();
-            bandera3 = 0;
-          }
-          else if(flag1 == 2 || flag2 == 2)
-          {
-              $("#lupa #triangle3").show();
-              flag1 = 0;
-              flag2 = 0;
-          }
-          else
-          {
-              $("#lupa #triangle3").hide();
-              bandera3 = 1;
-          }
-            
-    });
+    
 
     //Onclick de los Personal !!!
     $("#personal").click(function () { 
