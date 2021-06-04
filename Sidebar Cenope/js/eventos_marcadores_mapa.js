@@ -9,6 +9,13 @@ $("#EA-mil").click(function () {
   $(this).data("clicks", !clicks);
 });
 
+$(".ejer-items").click(function () {
+  var cod_uni = $(this).data("cod_uni");
+  //console.log("cod_uni:"+cod_uni);
+  map.removeLayer(ejercito);
+  mostrar_marcadores(cod_uni);
+});
+
 function mostrar_marcadores(cod_uni) {
   $.ajax({
     data: { "cod_uni" : cod_uni },
@@ -42,6 +49,12 @@ function mostrar_marcadores(cod_uni) {
               feature.properties.objeto +
               "' data-nombre='" +
               feature.properties.fna +
+              "' data-localidad='" +
+              feature.properties.localidad +
+              "' data-nodo='" +
+              feature.properties.nodo +
+              "' data-arma='" +
+              feature.properties.arma +
               "' data-fuente='" +
               feature.properties.sag +
               "' data-img='" +

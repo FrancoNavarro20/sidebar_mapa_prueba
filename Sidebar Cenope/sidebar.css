@@ -762,6 +762,44 @@ div.leaflet-sidebar.right.visible {
 #sist-edu{
   border-left: 5px solid rgb(234, 236, 97);
 }
+#fuerza_operativa {
+  background-color: #01A1BD;
+}
+#fuerza_operativa_guc {
+  background-color: #AEDE87;
+}
+#fuerza_sostenimiento {
+  background-color: #D37B7B;
+}
+#sistema_educativo {
+  background-color: #EAEC61;
+}
+#sistema_educativo p {
+  color: black;
+}
+#items-fuerza_operativa {
+  overflow-x:hidden ;
+  height: 35vh;
+}
+#items-fuerza_operativa_guc {
+  overflow-x:hidden ;
+  height: 31vh;
+}
+.click_fuerza_ope {
+  cursor: pointer;
+}
+.click_fuerza_sostenim {
+  cursor: pointer;
+}
+.click_sist_educ {
+  cursor: pointer;
+}
+.crossicon-fuerza_oper_guc{
+  position: absolute;
+  top: 122px;
+  left: 215px;
+  color: #ffffff;
+}
 
 #EA-mil{
   border-left:5px solid #AEC90B;
@@ -797,8 +835,18 @@ div.leaflet-sidebar.right.visible {
   height: 46vh;
 }
 
+.areas_personal{
+  position: absolute;
+  top: 53.4vh;
+  left: 60px;
+  display: block;
+  width: 290px;
+  height: 46vh;
+}
+
 #sub-menu-conduc-sup .ejer-items{
   height: 38px;
+  cursor: pointer;
   /*border-left:5px solid gray;*/
 }
 #sub-menu-conduc-sup .ejer-items p{
@@ -824,6 +872,13 @@ div.leaflet-sidebar.right.visible {
 #sub-menu-conduc-sup #crossicon-conduc{
   position: absolute;
   top: 85px;
+  left: 215px;
+  color: #ffffff;
+}
+
+#sub-menu-conduc-sup #crossicon-conduc_areas_pers{
+  position: absolute;
+  top: 48px;
   left: 215px;
   color: #ffffff;
 }
