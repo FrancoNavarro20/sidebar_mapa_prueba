@@ -145,7 +145,7 @@
         </div>
         <div class="scroll_B">
           <ul id="submenu2" class="alto_elemento_menu">
-            <li id="personal">
+            <li id="personal" class="click_areas_personal">
               <a href="#">
                 Personal
               </a>
@@ -204,15 +204,15 @@
         <li id="cond-sup" class="ejer-items">
           <p>Conducción Superior</p>
         </li>
-        <li id="fuerza-ope" class="ejer-items">
+        <li id="fuerza-ope" class="ejer-items click_fuerza_ope">
           <p>Fuerza Operativa</p>
         </li>
-        <li id="fuerza-sost" class="ejer-items">
-          <p>Fuerza de sostenimiento</p>
+        <li id="fuerza-sost" class="ejer-items click_fuerza_sostenim">
+          <p>Fuerza de Sostenimiento</p>
         </li>
-        <li id="sist-edu" class="ejer-items">
+        <li id="sist-edu" class="ejer-items click_sist_educ">
           <p>Sistema Educativo</p>
-        </li>        
+        </li>
       </ul>
     </div>
 
@@ -237,41 +237,41 @@
           </a>
         </li>
         <div id="items-conduccion">
-          <li id="fuerza-ope" class="ejer-items">
-            <p>Dir Gral Pers Bien</p>
+          <li id="fuerza-ope" class="ejer-items" data-cod_uni="U3465">
+            <p>Dir Grl Pers Bien</p>
           </li>
           <li id="direc1" class="ejer-items">
-            <p>Dir Gral Inves Dllo</p>
+            <p>Dir Grl Inves Dllo</p>
           </li>
           <li id="direc2" class="ejer-items">
-            <p>Dir Gral Icia</p>
+            <p>Dir Grl Icia</p>
           </li>
           <li id="direc3" class="ejer-items">
-            <p>Dir Gral Adm Fin</p>
+            <p>Dir Grl Adm Fin</p>
           </li>
           <li id="direc4" class="ejer-items">
-            <p>Dir Gral Mat</p>
+            <p>Dir Grl Mat</p>
           </li>
           <li id="direc5" class="ejer-items">
-            <p>Dir Gral Com Info</p>
+            <p>Dir Grl Com Info</p>
           </li>
           <li id="direc6" class="ejer-items">
-            <p>Dir Gral As Jur</p>
+            <p>Dir Grl As Jur</p>
           </li>
           <li id="direc7" class="ejer-items">
-            <p>Dir Gral Educ</p>
+            <p>Dir Grl Educ</p>
           </li>
           <li id="direc8" class="ejer-items">
-            <p>Dir Gral Org Doct</p>
+            <p>Dir Grl Org Doct</p>
           </li>
           <li id="direc9" class="ejer-items">
-            <p>Dir Gral Pl(S) Prog(S) Presup</p>
+            <p>Dir Grl Pl(S) Prog(S) Presup</p>
           </li>
           <li id="direc10" class="ejer-items">
-            <p>Dir Gral Sal</p>
+            <p>Dir Grl Sal</p>
           </li>
           <li id="direc11" class="ejer-items">
-            <p>Secr A y Te JEMGE</p>
+            <p>Secr Ayte JEMGE</p>
           </li>
           <li id="direc12" class="ejer-items">
             <p>Secr Coord SUBJEMGE</p>
@@ -287,6 +287,172 @@
     </div>
 
     <!--fin Sub-menu Conduccion superior-->
+
+    <!--Sub-menu Fuerza Operativa-->
+    <div id="sub-menu-conduc-sup" class="sidebar-search elem_fuerza_oper">
+      <div class="title-menu">
+        Estructura Orgánica
+      </div>
+      <ul id="subMenuB">
+        <li id="title-ejer-arg">
+
+          <a href="#">
+            <img id="logo" src="img/Escudo_del_Ejército_Argentino.png" alt="EA" style="width: 25px">
+            <p>Ejército Argentino</p>
+          </a>
+        </li>
+        <li id="fuerza_operativa" class="ejer-items">
+          <p>Fuerza Operativa</p>
+          <a href="#">
+            <i class="fas fa-times crossicon-fuerza_oper" style="padding-left: 45px" id="crossicon-conduc"></i>
+          </a>
+        </li>
+        <div id="items-fuerza_operativa">
+          <li id="fuerza-ope" class="ejer-items" data-cod_uni="U3467">
+            <p>CAAE</p>
+          </li>
+          <li id="direc1" class="ejer-items">
+            <p>GUB</p>
+          </li>
+          <li id="direc2" class="ejer-items click_guc">
+            <p>GUC</p>
+          </li>
+          <li id="direc3" class="ejer-items">
+            <p>AE</p>
+          </li>
+        </div>
+      </ul>
+    </div>
+    <!--fin Sub-menu Fuerza Operativa-->
+
+    <!--Sub-menu Fuerza Operativa-->
+    <div id="sub-menu-conduc-sup" class="sidebar-search elem_fuerza_oper_guc">
+      <div class="title-menu">
+        Estructura Orgánica
+      </div>
+      <ul id="subMenuB">
+        <li id="title-ejer-arg">
+
+          <a href="#">
+            <img id="logo" src="img/Escudo_del_Ejército_Argentino.png" alt="EA" style="width: 25px">
+            <p>Ejército Argentino</p>
+          </a>
+        </li>
+        <li id="fuerza_operativa" class="ejer-items">
+          <p>Fuerza Operativa</p>
+        </li>
+        <li id="fuerza_operativa_guc" class="ejer-items">
+          <p>GUC</p>
+          <a href="#">
+            <i class="fas fa-times crossicon-fuerza_oper_guc" style="padding-left: 45px"></i>
+          </a>
+        </li>
+        <div id="items-fuerza_operativa_guc">
+          <li id="fuerza-ope" class="ejer-items" data-cod_uni="U2055">
+            <p>Br Bl I</p>
+          </li>
+          <li id="direc1" class="ejer-items" data-cod_uni="U2092">
+            <p>Br Bl II</p>
+          </li>
+          <li id="direc2" class="ejer-items" data-cod_uni="U2664">
+            <p>Br Mte III</p>
+          </li>
+          <li id="direc3" class="ejer-items" data-cod_uni="U2135">
+            <p>Br Parac IV</p>
+          </li>
+          <li id="direc4" class="ejer-items" data-cod_uni="U2147">
+            <p>Br M V</p>
+          </li>
+          <li id="direc5" class="ejer-items" data-cod_uni="U2211">
+            <p>Br M VI</p>
+          </li>
+          <li id="direc6" class="ejer-items" data-cod_uni="U2159">
+            <p>Br M VIII</p>
+          </li>
+          <li id="direc7" class="ejer-items" data-cod_uni="U2226">
+            <p>Br Mec IX</p>
+          </li>
+          <li id="direc8" class="ejer-items" data-cod_uni="U2054">
+            <p>Br Mec X</p>
+          </li>
+          <li id="direc9" class="ejer-items" data-cod_uni="U2240">
+            <p>Br Mec XI</p>
+          </li>
+          <li id="direc10" class="ejer-items" data-cod_uni="U2084">
+            <p>Br Mte XII</p>
+          </li>
+        </div>
+      </ul>
+    </div>
+    <!--fin Sub-menu Fuerza Operativa-->
+
+    <!--Sub-menu Fuerza de Sostenimiento-->
+    <div id="sub-menu-conduc-sup" class="sidebar-search elem_fuerza_sostenim">
+      <div class="title-menu">
+        Estructura Orgánica
+      </div>
+      <ul id="subMenuB">
+        <li id="title-ejer-arg">
+
+          <a href="#">
+            <img id="logo" src="img/Escudo_del_Ejército_Argentino.png" alt="EA" style="width: 25px">
+            <p>Ejército Argentino</p>
+          </a>
+        </li>
+        <li id="fuerza_sostenimiento" class="ejer-items">
+          <p>Fuerza de Sostenimiento</p>
+          <a href="#">
+            <i class="fas fa-times crossicon-fuerza_sostenim" style="padding-left: 45px" id="crossicon-conduc"></i>
+          </a>
+        </li>
+        <div id="items-fuerza_sostenimiento">
+          <li id="fuerza-ope" class="ejer-items">
+            <p>Direcciones</p>
+          </li>
+          <li id="direc1" class="ejer-items">
+            <p>Comandos</p>
+          </li>
+        </div>
+      </ul>
+    </div>
+    <!--fin Sub-menu Fuerza de Sostenimiento-->
+
+    <!--Sub-menu Fuerza de Sostenimiento-->
+    <div id="sub-menu-conduc-sup" class="sidebar-search elem_sist_educ">
+      <div class="title-menu">
+        Estructura Orgánica
+      </div>
+      <ul id="subMenuB">
+        <li id="title-ejer-arg">
+
+          <a href="#">
+            <img id="logo" src="img/Escudo_del_Ejército_Argentino.png" alt="EA" style="width: 25px">
+            <p>Ejército Argentino</p>
+          </a>
+        </li>
+        <li id="sistema_educativo" class="ejer-items">
+          <p>Sistema Educativo</p>
+          <a href="#">
+            <i class="fas fa-times crossicon-sist_educ" style="padding-left: 45px" id="crossicon-conduc"></i>
+          </a>
+        </li>
+        <div id="items-sist_educ">
+          <li id="fuerza-ope" class="ejer-items">
+            <p>Direcciones</p>
+          </li>
+          <li id="direc1" class="ejer-items">
+            <p>Institutos de Formación</p>
+          </li>
+          <li id="direc2" class="ejer-items">
+            <p>Institutos de Perfeccionamiento</p>
+          </li>
+          <li id="direc3" class="ejer-items">
+            <p>Liceos Militares</p>
+          </li>
+        </div>
+      </ul>
+    </div>
+    <!--fin Sub-menu Fuerza de Sostenimiento-->
 
     <div id="sub-menu-search2" class="sidebar-search">
       <ul id="subMenuB">
@@ -319,8 +485,118 @@
     </div>
     <!--Segundo sub menu "search" / Unidades militares-->
 
+    <!--tercero sub menu "search" / Universidades-->
+    <div id="sub-menu-search3" class="sidebar-search">
+      <ul id="subMenuB">
+        <li id="universidad">
+          <a href="#" id="Item1">
+            <h4>
+              Universidades<i class="fas fa-times" style="padding-left: 45px" id="crossicon-univer"></i>
+            </h4>
+          </a>
+        </li>
+        <li id="publica-mil" class="borde pulsar-universidades" data-universidad="publica">
+          <a href="#">
+            <img id="logo-unis" src="img/universidad_nac.svg" alt="Universidades Nacionales" />
+            <p class="mover-universidades">Universidades públicas</p>
+          </a>
+        </li>
+        <li id="privada-mil" class="borde pulsar-universidades" data-universidad="privada">
+          <a href="#">
+            <img id="logo-unis" src="img/universidad_otras.svg" alt="Universidades Privadas" style="width: 25px" />
+            <p class="mover-universidades">Universidades privadas</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!--tercero sub menu "search" / Universidades-->
+
+    <!--cuarto sub menu "search" / limite internacional-->
+    <div id="sub-menu-search4" class="sidebar-search">
+      <ul id="subMenuB">
+        <li id="lim-intern">
+          <a href="#" id="Item1">
+            <h4>
+              Líneas de Ferrocarril<i class="fas fa-times" style="padding-left: 45px" id="crossicon-lim"></i>
+            </h4>
+          </a>
+        </li>
+        <li id="bt-lim-intern" class="borde">
+          <a href="#">
+            <p>
+              <i id="lim-icon" class="fas fa-map-marked-alt"></i> Visualizar
+              Líneas de Ferrocarril
+            </p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!--cuarto sub menu "search" / limite internacional-->
+    
+    <!--Sub-menu Conduccion superior-->
+
+    <div id="sub-menu-conduc-sup" class="sidebar-search areas_personal">
+      <div class="title-menu">
+        Áreas de la Conducción
+      </div>
+      <ul id="subMenuB">
+        <li id="cond-sup" class="ejer-items">
+          <p>Personal</p>
+          <a href="#">
+            <i class="fas fa-times" style="padding-left: 45px" id="crossicon-conduc_areas_pers"></i>
+          </a>
+        </li>
+        <div id="items-conduccion">
+          <li id="fuerza-ope" class="ejer-items panel_graficos" >
+            <p>Fuerza Efectiva</p>
+          </li>
+          <li id="direc1" class="ejer-items">
+              <p>Proyección de Bajas</p>
+          </li>
+          <li id="direc2" class="ejer-items">
+              <p>Oficios judiciales</p>
+          </li>
+          <li id="direc3" class="ejer-items">
+              <p>Causas de Género</p>
+          </li>
+          <li id="direc4" class="ejer-items">
+              <p>Control Toxicológico </p>
+          </li>
+          <li id="direc5" class="ejer-items">
+              <p>Anexo 27 </p>
+          </li>
+          <li id="direc6" class="ejer-items">
+              <p>Faltas Disciplinarias</p>
+          </li>
+          <li id="direc7" class="ejer-items">
+              <p>Deserción </p>
+          </li>
+          <li id="direc8" class="ejer-items">
+              <p>Actuaciones de Justicia Militar </p>
+          </li>
+          <li id="direc9" class="ejer-items">
+              <p>Situación de Vivienda </p>
+          </li>
+          <li id="direc10" class="ejer-items">
+              <p>Evacuaciones </p>
+          </li>
+          <li id="direc11" class="ejer-items">
+              <p>Acciones </p>
+          </li>
+          <li id="direc12" class="ejer-items">
+              <p>Partes de Sanidad </p>
+          </li>
+          <li id="direc13" class="ejer-items">
+              <p>Estado Civil </p>
+          </li>
+        </div>
+      </ul>
+    </div>
+
+    <!--fin Sub-menu Conduccion superior-->
+
     <!--Quinto sub menu "search" / Personal-->
-    <div id="sub-menu-search5" class="sidebar-search" style="display: none;">
+    <!-- <div id="sub-menu-search5" class="sidebar-search" style="display: none;">
       <ul id="subMenuB">
         <li id="title-person" style="background-color: white; font-weight: bold;">
           <a href="#">
@@ -338,12 +614,12 @@
             </h4>
         </li>
         <div id="items-personal">
-          <li id="personal-1" class="borde prueba">
+          <li id="personal-1" class="ejer-items">
             <a href="#">
-              <p>Fuerza Ejecutiva</p>
+              <p>Fuerza Efectiva</p>
             </a>
           </li>
-          <li id="personal-2" class="borde prueba">
+          <li id="personal-2" class="ejer-items">
             <a href="#">
               <p>Proyección de Bajas</p>
             </a>
@@ -410,7 +686,7 @@
           </li>
         </div>
       </ul>
-    </div>
+    </div> -->
     <!--Quinto sub menu "search" / Unidades militares-->
 
     <!--Sexto sub menu "search" / Inteligencia-->
@@ -1038,8 +1314,23 @@
       sidebar.show();
     }
     var toPrintGraphics = "<div style='height:calc(48vh - 35.5px); overflow:hidden'><img src='img/toPrintSideA.svg' alt='graphB' style='width:100%;height:auto;'></div><br/><div style='height:calc(48vh - 35.5px); overflow-y:hidden' class='punteado'><img src='img/toPrintSideB.svg' alt='graphB' style='width:100%;height:auto'>"
-    
-  
+
+    function graficosSidebar() {
+      document.getElementById("detalles").innerHTML = toPrintGraphics;
+      openSidebar();
+    }
+
+    $(".panel_graficos").click(function () {
+      var clicks = $(this).data("clicks");
+      if (!clicks) {
+        document.getElementById("detalles").innerHTML = toPrintGraphics;
+        sidebar.show();
+      } else {
+        sidebar.hide();
+      }
+      $(this).data("clicks", !clicks);
+    });
+
   </script>
   <!--<script src="js/graficos.js" type="text/javascript"></script>-->
 </body>

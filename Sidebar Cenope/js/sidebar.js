@@ -58,6 +58,11 @@ $(document).ready(function () {
     $("#sub-menu-search3").hide();
     $("#sub-menu-search4").hide();
     $("#sub-menu-conduc-sup").hide();
+    $(".elem_fuerza_oper").hide();
+    $(".elem_fuerza_sostenim").hide();
+    $(".elem_sist_educ").hide();
+    $(".elem_fuerza_oper_guc").hide();
+    $(".areas_personal").hide();
     //$("#sub-menu-lupa").hide();
 
     //-------------------------Boton de capas - funcionalidades---------------------//
@@ -326,6 +331,46 @@ $(document).ready(function () {
        $("#sub-menu-conduc-sup").hide();
     });
 
+    
+    $(".click_fuerza_ope").click(function () { 
+       $(".elem_fuerza_oper").show();
+    });
+    
+    $(".crossicon-fuerza_oper").click(function () { 
+       $(".elem_fuerza_oper").hide();
+    });
+
+    $(".click_fuerza_sostenim").click(function () { 
+       $(".elem_fuerza_sostenim").show();
+    });
+    
+    $(".crossicon-fuerza_sostenim").click(function () { 
+       $(".elem_fuerza_sostenim").hide();
+    });
+
+    $(".click_sist_educ").click(function () { 
+       $(".elem_sist_educ").show();
+    });
+    
+    $(".crossicon-sist_educ").click(function () { 
+       $(".elem_sist_educ").hide();
+    });
+
+    $(".click_guc").click(function () { 
+       $(".elem_fuerza_oper_guc").show();
+    });
+    
+    $(".crossicon-fuerza_oper_guc").click(function () { 
+       $(".elem_fuerza_oper_guc").hide();
+    });
+
+    $(".click_areas_personal").click(function () { 
+       $(".areas_personal").show();
+    });
+    
+    $("#crossicon-conduc_areas_pers").click(function () { 
+       $(".areas_personal").hide();
+    });
 
 
 
