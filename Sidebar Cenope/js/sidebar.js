@@ -64,6 +64,10 @@ $(document).ready(function () {
     $(".elem_fuerza_oper_gub").hide();
     $(".elem_fuerza_oper_guc").hide();
     $(".areas_personal").hide();
+    $(".areas_inteligencia").hide();
+    $(".areas_operaciones").hide();
+    $(".areas_material").hide();
+    $(".areas_finanzas").hide();
 
     //-------------------------Boton de capas - funcionalidades---------------------//
     $("#search").on('click', function () {
@@ -249,54 +253,6 @@ $(document).ready(function () {
         $("#sub-menu-search5").hide(); 
         console.log("Personal se cerro correctamente");    
      });
-
-    //Click inteligencia
-    $("#inteligencia").click(function () { 
-        $("#sub-menu-search6").show();
-        console.log("Inteligencia abierto correctamente .");
-    });
-
-    //Click cerrar Inteligencia
-    $("#title-intel #crossicon").click(function () { 
-        $("#sub-menu-search6").hide(); 
-        console.log("Inteligencia se cerro correctamente");    
-    });
-
-     //Click Operaciones
-     $("#operaciones").click(function () { 
-        $("#sub-menu-search7").show();
-        console.log("Inteligencia abierto correctamente .");
-    });
-
-    //Click cerrar Operaciones
-    $("#title-opera #crossicon").click(function () { 
-        $("#sub-menu-search7").hide(); 
-        console.log("Operaciones se cerro correctamente");    
-    });
-
-     //Click Materiales
-     $("#material").click(function () { 
-        $("#sub-menu-search8").show();
-        console.log("Materiales abierto correctamente .");
-    });
-
-    //Click cerrar Materiales
-    $("#title-mate #crossicon").click(function () { 
-        $("#sub-menu-search8").hide(); 
-        console.log("Operaciones se cerro correctamente");    
-    });
- 
-     //Click Finanzas
-     $("#finanzas").click(function () { 
-        $("#sub-menu-search9").show();
-        console.log("Finanzas abierto correctamente .");
-    });
-
-    //Click cerrar Finanzas
-    $("#title-fina #crossicon").click(function () { 
-        $("#sub-menu-search9").hide(); 
-        console.log("Finanzas se cerro correctamente");    
-    });
  
     /*abrir ejer-arg principal*/
     $("#click-EA").click(function () { 
@@ -367,6 +323,37 @@ $(document).ready(function () {
        $(".areas_personal").hide();
     });
 
+    $(".click_areas_inteligencia").click(function () { 
+       $(".areas_inteligencia").show();
+    });
+    
+    $("#crossicon-conduc_areas_inteligencia").click(function () { 
+       $(".areas_inteligencia").hide();
+    });
+
+    $(".click_areas_operaciones").click(function () { 
+       $(".areas_operaciones").show();
+    });
+    
+    $("#crossicon-conduc_areas_operaciones").click(function () { 
+       $(".areas_operaciones").hide();
+    });
+
+    $(".click_areas_material").click(function () { 
+       $(".areas_material").show();
+    });
+    
+    $("#crossicon-conduc_areas_material").click(function () { 
+       $(".areas_material").hide();
+    });
+
+    $(".click_areas_finanzas").click(function () { 
+       $(".areas_finanzas").show();
+    });
+    
+    $("#crossicon-conduc_areas_finanzas").click(function () { 
+       $(".areas_finanzas").hide();
+    });
 
 
 });

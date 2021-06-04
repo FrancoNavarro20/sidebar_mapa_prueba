@@ -922,7 +922,7 @@ div.leaflet-sidebar.right.visible {
   height: 46vh;
 }
 
-.areas_personal{
+.areas_personal, .areas_inteligencia, .areas_operaciones, .areas_material, .areas_finanzas{
   position: absolute;
   top: 53.4vh;
   left: 60px;
@@ -963,7 +963,7 @@ div.leaflet-sidebar.right.visible {
   color: #ffffff;
 }
 
-#sub-menu-conduc-sup #crossicon-conduc_areas_pers{
+#sub-menu-conduc-sup #crossicon-conduc_areas_pers, #crossicon-conduc_areas_inteligencia, #crossicon-conduc_areas_operaciones, #crossicon-conduc_areas_material, #crossicon-conduc_areas_finanzas{
   position: absolute;
   top: 48px;
   left: 215px;
