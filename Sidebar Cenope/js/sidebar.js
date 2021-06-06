@@ -1,37 +1,7 @@
-'use strict'
-
-//Boton de capas
-
-/*
-var search = document.querySelector("#search");
-var trianguloCapas = document.querySelector("#search #triangle2");
-search.addEventListener('click', () =>{
-    //Sacar y poner el sub-menu search
-    console.log("Esto entra!!");
-    /*
-    if(bandera){
-        //document.querySelector("#search i").style.color = "#fff";
-        //document.querySelector("#search i").style.fontSize = "30px";
-        document.querySelector("#search #triangle2").style.display = "block";
-        bandera = 0;
-    }else{
-        //document.querySelector("#search i").style.color = "#818181";
-        document.querySelector("#search i").style.fontSize = "25px";
-        document.querySelector("#search #triangle2").style.display = "none";
-        bandera = 1;
-    }
-    
-    //Para aparecer y desaparecer el sidebar-search y coloriar el boton si esta pulsado o no
-    //document.querySelector(".sidebar-search").classList.toggle('active');
-    //search.classList.toggle('pulsado');
-}); */
-
-//Generando un evento over in
-
+var ejercito;
 
 //codigo jquery
 $(document).ready(function () {
-
     //variables
     var bandera;
     var bandera2;
@@ -86,29 +56,6 @@ $(document).ready(function () {
             banderaGraficos = false;
         }
 
-
-
-        //Achicar mapa
-        //$("#map-cenope").toggleClass("active-mapa");
-
-        //Para abrir mapa al abrir el primer sidebar responsiado;
-        /*
-        if($("#mapa").hasClass("tamanoA")){
-           $("#mapa").removeClass("tamanoA")
-           $("#mapa").addClass("tamanoB");
-        }else if(ajustarse_Search == 1){
-            $("#mapa").removeClass("tamanoC")
-            $("#mapa").addClass("tamanoA"); 
-        }
-        else{
-            $("#mapa").removeClass("tamanoB")
-            $("#mapa").addClass("tamanoA"); 
-        }
-        */
-
-    
-        //
-        
         $(".sidebar #search i").toggleClass('pulsado'); // pintar y despintar boton
         $("#capas i").removeClass('pulsado');
         $("#info #triangle4").hide();
@@ -136,47 +83,38 @@ $(document).ready(function () {
 
     //Click unidades militares
     $("#uni-militares").click(function () { 
-        //$("#sub-menu-search").hide(); 
-        $("#sub-menu-search2 #subMenuB").slideDown();
-        $("#sub-menu-search2").show();
-      
-        console.log("Se produjo correctamente.");
+      $("#sub-menu-search2 #subMenuB").slideDown();
+      $("#sub-menu-search2").show();
     });
 
     //Click cerrar unidades militares
     $("#sub-menu-search2 #crossicon").click(function () { 
-        $("#sub-menu-search2").hide();
-        $("#sub-menu-search").show(); 
-        console.log("Unidades militares se cerro correctamente");
-        
+      $("#sub-menu-search2").hide();
+      $("#sub-menu-search").show(); 
     });
 
     //Click universidades
     $("#universidades").click(function () { 
-        //$("#sub-menu-search").hide(); 
-        $("#sub-menu-search3").show();
-        console.log("Universidades se abrio correctamente .");
+      $("#sub-menu-search3").show();
     });
 
     //Click cerrar Universidades
     $("#sub-menu-search3 #crossicon-univer").click(function () { 
-        $("#sub-menu-search3").hide();
-        $("#sub-menu-capas").show(); 
-        console.log("Universidades se cerro correctamente .");
+      $("#sub-menu-search3").hide();
+      $("#sub-menu-capas").show(); 
     });
 
     //Click limite internacional
     $("#limite-arg").click(function () { 
-        //$("#sub-menu-search").hide(); 
-        $("#sub-menu-search4").show();
-        console.log("Límite internacional se abrio correctamente .");
+      //$("#sub-menu-search").hide(); 
+      $("#sub-menu-search4").show();
     });
 
     //Click cerrar Universidades
     $("#sub-menu-search4 #crossicon-lim").click(function () { 
-        $("#sub-menu-search4").hide();
-        $("#sub-menu-capas").show(); 
-        console.log("Límite internacional se cerro correctamente .");
+      $("#sub-menu-search4").hide();
+      $("#sub-menu-capas").show(); 
+      //console.log("Límite internacional se cerro correctamente .");
     });
 
     //--------------- Boton de informacion----------------------------//
@@ -255,8 +193,37 @@ $(document).ready(function () {
      });
  
     /*abrir ejer-arg principal*/
-    $("#click-EA").click(function () { 
-        $("#sub-menu-ejer-arg").show(); 
+    $("#EA-mil").click(function () {
+      console.log("click EA");
+      $("#sub-menu-ejer-arg").show(); 
+      var clicks = $(this).data("clicks");
+
+      if ( typeof $(this).data("cod_uni") !== "undefined")
+        cod_uni = $(this).data("cod_uni");
+
+      map.removeLayer(ejercito);
+      if (!clicks) {
+        mostrar_marcadores(cod_uni);
+      }
+      $(this).data("clicks", !clicks);
+    });
+
+    $(".items_areas_conduccion").click(function () {
+      graficosSidebar();
+      if (!sidebar.isVisible())
+        sidebar.show();
+    });
+
+    $(".ejer-items").click(function () {
+      if (typeof $(this).data("cod_uni") == "undefined" || $(this).data("cod_uni")=="")
+        return;
+      cod_uni = $(this).data("cod_uni");
+      //console.log("cod_uni:"+cod_uni);
+      map.removeLayer(ejercito);
+      mostrar_marcadores(cod_uni);
+      graficosSidebar();
+      if (!sidebar.isVisible())
+        sidebar.show();
     });
     
     //Cerrar ejer-arg principal

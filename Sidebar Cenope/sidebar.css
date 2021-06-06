@@ -114,22 +114,18 @@ body {
 }
 
 .sidebar-capas ul li h4 {
- 
-    color: white;
-
+  color: white;
   margin-top: 7px;
   font-size: 23px;
 }
-
 
 .sidebar-capas ul li p {
   color: rgb(255, 255, 255);
   font-size: 16px;
   margin-top: 0;
-    margin-bottom: 0rem;
-    color: white;
-  /*  padding-top: 8px;*/
-   min-height:-35px
+  margin-bottom: 0rem;
+  color: white;
+  min-height:-35px
 }
 
 .sidebar-capas ul li a {
@@ -147,6 +143,7 @@ body {
   /*transition:all 0.5s linear;*/
   z-index: 1;
   /*overflow: scroll;*/
+  min-height: calc((100vh - 65px)/2);
 }
 
 .sidebar-search.active {
@@ -167,10 +164,7 @@ body {
   height: 50px;
 }
 
-.sidebar-search ul #uni-militares {
-  border-left: solid 6px RGB(174, 201, 11);
-  width: 100%;
-}
+
 .sidebar-search ul #universidades {
   border-left: solid 6px RGB(238, 125, 0);
 }
@@ -183,13 +177,10 @@ body {
 }
 
 .sidebar-search ul li h4 {
- 
-    color: #2f4491;
-
+  color: #2f4491;
   margin-top: 7px;
   font-size: 23px;
 }
-
 
 .sidebar-search ul li p {
   color: rgb(255, 255, 255);
@@ -201,14 +192,13 @@ body {
    min-height:-35px
 }
 
-.sidebar-search ul li a {
+.sidebar-search ul li a p {
   text-decoration: none;
 }
 
 #personal {
   border-left: 5px solid #798dd4;
 }
-
 #inteligencia {
   border-left: 5px solid #79c6d4;
 }
@@ -221,18 +211,6 @@ body {
 #finanzas {
   border-left: 5px solid #e7b202;
 }
-/*
-.sidebar-search .scroll_B::-webkit-scrollbar {
-	width: 7px;
-}
-
-.sidebar-search .scroll_B::-webkit-scrollbar-thumb {
-	background: #ff9d00;
-	border-radius: 5px;
-}
-*/
-
-/*sub-sidebar 2 - estilos - unidades militares*/
 
 #sub-menu-capas {
   left:60px;
@@ -259,8 +237,6 @@ body {
   top: -15px;
   left: 34px;
   font-size: 18px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 800;
 }
 #sub-menu-search2 #uni-mil-title {
   background-color: RGB(174, 201, 11);
@@ -325,8 +301,7 @@ body {
 
 #sub-menu-search3 ul li a p {
   font-size: 18px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 800;
+  position: relative;
 }
 
 #sub-menu-search3 ul li a p #uni-icon {
@@ -378,9 +353,7 @@ body {
 #sub-menu-search4 ul li a p {
   position: absolute;
   top: 60px;
-  font-size: 16px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 800;
+  font-size: 18px;
 }
 #sub-menu-search4 ul li a p #lim-icon {
   margin-right: 10px;
@@ -422,19 +395,6 @@ body {
   padding-left: 10px;
   padding-right: 10px;
   background-color: white;
-}
-
-/*Mostrar y quitar unidades militares EA / AA / FFAA*/
-.uni-mil {
-  position: relative;
-  top: 50px;
-  left: 500px;
-  font-size: 50px;
-  display: none;
-}
-
-.mostrar {
-  display: block;
 }
 
 /*Buscador */
@@ -494,16 +454,9 @@ body {
   top: 0px;
 }
 
-.active-mapa {
-  position: absolute;
-  height: 100%;
-  width: 84%;
-  z-index: 0;
-  left: 289px;
-}
-
-div.leaflet-sidebar.right.visible {
+div.leaflet-sidebar {
   padding: 0;
+  width: 460px;
 }
 
 .leaflet-control-geocoder-options-open {
@@ -513,36 +466,30 @@ div.leaflet-sidebar.right.visible {
 /*Prueba de scroll*/
 
 .centrar-1 {
-  height: calc((100vh - 65px)/2);
+  min-height: calc((100vh - 65px)/2);
   width: 100%;
   /*border: 3px solid yellow;*/
   /*border: 1px solid #66cc54;*/
-  overflow: hidden;
-}
-.centrar-2 {
-  height: calc((100vh - 65px)/2);
-  width: 100%;
-  /*border: 3px solid violet;*/
   overflow: hidden;
 }
 
 .scroll_A {
   position: absolute;
   overflow: hidden;
-  height: calc((100vh - 65px)/2);
+  max-height: calc((100vh - 65px)/2);
   width: 100%;
 }
 
 .scroll_B {
   position: absolute;
-  overflow: scroll;
-  height: 45vh;
+  overflow: hidden;
+  max-height: calc((100vh - 65px)/2);
   width: 100%;
 }
 
 .scroll_C {
   position: absolute;
-  height: 45vh;
+  height: calc(100vh - 65px);
   width: 100%;
 }
 
@@ -582,130 +529,11 @@ div.leaflet-sidebar.right.visible {
   z-index: 1;
 }
 
-/* .sidebar-search5 Personal*/
-
-#sub-menu-search5 {
-  position: absolute;
-  top: 52vh;
-  height: 48vh;
-  /*overflow-x: hidden;*/
-}
-
-
-
 #title-person {
   background-color: white
  color #798dd4;
   height: 50px;
 }
-#title-person #crossicon {
-  position: absolute;
-  left: 210px;
-  top: 22px;
-}
-
-#sub-menu-search6 {
-  position: absolute;
-  top: 52vh;
-  height: 48vh;
-}
-
-#sub-menu-search6 #title-intel {
-  background-color: #79c6d4;
-}
-
-#title-intel #crossicon {
-  position: absolute;
-  left: 210px;
-  top: 22px;
-}
-
-#sub-menu-search7 {
-  position: absolute;
-  top: 52vh;
-  height: 48vh;
-}
-
-#title-opera {
-  background-color: #ca4057;
-}
-#title-opera #crossicon {
-  position: absolute;
-  left: 210px;
-  top: 22px;
-}
-/*Materiales*/
-#sub-menu-search8 {
-  position: absolute;
-  top: 52vh;
-  height: 48vh;
-}
-
-#title-mate {
-  background-color: #66cc54;
-}
-#title-mate #crossicon {
-  position: absolute;
-  left: 210px;
-  top: 22px;
-}
-/*Finanzas*/
-#sub-menu-search9 {
-  position: absolute;
-  top: 52vh;
-  height: 48vh;
-}
-
-#title-fina {
-  background-color: #e7b202;
-}
-#title-fina #crossicon {
-  position: absolute;
-  left: 210px;
-  top: 22px;
-}
-
-/*Graficos*/
-.graficos {
-  width: 400px;
-  height: 100vh;
-  border: 5px solid rgb(128, 128, 128);
-  margin-left: 60px;
-  background-color: white;
-  display: none;
-}
-
-.grafic-1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: calc(47vh);
-  border-bottom: 1px dashed black;
-}
-
-.grafic-2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 50vh;
-  width: 100%;
-  height: 50vh;
-}
-
-.graph {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60%;
-}
-.mover-grafic {
-  margin-left: 350px;
-  display: block;
-}
-
-/* page Responsive*/
 
 .tamanoA {
   padding-left: 0px;
@@ -718,22 +546,6 @@ div.leaflet-sidebar.right.visible {
   padding-right: 0px;
 }
 
-.tamanoB {
-  margin-left: 100px;
-  left: -39px;
-  height: 95vh;
-  width: calc(97vw - 290px);
-  margin-right: 0px;
-}
-
-.tamanoC {
-  margin-left: 100px;
-  left: 360px;
-  height: 95vh;
-  width: calc(76vw - 290px);
-  margin-right: 0px;
-}
-
 
 .alto_elemento_menu li {
   min-height: 35px;
@@ -742,6 +554,9 @@ div.leaflet-sidebar.right.visible {
 }
 .alto_elemento_menu li a {
   font-size: 18px;
+  color: white;
+}
+.alto_elemento_menu li a p{
   color: white;
 }
 
@@ -788,18 +603,19 @@ div.leaflet-sidebar.right.visible {
 }
 #title-ejer-arg{
   height: 38px;
+  padding-top: 5px;
   background-color: #AEC90B;
+  align-items: center;
 }
-/* 
-#personal-1,#personal-2{
-  height: 30px; 
+#title-ejer-arg a{
+  text-decoration: none;
 }
-*/
+
 #sub-menu-ejer-arg ul li a p {
-    position: relative;
-    top: -26px;
-    left: 34px;
-    font-size: 18px;
+  position: relative;
+  top: -26px;
+  left: 34px;
+  font-size: 18px;
 }
 
 #crossicon-ejer{
@@ -807,13 +623,6 @@ div.leaflet-sidebar.right.visible {
   top: 48px;
   left: 215px;
   color: #ffffff;
-}
-#sub-menu-ejer-arg .ejer-items{
-  height: 38px;
-  /*border-left:5px solid gray;*/
-}
-#sub-menu-ejer-arg .ejer-items p{
-  font-size: 18px;
 }
 
 #sub-menu-ejer-arg #logo{
@@ -829,12 +638,15 @@ div.leaflet-sidebar.right.visible {
 
 #fuerza-ope{
   border-left: 5px solid rgb(1, 161, 189);
+  cursor: pointer;
 }
 #fuerza-sost{
   border-left: 5px solid rgb(211, 123, 123);
+  cursor: pointer;
 }
 #sist-edu{
   border-left: 5px solid rgb(234, 236, 97);
+  cursor: pointer;
 }
 #fuerza_operativa {
   background-color: #01A1BD;
@@ -854,27 +666,7 @@ div.leaflet-sidebar.right.visible {
 #sistema_educativo p {
   color: black;
 }
-#items-fuerza_operativa {
-  overflow-x:hidden ;
-  height: 35vh;
-}
-#items-fuerza_operativa_guc {
-  overflow-x:hidden ;
-  height: 31vh;
-}
-#items-fuerza_operativa_gub {
-  overflow-x:hidden ;
-  height: 31vh;
-}
-.click_fuerza_ope {
-  cursor: pointer;
-}
-.click_fuerza_sostenim {
-  cursor: pointer;
-}
-.click_sist_educ {
-  cursor: pointer;
-}
+
 .crossicon-fuerza_oper_gub{
   position: absolute;
   top: 122px;
@@ -890,54 +682,132 @@ div.leaflet-sidebar.right.visible {
 
 #EA-mil{
   border-left:5px solid #AEC90B;
-  display: block;
+  cursor: pointer;
 }
 
 #arm-arg{
   border-left:5px solid #EE7D00;
-  display: block;
+  cursor: pointer;
 }
 
 #FFAA{
   border-left:5px solid #40BFEF;
-  display: block;
+  cursor: pointer;
 }
 
-
-#sub-menu-ejer-arg{
-  position: absolute;
-    left: 60px;
-    display: block;
-    width: 290px;
-    height: 46vh;
-}
-
-
-
-#sub-menu-conduc-sup{
+#sub-menu-ejer-arg {
   position: absolute;
   left: 60px;
-  display: block;
   width: 290px;
-  height: 46vh;
+  max-height: calc((100vh - 65px)/2);
+}
+
+#sub-menu-conduc-sup {
+  position: absolute;
+  left: 60px;
+  width: 290px;
+  max-height: calc((100vh - 65px)/2);
+  --alto_panel: calc((100vh - 65px)/2);
+}
+.elem_conducc_sup .div_items_elem {
+  overflow: scroll;
+  overflow-x:hidden ;
+  height: calc(var(--alto_panel) - 35px - 38px - 38px); 
+}
+.elem_fuerza_oper .div_items_elem {
+  overflow-x:hidden ;
+  height: calc(var(--alto_panel) - 35px - 38px - 38px); 
+}
+.elem_fuerza_oper_guc .div_items_elem {
+  overflow: scroll;
+  overflow-x:hidden ;
+  height: calc(var(--alto_panel) - 35px - 38px - 38px - 38px); 
+}
+.elem_fuerza_oper_gub .div_items_elem {
+  overflow-x:hidden ;
+  height: calc(var(--alto_panel) - 35px - 38px - 38px); 
+}
+.elem_fuerza_sostenim .div_items_elem {
+  overflow-x:hidden ;
+  height: calc(var(--alto_panel) - 35px - 38px - 38px); 
+}
+.elem_sist_educ .div_items_elem {
+  overflow-x:hidden ;
+  height: calc(var(--alto_panel) - 35px - 38px - 38px); 
 }
 
 .areas_personal, .areas_inteligencia, .areas_operaciones, .areas_material, .areas_finanzas{
   position: absolute;
-  top: 53.4vh;
+  top: calc(65px + ((100vh - 65px)/2));
   left: 60px;
-  display: block;
   width: 290px;
-  height: 46vh;
+  max-height: calc((100vh - 65px)/2);
 }
 
+.areas_conduccion {
+  top: calc(65px + ((100vh - 65px)/2));
+  max-height: calc((100vh - 65px)/2);
+  width: 100%;
+}
+
+.areas_personal #items-conduccion {
+  overflow: scroll;
+  overflow-x:hidden ;
+  height: calc(var(--alto_panel) - 35px - 38px); 
+}
+
+.menu_superior .ejer-items{
+  height: 38px;
+  cursor: pointer;
+  
+}
+.menu_superior .ejer-items p{
+  font-size: 18px;
+}
+.menu_superior .ejer-items a {
+  text-decoration: none;
+}
+#sub-menu-ejer-arg .ejer-items{
+  height: 38px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+#sub-menu-ejer-arg .ejer-items p{
+  font-size: 18px;
+}
+#sub-menu-ejer-arg .ejer-items a {
+  text-decoration: none;
+}
+.alto_elemento_menu .ejer-items{
+  height: 38px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.areas_conduccion .ejer-items p{
+  font-size: 18px;
+}
+.areas_conduccion .ejer-items a {
+  text-decoration: none;
+}
+.areas_conduccion .ejer-items{
+  height: 38px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
 #sub-menu-conduc-sup .ejer-items{
   height: 38px;
   cursor: pointer;
-  /*border-left:5px solid gray;*/
+  display: flex;
+  align-items: center;
 }
 #sub-menu-conduc-sup .ejer-items p{
   font-size: 18px;
+}
+#sub-menu-conduc-sup .ejer-items a {
+  text-decoration: none;
 }
 
 #sub-menu-conduc-sup #logo{
@@ -968,13 +838,6 @@ div.leaflet-sidebar.right.visible {
   top: 48px;
   left: 215px;
   color: #ffffff;
-}
-
-
-#items-conduccion{
-  overflow: scroll;
-  overflow-x:hidden ;
-  height: 35vh;
 }
 
 #direc1{
@@ -1030,12 +893,6 @@ div.leaflet-sidebar.right.visible {
   height: 44vh;
 }
 
-/* Sidebar5 scrollbar */
-#items-personal{
-  overflow: scroll;
-  height: 39.3vh;
-  overflow-x: hidden;
-}
 /*
 @media only screen and (max-width: 992px) {
   .tamanoA {
@@ -1044,22 +901,6 @@ div.leaflet-sidebar.right.visible {
     left: -39;
     width: 96vw;
     height: 91.5vh;
-  }
-
-  .tamanoB {
-    margin-left: 100px;
-    left: -39px;
-    margin-right: 0px;
-    height: 91.5vh;
-    width: 75.5vw;
-  }
-
-  .tamanoC {
-    margin-left: 100px;
-    left: 360px;
-    margin-right: 0px;
-    height: 91.8vh;
-    width: 47.5vw;
   }
 }
 */
