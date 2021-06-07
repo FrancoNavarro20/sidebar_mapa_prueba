@@ -44,6 +44,7 @@ body {
   color: #f1f1f1;
 }
 
+
 .sidebar li a .fa-caret-left {
   padding-left: 4px;
   color: rgb(255, 255, 255);
@@ -71,6 +72,7 @@ body {
   top: 55px;
   padding-left: 4px;
   color: rgb(255, 255, 255);
+  display: block;
 }
 
 .sidebar-capas {
@@ -664,6 +666,11 @@ div.leaflet-sidebar {
 #sub-menu-conduc-sup #logo{
   position: relative;
   top: -1px;
+}
+
+.pulsado-items{
+  border-left: 10px solid rgb(48, 129, 195);
+  background-color: rgb(95, 91, 91);
 }
 
 #sub-menu-conduc-sup ul li a p {
