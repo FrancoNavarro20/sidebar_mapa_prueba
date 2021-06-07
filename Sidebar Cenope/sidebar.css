@@ -76,7 +76,7 @@ body {
 .sidebar-capas {
   position: absolute;
   left: 60px;
-  width: 290px;
+  width: 260px;
   top: 65px;
   height: 100%;
   background: #333333;
@@ -103,10 +103,10 @@ body {
   height: 50px;
 }
 .sidebar-capas ul #universidades {
-  border-left: solid 6px RGB(238, 125, 0);
+  border-left: solid 5px RGB(238, 125, 0);
 }
 .sidebar-capas ul #limite-arg {
-  border-left: solid 6px RGB(64, 191, 239);
+  border-left: solid 5px RGB(64, 191, 239);
 }
 
 .sidebar-capas ul li:hover {
@@ -125,7 +125,7 @@ body {
   margin-top: 0;
   margin-bottom: 0rem;
   color: white;
-  min-height:-35px
+  min-height:-30px
 }
 
 .sidebar-capas ul li a {
@@ -136,7 +136,7 @@ body {
 .sidebar-search {
   position: absolute;
   left: 60px;
-  width: 290px;
+  width: 260px;
   top: 65px;
   height: 100%;
   background: #333333;
@@ -164,14 +164,6 @@ body {
   height: 50px;
 }
 
-
-.sidebar-search ul #universidades {
-  border-left: solid 6px RGB(238, 125, 0);
-}
-.sidebar-search ul #limite-arg {
-  border-left: solid 6px RGB(64, 191, 239);
-}
-
 .sidebar-search ul li:hover {
   background-color: rgb(131, 131, 131);
 }
@@ -189,7 +181,7 @@ body {
     margin-bottom: 0rem;
     color: white;
   /*  padding-top: 8px;*/
-   min-height:-35px
+   min-height:-30px
 }
 
 .sidebar-search ul li a p {
@@ -212,70 +204,9 @@ body {
   border-left: 5px solid #e7b202;
 }
 
-#sub-menu-capas {
-  left:60px;
-}
-
-#sub-menu-search2 {
-  display: none;
-  margin-left: 0px;
-  height: 45vh;
-}
-
-#sub-menu-search2 ul li {
-  height: 66px;
-  border-bottom: 1px solid rgb(144, 144, 144);
-}
-#sub-menu-search2 #logo {
-  position: relative;
-  top: 11px;
-  width: 35px;
-}
-
-#sub-menu-search2 ul li a p {
-  position: relative;
-  top: -15px;
-  left: 34px;
-  font-size: 18px;
-}
-#sub-menu-search2 #uni-mil-title {
-  background-color: RGB(174, 201, 11);
-  height: 50px;
-}
-
-#sub-menu-search2 #uni-mil-title #Item1 {
-  position: absolute;
-  top: 12px;
-}
-#sub-menu-search2 #uni-mil-title #Item1 h4 {
-  position: relative;
-  bottom: 8px;
-  font-size: 20px;
-}
-#sub-menu-search2 #uni-mil-title #Item1 #crossicon {
-  position: absolute;
-  left: 205px;
-  top: 3px;
-}
-
 .active4 {
   background-color: rgb(131, 131, 131);
   border-left: 5px solid RGB(174, 201, 11);
-}
-
-/*sub-sidebar 3 - estilos - Universidades*/
-#sub-menu-search3 {
-  height: 45vh;
-  top: 100px;
-}
-#sub-menu-search3 ul li {
-  height: 55px;
-  border-bottom: 1px solid rgb(144, 144, 144);
-}
-
-#sub-menu-search3 #universidad {
-  background-color: RGB(238, 125, 0);
-  height: 50px;
 }
 
 #logo-unis {
@@ -283,77 +214,17 @@ body {
   top: 6px;
 }
 
-#sub-menu-search3 #universidad #Item1 {
-  position: absolute;
-  top: 12px;
-}
-#sub-menu-search3 #universidad #Item1 h4 {
-  position: relative;
-  bottom: 9px;
-  font-size: 20px;
-}
-
-#sub-menu-search3 #universidad #Item1 #crossicon-univer {
-  position: absolute;
-  left: 205px;
-  top: 3px;
-}
-
-#sub-menu-search3 ul li a p {
-  font-size: 18px;
-  position: relative;
-}
-
-#sub-menu-search3 ul li a p #uni-icon {
-  margin-right: 10px;
-}
-
-#sub-menu-search3 li .mover-universidades {
-  position: relative;
-  top: -20px;
-  left: 30px;
-}
-
 .active5 {
   background-color: rgb(131, 131, 131);
   border-left: 5px solid RGB(238, 125, 0);
 }
 
-/*sub-sidebar 4 - estilos - limite ferrocarril*/
-#sub-menu-search4 {
-  height: 45vh;
-  top: 100px;
-}
-#sub-menu-search4 ul li {
-  height: 50px;
-  border-bottom: 1px solid rgb(144, 144, 144);
-}
 
-#sub-menu-search4 #lim-intern {
-  background-color: RGB(64, 191, 239);
-  height: 50px;
-}
-
-#sub-menu-search4 #lim-intern #Item1 {
-  position: absolute;
-  top: 12px;
-}
-#sub-menu-search4 #lim-intern #Item1 h4 {
-  position: relative;
-  bottom: 6px;
-  font-size: 20px;
-}
-
-#sub-menu-search4 #lim-intern #Item1 #crossicon-lim {
-  position: absolute;
-  left: 205px;
-  top: 3px;
-}
 
 #sub-menu-search4 ul li a p {
   position: absolute;
   top: 60px;
-  font-size: 18px;
+  font-size: 16px;
 }
 #sub-menu-search4 ul li a p #lim-icon {
   margin-right: 10px;
@@ -363,8 +234,8 @@ body {
 
 .sidebar-search-info {
   position: absolute;
-  left: -290px;
-  width: 290px;
+  left: -260px;
+  width: 260px;
   top: 66px;
   height: 100%;
   background: #333333;
@@ -409,7 +280,7 @@ body {
   margin-left: 6px;
   margin-top: 10px;
   padding: 0 20px;
-  font-size: 18px;
+  font-size: 16px;
   color: black;
   outline: none;
   border: 1px solid silver;
@@ -496,10 +367,10 @@ div.leaflet-sidebar {
 .title-menu {
   background-color: #ffffff;
   color: #2f4491;
-  min-height: 35px;
+  min-height: 30px;
   padding-left: 5px;
   text-align: left;
-  font-size: 20px;
+  font-size: 18px;
   padding-top: 2px;
   font-weight: bold;
 }
@@ -537,10 +408,10 @@ div.leaflet-sidebar {
 
 .tamanoA {
   padding-left: 0px;
-  margin-left: 350px;
+  margin-left: 320px;
   padding-top: 0px;
   margin-top: 65px;
-  width: calc(100vw - 350px);
+  width: calc(100vw - 320px);
   height: calc(100vh - 65px);
   margin-right: 0px;
   padding-right: 0px;
@@ -548,12 +419,12 @@ div.leaflet-sidebar {
 
 
 .alto_elemento_menu li {
-  min-height: 35px;
+  min-height: 30px;
   padding-top: 0px;
   margin-top: 0px;
 }
 .alto_elemento_menu li a {
-  font-size: 18px;
+  font-size: 16px;
   color: white;
 }
 .alto_elemento_menu li a p{
@@ -562,34 +433,13 @@ div.leaflet-sidebar {
 
 /*Nuevo menu ejercito Argentino*/
 
-
-#sub-menu-capas #logo {
-  position: relative;
-  top: -4px;
-  width: 35px;
-}
-#sub-menu-capas ul li {
-  height: 38px;
-  /*border-bottom: 1px solid rgb(144, 144, 144);*/
-}
-
-#sub-menu-capas ul li a p {
-  position: relative;
-  top: -30px;
-  left: 34px;
-  font-size: 18px;
-  /*font-family: "Open Sans", sans-serif;
-  font-weight: 800;*/
-}
-
-
 #sub-menu-search #logo {
   position: relative;
   top: -4px;
-  width: 35px;
+  width: 30px;
 }
 #sub-menu-search ul li {
-  height: 38px;
+  height: 30px;
   /*border-bottom: 1px solid rgb(144, 144, 144);*/
 }
 
@@ -597,13 +447,13 @@ div.leaflet-sidebar {
   position: relative;
   top: -30px;
   left: 34px;
-  font-size: 18px;
+  font-size: 16px;
   /*font-family: "Open Sans", sans-serif;
   font-weight: 800;*/
 }
 #title-ejer-arg{
-  height: 38px;
-  padding-top: 5px;
+  height: 30px;
+  padding-top: 2px;
   background-color: #AEC90B;
   align-items: center;
 }
@@ -615,13 +465,13 @@ div.leaflet-sidebar {
   position: relative;
   top: -26px;
   left: 34px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 #crossicon-ejer{
   position: absolute;
-  top: 48px;
-  left: 215px;
+  top: calc(30px + 8px);
+  left: 240px;
   color: #ffffff;
 }
 
@@ -667,16 +517,10 @@ div.leaflet-sidebar {
   color: black;
 }
 
-.crossicon-fuerza_oper_gub{
+.crossicon-fuerza_oper_gub, .crossicon-fuerza_oper_guc{
   position: absolute;
-  top: 122px;
-  left: 215px;
-  color: #ffffff;
-}
-.crossicon-fuerza_oper_guc{
-  position: absolute;
-  top: 122px;
-  left: 215px;
+  top: calc(90px + 8px);
+  left: 240px;
   color: #ffffff;
 }
 
@@ -698,49 +542,35 @@ div.leaflet-sidebar {
 #sub-menu-ejer-arg {
   position: absolute;
   left: 60px;
-  width: 290px;
+  width: 260px;
   max-height: calc((100vh - 65px)/2);
 }
 
 #sub-menu-conduc-sup {
   position: absolute;
   left: 60px;
-  width: 290px;
+  width: 260px;
   max-height: calc((100vh - 65px)/2);
   --alto_panel: calc((100vh - 65px)/2);
 }
-.elem_conducc_sup .div_items_elem {
-  overflow: scroll;
-  overflow-x:hidden ;
-  height: calc(var(--alto_panel) - 35px - 38px - 38px); 
-}
-.elem_fuerza_oper .div_items_elem {
-  overflow-x:hidden ;
-  height: calc(var(--alto_panel) - 35px - 38px - 38px); 
+.elem_conducc_sup .div_items_elem, .elem_fuerza_oper .div_items_elem,
+.elem_fuerza_oper_gub .div_items_elem, .elem_fuerza_sostenim .div_items_elem,
+.elem_sist_educ .div_items_elem {
+  overflow: auto;
+  overflow-x: hidden;
+  height: calc(var(--alto_panel) - 30px - 30px - 30px); 
 }
 .elem_fuerza_oper_guc .div_items_elem {
-  overflow: scroll;
-  overflow-x:hidden ;
-  height: calc(var(--alto_panel) - 35px - 38px - 38px - 38px); 
+  overflow: auto;
+  overflow-x: hidden;
+  height: calc(var(--alto_panel) - 30px - 30px - 30px - 30px); 
 }
-.elem_fuerza_oper_gub .div_items_elem {
-  overflow-x:hidden ;
-  height: calc(var(--alto_panel) - 35px - 38px - 38px); 
-}
-.elem_fuerza_sostenim .div_items_elem {
-  overflow-x:hidden ;
-  height: calc(var(--alto_panel) - 35px - 38px - 38px); 
-}
-.elem_sist_educ .div_items_elem {
-  overflow-x:hidden ;
-  height: calc(var(--alto_panel) - 35px - 38px - 38px); 
-}
-
+ 
 .areas_personal, .areas_inteligencia, .areas_operaciones, .areas_material, .areas_finanzas{
   position: absolute;
   top: calc(65px + ((100vh - 65px)/2));
   left: 60px;
-  width: 290px;
+  width: 260px;
   max-height: calc((100vh - 65px)/2);
 }
 
@@ -750,63 +580,84 @@ div.leaflet-sidebar {
   width: 100%;
 }
 
-.areas_personal #items-conduccion {
-  overflow: scroll;
+.areas_personal #items-conduccion, .areas_inteligencia #items-conduccion,
+.areas_operaciones #items-conduccion, .areas_material #items-conduccion,
+.areas_finanzas #items-conduccion{
+  overflow: auto;
   overflow-x:hidden ;
-  height: calc(var(--alto_panel) - 35px - 38px); 
+  height: calc(var(--alto_panel) - 30px - 30px); 
 }
 
 .menu_superior .ejer-items{
-  height: 38px;
+  height: 30px;
   cursor: pointer;
   
 }
 .menu_superior .ejer-items p{
-  font-size: 18px;
+  font-size: 16px;
 }
 .menu_superior .ejer-items a {
   text-decoration: none;
 }
 #sub-menu-ejer-arg .ejer-items{
-  height: 38px;
+  height: 30px;
   cursor: pointer;
   display: flex;
   align-items: center;
 }
 #sub-menu-ejer-arg .ejer-items p{
-  font-size: 18px;
+  font-size: 16px;
 }
 #sub-menu-ejer-arg .ejer-items a {
   text-decoration: none;
 }
+#publica-mil {
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
 .alto_elemento_menu .ejer-items{
-  height: 38px;
+  height: 30px;
   cursor: pointer;
   display: flex;
   align-items: center;
 }
 .areas_conduccion .ejer-items p{
-  font-size: 18px;
+  font-size: 16px;
 }
 .areas_conduccion .ejer-items a {
   text-decoration: none;
 }
 .areas_conduccion .ejer-items{
-  height: 38px;
+  height: 30px;
   cursor: pointer;
   display: flex;
   align-items: center;
 }
 #sub-menu-conduc-sup .ejer-items{
-  height: 38px;
+  height: 30px;
   cursor: pointer;
   display: flex;
   align-items: center;
 }
 #sub-menu-conduc-sup .ejer-items p{
-  font-size: 18px;
+  font-size: 16px;
 }
 #sub-menu-conduc-sup .ejer-items a {
+  text-decoration: none;
+}
+
+.sidebar-capas .ejer-items{
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.sidebar-capas .ejer-items p{
+  font-size: 16px;
+}
+.sidebar-capas .ejer-items a {
   text-decoration: none;
 }
 
@@ -819,7 +670,7 @@ div.leaflet-sidebar {
   position: relative;
   top: -26px;
   left: 34px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 #sub-menu-conduc-sup #cond-sup{
@@ -828,15 +679,22 @@ div.leaflet-sidebar {
 
 #sub-menu-conduc-sup #crossicon-conduc{
   position: absolute;
-  top: 85px;
-  left: 215px;
+  top: calc(60px + 8px);
+  left: 240px;
+  color: #ffffff;
+}
+
+#sub-menu-capa_universidades #crossicon-univer, #sub-menu-capa_ferrocarril #crossicon-lim{
+  position: absolute;
+  top: calc(30px + 8px);
+  left: 240px;
   color: #ffffff;
 }
 
 #sub-menu-conduc-sup #crossicon-conduc_areas_pers, #crossicon-conduc_areas_inteligencia, #crossicon-conduc_areas_operaciones, #crossicon-conduc_areas_material, #crossicon-conduc_areas_finanzas{
   position: absolute;
-  top: 48px;
-  left: 215px;
+  top: calc(30px + 8px);
+  left: 240px;
   color: #ffffff;
 }
 
