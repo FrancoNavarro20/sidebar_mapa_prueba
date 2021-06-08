@@ -151,7 +151,6 @@ $(document).ready(function () {
 
   /*abrir ejer-arg principal*/
   $("#EA-mil").click(function () {
-    console.log("click EA");
     $("#sub-menu-ejer-arg").show(); 
     var clicks = $(this).data("clicks");
 
@@ -284,4 +283,16 @@ $(document).ready(function () {
   $("#crossicon-conduc_areas_finanzas").click(function () { 
      $(".areas_finanzas").hide();
   });
+});
+
+$('.hover_fuerzas ul').on('click', 'li', function(){
+   // $(this).addClass('hoveado_fuerzas').siblings().removeClass('hoveado_fuerzas');
+   $('.hoveado_fuerzas').removeClass('hoveado_fuerzas');
+   $(this).addClass('hoveado_fuerzas');
+});
+
+$('.hover_areas ul').on('click', 'li', function(){
+   // $(this).addClass('hoveado_areas').siblings().removeClass('hoveado_areas');
+   $('.hoveado_areas').removeClass('hoveado_areas');
+   $(this).addClass('hoveado_areas');
 });

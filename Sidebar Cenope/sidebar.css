@@ -754,3 +754,11 @@ div.leaflet-sidebar {
 .punteado{
   border-top: dotted 1px black;
 }
+
+li.hoveado_fuerzas {
+  background-color: rgb(131, 131, 131)
+}
+
+li.hoveado_areas {
+  background-color: rgb(131, 131, 131)
+}
