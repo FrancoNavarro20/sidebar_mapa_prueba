@@ -766,3 +766,11 @@ div.leaflet-sidebar {
 
 /*FIN Franco Navarro css Cambios*/
 
+
+li.hoveado_fuerzas {
+  background-color: rgb(131, 131, 131)
+}
+
+li.hoveado_areas {
+  background-color: rgb(131, 131, 131)
+}

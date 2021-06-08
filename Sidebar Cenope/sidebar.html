@@ -51,6 +51,13 @@
   <script src="./js/leaflet-control-geocoder.js"></script>
   <!-- Fin Geocoder -->
 
+  <!-- MarkerCluser -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+  <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+  <!-- Fin MarkerCluser -->
+
+
   <!--Google font-->
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
@@ -191,7 +198,7 @@
 
     <!--Sub-menu Conduccion superior-->
 
-    <div id="sub-menu-conduc-sup" class="sidebar-search elem_conducc_sup">
+    <div id="sub-menu-conduc-sup" class="sidebar-search elem_conducc_sup hover_fuerzas">
       <div class="title-menu">
         Estructura Orgánica
       </div>
@@ -270,7 +277,7 @@
     <!--fin Sub-menu Conduccion superior-->
 
     <!--Sub-menu Fuerza Operativa-->
-    <div id="sub-menu-conduc-sup" class="sidebar-search elem_fuerza_oper">
+    <div id="sub-menu-conduc-sup" class="sidebar-search elem_fuerza_oper hover_fuerzas">
       <div class="title-menu">
         Estructura Orgánica
       </div>
@@ -307,7 +314,7 @@
     <!--fin Sub-menu Fuerza Operativa-->
 
     <!--Sub-menu Fuerza Operativa-->
-    <div id="sub-menu-conduc-sup" class="sidebar-search elem_fuerza_oper_guc">
+    <div id="sub-menu-conduc-sup" class="sidebar-search elem_fuerza_oper_guc hover_fuerzas">
       <div class="title-menu">
         Estructura Orgánica
       </div>
@@ -367,7 +374,7 @@
     </div>
     <!--fin Sub-menu Fuerza Operativa-->
 
-    <div id="sub-menu-conduc-sup" class="sidebar-search elem_fuerza_oper_gub">
+    <div id="sub-menu-conduc-sup" class="sidebar-search elem_fuerza_oper_gub hover_fuerzas">
       <div class="title-menu">
         Estructura Orgánica
       </div>
@@ -399,7 +406,7 @@
     </div>
 
     <!--Sub-menu Fuerza de Sostenimiento-->
-    <div id="sub-menu-conduc-sup" class="sidebar-search elem_fuerza_sostenim">
+    <div id="sub-menu-conduc-sup" class="sidebar-search elem_fuerza_sostenim hover_fuerzas">
       <div class="title-menu">
         Estructura Orgánica
       </div>
@@ -430,7 +437,7 @@
     <!--fin Sub-menu Fuerza de Sostenimiento-->
 
     <!--Sub-menu Fuerza de Sostenimiento-->
-    <div id="sub-menu-conduc-sup" class="sidebar-search elem_sist_educ">
+    <div id="sub-menu-conduc-sup" class="sidebar-search elem_sist_educ hover_fuerzas">
       <div class="title-menu">
         Estructura Orgánica
       </div>
@@ -465,7 +472,7 @@
     </div>
     <!--fin Sub-menu Fuerza de Sostenimiento-->
 
-    <div id="sub-menu-conduc-sup" class="sidebar-search areas_personal">
+    <div id="sub-menu-conduc-sup" class="sidebar-search areas_personal hover_areas">
       <div class="title-menu">
         Áreas de la Conducción
       </div>
@@ -520,7 +527,7 @@
       </ul>
     </div>
 
-    <div id="sub-menu-conduc-sup" class="sidebar-search areas_inteligencia" >
+    <div id="sub-menu-conduc-sup" class="sidebar-search areas_inteligencia hover_areas" >
       <div class="title-menu">
         Áreas de la Conducción
       </div>
@@ -545,7 +552,7 @@
       </ul>
     </div>
 
-    <div id="sub-menu-conduc-sup" class="sidebar-search areas_operaciones" >
+    <div id="sub-menu-conduc-sup" class="sidebar-search areas_operaciones hover_areas" >
       <div class="title-menu">
         Áreas de la Conducción
       </div>
@@ -576,7 +583,7 @@
       </ul>
     </div>
 
-    <div id="sub-menu-conduc-sup" class="sidebar-search areas_material" >
+    <div id="sub-menu-conduc-sup" class="sidebar-search areas_material hover_areas" >
       <div class="title-menu">
         Áreas de la Conducción
       </div>
@@ -616,7 +623,7 @@
       </ul>
     </div>
 
-    <div id="sub-menu-conduc-sup" class="sidebar-search areas_finanzas" >
+    <div id="sub-menu-conduc-sup" class="sidebar-search areas_finanzas hover_areas" >
       <div class="title-menu">
         Áreas de la Conducción
       </div>
@@ -761,7 +768,6 @@
 
   <script src="js/eventos_mapa.js" type="text/javascript"></script>
   <script src="js/sidebar.js" type="text/javascript"></script>
-  <script src="js/eventos_marcadores_mapa.js" type="text/javascript"></script>
   <script src="js/graficos.js" type="text/javascript"></script>
 </body>
 
