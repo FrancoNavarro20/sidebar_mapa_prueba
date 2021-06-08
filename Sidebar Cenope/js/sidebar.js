@@ -16,9 +16,7 @@ $(document).ready(function () {
   var bandera;
   var bandera2;
   var bandera3;
-  var flag1;
   var flag2;
-  var flag3;
   var banderaGraficos;
   var banderaActive;
   var ajustarse_Search;
@@ -28,9 +26,7 @@ $(document).ready(function () {
   bandera3 = 1;
   banderaGraficos = false;
   ajustarse_Search = 0;
-  flag1 = 0;
   flag2 = 0;
-  flag3 = 0;
 
   //Ocultar sub-menu al cargar la pagina
   $(".sidebar-search-info").hide();
@@ -48,47 +44,21 @@ $(document).ready(function () {
   $(".areas_operaciones").hide();
   $(".areas_material").hide();
   $(".areas_finanzas").hide();
-
+  //alert("Estas en php");
   //-------------------------Boton de capas - funcionalidades---------------------//
   $("#search").on('click', function () {
+   
     //Apagar color de botones del sidebar principal
-
     $(".sidebar-search-info").hide(); // esconder sub-menu del boton de lupa
     $("#sub-menu-search").show();
     $(".sidebar-search").toggleClass('active'); //aparecer y desaparecer sidebar 
-    //$(".graficos").toggleClass("mover-grafic");
-    //$("#mapa").toggleClass("mapa-completo");
     $(".sidebar-capas").removeClass('active');
-    // $(".sidebar-search-lupa").removeClass('active3');
     
-    if(banderaGraficos == true){
-        $(".graficos").removeClass("mover-grafic");
-        banderaGraficos = false;
-    }
-
-    $(".sidebar #search i").toggleClass('pulsado'); // pintar y despintar boton
+    $(".sidebar #search i").show("slow");
+    $("#search i").addClass("pulsado"); //pintar y despintar boton
     $("#capas i").removeClass('pulsado');
-    $("#info #triangle4").hide();
     $("#capas #triangle2").hide();
-    flag3 = 2;
 
-    //Aparecer y desaparecer triangulito
-    if(bandera3 == 1)
-    {   
-      $("#search #triangle3").show();
-      bandera3 = 0;
-    }
-    else if(flag1 == 2 || flag2 == 2)
-    {
-        $("#search #triangle3").show();
-        flag1 = 0;
-        flag2 = 0;
-    }
-    else
-    {
-        $("#search #triangle3").hide();
-        bandera3 = 1;
-    }
   });
 
   //Click unidades militares
@@ -124,7 +94,7 @@ $(document).ready(function () {
   $("#sub-menu-capa_ferrocarril #crossicon-lim").click(function () { 
     $("#sub-menu-capa_ferrocarril").hide();
     $("#sub-menu-capas").show(); 
-    //console.log("Límite internacional se cerro correctamente .");
+    console.log("Límite internacional se cerro correctamente .");
   });
 
   //--------------- Boton de informacion----------------------------//
@@ -133,36 +103,18 @@ $(document).ready(function () {
     $(".sidebar-search").hide(); // esconder sub-menu del boton de capas
     $("#sub-menu-capas").show();  
     $(".sidebar-capas").toggleClass('active');
-    // $(".sidebar-capas").removeClass('active');
-    $("#capas i").toggleClass('pulsado');
+    $("#capas i").addClass('pulsado');
     $("#search i").removeClass('pulsado');
-    $("#info #triangle4").hide();
     $("#search #triangle3").hide();
-    flag1 = 2;
 
-    //Aparecer y desaparecer triangulito
-    if(bandera == 1)
-    {   
-      $("#capas #triangle2").show();
-      bandera = 0;
-    }
-    else if(flag2 == 2 || flag3 == 2)
-    {
-        $("#capas #triangle2").show();
-        flag2 = 0;
-        flag3 = 0;
-    }
-    else
-    {
-        $("#capas #triangle2").hide();
-        bandera = 1;
-    }
+    //Pintar boton de capas del menu principal;
+    $(".sidebar #capas i").show("slow");
+    $("#capas i").addClass("pulsado");
   });
   //-------------Universidades-----------Publicas y privadas -----------------//
   $(".pulsar-universidades").click(function () { 
     var origen = $(this);
     var universidad = origen.data('universidad');
-    //Ocultar los 3
     switch(universidad)
     {
       case "publica" :
@@ -192,7 +144,7 @@ $(document).ready(function () {
   });
 
 
-  $(".pers ").click(function () { 
+  $(".pers").click(function () { 
     $("#sub-menu-search5").hide(); 
     console.log("Personal se cerro correctamente");    
   });
@@ -214,7 +166,7 @@ $(document).ready(function () {
   });
 
   $(".items_areas_conduccion").click(function () {
-    graficosSidebar();
+     //();
     if (!sidebar.isVisible())
       sidebar.show();
   });
@@ -230,6 +182,8 @@ $(document).ready(function () {
     if (!sidebar.isVisible())
       sidebar.show();
   });
+  
+  /*Inicio de panel principal (Conduccion Superior,Fuerza Operativa,Fuerza de Sostenimiento,Sistema Educ)*/
   
   //Cerrar ejer-arg principal
   $("#crossicon-ejer").click(function () { 
@@ -270,6 +224,10 @@ $(document).ready(function () {
   $(".crossicon-sist_educ").click(function () { 
      $(".elem_sist_educ").hide();
   });
+
+  /*Fin de panel principal (Conduccion Superior,Fuerza Operativa,Fuerza de Sostenimiento,Sistema Educ)*/
+
+  //Panel fuerza Operativa Gub
 
   $(".click_gub").click(function () { 
      $(".elem_fuerza_oper_gub").show();
