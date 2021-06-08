@@ -44,6 +44,7 @@ body {
   color: #f1f1f1;
 }
 
+
 .sidebar li a .fa-caret-left {
   padding-left: 4px;
   color: rgb(255, 255, 255);
@@ -71,6 +72,7 @@ body {
   top: 55px;
   padding-left: 4px;
   color: rgb(255, 255, 255);
+  display: block;
 }
 
 .sidebar-capas {
@@ -98,9 +100,8 @@ body {
 /*Elementos li*/
 .sidebar-capas ul li {
   padding: 8px 8px 8px 8px;
-  border-top: 1px solid rgb(83, 83, 83);
+  border-bottom: 1px solid rgb(83, 83, 83);
   transition: all 300ms linear;
-  height: 50px;
 }
 .sidebar-capas ul #universidades {
   border-left: solid 5px RGB(238, 125, 0);
@@ -120,16 +121,15 @@ body {
 }
 
 .sidebar-capas ul li p {
-  color: rgb(255, 255, 255);
   font-size: 16px;
   margin-top: 0;
   margin-bottom: 0rem;
   color: white;
-  min-height:-30px
 }
 
 .sidebar-capas ul li a {
   text-decoration: none;
+  display: flex;
 }
 
 /*sub menu*/
@@ -159,7 +159,7 @@ body {
 /*Elementos li*/
 .sidebar-search ul li {
   padding: 8px 8px 8px 8px;
-  border-top: 1px solid rgb(83, 83, 83);
+  border-bottom: 1px solid rgb(83, 83, 83);
   transition: all 300ms linear;
   height: 50px;
 }
@@ -184,7 +184,7 @@ body {
    min-height:-30px
 }
 
-.sidebar-search ul li a p {
+.sidebar-search ul li a {
   text-decoration: none;
 }
 
@@ -207,11 +207,6 @@ body {
 .active4 {
   background-color: rgb(131, 131, 131);
   border-left: 5px solid RGB(174, 201, 11);
-}
-
-#logo-unis {
-  position: relative;
-  top: 6px;
 }
 
 .active5 {
@@ -611,12 +606,6 @@ div.leaflet-sidebar {
 #sub-menu-ejer-arg .ejer-items a {
   text-decoration: none;
 }
-#publica-mil {
-  height: 30px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
 .alto_elemento_menu .ejer-items{
   height: 30px;
   cursor: pointer;
@@ -648,22 +637,21 @@ div.leaflet-sidebar {
   text-decoration: none;
 }
 
-.sidebar-capas .ejer-items{
+.sidebar-capas .ejer-items {
   height: 30px;
   cursor: pointer;
   display: flex;
   align-items: center;
 }
-.sidebar-capas .ejer-items p{
-  font-size: 16px;
-}
-.sidebar-capas .ejer-items a {
-  text-decoration: none;
-}
 
 #sub-menu-conduc-sup #logo{
   position: relative;
   top: -1px;
+}
+
+.pulsado-items{
+  border-left: 10px solid rgb(48, 129, 195);
+  background-color: rgb(95, 91, 91);
 }
 
 #sub-menu-conduc-sup ul li a p {
