@@ -326,11 +326,14 @@ function mostrar_marcadores(cod_uni) {
     dataType : 'json',
     success: function(data)   // A function to be called if request succeeds
     {
+      //console.log(data);
+      var elem="";
       ejercito = L.geoJSON(data, {
         pointToLayer: function (feature, latlng) {
           return L.marker(latlng, { icon: new EjercitoSvg() });
         },
         onEachFeature: function (feature, layer) {
+          elem = elem + "<div class='row' style='background-color:#eeeeee; min-height: 25px; margin-left: 0px; margin-right:0px; padding-left:10px; padding-right:10px; align-content: center; font-weight:bold; text-transform: uppercase;'>" + feature.properties.fna + "</div>";
           layer.bindPopup(
             '<b style="font-size: 14px;"><img src="./img/Escudo_del_Ejército_Argentino.png" style="width: 24px; height: 24px"/> ' +
               feature.properties.fdc +
@@ -357,7 +360,7 @@ function mostrar_marcadores(cod_uni) {
               "' data-fuente='" +
               feature.properties.sag +
               "' data-img='" +
-              '<center><img src="./img/Escudo_del_Ejército_Argentino.png" style="max-width: 20%; height: auto;"/></center>' + 
+              '<center><img src="./img/Escudo_del_Ejército_Argentino.png" style="max-width: 15%; height: auto;"/></center>' + 
               "' onclick='masInfo(this)'>Mas información</a>"
           );
         },
@@ -365,6 +368,8 @@ function mostrar_marcadores(cod_uni) {
           return feature.properties.fdc == "Ejército Argentino";
         },
       }).addTo(map);
+      //$("#div_listado_unidades").html(data.features[0].properties.fna);
+      $("#div_listado_unidades").html(elem);
     }
   });
 }
@@ -374,7 +379,7 @@ function masInfo(info) {
   var cod_uni = $(info).data("cod_uni");
   var cod_unisup = $(info).data("cod_unisup");
   //alert ("Cod Uni: "+cod_uni);
-  document.getElementById("detalles").innerHTML =
+  document.getElementById("div_elem_mapa_seleccionado").innerHTML =
     //   "ID: " +
     $(info).data("img") +
     '<h4 style="text-align: center; padding-top: 10px; margin-bottom: 10px; text-transform: uppercase;">' +
@@ -387,5 +392,7 @@ function masInfo(info) {
     $(info).data("arma") +
     "</div></div><div class='row' style='min-height: 30px; margin-left: 0px; margin-right:0px; padding-left:1px; padding-right:1px; align-content: center;'><div class='col-md-6' style='font-weight:bold;'>Fuente de información</div><div class='col-md-6'>" +
     $(info).data("fuente") + "</div></div></div>";
+  $("#div_elem_menu_seleccionado").hide();
+  $("#div_elem_mapa_seleccionado").show();
   sidebar.show();
 }

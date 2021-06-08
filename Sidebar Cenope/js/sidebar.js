@@ -175,6 +175,13 @@ $(document).ready(function () {
       return;
     cod_uni = $(this).data("cod_uni");
     //console.log("cod_uni:"+cod_uni);
+    if (typeof $(this).data("nombre_elem") != "undefined") {
+      elem_selec = $(this).data("nombre_elem");
+      div_sup = "<center><img src='./img/Escudo_del_Ejército_Argentino.png' style='max-width: 15%; height: auto;'/></center>";
+      $("#div_nombre_elem_seleccionado").html(div_sup+'<h4 style="text-align: center; padding-top: 10px; margin-bottom: 10px;">'+elem_selec+"</h4>");
+    }
+    $("#div_elem_mapa_seleccionado").hide();
+    $("#div_elem_menu_seleccionado").show();
     map.removeLayer(ejercito);
     mostrar_marcadores(cod_uni);
     graficosSidebar();
