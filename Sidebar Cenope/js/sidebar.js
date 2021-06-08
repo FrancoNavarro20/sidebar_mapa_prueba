@@ -284,4 +284,25 @@ $(document).ready(function () {
   $("#crossicon-conduc_areas_finanzas").click(function () { 
      $(".areas_finanzas").hide();
   });
+
+
+   /*Estilo pulsado Ferrocarril JS*/
+   $("#bt-lim-intern").click(function () { 
+      $(this).toggleClass('active-ferrocarril'); 
+   });
+
+   /*fin Estilo pulsado Ferrocarril JS*/
 });
+
+
+
+
+
+
+
+
+
+
+
+
+

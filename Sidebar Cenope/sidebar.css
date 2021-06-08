@@ -754,3 +754,15 @@ div.leaflet-sidebar {
 .punteado{
   border-top: dotted 1px black;
 }
+
+
+
+/*Franco Navarro css Cambios*/
+
+.active-ferrocarril {
+  background-color: rgb(131, 131, 131);
+  border-left: 5px solid #40bfef;
+}
+
+/*FIN Franco Navarro css Cambios*/
+
