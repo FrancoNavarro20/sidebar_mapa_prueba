@@ -209,10 +209,11 @@ body {
   border-left: 5px solid RGB(174, 201, 11);
 }
 
-.active5 {
+/*.active5 {
   background-color: rgb(131, 131, 131);
   border-left: 5px solid RGB(238, 125, 0);
 }
+*/
 
 
 
@@ -760,9 +761,34 @@ div.leaflet-sidebar {
 /*Franco Navarro css Cambios*/
 
 .active-ferrocarril {
-  background-color: rgb(131, 131, 131);
   border-left: 5px solid #40bfef;
 }
+
+.active-ferrocarril-pulsado {
+  background-color: rgb(131, 131, 131);
+}
+
+/*Universidades publicas y privadas*/
+
+#publica-mil{
+  border-left: 5px solid #f18187;
+}
+
+#privada-mil{
+  border-left: 5px solid #81adf8;
+}
+
+.active-pub {
+  background-color: rgb(131, 131, 131);
+}
+.active-priv {
+  background-color: rgb(131, 131, 131);
+}
+
+/*Fin Universidades publicas y privadas */
+
+
+
 
 /*FIN Franco Navarro css Cambios*/
 

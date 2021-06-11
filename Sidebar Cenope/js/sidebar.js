@@ -292,13 +292,29 @@ $(document).ready(function () {
   });
 
 
-   /*Estilo pulsado Ferrocarril JS*/
+  /* Estilo pulsado Ferrocarril JS
    $("#bt-lim-intern").click(function () { 
       $(this).toggleClass('active-ferrocarril'); 
+   });*/
+
+   /*Estilo pulsado Ferrocarril JS*/
+   $("#bt-lim-intern").click(function () { 
+      $(this).toggleClass('active-ferrocarril-pulsado'); 
    });
 
+   /*Estilo universidades publicas*/
+   $("#privada-mil").click(function () { 
+      $(this).toggleClass('active-priv'); 
+   });
+
+   $("#publica-mil").click(function () { 
+      $(this).toggleClass('active-pub'); 
+   });
+
+   
+
    /*fin Estilo pulsado Ferrocarril JS*/
-});
+})
 
 
 
