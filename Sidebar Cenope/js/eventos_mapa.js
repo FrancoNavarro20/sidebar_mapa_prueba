@@ -202,6 +202,45 @@ $("#privada-mil").click(function () {
 
 //Fin WFS
 
+var zonas_br_ea;
+$("#zonas_responsabilidad_br_EA").click(function () {
+  var clicks = $(this).data("clicks");
+  if (!clicks) {
+    // Load the GeoPackage and display the layer
+    zonas_br_ea = L.geoPackageFeatureLayer([], {
+      geoPackageUrl: './geoPackage/CCZEM.gpkg',
+      layerName: 'CCZEM',
+      onEachFeature: function (feature, layer) {
+        layer.bindPopup(
+          "<div style='font-size: 16px;'><b>Zona de Emergencia COVID</b></div><div style='font-size: 14px; padding-top:8px;'>Nombre: <b>" +
+          feature.properties.CCZE + "</b></div>" +
+          "<div style='font-size: 14px; padding-top:4px;'>A cargo de: <b>" +
+          feature.properties.CDO + "</b></div></b>"
+        );
+      },
+      style: {color: 'rgb(31, 141, 108)'}
+    }).addTo(map);
+  } else {
+    map.removeLayer(zonas_br_ea);
+  }
+  $(this).data("clicks", !clicks);
+});
+
+/*
+$("#zonas_responsabilidad_br_EA").click(function () {
+  var clicks = $(this).data("clicks");
+  if (!clicks) {
+    // Load the GeoPackage and display the layer
+    zonas_br_ea = L.geoPackageTileLayer({
+      geoPackageUrl: 'http://ngageoint.github.io/GeoPackage/examples/rivers.gpkg',
+      layerName: 'rivers_tiles'
+    }).addTo(map);
+  } else {
+    map.removeLayer(zonas_br_ea);
+  }
+  $(this).data("clicks", !clicks);
+});
+*/
 //GeoJSON
 
 var AereaSvg = L.Icon.extend({

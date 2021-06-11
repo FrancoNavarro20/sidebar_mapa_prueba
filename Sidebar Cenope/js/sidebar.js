@@ -10,7 +10,7 @@ $(document).ready(function () {
   $(".elem_fuerza_sostenim").hide();
   $(".elem_sist_educ").hide();
   
-  mostrar_marcadores("TODOS");
+  //mostrar_marcadores("TODOS");
 
   //variables
   var bandera;
