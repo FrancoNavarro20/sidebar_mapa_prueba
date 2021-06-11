@@ -490,6 +490,9 @@ div.leaflet-sidebar {
   border-left: 5px solid rgb(211, 123, 123);
   cursor: pointer;
 }
+#fuerza-sost_selec{
+  background-color: rgb(211, 123, 123);
+}
 #sist-edu{
   border-left: 5px solid rgb(234, 236, 97);
   cursor: pointer;

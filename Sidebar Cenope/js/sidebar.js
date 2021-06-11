@@ -4,11 +4,6 @@ var ejercito;
 //codigo jquery
 $(document).ready(function () {
   $(".elem_conducc_sup").hide();
-  $(".elem_fuerza_oper").hide();
-  $(".elem_fuerza_oper_gub").hide();
-  $(".elem_fuerza_oper_guc").hide();
-  $(".elem_fuerza_sostenim").hide();
-  $(".elem_sist_educ").hide();
   
   mostrar_marcadores("TODOS");
 
@@ -197,12 +192,13 @@ $(document).ready(function () {
   
   //Cerrar ejer-arg principal
   $("#crossicon-ejer").click(function () { 
-     $("#sub-menu-ejer-arg").hide();
+    $("#sub-menu-ejer-arg").hide();
   });
 
   /*abrir ejer-arg principal*/ 
   $("#cond-sup").click(function () { 
-      $("#sub-menu-conduc-sup").show(); 
+    //$("#sub-menu-conduc-sup").show(); 
+    $(".elem_fuerza_sostenim").show();
   });
   
   //Cerrar ejer-arg principal
@@ -220,7 +216,7 @@ $(document).ready(function () {
   });
 
   $(".click_fuerza_sostenim").click(function () { 
-     $(".elem_fuerza_sostenim").show();
+    $("#sub-menu-conduc-sup").show(); 
   });
   
   $(".crossicon-fuerza_sostenim").click(function () { 
