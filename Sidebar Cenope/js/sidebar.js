@@ -180,8 +180,12 @@ $(document).ready(function () {
       div_sup = "<center><img src='./img/Escudo_del_Ejército_Argentino.png' style='max-width: 15%; height: auto;'/></center>";
       $("#div_nombre_elem_seleccionado").html(div_sup+'<h4 style="text-align: center; padding-top: 10px; margin-bottom: 10px;">'+elem_selec+"</h4>");
     }
-    $("#div_elem_mapa_seleccionado").hide();
-    $("#div_elem_menu_seleccionado").show();
+   
+    setTimeout(function(){
+      $("#div_elem_mapa_seleccionado").hide();
+      $("#div_elem_menu_seleccionado").show();
+   }, 3000);
+   
     map.removeLayer(ejercito);
     mostrar_marcadores(cod_uni);
     graficosSidebar();
@@ -308,10 +312,6 @@ $(document).ready(function () {
    });
 
    $("#publica-mil").click(function () { 
-      $(this).toggleClass('active-pub'); 
-   });
-
-   $("#zonas_responsabilidad_br_EA").click(function () { 
       $(this).toggleClass('active-pub'); 
    });
 

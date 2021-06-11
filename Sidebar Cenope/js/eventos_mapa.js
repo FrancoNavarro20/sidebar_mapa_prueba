@@ -415,6 +415,8 @@ function mostrar_marcadores(cod_uni) {
 //Fin GeoJSON
 
 function masInfo(info) {
+ 
+
   var cod_uni = $(info).data("cod_uni");
   var cod_unisup = $(info).data("cod_unisup");
   //alert ("Cod Uni: "+cod_uni);
@@ -431,7 +433,17 @@ function masInfo(info) {
     $(info).data("arma") +
     "</div></div><div class='row' style='min-height: 30px; margin-left: 0px; margin-right:0px; padding-left:1px; padding-right:1px; align-content: center;'><div class='col-md-6' style='font-weight:bold;'>Fuente de información</div><div class='col-md-6'>" +
     $(info).data("fuente") + "</div></div></div>";
-  $("#div_elem_menu_seleccionado").hide();
-  $("#div_elem_mapa_seleccionado").show();
-  sidebar.show();
+ 
+    setTimeout(function(){
+      $("#div_elem_menu_seleccionado").hide();
+      $("#div_elem_mapa_seleccionado").show();    
+      sidebar.show();
+    }, 3000);
+  
+}
+
+
+
+function clickZoom(coord,zoom) {
+  map.setView(coord,zoom);
 }
