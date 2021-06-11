@@ -10,7 +10,7 @@ $(document).ready(function () {
   $(".elem_fuerza_sostenim").hide();
   $(".elem_sist_educ").hide();
   
-  //mostrar_marcadores("TODOS");
+  mostrar_marcadores("TODOS");
 
   //variables
   var bandera;
@@ -308,6 +308,10 @@ $(document).ready(function () {
    });
 
    $("#publica-mil").click(function () { 
+      $(this).toggleClass('active-pub'); 
+   });
+
+   $("#zonas_responsabilidad_br_EA").click(function () { 
       $(this).toggleClass('active-pub'); 
    });
 
