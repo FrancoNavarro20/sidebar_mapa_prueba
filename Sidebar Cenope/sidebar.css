@@ -44,6 +44,7 @@ body {
   color: #f1f1f1;
 }
 
+
 .sidebar li a .fa-caret-left {
   padding-left: 4px;
   color: rgb(255, 255, 255);
@@ -71,19 +72,78 @@ body {
   top: 55px;
   padding-left: 4px;
   color: rgb(255, 255, 255);
+  display: block;
+}
+
+.sidebar-capas {
+  position: absolute;
+  left: 60px;
+  width: 260px;
+  top: 65px;
+  height: 100%;
+  background: #333333;
+  /*transition:all 0.5s linear;*/
+  display: none;
+  /*overflow: scroll;*/
+}
+
+.sidebar-capas.active {
+  left: 60px;
+}
+
+.sidebar-capas ul {
+  list-style: none;
+  margin-top: 0px;
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+/*Elementos li*/
+.sidebar-capas ul li {
+  padding: 8px 8px 8px 8px;
+  border-bottom: 1px solid rgb(83, 83, 83);
+  transition: all 300ms linear;
+}
+.sidebar-capas ul #universidades {
+  border-left: solid 5px RGB(238, 125, 0);
+}
+.sidebar-capas ul #limite-arg {
+  border-left: solid 5px RGB(64, 191, 239);
+}
+
+.sidebar-capas ul li:hover {
+  background-color: rgb(131, 131, 131);
+}
+
+.sidebar-capas ul li h4 {
+  color: white;
+  margin-top: 7px;
+  font-size: 23px;
+}
+
+.sidebar-capas ul li p {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 0rem;
+  color: white;
+}
+
+.sidebar-capas ul li a {
+  text-decoration: none;
+  display: flex;
 }
 
 /*sub menu*/
 .sidebar-search {
   position: absolute;
   left: 60px;
-  width: 290px;
+  width: 260px;
   top: 65px;
   height: 100%;
   background: #333333;
   /*transition:all 0.5s linear;*/
   z-index: 1;
   /*overflow: scroll;*/
+  min-height: calc((100vh - 65px)/2);
 }
 
 .sidebar-search.active {
@@ -99,19 +159,9 @@ body {
 /*Elementos li*/
 .sidebar-search ul li {
   padding: 8px 8px 8px 8px;
-  border-top: 1px solid rgb(83, 83, 83);
+  border-bottom: 1px solid rgb(83, 83, 83);
   transition: all 300ms linear;
-}
-
-.sidebar-search ul #uni-militares {
-  border-left: solid 6px RGB(174, 201, 11);
-  width: 100%;
-}
-.sidebar-search ul #universidades {
-  border-left: solid 6px RGB(238, 125, 0);
-}
-.sidebar-search ul #limite-arg {
-  border-left: solid 6px RGB(64, 191, 239);
+  height: 50px;
 }
 
 .sidebar-search ul li:hover {
@@ -119,14 +169,19 @@ body {
 }
 
 .sidebar-search ul li h4 {
-  color: rgb(255, 255, 255);
-  margin-top: 10px;
-  font-size: 20px;
+  color: #2f4491;
+  margin-top: 7px;
+  font-size: 23px;
 }
 
 .sidebar-search ul li p {
   color: rgb(255, 255, 255);
-  font-size: 13px;
+  font-size: 16px;
+  margin-top: 0;
+    margin-bottom: 0rem;
+    color: white;
+  /*  padding-top: 8px;*/
+   min-height:-30px
 }
 
 .sidebar-search ul li a {
@@ -136,7 +191,6 @@ body {
 #personal {
   border-left: 5px solid #798dd4;
 }
-
 #inteligencia {
   border-left: 5px solid #79c6d4;
 }
@@ -149,160 +203,24 @@ body {
 #finanzas {
   border-left: 5px solid #e7b202;
 }
-/*
-.sidebar-search .scroll_B::-webkit-scrollbar {
-	width: 7px;
-}
-
-.sidebar-search .scroll_B::-webkit-scrollbar-thumb {
-	background: #ff9d00;
-	border-radius: 5px;
-}
-*/
-
-/*sub-sidebar 2 - estilos - unidades militares*/
-
-#sub-menu-search2 {
-  display: none;
-  margin-left: 0px;
-  height: 45vh;
-}
-
-#sub-menu-search2 ul li {
-  height: 66px;
-  border-bottom: 1px solid rgb(144, 144, 144);
-}
-#sub-menu-search2 #logo {
-  position: relative;
-  top: 11px;
-  width: 35px;
-}
-
-#sub-menu-search2 ul li a p {
-  position: relative;
-  top: -15px;
-  left: 34px;
-  font-size: 18px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 800;
-}
-#sub-menu-search2 #uni-mil-title {
-  background-color: RGB(174, 201, 11);
-  height: 50px;
-}
-
-#sub-menu-search2 #uni-mil-title #Item1 {
-  position: absolute;
-  top: 12px;
-}
-#sub-menu-search2 #uni-mil-title #Item1 h4 {
-  position: relative;
-  bottom: 8px;
-  font-size: 20px;
-}
-#sub-menu-search2 #uni-mil-title #Item1 #crossicon {
-  position: absolute;
-  left: 205px;
-  top: 3px;
-}
 
 .active4 {
   background-color: rgb(131, 131, 131);
   border-left: 5px solid RGB(174, 201, 11);
 }
 
-/*sub-sidebar 3 - estilos - Universidades*/
-#sub-menu-search3 {
-  height: 45vh;
-}
-#sub-menu-search3 ul li {
-  height: 55px;
-  border-bottom: 1px solid rgb(144, 144, 144);
-}
-
-#sub-menu-search3 #universidad {
-  background-color: RGB(238, 125, 0);
-  height: 50px;
-}
-
-#logo-unis {
-  position: relative;
-  top: 6px;
-}
-
-#sub-menu-search3 #universidad #Item1 {
-  position: absolute;
-  top: 12px;
-}
-#sub-menu-search3 #universidad #Item1 h4 {
-  position: relative;
-  bottom: 9px;
-  font-size: 20px;
-}
-
-#sub-menu-search3 #universidad #Item1 #crossicon-univer {
-  position: absolute;
-  left: 205px;
-  top: 3px;
-}
-
-#sub-menu-search3 ul li a p {
-  font-size: 18px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 800;
-}
-
-#sub-menu-search3 ul li a p #uni-icon {
-  margin-right: 10px;
-}
-
-#sub-menu-search3 li .mover-universidades {
-  position: relative;
-  top: -20px;
-  left: 30px;
-}
-
-.active5 {
+/*.active5 {
   background-color: rgb(131, 131, 131);
   border-left: 5px solid RGB(238, 125, 0);
 }
+*/
 
-/*sub-sidebar 4 - estilos - limite ferrocarril*/
-#sub-menu-search4 {
-  height: 45vh;
-}
-#sub-menu-search4 ul li {
-  height: 50px;
-  border-bottom: 1px solid rgb(144, 144, 144);
-}
 
-#sub-menu-search4 #lim-intern {
-  background-color: RGB(64, 191, 239);
-  height: 50px;
-}
-
-#sub-menu-search4 #lim-intern #Item1 {
-  position: absolute;
-  top: 12px;
-}
-#sub-menu-search4 #lim-intern #Item1 h4 {
-  position: relative;
-  bottom: 6px;
-  font-size: 20px;
-}
-
-#sub-menu-search4 #lim-intern #Item1 #crossicon-lim {
-  position: absolute;
-  left: 205px;
-  top: 3px;
-}
 
 #sub-menu-search4 ul li a p {
   position: absolute;
   top: 60px;
   font-size: 16px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 800;
 }
 #sub-menu-search4 ul li a p #lim-icon {
   margin-right: 10px;
@@ -312,8 +230,8 @@ body {
 
 .sidebar-search-info {
   position: absolute;
-  left: -290px;
-  width: 290px;
+  left: -260px;
+  width: 260px;
   top: 66px;
   height: 100%;
   background: #333333;
@@ -346,34 +264,6 @@ body {
   background-color: white;
 }
 
-/*Mostrar y quitar unidades militares EA / AA / FFAA*/
-.uni-mil {
-  position: relative;
-  top: 50px;
-  left: 500px;
-  font-size: 50px;
-  display: none;
-}
-
-.mostrar {
-  display: block;
-}
-
-/*sub-menu-lupa*/
-.sidebar-search-lupa {
-  position: absolute;
-  left: -290px;
-  width: 290px;
-  top: 66px;
-  height: 900px;
-  background: #333333;
-  display: none;
-  z-index: 1;
-}
-.sidebar-search-lupa.active3 {
-  left: 60px;
-}
-
 /*Buscador */
 .buscador {
   position: absolute;
@@ -386,7 +276,7 @@ body {
   margin-left: 6px;
   margin-top: 10px;
   padding: 0 20px;
-  font-size: 18px;
+  font-size: 16px;
   color: black;
   outline: none;
   border: 1px solid silver;
@@ -431,16 +321,9 @@ body {
   top: 0px;
 }
 
-.active-mapa {
-  position: absolute;
-  height: 100%;
-  width: 84%;
-  z-index: 0;
-  left: 289px;
-}
-
-div.leaflet-sidebar.right.visible {
+div.leaflet-sidebar {
   padding: 0;
+  width: 460px;
 }
 
 .leaflet-control-geocoder-options-open {
@@ -450,40 +333,40 @@ div.leaflet-sidebar.right.visible {
 /*Prueba de scroll*/
 
 .centrar-1 {
-  height: calc((100vh - 65px)/2);
+  min-height: calc((100vh - 65px)/2);
   width: 100%;
   /*border: 3px solid yellow;*/
   /*border: 1px solid #66cc54;*/
-  overflow: hidden;
-}
-.centrar-2 {
-  height: calc((100vh - 65px)/2);
-  width: 100%;
-  /*border: 3px solid violet;*/
   overflow: hidden;
 }
 
 .scroll_A {
   position: absolute;
   overflow: hidden;
-  height: calc((100vh - 65px)/2);
+  max-height: calc((100vh - 65px)/2);
   width: 100%;
 }
 
 .scroll_B {
   position: absolute;
-  overflow: scroll;
-  height: 45vh;
+  overflow: hidden;
+  max-height: calc((100vh - 65px)/2);
+  width: 100%;
+}
+
+.scroll_C {
+  position: absolute;
+  height: calc(100vh - 65px);
   width: 100%;
 }
 
 .title-menu {
   background-color: #ffffff;
   color: #2f4491;
-  min-height: 35px;
+  min-height: 30px;
   padding-left: 5px;
   text-align: left;
-  font-size: 20px;
+  font-size: 18px;
   padding-top: 2px;
   font-weight: bold;
 }
@@ -513,161 +396,34 @@ div.leaflet-sidebar.right.visible {
   z-index: 1;
 }
 
-/* .sidebar-search5 Personal*/
-
-#sub-menu-search5 {
-  position: absolute;
-  top: 52vh;
-  height: 48vh;
-}
-
 #title-person {
-  background-color: #798dd4;
+  background-color: white
+ color #798dd4;
+  height: 50px;
 }
-#title-person #crossicon {
-  position: absolute;
-  left: 210px;
-  top: 22px;
-}
-
-#sub-menu-search6 {
-  position: absolute;
-  top: 52vh;
-  height: 48vh;
-}
-
-#sub-menu-search6 #title-intel {
-  background-color: #79c6d4;
-}
-
-#title-intel #crossicon {
-  position: absolute;
-  left: 210px;
-  top: 22px;
-}
-
-#sub-menu-search7 {
-  position: absolute;
-  top: 52vh;
-  height: 48vh;
-}
-
-#title-opera {
-  background-color: #ca4057;
-}
-#title-opera #crossicon {
-  position: absolute;
-  left: 210px;
-  top: 22px;
-}
-/*Materiales*/
-#sub-menu-search8 {
-  position: absolute;
-  top: 52vh;
-  height: 48vh;
-}
-
-#title-mate {
-  background-color: #66cc54;
-}
-#title-mate #crossicon {
-  position: absolute;
-  left: 210px;
-  top: 22px;
-}
-/*Finanzas*/
-#sub-menu-search9 {
-  position: absolute;
-  top: 52vh;
-  height: 48vh;
-}
-
-#title-fina {
-  background-color: #e7b202;
-}
-#title-fina #crossicon {
-  position: absolute;
-  left: 210px;
-  top: 22px;
-}
-
-/*Graficos*/
-.graficos {
-  width: 400px;
-  height: 100vh;
-  border: 5px solid rgb(128, 128, 128);
-  margin-left: 60px;
-  background-color: white;
-  display: none;
-}
-
-.grafic-1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: calc(47vh);
-  border-bottom: 1px dashed black;
-}
-
-.grafic-2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 50vh;
-  width: 100%;
-  height: 50vh;
-}
-
-.graph {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60%;
-}
-.mover-grafic {
-  margin-left: 350px;
-  display: block;
-}
-
-/* page Responsive*/
 
 .tamanoA {
   padding-left: 0px;
-  margin-left: 350px;
+  margin-left: 320px;
   padding-top: 0px;
   margin-top: 65px;
-  width: calc(100vw - 350px);
+  width: calc(100vw - 320px);
   height: calc(100vh - 65px);
   margin-right: 0px;
   padding-right: 0px;
 }
 
-.tamanoB {
-  margin-left: 100px;
-  left: -39px;
-  height: 95vh;
-  width: calc(97vw - 290px);
-  margin-right: 0px;
-}
-
-.tamanoC {
-  margin-left: 100px;
-  left: 360px;
-  height: 95vh;
-  width: calc(76vw - 290px);
-  margin-right: 0px;
-}
-
 
 .alto_elemento_menu li {
-  min-height: 35px;
+  min-height: 30px;
   padding-top: 0px;
   margin-top: 0px;
 }
 .alto_elemento_menu li a {
-  font-size: 18px;
+  font-size: 16px;
+  color: white;
+}
+.alto_elemento_menu li a p{
   color: white;
 }
 
@@ -676,10 +432,10 @@ div.leaflet-sidebar.right.visible {
 #sub-menu-search #logo {
   position: relative;
   top: -4px;
-  width: 35px;
+  width: 30px;
 }
 #sub-menu-search ul li {
-  height: 38px;
+  height: 30px;
   /*border-bottom: 1px solid rgb(144, 144, 144);*/
 }
 
@@ -687,36 +443,32 @@ div.leaflet-sidebar.right.visible {
   position: relative;
   top: -30px;
   left: 34px;
-  font-size: 18px;
+  font-size: 16px;
   /*font-family: "Open Sans", sans-serif;
   font-weight: 800;*/
 }
 #title-ejer-arg{
-  height: 38px;
-  background-color: #AEC90B;
-}
-#personal-1,#personal-2{
   height: 30px;
+  padding-top: 2px;
+  background-color: #AEC90B;
+  align-items: center;
 }
+#title-ejer-arg a{
+  text-decoration: none;
+}
+
 #sub-menu-ejer-arg ul li a p {
-    position: relative;
-    top: -26px;
-    left: 34px;
-    font-size: 18px;
+  position: relative;
+  top: -26px;
+  left: 34px;
+  font-size: 16px;
 }
 
 #crossicon-ejer{
   position: absolute;
-  top: 48px;
-  left: 215px;
+  top: calc(30px + 8px);
+  left: 240px;
   color: #ffffff;
-}
-#sub-menu-ejer-arg .ejer-items{
-  height: 38px;
-  /*border-left:5px solid gray;*/
-}
-#sub-menu-ejer-arg .ejer-items p{
-  font-size: 18px;
 }
 
 #sub-menu-ejer-arg #logo{
@@ -732,54 +484,165 @@ div.leaflet-sidebar.right.visible {
 
 #fuerza-ope{
   border-left: 5px solid rgb(1, 161, 189);
+  cursor: pointer;
 }
 #fuerza-sost{
   border-left: 5px solid rgb(211, 123, 123);
+  cursor: pointer;
 }
 #sist-edu{
   border-left: 5px solid rgb(234, 236, 97);
+  cursor: pointer;
+}
+#fuerza_operativa {
+  background-color: #01A1BD;
+}
+#fuerza_operativa_guc {
+  background-color: #AEDE87;
+}
+#fuerza_operativa_gub {
+  background-color: #DEB887;
+}
+#fuerza_sostenimiento {
+  background-color: #D37B7B;
+}
+#sistema_educativo {
+  background-color: #EAEC61;
+}
+#sistema_educativo p {
+  color: black;
+}
+
+.crossicon-fuerza_oper_gub, .crossicon-fuerza_oper_guc{
+  position: absolute;
+  top: calc(90px + 8px);
+  left: 240px;
+  color: #ffffff;
 }
 
 #EA-mil{
   border-left:5px solid #AEC90B;
-  display: block;
+  cursor: pointer;
 }
 
 #arm-arg{
   border-left:5px solid #EE7D00;
-  display: block;
+  cursor: pointer;
 }
 
 #FFAA{
   border-left:5px solid #40BFEF;
-  display: block;
+  cursor: pointer;
 }
 
-
-#sub-menu-ejer-arg{
-  position: absolute;
-    left: 60px;
-    display: block;
-    width: 290px;
-    height: 46vh;
-}
-
-
-
-#sub-menu-conduc-sup{
+#sub-menu-ejer-arg {
   position: absolute;
   left: 60px;
-  display: block;
-  width: 290px;
-  height: 46vh;
+  width: 260px;
+  max-height: calc((100vh - 65px)/2);
 }
 
+#sub-menu-conduc-sup {
+  position: absolute;
+  left: 60px;
+  width: 260px;
+  max-height: calc((100vh - 65px)/2);
+  --alto_panel: calc((100vh - 65px)/2);
+}
+.elem_conducc_sup .div_items_elem, .elem_fuerza_oper .div_items_elem,
+.elem_fuerza_oper_gub .div_items_elem, .elem_fuerza_sostenim .div_items_elem,
+.elem_sist_educ .div_items_elem {
+  overflow: auto;
+  overflow-x: hidden;
+  height: calc(var(--alto_panel) - 30px - 30px - 30px); 
+}
+.elem_fuerza_oper_guc .div_items_elem {
+  overflow: auto;
+  overflow-x: hidden;
+  height: calc(var(--alto_panel) - 30px - 30px - 30px - 30px); 
+}
+ 
+.areas_personal, .areas_inteligencia, .areas_operaciones, .areas_material, .areas_finanzas{
+  position: absolute;
+  top: calc(65px + ((100vh - 65px)/2));
+  left: 60px;
+  width: 260px;
+  max-height: calc((100vh - 65px)/2);
+}
+
+.areas_conduccion {
+  top: calc(65px + ((100vh - 65px)/2));
+  max-height: calc((100vh - 65px)/2);
+  width: 100%;
+}
+
+.areas_personal #items-conduccion, .areas_inteligencia #items-conduccion,
+.areas_operaciones #items-conduccion, .areas_material #items-conduccion,
+.areas_finanzas #items-conduccion{
+  overflow: auto;
+  overflow-x:hidden ;
+  height: calc(var(--alto_panel) - 30px - 30px); 
+}
+
+.menu_superior .ejer-items{
+  height: 30px;
+  cursor: pointer;
+  
+}
+.menu_superior .ejer-items p{
+  font-size: 16px;
+}
+.menu_superior .ejer-items a {
+  text-decoration: none;
+}
+#sub-menu-ejer-arg .ejer-items{
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+#sub-menu-ejer-arg .ejer-items p{
+  font-size: 16px;
+}
+#sub-menu-ejer-arg .ejer-items a {
+  text-decoration: none;
+}
+.alto_elemento_menu .ejer-items{
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.areas_conduccion .ejer-items p{
+  font-size: 16px;
+}
+.areas_conduccion .ejer-items a {
+  text-decoration: none;
+}
+.areas_conduccion .ejer-items{
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
 #sub-menu-conduc-sup .ejer-items{
-  height: 38px;
-  /*border-left:5px solid gray;*/
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 #sub-menu-conduc-sup .ejer-items p{
-  font-size: 18px;
+  font-size: 16px;
+}
+#sub-menu-conduc-sup .ejer-items a {
+  text-decoration: none;
+}
+
+.sidebar-capas .ejer-items {
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 #sub-menu-conduc-sup #logo{
@@ -787,11 +650,16 @@ div.leaflet-sidebar.right.visible {
   top: -1px;
 }
 
+.pulsado-items{
+  border-left: 10px solid rgb(48, 129, 195);
+  background-color: rgb(95, 91, 91);
+}
+
 #sub-menu-conduc-sup ul li a p {
   position: relative;
   top: -26px;
   left: 34px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 #sub-menu-conduc-sup #cond-sup{
@@ -800,16 +668,23 @@ div.leaflet-sidebar.right.visible {
 
 #sub-menu-conduc-sup #crossicon-conduc{
   position: absolute;
-  top: 85px;
-  left: 215px;
+  top: calc(60px + 8px);
+  left: 240px;
   color: #ffffff;
 }
 
+#sub-menu-capa_universidades #crossicon-univer, #sub-menu-capa_ferrocarril #crossicon-lim{
+  position: absolute;
+  top: calc(30px + 8px);
+  left: 240px;
+  color: #ffffff;
+}
 
-#items-conduccion{
-  overflow: scroll;
-  overflow-x:hidden ;
-  height: 35vh;
+#sub-menu-conduc-sup #crossicon-conduc_areas_pers, #crossicon-conduc_areas_inteligencia, #crossicon-conduc_areas_operaciones, #crossicon-conduc_areas_material, #crossicon-conduc_areas_finanzas{
+  position: absolute;
+  top: calc(30px + 8px);
+  left: 240px;
+  color: #ffffff;
 }
 
 #direc1{
@@ -860,6 +735,11 @@ div.leaflet-sidebar.right.visible {
 /*Sub-menu principal de ejercito argentino*/
 /*.sub-menu-searchb*/
 
+#sidebar456{
+  padding-bottom: -20px;
+  height: 44vh;
+}
+
 /*
 @media only screen and (max-width: 992px) {
   .tamanoA {
@@ -869,21 +749,54 @@ div.leaflet-sidebar.right.visible {
     width: 96vw;
     height: 91.5vh;
   }
-
-  .tamanoB {
-    margin-left: 100px;
-    left: -39px;
-    margin-right: 0px;
-    height: 91.5vh;
-    width: 75.5vw;
-  }
-
-  .tamanoC {
-    margin-left: 100px;
-    left: 360px;
-    margin-right: 0px;
-    height: 91.8vh;
-    width: 47.5vw;
-  }
 }
 */
+
+.punteado{
+  border-top: dotted 1px black;
+}
+
+
+
+/*Franco Navarro css Cambios*/
+
+.active-ferrocarril {
+  border-left: 5px solid #40bfef;
+}
+
+.active-ferrocarril-pulsado {
+  background-color: rgb(131, 131, 131);
+}
+
+/*Universidades publicas y privadas*/
+
+#publica-mil{
+  border-left: 5px solid #f18187;
+}
+
+#privada-mil{
+  border-left: 5px solid #81adf8;
+}
+
+.active-pub {
+  background-color: rgb(131, 131, 131);
+}
+.active-priv {
+  background-color: rgb(131, 131, 131);
+}
+
+/*Fin Universidades publicas y privadas */
+
+
+
+
+/*FIN Franco Navarro css Cambios*/
+
+
+li.hoveado_fuerzas {
+  background-color: rgb(131, 131, 131)
+}
+
+li.hoveado_areas {
+  background-color: rgb(131, 131, 131)
+}
