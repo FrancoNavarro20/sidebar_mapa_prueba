@@ -500,6 +500,14 @@ div.leaflet-sidebar {
 #fuerza_operativa {
   background-color: #01A1BD;
 }
+
+#tit_fuer_oper_elem1 {
+  background-color: burlywood;
+}
+#tit_fuer_oper_elem3 {
+  background-color: rgb(135, 187, 222);
+}
+
 #fuerza_operativa_guc {
   background-color: #AEDE87;
 }
@@ -516,7 +524,8 @@ div.leaflet-sidebar {
   color: black;
 }
 
-.crossicon-fuerza_oper_gub, .crossicon-fuerza_oper_guc{
+.crossicon-fuerza_oper_gub, .crossicon-fuerza_oper_guc, .crossicon_fuer_oper_elem1,
+.crossicon_fuer_oper_elem3{
   position: absolute;
   top: calc(90px + 8px);
   left: 240px;
@@ -559,7 +568,8 @@ div.leaflet-sidebar {
   overflow-x: hidden;
   height: calc(var(--alto_panel) - 30px - 30px - 30px); 
 }
-.elem_fuerza_oper_guc .div_items_elem {
+.elem_fuerza_oper_guc .div_items_elem, .menu_fuer_oper_elem1 .div_items_elem,
+.menu_fuer_oper_elem3 .div_items_elem {
   overflow: auto;
   overflow-x: hidden;
   height: calc(var(--alto_panel) - 30px - 30px - 30px - 30px); 

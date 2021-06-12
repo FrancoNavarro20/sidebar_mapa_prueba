@@ -441,9 +441,3 @@ function masInfo(info) {
     }, 3000);
   
 }
-
-
-
-function clickZoom(coord,zoom) {
-  map.setView(coord,zoom);
-}
