@@ -406,7 +406,9 @@ function mostrar_marcadores(cod_uni) {
         filter: function (feature) {
           return feature.properties.fdc == "Ejército Argentino";
         },
-      }).addTo(map);
+      })
+      uni_agrupadas.addLayer(ejercito);
+      map.addLayer(uni_agrupadas);
       //$("#div_listado_unidades").html(data.features[0].properties.fna);
       $("#div_listado_unidades").html(elem);
     }

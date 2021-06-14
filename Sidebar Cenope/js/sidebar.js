@@ -1,5 +1,6 @@
 var cod_uni = "TODOS";
 var ejercito;
+var uni_agrupadas = L.markerClusterGroup.layerSupport();
 
 //codigo jquery
 $(document).ready(function () {
