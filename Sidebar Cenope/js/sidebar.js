@@ -34,6 +34,10 @@ $(document).ready(function () {
   $(".elem_sist_educ").hide();
   $(".elem_fuerza_oper_gub").hide();
   $(".elem_fuerza_oper_guc").hide();
+  
+  $(".menu_fuer_oper_elem1").hide();
+  $(".menu_fuer_oper_elem3").hide();
+
   $(".areas_personal").hide();
   $(".areas_inteligencia").hide();
   $(".areas_operaciones").hide();
@@ -169,6 +173,9 @@ $(document).ready(function () {
     if (typeof $(this).data("cod_uni") == "undefined" || $(this).data("cod_uni")=="")
       return;
     cod_uni = $(this).data("cod_uni");
+    lat = $(this).data("lat");
+    lon = $(this).data("lon");
+    zoom = $(this).data("zoom");
     //console.log("cod_uni:"+cod_uni);
     if (typeof $(this).data("nombre_elem") != "undefined") {
       elem_selec = $(this).data("nombre_elem");
@@ -184,7 +191,9 @@ $(document).ready(function () {
     map.removeLayer(ejercito);
     mostrar_marcadores(cod_uni);
     graficosSidebar();
-    if (!sidebar.isVisible())
+    
+    map.setView([lat,lon],zoom);
+    //if (!sidebar.isVisible())
       sidebar.show();
   });
   
@@ -243,12 +252,25 @@ $(document).ready(function () {
      $(".elem_fuerza_oper_gub").hide();
   });
 
-  $(".click_guc").click(function () { 
+  $(".click_fuer_oper_elem2").click(function () { 
      $(".elem_fuerza_oper_guc").show();
   });
   
   $(".crossicon-fuerza_oper_guc").click(function () { 
      $(".elem_fuerza_oper_guc").hide();
+  });
+
+  $(".click_fuer_oper_elem1").click(function () { 
+     $(".menu_fuer_oper_elem1").show();
+  });  
+  $(".crossicon_fuer_oper_elem1").click(function () { 
+     $(".menu_fuer_oper_elem1").hide();
+  });
+  $(".click_fuer_oper_elem3").click(function () { 
+     $(".menu_fuer_oper_elem3").show();
+  });  
+  $(".crossicon_fuer_oper_elem3").click(function () { 
+     $(".menu_fuer_oper_elem3").hide();
   });
 
   $(".click_areas_personal").click(function () { 
