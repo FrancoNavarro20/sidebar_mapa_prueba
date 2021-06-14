@@ -193,7 +193,7 @@ $(document).ready(function () {
     mostrar_marcadores(cod_uni);
     graficosSidebar();
     
-    map.setView([lat,lon],zoom);
+    //map.setView([lat,lon],zoom);
     //if (!sidebar.isVisible())
       sidebar.show();
   });
