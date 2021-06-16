@@ -91,7 +91,7 @@ function chart_personal(div_chart,titulo,datos_json) {
   //title.text.color = "#125186";
   title.text = titulo;
   title.fontSize = 20;
-  title.marginTop = 15;
+  title.marginTop = 10;
   title.marginBottom = 10;
 
   // Add data

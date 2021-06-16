@@ -846,44 +846,67 @@
       <div id="sidebar">
         <div id="div_elem_menu_seleccionado">
           <div id="div_nombre_elem_seleccionado"></div>
-          <div id="div_listado_unidades"></div>
+          <div class="row" id="div_listado_unidades"></div>
         </div>
-        <div id="div_elem_mapa_seleccionado">
+        <div class="row" id="div_elem_mapa_seleccionado">
         </div>
-        <!-- HTML -->
-        <div class="row" style="width: 100%; justify-content: flex-start; align-items: center; text-align: center; padding-top: 10px;">
-          <div class="thumbnail col-md-6" style="padding: 10px">
-            <div style="font-size: 20px; color: #125186">
-              Oficiales
-            </div>
-            <div style="font-size: 30px; font-weight: bold; color: #125186">
-              <span id="cant_of_total"></span>
-            </div>
-            <div style="font-size: 15px; color: #125186">
-              Superiores: <span style="font-weight: bold;" id="cant_of_superiores"></span>
-              Jefes: <span style="font-weight: bold;" id="cant_of_jefes"></span>
-            </div>
-            <div style="font-size: 15px; color: #125186">
-              Subalternos: <span style="font-weight: bold;" id="cant_of_subalternos"></span>
+        <div class="row" style="text-align: center; margin-top: 20px; margin-bottom: 0px; padding: 0px;">
+          <div class="col-md-6" style="padding: 5px;">
+            <div class="thumbnail" style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; min-height: 130px;">
+              <div style="font-size: 20px;">
+                Oficiales
+              </div>
+              <div style="font-size: 30px; font-weight: bold; color: #125186">
+                <span id="cant_of_total"></span>
+              </div>
+              <div style="font-size: 15px;">
+                Superiores: <span style="color: #125186; font-weight: bold;" id="cant_of_superiores"></span>
+                Jefes: <span style="color: #125186; font-weight: bold;" id="cant_of_jefes"></span>
+              </div>
+              <div style="font-size: 15px;">
+                Subalternos: <span style="color: #125186; font-weight: bold;" id="cant_of_subalternos"></span>
+              </div>
             </div>
           </div>
-          <div class="thumbnail col-md-6" style="padding: 10px">
-            <div style="font-size: 20px; color: #125186">
-              Suboficiales
+          <div class="col-md-6" style="padding: 5px;">
+            <div class="thumbnail" style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; min-height: 130px;">
+              <div style="font-size: 20px;">
+                Suboficiales
+              </div>
+              <div style="font-size: 30px; font-weight: bold; color: #125186">
+                <span id="cant_subof_total"></span>
+              </div>
+              <div style="font-size: 15px;">
+                Superiores: <span style="color: #125186; font-weight: bold;" id="cant_subof_superiores"></span>
+              </div>
+              <div style="font-size: 15px;">
+                Subalternos: <span style="color: #125186; font-weight: bold;" id="cant_subof_subalternos"></span>
+              </div>
             </div>
-            <div style="font-size: 30px; font-weight: bold; color: #125186">
-              <span id="cant_subof_total"></span>
+          </div>
+          <div class="col-md-6" style="padding: 5px;">
+            <div class="thumbnail" style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; min-height: 130px;">
+              <div style="font-size: 20px;">
+                Soldados
+              </div>
+              <div style="font-size: 30px; font-weight: bold; color: #125186;">
+                <span id="cant_soldados_total" style="font-style: italic;">S/D</span>
+              </div>
             </div>
-            <div style="font-size: 15px; color: #125186">
-              Superiores: <span style="font-weight: bold;" id="cant_subof_superiores"></span>
-            </div>
-            <div style="font-size: 15px; color: #125186">
-              Subalternos: <span style="font-weight: bold;" id="cant_subof_subalternos"></span>
+          </div>
+          <div class="col-md-6" style="padding: 5px;">
+            <div class="thumbnail" style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; min-height: 130px;">
+              <div style="font-size: 20px;">
+                Agentes Civiles
+              </div>
+              <div style="font-size: 30px; font-weight: bold; color: #125186">
+                <span id="cant_civiles_total" style="font-style: italic;">S/D</span>
+              </div>
             </div>
           </div>
         </div>
-        <div id="chart_oficiales" style="height: 350px;"></div>
-        <div id="chart_suboficiales" style="height: 350px;"></div>
+        <div class="row" id="chart_oficiales" style="height: 350px; margin-top: 0px; padding-top: 0px;"></div>
+        <div class="row" id="chart_suboficiales" style="height: 350px;"></div>
       </div>
     </div>
   </div>
