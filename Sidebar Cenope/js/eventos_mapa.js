@@ -423,9 +423,9 @@ function masInfo(info) {
   document.getElementById("div_elem_mapa_seleccionado").innerHTML =
     //   "ID: " +
     "<div>" + $(info).data("img") + "</div>" +
-    '<div><h4 style="text-align: center; padding-top: 10px; margin-bottom: 5px; text-transform: uppercase;">' +
+    '<div style="text-align: center; padding-top: 10px; margin-bottom: 5px; text-transform: uppercase; font-size: 22px; font-weight: bold;">' +
     $(info).data("nombre") +
-    "</h4></div>" +
+    "</div>" +
     "<div style='text-align: center; background-color:#eeeeee; min-height: 30px; margin-top:5px; font-size:14px;'>" +
     "<div class='row'>" +
     "<div class='col-md-6' style='font-weight:bold; padding: 5px; text-align:left;'>Localidad</div>" +

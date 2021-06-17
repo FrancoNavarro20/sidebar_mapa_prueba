@@ -4,6 +4,42 @@ var uni_agrupadas = L.markerClusterGroup.layerSupport();
 
 //codigo jquery
 $(document).ready(function () {
+  //now on button click
+  //$('#modal_listado_personal').modal('toggle');
+
+
+  $('#modal_listado_personal').on('show.bs.modal', function(e) {
+    var button = $(e.relatedTarget);
+
+    var modal = $(this);
+    modal.find(".overlay").show();
+    var personal_listado = button.data("personal_listado");
+    switch (personal_listado) {
+      case "Oficiales":
+        break;
+    }
+    modal.find("#modal_titulo_listado").html("Listado de "+personal_listado);
+    $.ajax({
+      data: "cod_uni=" + cod_uni + " & tipo_personal="+ personal_listado,
+      url: "datos_area_personal.php",        // Url to which the request is send
+      //url: "./geojson/data_unidades_ea.geojson",        // Url to which the request is send
+      type: "POST",             // Type of request to be send, called as method
+      cache: true,             // To unable request pages to be cached
+      // el tipo de información que se espera de respuesta
+      success: function(datos)   // A function to be called if request succeeds
+      {
+        console.log("se envio");
+        modal.find(".overlay").delay(500).fadeOut();
+        modal.find("#div_modal_listado_personal").html("").delay(500).hide();
+        modal.find("#div_modal_listado_personal").html(datos).fadeIn();
+      },
+      error: function(XMLHttpRequest, textStatus, errorThrown) { 
+        console.log("se produjo un error en el envio");
+      }
+    });
+  });
+  
+
   $(".elem_conducc_sup").hide();
   
   mostrar_marcadores("TODOS");
@@ -181,7 +217,7 @@ $(document).ready(function () {
     if (typeof $(this).data("nombre_elem") != "undefined") {
       elem_selec = $(this).data("nombre_elem");
       div_sup = "<center><img src='./img/Escudo_del_Ejército_Argentino.png' style='max-width: 15%; height: auto;'/></center>";
-      $("#div_nombre_elem_seleccionado").html(div_sup+'<h4 style="text-align: center; padding-top: 10px; margin-bottom: 10px;">'+elem_selec+"</h4>");
+      $("#div_nombre_elem_seleccionado").html(div_sup+'<div style="font-size: 22px; font-weight: bold; text-align: center; padding-top: 10px; margin-bottom: 10px;">'+elem_selec+"</div>");
     }
    
     setTimeout(function(){
@@ -352,3 +388,5 @@ $('.hover_areas ul').on('click', 'li', function(){
    $('.hoveado_areas').removeClass('hoveado_areas');
    $(this).addClass('hoveado_areas');
 });
+
+
