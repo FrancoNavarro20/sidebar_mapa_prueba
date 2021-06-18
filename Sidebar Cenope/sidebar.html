@@ -877,11 +877,11 @@
               <div style="font-size: 30px; font-weight: bold; color: #125186">
                 <span id="cant_of_total"></span>
               </div>
-              <div style="font-size: 15px;">
+              <div style="font-size: 14px;">
                 Superiores: <span style="color: #125186; font-weight: bold;" id="cant_of_superiores"></span>
                 Jefes: <span style="color: #125186; font-weight: bold;" id="cant_of_jefes"></span>
               </div>
-              <div style="font-size: 15px; padding-bottom: 5px;">
+              <div style="font-size: 14px; padding-bottom: 5px;">
                 Subalternos: <span style="color: #125186; font-weight: bold;" id="cant_of_subalternos"></span>
               </div>
               <div style="font-size: 15px; padding-bottom: 5px;">
@@ -897,10 +897,10 @@
               <div style="font-size: 30px; font-weight: bold; color: #125186">
                 <span id="cant_subof_total"></span>
               </div>
-              <div style="font-size: 15px;">
+              <div style="font-size: 14px;">
                 Superiores: <span style="color: #125186; font-weight: bold;" id="cant_subof_superiores"></span>
               </div>
-              <div style="font-size: 15px; padding-bottom: 5px;">
+              <div style="font-size: 14px; padding-bottom: 5px;">
                 Subalternos: <span style="color: #125186; font-weight: bold;" id="cant_subof_subalternos"></span>
               </div>
               <div style="font-size: 15px; padding-bottom: 5px;">
@@ -914,15 +914,23 @@
                 Soldados
               </div>
               <div style="font-size: 30px; font-weight: bold; color: #125186; padding-bottom: 5px;">
-                <span id="cant_soldados_total" style="font-style: italic;">N/D</span>
+                <span id="cant_sold_total" style="font-style: italic;"></span>
+              </div>
+              <div style="font-size: 14px;">
+                Operacionales: <span style="color: #125186; font-weight: bold;" id="cant_sold_operacionales"></span>
+                Especialistas: <span style="color: #125186; font-weight: bold;" id="cant_sold_especialistas"></span>
+              </div>
+              <div style="font-size: 14px; padding-bottom: 5px;">
+                Técnicos: <span style="color: #125186; font-weight: bold;" id="cant_sold_tecnicos"></span>
+                Deportistas: <span style="color: #125186; font-weight: bold;" id="cant_sold_deportistas"></span>
               </div>
               <div style="font-size: 15px; padding-bottom: 5px;">
-                <button type="button" class="btn btn-outline-primary btn-sm" id="btn_ver_soldados" disabled>Ver listado</button>
+                <button type="button" class="btn btn-outline-primary btn-sm" id="btn_ver_soldados" data-personal_listado="Soldados" data-bs-toggle="modal" data-bs-target="#modal_listado_personal">Ver listado</button>
               </div>
             </div>
           </div>
           <div class="col-md-6" style="padding: 5px;">
-            <div class="thumbnail" style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; min-height: 130px;">
+            <div class="thumbnail" style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; min-height: 177px;">
               <div style="font-size: 20px;">
                 Agentes Civiles
               </div>
@@ -937,6 +945,7 @@
         </div>
         <div class="row" id="chart_oficiales" style="height: 350px; margin-top: 0px; padding-top: 0px;"></div>
         <div class="row" id="chart_suboficiales" style="height: 350px;"></div>
+        <div class="row" id="chart_soldados" style="height: 350px;"></div>
       </div>
     </div>
   </div>

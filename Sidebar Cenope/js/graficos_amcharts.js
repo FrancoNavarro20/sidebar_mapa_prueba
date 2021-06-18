@@ -31,6 +31,10 @@ function cargarEstadisticasPersonal() {
         var cant_of_subalternos=0;
         var cant_subof_superiores=0;
         var cant_subof_subalternos=0;
+        var cant_sold_operacionales=0;
+        var cant_sold_tecnicos=0;
+        var cant_sold_especialistas=0;
+        var cant_sold_deportistas=0;
         var peso_grado;
 
         $.each(datos.oficiales, function(key,value) {
@@ -56,8 +60,26 @@ function cargarEstadisticasPersonal() {
             cant_subof_subalternos = cant_subof_subalternos + parseInt(value.first)
           }
         });
+        $.each(datos.soldados, function(key,value) {
+          //console.log(value.peso_grado+':'+value.first);
+          switch (value.peso_grado) {
+            case "O": //Operacionales
+              cant_sold_operacionales = cant_sold_operacionales + parseInt(value.first);
+              break;
+            case "T": //Técnicos
+              cant_sold_tecnicos = cant_sold_tecnicos + parseInt(value.first);
+              break;
+            case "E": //Especialistas
+              cant_sold_especialistas = cant_sold_especialistas + parseInt(value.first);
+              break;
+            case "D": //Deportistas
+              cant_sold_deportistas = cant_sold_deportistas + parseInt(value.first);
+              break;
+          }
+        });
         var cant_of_total = cant_of_superiores + cant_of_jefes + cant_of_subalternos;
         var cant_subof_total = cant_subof_superiores + cant_subof_subalternos;
+        var cant_soldados_total = cant_sold_operacionales + cant_sold_tecnicos + cant_sold_especialistas;
         $("#cant_of_total").html(cant_of_total);
         $("#cant_of_superiores").html(cant_of_superiores);
         $("#cant_of_jefes").html(cant_of_jefes);
@@ -65,9 +87,15 @@ function cargarEstadisticasPersonal() {
         $("#cant_subof_total").html(cant_subof_total);
         $("#cant_subof_superiores").html(cant_subof_superiores);
         $("#cant_subof_subalternos").html(cant_subof_subalternos);
+        $("#cant_sold_total").html(cant_soldados_total);
+        $("#cant_sold_operacionales").html(cant_sold_operacionales);
+        $("#cant_sold_tecnicos").html(cant_sold_tecnicos);
+        $("#cant_sold_especialistas").html(cant_sold_especialistas);
+        $("#cant_sold_deportistas").html(cant_sold_deportistas);
         
         chart_personal("chart_oficiales", "Oficiales", datos.oficiales);
         chart_personal("chart_suboficiales", "Suboficiales", datos.suboficiales);
+        chart_personal("chart_soldados", "Soldados", datos.soldados);
       });
     }
   )
