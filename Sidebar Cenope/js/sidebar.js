@@ -5,7 +5,7 @@ var uni_agrupadas = L.markerClusterGroup.layerSupport();
 //codigo jquery
 $(document).ready(function () {
   $(".elem_conducc_sup").hide();
-  
+
   mostrar_marcadores("TODOS");
 
   //variables
@@ -35,7 +35,7 @@ $(document).ready(function () {
   $(".elem_sist_educ").hide();
   $(".elem_fuerza_oper_gub").hide();
   $(".elem_fuerza_oper_guc").hide();
-  
+
   $(".menu_fuer_oper_elem1").hide();
   $(".menu_fuer_oper_elem3").hide();
 
@@ -46,65 +46,63 @@ $(document).ready(function () {
   $(".areas_finanzas").hide();
   //alert("Estas en php");
   //-------------------------Boton de capas - funcionalidades---------------------//
-  $("#search").on('click', function () {
-   
+  $("#search").on("click", function () {
     //Apagar color de botones del sidebar principal
     $(".sidebar-search-info").hide(); // esconder sub-menu del boton de lupa
     $("#sub-menu-search").show();
-    $(".sidebar-search").toggleClass('active'); //aparecer y desaparecer sidebar 
-    $(".sidebar-capas").removeClass('active');
-    
+    $(".sidebar-search").toggleClass("active"); //aparecer y desaparecer sidebar
+    $(".sidebar-capas").removeClass("active");
+
     $(".sidebar #search i").show("slow");
     $("#search i").addClass("pulsado"); //pintar y despintar boton
-    $("#capas i").removeClass('pulsado');
+    $("#capas i").removeClass("pulsado");
     $("#capas #triangle2").hide();
-
   });
 
   //Click unidades militares
-  $("#uni-militares").click(function () { 
+  $("#uni-militares").click(function () {
     $("#sub-menu-search2 #subMenuB").slideDown();
     $("#sub-menu-search2").show();
   });
 
   //Click cerrar unidades militares
-  $("#sub-menu-search2 #crossicon").click(function () { 
+  $("#sub-menu-search2 #crossicon").click(function () {
     $("#sub-menu-search2").hide();
-    $("#sub-menu-search").show(); 
+    $("#sub-menu-search").show();
   });
 
   //Click universidades
-  $("#universidades").click(function () { 
+  $("#universidades").click(function () {
     $("#sub-menu-capa_universidades").show();
   });
 
   //Click cerrar Universidades
-  $("#sub-menu-capa_universidades #crossicon-univer").click(function () { 
+  $("#sub-menu-capa_universidades #crossicon-univer").click(function () {
     $("#sub-menu-capa_universidades").hide();
-    $("#sub-menu-capas").show(); 
+    $("#sub-menu-capas").show();
   });
 
   //Click limite internacional
-  $("#limite-arg").click(function () { 
-    //$("#sub-menu-search").hide(); 
+  $("#limite-arg").click(function () {
+    //$("#sub-menu-search").hide();
     $("#sub-menu-capa_ferrocarril").show();
   });
 
   //Click cerrar Universidades
-  $("#sub-menu-capa_ferrocarril #crossicon-lim").click(function () { 
+  $("#sub-menu-capa_ferrocarril #crossicon-lim").click(function () {
     $("#sub-menu-capa_ferrocarril").hide();
-    $("#sub-menu-capas").show(); 
+    $("#sub-menu-capas").show();
     console.log("Límite internacional se cerro correctamente .");
   });
 
   //--------------- Boton de informacion----------------------------//
-  
+
   $("#capas").click(function () {
     $(".sidebar-search").hide(); // esconder sub-menu del boton de capas
-    $("#sub-menu-capas").show();  
-    $(".sidebar-capas").toggleClass('active');
-    $("#capas i").addClass('pulsado');
-    $("#search i").removeClass('pulsado');
+    $("#sub-menu-capas").show();
+    $(".sidebar-capas").toggleClass("active");
+    $("#capas i").addClass("pulsado");
+    $("#search i").removeClass("pulsado");
     $("#search #triangle3").hide();
 
     //Pintar boton de capas del menu principal;
@@ -112,19 +110,20 @@ $(document).ready(function () {
     $("#capas i").addClass("pulsado");
   });
   //-------------Universidades-----------Publicas y privadas -----------------//
-  $(".pulsar-universidades").click(function () { 
+  $(".pulsar-universidades").click(function () {
     var origen = $(this);
-    var universidad = origen.data('universidad');
-    switch(universidad)
-    {
-      case "publica" :
-        $("#publica-mil").toggleClass('active5');
-        break;   
-      case "privada" :
-        $("#privada-mil").toggleClass('active5');
+    var universidad = origen.data("universidad");
+    switch (universidad) {
+      case "publica":
+        $("#publica-mil").toggleClass("active5");
         break;
-      default :
-        console.log("Hubo un error, no se selecciono una universidad pública o privada .");
+      case "privada":
+        $("#privada-mil").toggleClass("active5");
+        break;
+      default:
+        console.log(
+          "Hubo un error, no se selecciono una universidad pública o privada ."
+        );
         break;
     }
   });
@@ -132,29 +131,17 @@ $(document).ready(function () {
   //---------------------Mostrar sidebar del boton lupa---------------------//
 
   //Onclick de los Personal !!!
-  $("#personal").click(function () { 
+  $("#personal").click(function () {
     $("#sub-menu-search5").show();
     console.log("Personal abierto correctamente .");
   });
 
-  //Click cerrar Personal
-  $("#title-person #crossicon").click(function () { 
-     $("#sub-menu-search5").hide(); 
-     console.log("Personal se cerro correctamente");    
-  });
-
-
-  $(".pers").click(function () { 
-    $("#sub-menu-search5").hide(); 
-    console.log("Personal se cerro correctamente");    
-  });
-
   /*abrir ejer-arg principal*/
   $("#EA-mil").click(function () {
-    $("#sub-menu-ejer-arg").show(); 
+    $("#sub-menu-ejer-arg").show();
     var clicks = $(this).data("clicks");
 
-    if ( typeof $(this).data("cod_uni") !== "undefined")
+    if (typeof $(this).data("cod_uni") !== "undefined")
       cod_uni = $(this).data("cod_uni");
 
     map.removeLayer(ejercito);
@@ -165,13 +152,15 @@ $(document).ready(function () {
   });
 
   $(".items_areas_conduccion").click(function () {
-     //();
-    if (!sidebar.isVisible())
-      sidebar.show();
+    //();
+    if (!sidebar.isVisible()) showSidebar();
   });
 
   $(".ejer-items").click(function () {
-    if (typeof $(this).data("cod_uni") == "undefined" || $(this).data("cod_uni")=="")
+    if (
+      typeof $(this).data("cod_uni") == "undefined" ||
+      $(this).data("cod_uni") == ""
+    )
       return;
     cod_uni = $(this).data("cod_uni");
     lat = $(this).data("lat");
@@ -180,175 +169,189 @@ $(document).ready(function () {
     //console.log("cod_uni:"+cod_uni);
     if (typeof $(this).data("nombre_elem") != "undefined") {
       elem_selec = $(this).data("nombre_elem");
-      div_sup = "<center><img src='./img/Escudo_del_Ejército_Argentino.png' style='max-width: 15%; height: auto;'/></center>";
-      $("#div_nombre_elem_seleccionado").html(div_sup+'<h4 style="text-align: center; padding-top: 10px; margin-bottom: 10px;">'+elem_selec+"</h4>");
+      div_sup =
+        "<center><img src='./img/Escudo_del_Ejército_Argentino.png' style='max-width: 15%; height: auto;'/></center>";
+      $("#div_nombre_elem_seleccionado").html(
+        div_sup +
+          '<h4 style="text-align: center; padding-top: 10px; margin-bottom: 10px;">' +
+          elem_selec +
+          "</h4>"
+      );
     }
-   
-    setTimeout(function(){
-      $("#div_elem_mapa_seleccionado").hide();
-      $("#div_elem_menu_seleccionado").show();
-   }, 3000);
-   
+
+    $("#div_elem_mapa_seleccionado").hide();
+    $("#div_elem_menu_seleccionado").show();
+
     map.removeLayer(ejercito);
     mostrar_marcadores(cod_uni);
     graficosSidebar();
-    
+
     //map.setView([lat,lon],zoom);
     //if (!sidebar.isVisible())
-      sidebar.show();
+    showSidebar();
   });
-  
+
   /*Inicio de panel principal (Conduccion Superior,Fuerza Operativa,Fuerza de Sostenimiento,Sistema Educ)*/
-  
+
   //Cerrar ejer-arg principal
-  $("#crossicon-ejer").click(function () { 
+  $("#crossicon-ejer").click(function () {
     $("#sub-menu-ejer-arg").hide();
   });
 
-  /*abrir ejer-arg principal*/ 
-  $("#cond-sup").click(function () { 
-    //$("#sub-menu-conduc-sup").show(); 
+  /*abrir ejer-arg principal*/
+  $("#cond-sup").click(function () {
+    //$("#sub-menu-conduc-sup").show();
     $(".elem_fuerza_sostenim").show();
   });
-  
+
   //Cerrar ejer-arg principal
-  $("#crossicon-conduc").click(function () { 
-     $("#sub-menu-conduc-sup").hide();
+  $("#crossicon-conduc").click(function () {
+    $("#sub-menu-conduc-sup").hide();
   });
 
-  
-  $(".click_fuerza_ope").click(function () { 
-     $(".elem_fuerza_oper").show();
-  });
-  
-  $(".crossicon-fuerza_oper").click(function () { 
-     $(".elem_fuerza_oper").hide();
+  $(".click_fuerza_ope").click(function () {
+    $(".elem_fuerza_oper").show();
   });
 
-  $(".click_fuerza_sostenim").click(function () { 
-    $("#sub-menu-conduc-sup").show(); 
-  });
-  
-  $(".crossicon-fuerza_sostenim").click(function () { 
-     $(".elem_fuerza_sostenim").hide();
+  $(".crossicon-fuerza_oper").click(function () {
+    $(".elem_fuerza_oper").hide();
   });
 
-  $(".click_sist_educ").click(function () { 
-     $(".elem_sist_educ").show();
+  $(".click_fuerza_sostenim").click(function () {
+    $("#sub-menu-conduc-sup").show();
   });
-  
-  $(".crossicon-sist_educ").click(function () { 
-     $(".elem_sist_educ").hide();
+
+  $(".crossicon-fuerza_sostenim").click(function () {
+    $(".elem_fuerza_sostenim").hide();
+  });
+
+  $(".click_sist_educ").click(function () {
+    $(".elem_sist_educ").show();
+  });
+
+  $(".crossicon-sist_educ").click(function () {
+    $(".elem_sist_educ").hide();
   });
 
   /*Fin de panel principal (Conduccion Superior,Fuerza Operativa,Fuerza de Sostenimiento,Sistema Educ)*/
 
   //Panel fuerza Operativa Gub
 
-  $(".click_gub").click(function () { 
-     $(".elem_fuerza_oper_gub").show();
-  });
-  
-  $(".crossicon-fuerza_oper_gub").click(function () { 
-     $(".elem_fuerza_oper_gub").hide();
+  $(".click_gub").click(function () {
+    $(".elem_fuerza_oper_gub").show();
   });
 
-  $(".click_fuer_oper_elem2").click(function () { 
-     $(".elem_fuerza_oper_guc").show();
-  });
-  
-  $(".crossicon-fuerza_oper_guc").click(function () { 
-     $(".elem_fuerza_oper_guc").hide();
+  $(".crossicon-fuerza_oper_gub").click(function () {
+    $(".elem_fuerza_oper_gub").hide();
   });
 
-  $(".click_fuer_oper_elem1").click(function () { 
-     $(".menu_fuer_oper_elem1").show();
-  });  
-  $(".crossicon_fuer_oper_elem1").click(function () { 
-     $(".menu_fuer_oper_elem1").hide();
-  });
-  $(".click_fuer_oper_elem3").click(function () { 
-     $(".menu_fuer_oper_elem3").show();
-  });  
-  $(".crossicon_fuer_oper_elem3").click(function () { 
-     $(".menu_fuer_oper_elem3").hide();
+  $(".click_fuer_oper_elem2").click(function () {
+    $(".elem_fuerza_oper_guc").show();
   });
 
-  $(".click_areas_personal").click(function () { 
-     $(".areas_personal").show();
-  });
-  
-  $("#crossicon-conduc_areas_pers").click(function () { 
-     $(".areas_personal").hide();
+  $(".crossicon-fuerza_oper_guc").click(function () {
+    $(".elem_fuerza_oper_guc").hide();
   });
 
-  $(".click_areas_inteligencia").click(function () { 
-     $(".areas_inteligencia").show();
+  $(".click_fuer_oper_elem1").click(function () {
+    $(".menu_fuer_oper_elem1").show();
   });
-  
-  $("#crossicon-conduc_areas_inteligencia").click(function () { 
-     $(".areas_inteligencia").hide();
+  $(".crossicon_fuer_oper_elem1").click(function () {
+    $(".menu_fuer_oper_elem1").hide();
   });
-
-  $(".click_areas_operaciones").click(function () { 
-     $(".areas_operaciones").show();
+  $(".click_fuer_oper_elem3").click(function () {
+    $(".menu_fuer_oper_elem3").show();
   });
-  
-  $("#crossicon-conduc_areas_operaciones").click(function () { 
-     $(".areas_operaciones").hide();
+  $(".crossicon_fuer_oper_elem3").click(function () {
+    $(".menu_fuer_oper_elem3").hide();
   });
 
-  $(".click_areas_material").click(function () { 
-     $(".areas_material").show();
-  });
-  
-  $("#crossicon-conduc_areas_material").click(function () { 
-     $(".areas_material").hide();
+  $(".click_areas_personal").click(function () {
+    $(".areas_personal").show();
   });
 
-  $(".click_areas_finanzas").click(function () { 
-     $(".areas_finanzas").show();
-  });
-  
-  $("#crossicon-conduc_areas_finanzas").click(function () { 
-     $(".areas_finanzas").hide();
+  $("#crossicon-conduc_areas_pers").click(function () {
+    $(".areas_personal").hide();
   });
 
+  $(".click_areas_inteligencia").click(function () {
+    $(".areas_inteligencia").show();
+  });
+
+  $("#crossicon-conduc_areas_inteligencia").click(function () {
+    $(".areas_inteligencia").hide();
+  });
+
+  $(".click_areas_operaciones").click(function () {
+    $(".areas_operaciones").show();
+  });
+
+  $("#crossicon-conduc_areas_operaciones").click(function () {
+    $(".areas_operaciones").hide();
+  });
+
+  $(".click_areas_material").click(function () {
+    $(".areas_material").show();
+  });
+
+  $("#crossicon-conduc_areas_material").click(function () {
+    $(".areas_material").hide();
+  });
+
+  $(".click_areas_finanzas").click(function () {
+    $(".areas_finanzas").show();
+  });
+
+  $("#crossicon-conduc_areas_finanzas").click(function () {
+    $(".areas_finanzas").hide();
+  });
 
   /* Estilo pulsado Ferrocarril JS
    $("#bt-lim-intern").click(function () { 
       $(this).toggleClass('active-ferrocarril'); 
    });*/
 
-   /*Estilo pulsado Ferrocarril JS*/
-   $("#bt-lim-intern").click(function () { 
-      $(this).toggleClass('active-ferrocarril-pulsado'); 
-   });
+  /*Estilo pulsado Ferrocarril JS*/
+  $("#bt-lim-intern").click(function () {
+    $(this).toggleClass("active-ferrocarril-pulsado");
+  });
 
-   /*Estilo universidades publicas*/
-   $("#privada-mil").click(function () { 
-      $(this).toggleClass('active-priv'); 
-   });
+  /*Estilo universidades publicas*/
+  $("#privada-mil").click(function () {
+    $(this).toggleClass("active-priv");
+  });
 
-   $("#publica-mil").click(function () { 
-      $(this).toggleClass('active-pub'); 
-   });
+  $("#publica-mil").click(function () {
+    $(this).toggleClass("active-pub");
+  });
 
-   
-
-   /*fin Estilo pulsado Ferrocarril JS*/
-})
-
-
-
-$('.hover_fuerzas ul').on('click', 'li', function(){
-   // $(this).addClass('hoveado_fuerzas').siblings().removeClass('hoveado_fuerzas');
-   $('.hoveado_fuerzas').removeClass('hoveado_fuerzas');
-   $(this).addClass('hoveado_fuerzas');
+  /*fin Estilo pulsado Ferrocarril JS*/
 });
 
-$('.hover_areas ul').on('click', 'li', function(){
-   // $(this).addClass('hoveado_areas').siblings().removeClass('hoveado_areas');
-   $('.hoveado_areas').removeClass('hoveado_areas');
-   $(this).addClass('hoveado_areas');
+$(".hover_fuerzas ul").on("click", "li", function () {
+  // $(this).addClass('hoveado_fuerzas').siblings().removeClass('hoveado_fuerzas');
+  $(".hoveado_fuerzas").removeClass("hoveado_fuerzas");
+  $(this).addClass("hoveado_fuerzas");
 });
+
+$(".hover_areas ul").on("click", "li", function () {
+  // $(this).addClass('hoveado_areas').siblings().removeClass('hoveado_areas');
+  $(".hoveado_areas").removeClass("hoveado_areas");
+  $(this).addClass("hoveado_areas");
+});
+
+function showSidebar() {
+  $("#infosidebar").addClass("visible");
+  $(".tamanoA").css("width", "calc(100vw - 800px)");
+  window.setTimeout(function () {
+    map.invalidateSize();
+  }, 1000);
+}
+
+function hideSidebar() {
+  $("#infosidebar").removeClass("visible");
+  $(".tamanoA").css("width", "calc(100vw - 320px)");
+  window.setTimeout(function () {
+    map.invalidateSize();
+  }, 1000);
+}

@@ -1,8 +1,47 @@
 body {
   min-height: 100vh;
-  background-color: rgb(99, 150, 216);
   font-family: "Lato", sans-serif;
   overflow: hidden;
+}
+.navbar {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#infosidebar {
+  right: -500px;
+  position: fixed;
+  height: calc(100vh - 65px);
+  transition: right 0.5s, width 0.5s;
+  padding-left: 0;
+  background-color: white;
+  top: 0px;
+  margin-top: 65px;
+  padding: 8px 24px;
+  overflow: auto;
+  width: 480px;
+}
+#infosidebar.visible {
+  right: 0;
+}
+#infosidebar a {
+  color: black;
+  text-decoration: none;
+}
+.cruz-sidebar {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 31px;
+  height: 31px;
+  color: #333;
+  font-size: 25px;
+  line-height: 1em;
+  text-align: center;
+  background: #fff;
+  -webkit-border-radius: 16px;
+  border-radius: 16px;
+  cursor: pointer;
 }
 
 .sidebar {
@@ -43,7 +82,6 @@ body {
 .sidebar li a .pulsado {
   color: #f1f1f1;
 }
-
 
 .sidebar li a .fa-caret-left {
   padding-left: 4px;
@@ -143,7 +181,7 @@ body {
   /*transition:all 0.5s linear;*/
   z-index: 1;
   /*overflow: scroll;*/
-  min-height: calc((100vh - 65px)/2);
+  min-height: calc((100vh - 65px) / 2);
 }
 
 .sidebar-search.active {
@@ -178,10 +216,10 @@ body {
   color: rgb(255, 255, 255);
   font-size: 16px;
   margin-top: 0;
-    margin-bottom: 0rem;
-    color: white;
+  margin-bottom: 0rem;
+  color: white;
   /*  padding-top: 8px;*/
-   min-height:-30px
+  min-height: -30px;
 }
 
 .sidebar-search ul li a {
@@ -214,8 +252,6 @@ body {
   border-left: 5px solid RGB(238, 125, 0);
 }
 */
-
-
 
 #sub-menu-search4 ul li a p {
   position: absolute;
@@ -333,7 +369,7 @@ div.leaflet-sidebar {
 /*Prueba de scroll*/
 
 .centrar-1 {
-  min-height: calc((100vh - 65px)/2);
+  min-height: calc((100vh - 65px) / 2);
   width: 100%;
   /*border: 3px solid yellow;*/
   /*border: 1px solid #66cc54;*/
@@ -343,14 +379,14 @@ div.leaflet-sidebar {
 .scroll_A {
   position: absolute;
   overflow: hidden;
-  max-height: calc((100vh - 65px)/2);
+  max-height: calc((100vh - 65px) / 2);
   width: 100%;
 }
 
 .scroll_B {
   position: absolute;
   overflow: hidden;
-  max-height: calc((100vh - 65px)/2);
+  max-height: calc((100vh - 65px) / 2);
   width: 100%;
 }
 
@@ -396,12 +432,6 @@ div.leaflet-sidebar {
   z-index: 1;
 }
 
-#title-person {
-  background-color: white
- color #798dd4;
-  height: 50px;
-}
-
 .tamanoA {
   padding-left: 0px;
   margin-left: 320px;
@@ -409,10 +439,9 @@ div.leaflet-sidebar {
   margin-top: 65px;
   width: calc(100vw - 320px);
   height: calc(100vh - 65px);
-  margin-right: 0px;
+  margin-right: 500px;
   padding-right: 0px;
 }
-
 
 .alto_elemento_menu li {
   min-height: 30px;
@@ -423,7 +452,7 @@ div.leaflet-sidebar {
   font-size: 16px;
   color: white;
 }
-.alto_elemento_menu li a p{
+.alto_elemento_menu li a p {
   color: white;
 }
 
@@ -447,13 +476,13 @@ div.leaflet-sidebar {
   /*font-family: "Open Sans", sans-serif;
   font-weight: 800;*/
 }
-#title-ejer-arg{
+#title-ejer-arg {
   height: 30px;
   padding-top: 2px;
-  background-color: #AEC90B;
+  background-color: #aec90b;
   align-items: center;
 }
-#title-ejer-arg a{
+#title-ejer-arg a {
   text-decoration: none;
 }
 
@@ -464,41 +493,41 @@ div.leaflet-sidebar {
   font-size: 16px;
 }
 
-#crossicon-ejer{
+#crossicon-ejer {
   position: absolute;
   top: calc(30px + 8px);
   left: 240px;
   color: #ffffff;
 }
 
-#sub-menu-ejer-arg #logo{
+#sub-menu-ejer-arg #logo {
   position: relative;
   top: -1px;
 }
 
 /*Bordes de los item del ejer-arg*/
-#cond-sup{
+#cond-sup {
   border-left: 5px solid rgb(123, 123, 211);
   cursor: pointer;
 }
 
-#fuerza-ope{
+#fuerza-ope {
   border-left: 5px solid rgb(1, 161, 189);
   cursor: pointer;
 }
-#fuerza-sost{
+#fuerza-sost {
   border-left: 5px solid rgb(51, 75, 211);
   cursor: pointer;
 }
-#fuerza-sost_selec{
+#fuerza-sost_selec {
   background-color: rgb(51, 75, 211);
 }
-#sist-edu{
+#sist-edu {
   border-left: 5px solid rgb(234, 236, 97);
   cursor: pointer;
 }
 #fuerza_operativa {
-  background-color: #01A1BD;
+  background-color: #01a1bd;
 }
 
 #tit_fuer_oper_elem1 {
@@ -509,41 +538,43 @@ div.leaflet-sidebar {
 }
 
 #fuerza_operativa_guc {
-  background-color: #AEDE87;
+  background-color: #aede87;
 }
 #fuerza_operativa_gub {
-  background-color: #DEB887;
+  background-color: #deb887;
 }
 #fuerza_sostenimiento {
-  background-color: #D37B7B;
+  background-color: #d37b7b;
 }
 #sistema_educativo {
-  background-color: #EAEC61;
+  background-color: #eaec61;
 }
 #sistema_educativo p {
   color: black;
 }
 
-.crossicon-fuerza_oper_gub, .crossicon-fuerza_oper_guc, .crossicon_fuer_oper_elem1,
-.crossicon_fuer_oper_elem3{
+.crossicon-fuerza_oper_gub,
+.crossicon-fuerza_oper_guc,
+.crossicon_fuer_oper_elem1,
+.crossicon_fuer_oper_elem3 {
   position: absolute;
   top: calc(90px + 8px);
   left: 240px;
   color: #ffffff;
 }
 
-#EA-mil{
-  border-left:5px solid #AEC90B;
+#EA-mil {
+  border-left: 5px solid #aec90b;
   cursor: pointer;
 }
 
-#arm-arg{
-  border-left:5px solid #EE7D00;
+#arm-arg {
+  border-left: 5px solid #ee7d00;
   cursor: pointer;
 }
 
-#FFAA{
-  border-left:5px solid #40BFEF;
+#FFAA {
+  border-left: 5px solid #40bfef;
   cursor: pointer;
 }
 
@@ -551,100 +582,108 @@ div.leaflet-sidebar {
   position: absolute;
   left: 60px;
   width: 260px;
-  max-height: calc((100vh - 65px)/2);
+  max-height: calc((100vh - 65px) / 2);
 }
 
 #sub-menu-conduc-sup {
   position: absolute;
   left: 60px;
   width: 260px;
-  max-height: calc((100vh - 65px)/2);
-  --alto_panel: calc((100vh - 65px)/2);
+  max-height: calc((100vh - 65px) / 2);
+  --alto_panel: calc((100vh - 65px) / 2);
 }
-.elem_conducc_sup .div_items_elem, .elem_fuerza_oper .div_items_elem,
-.elem_fuerza_oper_gub .div_items_elem, .elem_fuerza_sostenim .div_items_elem,
+.elem_conducc_sup .div_items_elem,
+.elem_fuerza_oper .div_items_elem,
+.elem_fuerza_oper_gub .div_items_elem,
+.elem_fuerza_sostenim .div_items_elem,
 .elem_sist_educ .div_items_elem {
   overflow: auto;
   overflow-x: hidden;
-  height: calc(var(--alto_panel) - 30px - 30px - 30px); 
+  height: calc(var(--alto_panel) - 30px - 30px - 30px);
 }
-.elem_fuerza_oper_guc .div_items_elem, .menu_fuer_oper_elem1 .div_items_elem,
+.elem_fuerza_oper_guc .div_items_elem,
+.menu_fuer_oper_elem1 .div_items_elem,
 .menu_fuer_oper_elem3 .div_items_elem {
   overflow: auto;
   overflow-x: hidden;
-  height: calc(var(--alto_panel) - 30px - 30px - 30px - 30px); 
+  height: calc(var(--alto_panel) - 30px - 30px - 30px - 30px);
 }
- 
-.areas_personal, .areas_inteligencia, .areas_operaciones, .areas_material, .areas_finanzas{
+
+.areas_personal,
+.areas_inteligencia,
+.areas_operaciones,
+.areas_material,
+.areas_finanzas {
   position: absolute;
-  top: calc(65px + ((100vh - 65px)/2));
+  top: calc(65px + ((100vh - 65px) / 2));
   left: 60px;
   width: 260px;
-  max-height: calc((100vh - 65px)/2);
+  max-height: calc((100vh - 65px) / 2);
 }
 
 .areas_conduccion {
-  top: calc(65px + ((100vh - 65px)/2));
-  max-height: calc((100vh - 65px)/2);
+  top: calc(65px + ((100vh - 65px) / 2));
+  max-height: calc((100vh - 65px) / 2);
   width: 100%;
 }
 
-.areas_personal #items-conduccion, .areas_inteligencia #items-conduccion,
-.areas_operaciones #items-conduccion, .areas_material #items-conduccion,
-.areas_finanzas #items-conduccion{
+.areas_personal #items-conduccion,
+.areas_inteligencia #items-conduccion,
+.areas_operaciones #items-conduccion,
+.areas_material #items-conduccion,
+.areas_finanzas #items-conduccion {
   overflow: auto;
-  overflow-x:hidden ;
-  height: calc(var(--alto_panel) - 30px - 30px); 
+  overflow-x: hidden;
+  height: calc(var(--alto_panel) - 30px - 30px);
 }
 
-.menu_superior .ejer-items{
+.menu_superior .ejer-items {
   height: 30px;
   cursor: pointer;
-  
 }
-.menu_superior .ejer-items p{
+.menu_superior .ejer-items p {
   font-size: 16px;
 }
 .menu_superior .ejer-items a {
   text-decoration: none;
 }
-#sub-menu-ejer-arg .ejer-items{
+#sub-menu-ejer-arg .ejer-items {
   height: 30px;
   cursor: pointer;
   display: flex;
   align-items: center;
 }
-#sub-menu-ejer-arg .ejer-items p{
+#sub-menu-ejer-arg .ejer-items p {
   font-size: 16px;
 }
 #sub-menu-ejer-arg .ejer-items a {
   text-decoration: none;
 }
-.alto_elemento_menu .ejer-items{
+.alto_elemento_menu .ejer-items {
   height: 30px;
   cursor: pointer;
   display: flex;
   align-items: center;
 }
-.areas_conduccion .ejer-items p{
+.areas_conduccion .ejer-items p {
   font-size: 16px;
 }
 .areas_conduccion .ejer-items a {
   text-decoration: none;
 }
-.areas_conduccion .ejer-items{
+.areas_conduccion .ejer-items {
   height: 30px;
   cursor: pointer;
   display: flex;
   align-items: center;
 }
-#sub-menu-conduc-sup .ejer-items{
+#sub-menu-conduc-sup .ejer-items {
   height: 30px;
   cursor: pointer;
   display: flex;
   align-items: center;
 }
-#sub-menu-conduc-sup .ejer-items p{
+#sub-menu-conduc-sup .ejer-items p {
   font-size: 16px;
 }
 #sub-menu-conduc-sup .ejer-items a {
@@ -658,12 +697,12 @@ div.leaflet-sidebar {
   align-items: center;
 }
 
-#sub-menu-conduc-sup #logo{
+#sub-menu-conduc-sup #logo {
   position: relative;
   top: -1px;
 }
 
-.pulsado-items{
+.pulsado-items {
   border-left: 10px solid rgb(48, 129, 195);
   background-color: rgb(95, 91, 91);
 }
@@ -675,80 +714,85 @@ div.leaflet-sidebar {
   font-size: 16px;
 }
 
-#sub-menu-conduc-sup #cond-sup{
+#sub-menu-conduc-sup #cond-sup {
   background-color: rgb(123, 123, 211);
 }
 
-#sub-menu-conduc-sup #crossicon-conduc{
+#sub-menu-conduc-sup #crossicon-conduc {
   position: absolute;
   top: calc(60px + 8px);
   left: 240px;
   color: #ffffff;
 }
 
-#sub-menu-capa_universidades #crossicon-univer, #sub-menu-capa_ferrocarril #crossicon-lim{
+#sub-menu-capa_universidades #crossicon-univer,
+#sub-menu-capa_ferrocarril #crossicon-lim {
   position: absolute;
   top: calc(30px + 8px);
   left: 240px;
   color: #ffffff;
 }
 
-#sub-menu-conduc-sup #crossicon-conduc_areas_pers, #crossicon-conduc_areas_inteligencia, #crossicon-conduc_areas_operaciones, #crossicon-conduc_areas_material, #crossicon-conduc_areas_finanzas{
+#sub-menu-conduc-sup #crossicon-conduc_areas_pers,
+#crossicon-conduc_areas_inteligencia,
+#crossicon-conduc_areas_operaciones,
+#crossicon-conduc_areas_material,
+#crossicon-conduc_areas_finanzas {
   position: absolute;
   top: calc(30px + 8px);
   left: 240px;
   color: #ffffff;
 }
 
-#direc1{
+#direc1 {
   border-left: 5px solid burlywood;
 }
 
-#direc2{
+#direc2 {
   border-left: 5px solid rgb(174, 222, 135);
 }
-#direc3{
+#direc3 {
   border-left: 5px solid rgb(135, 187, 222);
 }
-#direc4{
+#direc4 {
   border-left: 5px solid rgb(238, 116, 34);
 }
-#direc5{
+#direc5 {
   border-left: 5px solid rgb(144, 135, 222);
 }
-#direc6{
+#direc6 {
   border-left: 5px solid rgb(135, 222, 161);
 }
-#direc7{
+#direc7 {
   border-left: 5px solid rgb(212, 135, 222);
 }
-#direc8{
+#direc8 {
   border-left: 5px solid rgb(135, 163, 222);
 }
-#direc9{
+#direc9 {
   border-left: 5px solid rgb(222, 135, 135);
 }
-#direc10{
+#direc10 {
   border-left: 5px solid rgb(135, 176, 222);
 }
-#direc11{
+#direc11 {
   border-left: 5px solid rgb(31, 141, 108);
 }
-#direc12{
+#direc12 {
   border-left: 5px solid rgb(222, 135, 189);
 }
 
-#direc13{
+#direc13 {
   border-left: 5px solid rgb(51, 75, 211);
 }
-#direc14{
+#direc14 {
   border-left: 5px solid rgb(214, 85, 45);
 }
 
 /*Sub-menu principal de ejercito argentino*/
 /*.sub-menu-searchb*/
 
-#sidebar456{
+#sidebar456 {
   padding-bottom: -20px;
   height: 44vh;
 }
@@ -765,11 +809,9 @@ div.leaflet-sidebar {
 }
 */
 
-.punteado{
+.punteado {
   border-top: dotted 1px black;
 }
-
-
 
 /*Franco Navarro css Cambios*/
 
@@ -783,11 +825,11 @@ div.leaflet-sidebar {
 
 /*Universidades publicas y privadas*/
 
-#publica-mil{
+#publica-mil {
   border-left: 5px solid #f18187;
 }
 
-#privada-mil{
+#privada-mil {
   border-left: 5px solid #81adf8;
 }
 
@@ -800,16 +842,12 @@ div.leaflet-sidebar {
 
 /*Fin Universidades publicas y privadas */
 
-
-
-
 /*FIN Franco Navarro css Cambios*/
 
-
 li.hoveado_fuerzas {
-  background-color: rgb(131, 131, 131)
+  background-color: rgb(131, 131, 131);
 }
 
 li.hoveado_areas {
-  background-color: rgb(131, 131, 131)
+  background-color: rgb(131, 131, 131);
 }

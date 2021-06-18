@@ -1,7 +1,4 @@
-var map = L.map("mapa", { zoomControl: false }).setView(
-  [-40, -59],
-  5
-);
+var map = L.map("mapa", { zoomControl: false }).setView([-40, -59], 5);
 
 L.tileLayer(
   "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG%3A3857@png/{z}/{x}/{-y}.png",
@@ -41,12 +38,12 @@ map.addControl(
   })
 );
 
-var sidebar = L.control.sidebar("sidebar", {
-  position: "right",
-  closeButton: true,
-  autoPan: true
-});
-map.addControl(sidebar);
+// var sidebar = L.control.sidebar("sidebar", {
+//   position: "right",
+//   closeButton: true,
+//   autoPan: true
+// });
+// map.addControl(sidebar);
 //sidebar.show();
 
 /*
@@ -71,7 +68,8 @@ var geocoder = L.Control.Geocoder.nominatim({
 var control = L.Control.geocoder({
   geocoder: geocoder,
   placeholder: "Buscar",
-  errorMessage: "No se encontró ninguna ubicación que coincida con su búsqueda.",
+  errorMessage:
+    "No se encontró ninguna ubicación que coincida con su búsqueda.",
 });
 
 document.getElementById("geosidebar").appendChild(control.onAdd(map));
@@ -155,8 +153,7 @@ $("#publica-mil").click(function () {
         },
         onEachFeature: function (feature, layer) {
           layer.bindPopup(
-            "<h6>Institucion:</h6> " +
-            feature.properties.nombre_geografico
+            "<h6>Institucion:</h6> " + feature.properties.nombre_geografico
           );
         },
         filter: function (feature) {
@@ -183,8 +180,7 @@ $("#privada-mil").click(function () {
         },
         onEachFeature: function (feature, layer) {
           layer.bindPopup(
-            "<h6>Institucion:</h6> " +
-            feature.properties.nombre_geografico
+            "<h6>Institucion:</h6> " + feature.properties.nombre_geografico
           );
         },
         filter: function (feature) {
@@ -208,17 +204,19 @@ $("#zonas_responsabilidad_br_EA").click(function () {
   if (!clicks) {
     // Load the GeoPackage and display the layer
     zonas_br_ea = L.geoPackageFeatureLayer([], {
-      geoPackageUrl: './geoPackage/CCZEM.gpkg',
-      layerName: 'CCZEM',
+      geoPackageUrl: "./geoPackage/CCZEM.gpkg",
+      layerName: "CCZEM",
       onEachFeature: function (feature, layer) {
         layer.bindPopup(
           "<div style='font-size: 16px;'><b>Zona de Emergencia COVID</b></div><div style='font-size: 14px; padding-top:8px;'>Nombre: <b>" +
-          feature.properties.CCZE + "</b></div>" +
-          "<div style='font-size: 14px; padding-top:4px;'>A cargo de: <b>" +
-          feature.properties.CDO + "</b></div></b>"
+            feature.properties.CCZE +
+            "</b></div>" +
+            "<div style='font-size: 14px; padding-top:4px;'>A cargo de: <b>" +
+            feature.properties.CDO +
+            "</b></div></b>"
         );
       },
-      style: {color: 'rgb(31, 141, 108)'}
+      style: { color: "rgb(31, 141, 108)" },
     }).addTo(map);
   } else {
     map.removeLayer(zonas_br_ea);
@@ -282,22 +280,22 @@ $("#FFAA").click(function () {
           onEachFeature: function (feature, layer) {
             layer.bindPopup(
               '<b style="font-size: 14px;"><img src="./img/Logo_Fuerza-Aerea.png" style="width: 24px; height: 24px"/> ' +
-              feature.properties.fdc +
-              "<br><b>Nombre</b>: " +
-              feature.properties.fna +
-              "<br><a href=# data-id='" +
-              feature.properties.gid +
-              "' data-fuerza='" +
-              feature.properties.fdc +
-              "' data-objeto='" +
-              feature.properties.objeto +
-              "' data-nombre='" +
-              feature.properties.fna +
-              "' data-fuente='" +
-              feature.properties.sag +
-              "' data-img='" +
-              '<center><img src="./img/Logo_Fuerza-Aerea.png" style="max-width: 20%; height: auto;"/></center>' +
-              "' onclick='masInfo(this)'>Mas información</a>"
+                feature.properties.fdc +
+                "<br><b>Nombre</b>: " +
+                feature.properties.fna +
+                "<br><a href=# data-id='" +
+                feature.properties.gid +
+                "' data-fuerza='" +
+                feature.properties.fdc +
+                "' data-objeto='" +
+                feature.properties.objeto +
+                "' data-nombre='" +
+                feature.properties.fna +
+                "' data-fuente='" +
+                feature.properties.sag +
+                "' data-img='" +
+                '<center><img src="./img/Logo_Fuerza-Aerea.png" style="max-width: 20%; height: auto;"/></center>' +
+                "' onclick='masInfo(this)'>Mas información</a>"
             );
           },
           filter: function (feature) {
@@ -325,22 +323,22 @@ $("#arm-arg").click(function () {
           onEachFeature: function (feature, layer) {
             layer.bindPopup(
               '<b style="font-size: 14px;"><img src="./img/Escudo_armada_argentina_banderolas.png" style="width: 24px; height: 24px"/> ' +
-              feature.properties.fdc +
-              "<br><b>Nombre</b>: " +
-              feature.properties.fna +
-              "<br><a href=# data-id='" +
-              feature.properties.gid +
-              "' data-fuerza='" +
-              feature.properties.fdc +
-              "' data-objeto='" +
-              feature.properties.objeto +
-              "' data-nombre='" +
-              feature.properties.fna +
-              "' data-fuente='" +
-              feature.properties.sag +
-              "' data-img='" +
-              '<center><img src="./img/Escudo_armada_argentina_banderolas.png" style="max-width: 20%; height: auto;"/></center>' +
-              "' onclick='masInfo(this)'>Mas información</a>"
+                feature.properties.fdc +
+                "<br><b>Nombre</b>: " +
+                feature.properties.fna +
+                "<br><a href=# data-id='" +
+                feature.properties.gid +
+                "' data-fuerza='" +
+                feature.properties.fdc +
+                "' data-objeto='" +
+                feature.properties.objeto +
+                "' data-nombre='" +
+                feature.properties.fna +
+                "' data-fuente='" +
+                feature.properties.sag +
+                "' data-img='" +
+                '<center><img src="./img/Escudo_armada_argentina_banderolas.png" style="max-width: 20%; height: auto;"/></center>' +
+                "' onclick='masInfo(this)'>Mas información</a>"
             );
           },
           filter: function (feature) {
@@ -356,23 +354,23 @@ $("#arm-arg").click(function () {
 
 function mostrar_marcadores(cod_uni) {
   $.ajax({
-    data: { "cod_uni" : cod_uni },
-    url: "database.php",        // Url to which the request is send
+    data: { cod_uni: cod_uni },
+    url: "database.php", // Url to which the request is send
     //url: "./geojson/data_unidades_ea.geojson",        // Url to which the request is send
-    type: "POST",             // Type of request to be send, called as method
-    cache: true,             // To unable request pages to be cached
+    type: "POST", // Type of request to be send, called as method
+    cache: true, // To unable request pages to be cached
     // el tipo de información que se espera de respuesta
-    dataType : 'json',
-    success: function(data)   // A function to be called if request succeeds
-    {
+    dataType: "json",
+    success: function (
+      data // A function to be called if request succeeds
+    ) {
       //console.log(data);
-      var elem="";
       ejercito = L.geoJSON(data, {
         pointToLayer: function (feature, latlng) {
           return L.marker(latlng, { icon: new EjercitoSvg() });
         },
         onEachFeature: function (feature, layer) {
-          elem = elem + "<div class='row' style='background-color:#eeeeee; min-height: 25px; margin-left: 0px; margin-right:0px; padding-left:10px; padding-right:10px; align-content: center; font-weight:bold; text-transform: uppercase;'>" + feature.properties.fna + "</div>";
+          layer._leaflet_id = feature.properties.fna;
           layer.bindPopup(
             '<b style="font-size: 14px;"><img src="./img/Escudo_del_Ejército_Argentino.png" style="width: 24px; height: 24px"/> ' +
               feature.properties.fdc +
@@ -399,26 +397,34 @@ function mostrar_marcadores(cod_uni) {
               "' data-fuente='" +
               feature.properties.sag +
               "' data-img='" +
-              '<center><img src="./img/Escudo_del_Ejército_Argentino.png" style="max-width: 15%; height: auto;"/></center>' + 
+              '<center><img src="./img/Escudo_del_Ejército_Argentino.png" style="max-width: 15%; height: auto;"/></center>' +
               "' onclick='masInfo(this)'>Mas información</a>"
           );
         },
         filter: function (feature) {
           return feature.properties.fdc == "Ejército Argentino";
         },
-      })
+      });
       uni_agrupadas.addLayer(ejercito);
       map.addLayer(uni_agrupadas);
+
       //$("#div_listado_unidades").html(data.features[0].properties.fna);
-      $("#div_listado_unidades").html(elem);
-    }
+      // $("#div_listado_unidades").html(elem);
+
+      $("#div_listado_unidades a").remove();
+      for (var i = 0; i < ejercito.getLayers().length; i++) {
+        $("#div_listado_unidades div.row").append(
+          $("<a href='#' onclick='mostrarUnidadesZoom(this)'></a>").text(
+            ejercito.getLayers()[i].feature.properties.fna
+          )
+        );
+      }
+    },
   });
 }
 //Fin GeoJSON
 
 function masInfo(info) {
- 
-
   var cod_uni = $(info).data("cod_uni");
   var cod_unisup = $(info).data("cod_unisup");
   //alert ("Cod Uni: "+cod_uni);
@@ -434,12 +440,65 @@ function masInfo(info) {
     "</div></div><div class='row' style='background-color:#eeeeee; min-height: 30px; margin-left: 0px; margin-right:0px; padding-left:1px; padding-right:1px; align-content: center;'><div class='col-md-6' style='font-weight:bold;'>Arma</div><div class='col-md-6' style='text-transform: uppercase;'>" +
     $(info).data("arma") +
     "</div></div><div class='row' style='min-height: 30px; margin-left: 0px; margin-right:0px; padding-left:1px; padding-right:1px; align-content: center;'><div class='col-md-6' style='font-weight:bold;'>Fuente de información</div><div class='col-md-6'>" +
-    $(info).data("fuente") + "</div></div></div>";
- 
-    setTimeout(function(){
-      $("#div_elem_menu_seleccionado").hide();
-      $("#div_elem_mapa_seleccionado").show();    
-      sidebar.show();
-    }, 3000);
-  
+    $(info).data("fuente") +
+    "</div></div></div>";
+
+  $("#div_elem_menu_seleccionado").hide();
+  $("#div_elem_mapa_seleccionado").show();
+  showSidebar();
+}
+
+function mostrarUnidadesZoom(id) {
+  uniPopup = id.innerHTML;
+  ejercito._layers[uniPopup].fire("click");
+  var coords = ejercito._layers[uniPopup]._latlng;
+  map.setView(coords, 14);
+  _fireEventOnMarkerOrVisibleParentCluster(ejercito._layers[uniPopup], "click");
+  ejercito._layers[uniPopup].openPopup();
+}
+
+function _fireEventOnMarkerOrVisibleParentCluster(unidad, eventName) {
+  if (eventName === "click") {
+    var visibleLayer = uni_agrupadas.getVisibleParent(unidad);
+    if (visibleLayer instanceof L.MarkerCluster) {
+      // We want to show a marker that is currently hidden in a cluster.
+      // Make sure it will get highlighted once revealed.
+      uni_agrupadas.once("spiderfied", function () {
+        unidad.fire(eventName);
+      });
+      // Now spiderfy its containing cluster to reveal it.
+      // This will automatically unspiderfy other clusters.
+      visibleLayer.spiderfy();
+    } else {
+      // The marker is already visible, unspiderfy other clusters if
+      // they do not contain the marker.
+      _unspiderfyPreviousClusterIfNotParentOf(unidad);
+      unidad.fire(eventName);
+    }
+  } else {
+    // For mouseout, marker should be unclustered already, unless
+    // the next mouseover happened before?
+    unidad.fire(eventName);
+  }
+}
+
+function _unspiderfyPreviousClusterIfNotParentOf(unidad) {
+  // Check if there is a currently spiderfied cluster.
+  // If so and it does not contain the marker, unspiderfy it.
+  var spiderfiedCluster = uni_agrupadas._spiderfied;
+
+  if (spiderfiedCluster && !_clusterContainsMarker(spiderfiedCluster, unidad)) {
+    spiderfiedCluster.unspiderfy();
+  }
+}
+
+function _clusterContainsMarker(cluster, unidad) {
+  var currentLayer = unidad;
+
+  while (currentLayer && currentLayer !== cluster) {
+    currentLayer = currentLayer.__parent;
+  }
+
+  // Say if we found a cluster or nothing.
+  return !!currentLayer;
 }
