@@ -3,7 +3,7 @@
 require 'conexion_database.php';
 
 //$_POST['cod_uni'] = "U3448";
-//$_POST['tipo_personal'] = "Suboficiales";
+//$_POST['tipo_personal'] = "Soldados";
 if (!isset($_POST['cod_uni']) || $_POST['cod_uni']=="") {
     echo "";
     return;
@@ -17,8 +17,11 @@ switch ($_POST['tipo_personal']) {
     case 'Suboficiales':
         $query_todos = $query_todos." AND p.peso_grado>1600";
         break;
+    case 'Soldados':
+        $query_todos = "SELECT *,p.categoria as arma,p.grado as peso_grado,p.fecha_ingreso as fraccion_grado,p.apellido as orden_merito FROM personal_ssvv p WHERE p.cod_unidad='".$_POST['cod_uni']."'";
+        break;
 }
-$query_todos = $query_todos." ORDER BY p.peso_grado,p.fraccion_grado,p.orden_merito";
+$query_todos = $query_todos." ORDER BY peso_grado,fraccion_grado,orden_merito";
 
 $result_todos = mysqli_query( $conexion, $query_todos ) or die ( "Algo ha ido mal en la consulta a la base de datos");
 
