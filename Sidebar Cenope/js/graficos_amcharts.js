@@ -7,7 +7,6 @@ function cargarEstadisticasPersonal() {
   let post_fields = {
       cod_uni : cod_uni
   }
-
   fetch("datos_area_personal_grados.php", {
       method: 'POST',
       headers: {
@@ -24,10 +23,49 @@ function cargarEstadisticasPersonal() {
         return;
       }
       response.json().then(function(datos) {
-        console.log(datos);
+        //console.log(datos);
         let cantidadesOf = [];
         let labelsOf = [];
+        var cant_of_superiores=0;
+        var cant_of_jefes=0;
+        var cant_of_subalternos=0;
+        var cant_subof_superiores=0;
+        var cant_subof_subalternos=0;
+        var peso_grado;
 
+        $.each(datos.oficiales, function(key,value) {
+          //console.log(value.peso_grado+':'+value.first);
+          peso_grado = parseInt(value.peso_grado)
+          if (peso_grado>0 && peso_grado<=500) {
+            cant_of_superiores = cant_of_superiores + parseInt(value.first)
+          }
+          if (peso_grado>=600 && peso_grado<=700) {
+            cant_of_jefes = cant_of_jefes + parseInt(value.first)
+          }
+          if (peso_grado>=800 && peso_grado<=1600) {
+            cant_of_subalternos = cant_of_subalternos + parseInt(value.first)
+          }
+        });
+        $.each(datos.suboficiales, function(key,value) {
+          //console.log(value.peso_grado+':'+value.first);
+          peso_grado = parseInt(value.peso_grado)
+          if (peso_grado>=1700 && peso_grado<=2000) {
+            cant_subof_superiores = cant_subof_superiores + parseInt(value.first)
+          }
+          if (peso_grado>=2100) {
+            cant_subof_subalternos = cant_subof_subalternos + parseInt(value.first)
+          }
+        });
+        var cant_of_total = cant_of_superiores + cant_of_jefes + cant_of_subalternos;
+        var cant_subof_total = cant_subof_superiores + cant_subof_subalternos;
+        $("#cant_of_total").html(cant_of_total);
+        $("#cant_of_superiores").html(cant_of_superiores);
+        $("#cant_of_jefes").html(cant_of_jefes);
+        $("#cant_of_subalternos").html(cant_of_subalternos);
+        $("#cant_subof_total").html(cant_subof_total);
+        $("#cant_subof_superiores").html(cant_subof_superiores);
+        $("#cant_subof_subalternos").html(cant_subof_subalternos);
+        
         chart_personal("chart_oficiales", "Oficiales", datos.oficiales);
         chart_personal("chart_suboficiales", "Suboficiales", datos.suboficiales);
       });
@@ -46,12 +84,14 @@ function chart_personal(div_chart,titulo,datos_json) {
 
   // Create chart instance
   var chart = am4core.create(div_chart, am4charts.XYChart);
+  
 
   // Title
   var title = chart.titles.push(new am4core.Label());
+  //title.text.color = "#125186";
   title.text = titulo;
   title.fontSize = 20;
-  title.marginTop = 15;
+  title.marginTop = 10;
   title.marginBottom = 10;
 
   // Add data

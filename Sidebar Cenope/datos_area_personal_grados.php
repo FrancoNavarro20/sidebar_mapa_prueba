@@ -38,18 +38,20 @@ $pers_suboficiales = array();
 $i=0;
 while ($columna = mysqli_fetch_array($result_por_grados))
 {
-    $peso = (int)$columna['peso_grado'];
-    if ($peso>0 && $peso<=1600) {
-    	$pers_oficiales[] = array(
-            'category' => $columna['grado'],
-            'first' => $columna['cant_grado']
-        );
-    } else {
-        $pers_suboficiales[] = array(
-            'category' => $columna['grado'],
-            'first' => $columna['cant_grado']
-        );
-    }
+  $peso = (int)$columna['peso_grado'];
+  if ($peso>0 && $peso<=1600) {
+  	$pers_oficiales[] = array(
+      'peso_grado' => $columna['peso_grado'],
+      'category' => $columna['grado'],
+      'first' => $columna['cant_grado']
+    );
+  } else {
+    $pers_suboficiales[] = array(
+      'peso_grado' => $columna['peso_grado'],
+      'category' => $columna['grado'],
+      'first' => $columna['cant_grado']
+    );
+  }
 }
 
 //mysqli_close($conexion);

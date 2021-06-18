@@ -360,10 +360,9 @@ function mostrar_marcadores(cod_uni) {
     type: "POST", // Type of request to be send, called as method
     cache: true, // To unable request pages to be cached
     // el tipo de información que se espera de respuesta
-    dataType: "json",
-    success: function (
-      data // A function to be called if request succeeds
-    ) {
+    dataType : 'json',
+    success: function(data)   // A function to be called if request succeeds
+    {
       //console.log(data);
       ejercito = L.geoJSON(data, {
         pointToLayer: function (feature, latlng) {
@@ -397,8 +396,8 @@ function mostrar_marcadores(cod_uni) {
               "' data-fuente='" +
               feature.properties.sag +
               "' data-img='" +
-              '<center><img src="./img/Escudo_del_Ejército_Argentino.png" style="max-width: 15%; height: auto;"/></center>' +
-              "' onclick='masInfo(this)'>Mas información</a>"
+              '<center><img src="./img/Escudo_del_Ejército_Argentino.png" style="max-width: 15%; height: auto;"/></center>' + 
+              "' onclick='masInfo(this)'>Más información</a>"
           );
         },
         filter: function (feature) {
@@ -425,27 +424,25 @@ function mostrar_marcadores(cod_uni) {
 //Fin GeoJSON
 
 function masInfo(info) {
-  var cod_uni = $(info).data("cod_uni");
-  var cod_unisup = $(info).data("cod_unisup");
+  cod_uni = $(info).data("cod_uni");
+  cod_unisup = $(info).data("cod_unisup");
   //alert ("Cod Uni: "+cod_uni);
   document.getElementById("div_elem_mapa_seleccionado").innerHTML =
     //   "ID: " +
-    $(info).data("img") +
-    '<h4 style="text-align: center; padding-top: 10px; margin-bottom: 10px; text-transform: uppercase;">' +
+    "<div>" + $(info).data("img") + "</div>" +
+    '<div style="text-align: center; padding-top: 10px; margin-bottom: 5px; text-transform: uppercase; font-size: 22px; font-weight: bold;">' +
     $(info).data("nombre") +
-    "</h4><div style='padding-top:10px; border-top: 1px solid gray; font-size:14px;'><div class='row' style='background-color:#eeeeee; min-height: 30px; margin-left: 0px; margin-right:0px; padding-left:1px; padding-right:1px; align-content: center;'><div class='col-md-6' style='font-weight:bold;'>Localidad</div><div class='col-md-6' style='text-transform: uppercase;'>" +
-    $(info).data("localidad") +
-    "</div></div><div class='row' style='min-height: 30px; margin-left: 0px; margin-right:0px; padding-left:1px; padding-right:1px; align-content: center;'><div class='col-md-6' style='font-weight:bold;'>Nodo</div><div class='col-md-6' style='text-transform: uppercase;'>" +
-    $(info).data("nodo") +
-    "</div></div><div class='row' style='background-color:#eeeeee; min-height: 30px; margin-left: 0px; margin-right:0px; padding-left:1px; padding-right:1px; align-content: center;'><div class='col-md-6' style='font-weight:bold;'>Arma</div><div class='col-md-6' style='text-transform: uppercase;'>" +
-    $(info).data("arma") +
-    "</div></div><div class='row' style='min-height: 30px; margin-left: 0px; margin-right:0px; padding-left:1px; padding-right:1px; align-content: center;'><div class='col-md-6' style='font-weight:bold;'>Fuente de información</div><div class='col-md-6'>" +
-    $(info).data("fuente") +
-    "</div></div></div>";
-
+    "</div>" +
+    "<div style='text-align: center; background-color:#eeeeee; min-height: 30px; margin-top:5px; font-size:14px;'>" +
+    "<div class='row'>" +
+    "<div class='col-md-6' style='font-weight:bold; padding: 5px; text-align:left;'>Localidad</div>" +
+    "<div class='col-md-6' style='text-transform: uppercase; padding: 5px; text-align:left;'>" + $(info).data("localidad") + "</div>" +
+    "<div class='col-md-6' style='font-weight:bold; padding: 5px; text-align:left;'>Arma</div>" +
+    "<div class='col-md-6' style='text-transform: uppercase; padding: 5px; text-align:left;'>" + $(info).data("arma") + "</div></div></div>";
   $("#div_elem_menu_seleccionado").hide();
   $("#div_elem_mapa_seleccionado").show();
   showSidebar();
+  graficosSidebar();
 }
 
 function mostrarUnidadesZoom(id) {
