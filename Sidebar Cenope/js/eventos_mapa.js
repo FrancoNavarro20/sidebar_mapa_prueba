@@ -1,4 +1,4 @@
-var map = L.map("mapa", { zoomControl: false }).setView([-40, -59], 5);
+var map = L.map("mapa", { zoomControl: false }).setView([-40, -59], 4);
 
 L.tileLayer(
   "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG%3A3857@png/{z}/{x}/{-y}.png",
@@ -410,18 +410,22 @@ function mostrar_marcadores(cod_uni) {
       //$("#div_listado_unidades").html(data.features[0].properties.fna);
       // $("#div_listado_unidades").html(elem);
 
-      $("#div_listado_unidades a").remove();
-      for (var i = 0; i < ejercito.getLayers().length; i++) {
-        $("#div_listado_unidades div.row").append(
-          $("<a href='#' onclick='mostrarUnidadesZoom(this)'></a>").text(
-            ejercito.getLayers()[i].feature.properties.fna
-          )
-        );
+      
+      $("#div_listado_unidades .item").remove();
+      for (var i = 0; i < ejercito.getLayers().length; i++) {  
+        
+        $("#div_listado_unidades").append("<div class='item' onclick='mostrarUnidadesZoom(this)'>"+ejercito.getLayers()[i].feature.properties.fna+ "</div>")
+                
+        
+       //elem = elem + "<div class='item' onclick='mostrarUnidadesZoom(this)'>" + ejercito.getLayers()[i].feature.properties.fna + "</div>";
       }
+      //$("#div_listado_unidades").html(elem);
     },
   });
 }
 //Fin GeoJSON
+
+
 
 function masInfo(info) {
   cod_uni = $(info).data("cod_uni");
@@ -441,7 +445,7 @@ function masInfo(info) {
     "<div class='col-md-6' style='text-transform: uppercase; padding: 5px; text-align:left;'>" + $(info).data("arma") + "</div></div></div>";
   $("#div_elem_menu_seleccionado").hide();
   $("#div_elem_mapa_seleccionado").show();
-  showSidebar();
+  // showSidebar();
   graficosSidebar();
 }
 

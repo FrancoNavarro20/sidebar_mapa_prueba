@@ -8,26 +8,29 @@ body {
   padding-bottom: 5px;
 }
 
-#infosidebar {
-  right: -500px;
-  position: fixed;
-  height: calc(100vh - 65px);
-  transition: right 0.5s, width 0.5s;
-  padding-left: 0;
-  background-color: white;
-  top: 0px;
-  margin-top: 65px;
-  padding: 8px 24px;
-  overflow: auto;
-  width: 480px;
+#contenedor-mapa-div{
+  margin-left: 320px;
 }
-#infosidebar.visible {
-  right: 0;
-}
-#infosidebar a {
+
+#div_listado_unidades{
+  width: calc(100vw - 320px);
+  height: 20vh;
   color: black;
   text-decoration: none;
 }
+
+
+#infosidebar {
+  height: calc(75vh - 20px);
+  background-color: white;
+  padding: 8px 24px;
+  overflow: auto;
+  width: 30vw;
+}
+
+/* #infosidebar.visible {
+  right: 0;
+} 
 .cruz-sidebar {
   position: absolute;
   right: 20px;
@@ -42,6 +45,39 @@ body {
   -webkit-border-radius: 16px;
   border-radius: 16px;
   cursor: pointer;
+} */
+
+.carousel-wrap {
+  padding: 0 5%;
+  width: 80%;
+  position: relative;
+}
+
+/* fix blank or flashing items on carousel */
+.owl-carousel .item {
+  position: relative;
+  z-index: 100; 
+  -webkit-backface-visibility: hidden; 
+}
+
+/* end fix */
+.owl-nav > div {
+  margin-top: -26px;
+  position: absolute;
+  top: 50%;
+  color: #cdcbcd;
+}
+
+.owl-nav i {
+  font-size: 52px;
+}
+
+.owl-nav .owl-prev {
+  left: -30px;
+}
+
+.owl-nav .owl-next {
+  right: -30px;
 }
 
 .sidebar {
@@ -347,14 +383,9 @@ body {
 
 /*------Stylos del mapa ---------*/
 #mapa {
-  position: absolute;
+  position: relative;
   transition: 0.5s;
   z-index: 0;
-}
-
-#map-cenope {
-  position: absolute;
-  top: 0px;
 }
 
 div.leaflet-sidebar {
@@ -434,12 +465,9 @@ div.leaflet-sidebar {
 
 .tamanoA {
   padding-left: 0px;
-  margin-left: 320px;
   padding-top: 0px;
-  margin-top: 65px;
-  width: calc(100vw - 320px);
-  height: calc(100vh - 65px);
-  margin-right: 500px;
+  width: 60vw;
+  height: calc(80vh - 65px);
   padding-right: 0px;
 }
 

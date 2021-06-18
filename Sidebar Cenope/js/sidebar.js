@@ -2,10 +2,35 @@ var cod_uni = "TODOS";
 var ejercito;
 var uni_agrupadas = L.markerClusterGroup.layerSupport();
 
+$('.owl-carousel').owlCarousel({
+  loop: false,
+  margin: 10,
+  nav: true,
+  navText: [
+    "<i class='fa fa-caret-left'></i>",
+    "<i class='fa fa-caret-right'></i>"
+  ],
+  autoplay: false,
+  autoplayHoverPause: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 3
+    },
+    1000: {
+      items: 8
+    }
+  }
+})
+
 //codigo jquery
 $(document).ready(function () {
   //now on button click
   //$('#modal_listado_personal').modal('toggle');
+
+  
 
 
   $('#modal_listado_personal').on('show.bs.modal', function(e) {
@@ -189,10 +214,11 @@ $(document).ready(function () {
 
   $(".items_areas_conduccion").click(function () {
     //();
-    if (!sidebar.isVisible()) showSidebar();
+    // if (!sidebar.isVisible()) showSidebar();
   });
 
   $(".ejer-items").click(function () {
+    map.setView([-40, -59], 4);
     if (
       typeof $(this).data("cod_uni") == "undefined" ||
       $(this).data("cod_uni") == ""
@@ -218,7 +244,7 @@ $(document).ready(function () {
 
     //map.setView([lat,lon],zoom);
     //if (!sidebar.isVisible())
-    showSidebar();
+    // showSidebar();
   });
 
   /*Inicio de panel principal (Conduccion Superior,Fuerza Operativa,Fuerza de Sostenimiento,Sistema Educ)*/
@@ -370,18 +396,18 @@ $(".hover_areas ul").on("click", "li", function () {
   $(this).addClass("hoveado_areas");
 });
 
-function showSidebar() {
-  $("#infosidebar").addClass("visible");
-  $(".tamanoA").css("width", "calc(100vw - 800px)");
-  window.setTimeout(function () {
-    map.invalidateSize();
-  }, 1000);
-}
+// function showSidebar() {
+//   $("#infosidebar").addClass("visible");
+//   $(".tamanoA").css("width", "calc(100vw - 800px)");
+//   window.setTimeout(function () {
+//     map.invalidateSize();
+//   }, 1000);
+// }
 
-function hideSidebar() {
-  $("#infosidebar").removeClass("visible");
-  $(".tamanoA").css("width", "calc(100vw - 320px)");
-  window.setTimeout(function () {
-    map.invalidateSize();
-  }, 1000);
-}
+// function hideSidebar() {
+//   $("#infosidebar").removeClass("visible");
+//   $(".tamanoA").css("width", "calc(100vw - 320px)");
+//   window.setTimeout(function () {
+//     map.invalidateSize();
+//   }, 1000);
+// }
