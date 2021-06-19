@@ -2,36 +2,7 @@ var cod_uni = "TODOS";
 var ejercito;
 var uni_agrupadas = L.markerClusterGroup.layerSupport();
 
-$('.owl-carousel').owlCarousel({
-  loop: false,
-  margin: 10,
-  nav: true,
-  navText: [
-    "<i class='fa fa-caret-left'></i>",
-    "<i class='fa fa-caret-right'></i>"
-  ],
-  autoplay: false,
-  autoplayHoverPause: true,
-  responsive: {
-    0: {
-      items: 1
-    },
-    600: {
-      items: 3
-    },
-    1000: {
-      items: 8
-    }
-  }
-})
-
 //codigo jquery
-$(document).ready(function () {
-  //now on button click
-  //$('#modal_listado_personal').modal('toggle');
-
-  
-
 
   $('#modal_listado_personal').on('show.bs.modal', function(e) {
     var button = $(e.relatedTarget);
@@ -68,7 +39,6 @@ $(document).ready(function () {
   $(".elem_conducc_sup").hide();
 
   mostrar_marcadores("TODOS");
-
   //variables
   var bandera;
   var bandera2;
@@ -382,7 +352,6 @@ $(document).ready(function () {
   });
 
   /*fin Estilo pulsado Ferrocarril JS*/
-});
 
 $(".hover_fuerzas ul").on("click", "li", function () {
   // $(this).addClass('hoveado_fuerzas').siblings().removeClass('hoveado_fuerzas');

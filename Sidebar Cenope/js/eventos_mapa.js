@@ -406,26 +406,21 @@ function mostrar_marcadores(cod_uni) {
       });
       uni_agrupadas.addLayer(ejercito);
       map.addLayer(uni_agrupadas);
-
       //$("#div_listado_unidades").html(data.features[0].properties.fna);
       // $("#div_listado_unidades").html(elem);
-
-      
-      $("#div_listado_unidades .item").remove();
-      for (var i = 0; i < ejercito.getLayers().length; i++) {  
-        
-        $("#div_listado_unidades").append("<div class='item' onclick='mostrarUnidadesZoom(this)'>"+ejercito.getLayers()[i].feature.properties.fna+ "</div>")
-                
-        
-       //elem = elem + "<div class='item' onclick='mostrarUnidadesZoom(this)'>" + ejercito.getLayers()[i].feature.properties.fna + "</div>";
+      //$("#div_listado_unidades .owl-stage-outer .owl-stage .owl-item").remove();
+      var length = $('.item').length;
+      for (var i =0; i<length; i++) {
+        $(".owl-carousel").trigger('remove.owl.carousel', i );
       }
-      //$("#div_listado_unidades").html(elem);
-    },
+      //$(".owl-carousel").trigger('refresh.owl.carousel');
+      for (var i = 0; i < ejercito.getLayers().length; i++) {  
+        $('.owl-carousel').owlCarousel().trigger('add.owl.carousel', "<div class='owl-item'><div class='item' onclick='mostrarUnidadesZoom(this)'>"+ejercito.getLayers()[i].feature.properties.fna+ "</div></div>").trigger('refresh.owl.carousel');
+      }
+    }
   });
 }
 //Fin GeoJSON
-
-
 
 function masInfo(info) {
   cod_uni = $(info).data("cod_uni");

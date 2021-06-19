@@ -25,7 +25,7 @@ body {
   background-color: white;
   padding: 8px 24px;
   overflow: auto;
-  width: 30vw;
+  width: 55vw;
 }
 
 /* #infosidebar.visible {
@@ -46,38 +46,48 @@ body {
   border-radius: 16px;
   cursor: pointer;
 } */
-
-.carousel-wrap {
-  padding: 0 5%;
-  width: 80%;
-  position: relative;
+  
+#div_listado_unidades .item{
+  background: white;
+  padding: 5px;
+  padding-bottom: 10px;
+  padding-top: 75px;
+  margin: 5px;
+  width: 140px;
+  height: 120px;
+  color: black;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border: 1px solid #D9D9D9;
+  border-radius: 7px;
+  text-align: center;
 }
 
-/* fix blank or flashing items on carousel */
-.owl-carousel .item {
+.carousel-wrapper {
+  margin: auto;
   position: relative;
-  z-index: 100; 
-  -webkit-backface-visibility: hidden; 
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 14px;
 }
 
-/* end fix */
 .owl-nav > div {
-  margin-top: -26px;
+  
   position: absolute;
-  top: 50%;
+  top: 35%;
   color: #cdcbcd;
 }
 
 .owl-nav i {
-  font-size: 52px;
+  font-size: 30px;
 }
 
 .owl-nav .owl-prev {
-  left: -30px;
+  left: 0px;
 }
 
 .owl-nav .owl-next {
-  right: -30px;
+  right: 0px;
 }
 
 .sidebar {
