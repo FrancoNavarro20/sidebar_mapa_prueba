@@ -202,7 +202,7 @@ var uni_agrupadas = L.markerClusterGroup.layerSupport();
     if (typeof $(this).data("nombre_elem") != "undefined") {
       elem_selec = $(this).data("nombre_elem");
       div_sup = "<center><img src='./img/Escudo_del_Ejército_Argentino.png' style='max-width: 15%; height: auto;'/></center>";
-      $("#div_nombre_elem_seleccionado").html(div_sup+'<div style="font-size: 22px; font-weight: bold; text-align: center; padding-top: 10px; margin-bottom: 10px;">'+elem_selec+"</div>");
+      $("#div_nombre_elem_seleccionado").html('<div style="font-size: 22px; font-weight: bold; text-align: center; padding-top: 5px; margin-bottom: 0px;">'+elem_selec+"</div>");
     }
 
     $("#div_elem_mapa_seleccionado").hide();

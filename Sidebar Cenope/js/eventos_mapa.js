@@ -415,7 +415,7 @@ function mostrar_marcadores(cod_uni) {
       }
       //$(".owl-carousel").trigger('refresh.owl.carousel');
       for (var i = 0; i < ejercito.getLayers().length; i++) {  
-        $('.owl-carousel').owlCarousel().trigger('add.owl.carousel', "<div class='owl-item'><div class='item' onclick='mostrarUnidadesZoom(this)'>"+ejercito.getLayers()[i].feature.properties.fna+ "</div></div>").trigger('refresh.owl.carousel');
+        $('.owl-carousel').owlCarousel().trigger('add.owl.carousel', "<div class='owl-item'><div class='item' onclick='mostrarUnidadesZoom(this)'><center><img src='./img/Escudo_del_Ejército_Argentino.png' style='max-width: 50%; height: auto; padding-bottom: 5px;'/></center><div style='padding-top: 3px; margin-bottom: 20px; text-align: center; height: 25px; -webkit-line-clamp: 2; -webkit-box-orient: vertical; display: -webkit-box; line-height: 1.3rem;'>"+ejercito.getLayers()[i].feature.properties.fna+ "</div></div></div>").trigger('refresh.owl.carousel');
       }
     }
   });
