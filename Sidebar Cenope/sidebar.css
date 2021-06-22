@@ -889,3 +889,8 @@ li.hoveado_fuerzas {
 li.hoveado_areas {
   background-color: rgb(131, 131, 131);
 }
+
+#div_listado_unidades .click-unis{
+  background-color: lightgray;
+  color: white;
+}

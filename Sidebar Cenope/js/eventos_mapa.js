@@ -369,35 +369,13 @@ function mostrar_marcadores(cod_uni) {
           return L.marker(latlng, { icon: new EjercitoSvg() });
         },
         onEachFeature: function (feature, layer) {
-          layer._leaflet_id = feature.properties.fna;
+          layer._leaflet_id = feature.properties.cod_uni;
           layer.bindPopup(
             '<b style="font-size: 14px;"><img src="./img/Escudo_del_Ejército_Argentino.png" style="width: 24px; height: 24px"/> ' +
               feature.properties.fdc +
               "<br><b>Nombre</b>: " +
               feature.properties.fna +
-              "<br><a href=# data-id='" +
-              feature.properties.gid +
-              "' data-cod_uni='" +
-              feature.properties.cod_uni +
-              "' data-cod_unisup='" +
-              feature.properties.cod_unisup +
-              "' data-fuerza='" +
-              feature.properties.fdc +
-              "' data-objeto='" +
-              feature.properties.objeto +
-              "' data-nombre='" +
-              feature.properties.fna +
-              "' data-localidad='" +
-              feature.properties.localidad +
-              "' data-nodo='" +
-              feature.properties.nodo +
-              "' data-arma='" +
-              feature.properties.arma +
-              "' data-fuente='" +
-              feature.properties.sag +
-              "' data-img='" +
-              '<center><img src="./img/Escudo_del_Ejército_Argentino.png" style="max-width: 15%; height: auto;"/></center>' + 
-              "' onclick='masInfo(this)'>Más información</a>"
+              "<br><a href=# onclick=masInfo('" + feature.properties.cod_uni +"')>Más información</a>"
           );
         },
         filter: function (feature) {
@@ -415,29 +393,34 @@ function mostrar_marcadores(cod_uni) {
       }
       //$(".owl-carousel").trigger('refresh.owl.carousel');
       for (var i = 0; i < ejercito.getLayers().length; i++) {  
-        $('.owl-carousel').owlCarousel().trigger('add.owl.carousel', "<div class='owl-item'><div class='item' onclick='mostrarUnidadesZoom(this)'><center><img src='./img/Escudo_del_Ejército_Argentino.png' style='max-width: 50%; height: auto; padding-bottom: 5px;'/></center><div style='padding-top: 3px; margin-bottom: 20px; text-align: center; height: 25px; -webkit-line-clamp: 2; -webkit-box-orient: vertical; display: -webkit-box; line-height: 1.3rem;'>"+ejercito.getLayers()[i].feature.properties.fna+ "</div></div></div>").trigger('refresh.owl.carousel');
+        $('.owl-carousel').owlCarousel().trigger('add.owl.carousel', "<a href='#'><div class='owl-item'><div class='item' onmouseover=mostrarUnidadesZoom('"+ejercito.getLayers()[i].feature.properties.cod_uni+ "') onclick=masInfo('"+ejercito.getLayers()[i].feature.properties.cod_uni+ "')><center><img src='./img/Escudo_del_Ejército_Argentino.png' style='max-width: 50%; height: auto; padding-bottom: 5px;'/></center><div style='padding-top: 3px; margin-bottom: 20px; text-align: center; height: 25px; -webkit-line-clamp: 2; -webkit-box-orient: vertical; display: -webkit-box; line-height: 1.3rem;'>"+ejercito.getLayers()[i].feature.properties.fna+ "</div></div></div></a>").trigger('refresh.owl.carousel');
       }
+      $('div.item').click(function () {       
+        $('.click-unis').removeClass('click-unis');
+        $(this).addClass('click-unis');     
+      });
     }
   });
 }
 //Fin GeoJSON
 
-function masInfo(info) {
-  cod_uni = $(info).data("cod_uni");
-  cod_unisup = $(info).data("cod_unisup");
+function masInfo(info) {  
+  var uniInfo = ejercito._layers[info];
+  cod_uni = uniInfo.feature.properties.cod_uni;
+  cod_unisup = uniInfo.feature.properties.cod_unisup;
   //alert ("Cod Uni: "+cod_uni);
   document.getElementById("div_elem_mapa_seleccionado").innerHTML =
     //   "ID: " +
-    "<div>" + $(info).data("img") + "</div>" +
+    "<div><center><img src='./img/Escudo_del_Ejército_Argentino.png' style='max-width: 15%; height: auto;'/></center></div>" +
     '<div style="text-align: center; padding-top: 10px; margin-bottom: 5px; text-transform: uppercase; font-size: 22px; font-weight: bold;">' +
-    $(info).data("nombre") +
+    uniInfo.feature.properties.fna +
     "</div>" +
     "<div style='text-align: center; background-color:#eeeeee; min-height: 30px; margin-top:5px; font-size:14px;'>" +
     "<div class='row'>" +
     "<div class='col-md-6' style='font-weight:bold; padding: 5px; text-align:left;'>Localidad</div>" +
-    "<div class='col-md-6' style='text-transform: uppercase; padding: 5px; text-align:left;'>" + $(info).data("localidad") + "</div>" +
+    "<div class='col-md-6' style='text-transform: uppercase; padding: 5px; text-align:left;'>" + uniInfo.feature.properties.localidad + "</div>" +
     "<div class='col-md-6' style='font-weight:bold; padding: 5px; text-align:left;'>Arma</div>" +
-    "<div class='col-md-6' style='text-transform: uppercase; padding: 5px; text-align:left;'>" + $(info).data("arma") + "</div></div></div>";
+    "<div class='col-md-6' style='text-transform: uppercase; padding: 5px; text-align:left;'>" + uniInfo.feature.properties.arma + "</div></div></div>";
   $("#div_elem_menu_seleccionado").hide();
   $("#div_elem_mapa_seleccionado").show();
   // showSidebar();
@@ -445,16 +428,14 @@ function masInfo(info) {
 }
 
 function mostrarUnidadesZoom(id) {
-  uniPopup = id.innerHTML;
-  ejercito._layers[uniPopup].fire("click");
-  var coords = ejercito._layers[uniPopup]._latlng;
+  var coords = ejercito._layers[id]._latlng;
   map.setView(coords, 14);
-  _fireEventOnMarkerOrVisibleParentCluster(ejercito._layers[uniPopup], "click");
-  ejercito._layers[uniPopup].openPopup();
+  _fireEventOnMarkerOrVisibleParentCluster(ejercito._layers[id], "mouseover");
+  ejercito._layers[id].openPopup();
 }
 
 function _fireEventOnMarkerOrVisibleParentCluster(unidad, eventName) {
-  if (eventName === "click") {
+  if (eventName === "mouseover") {
     var visibleLayer = uni_agrupadas.getVisibleParent(unidad);
     if (visibleLayer instanceof L.MarkerCluster) {
       // We want to show a marker that is currently hidden in a cluster.
