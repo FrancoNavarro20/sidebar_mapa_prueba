@@ -896,3 +896,20 @@ li.hoveado_areas {
   background-color: lightgray;
   color: white;
 }
+
+
+/*Alto de los elemetos*/
+
+.sidebar-search ul .alto_item {
+  padding: 8px 8px 8px 8px;
+  border-bottom: 1px solid rgb(83, 83, 83);
+  transition: all 300ms linear;
+  height: 59px;
+}
+/*
+.alto_item_p{
+  line-height: 22px;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+*/
