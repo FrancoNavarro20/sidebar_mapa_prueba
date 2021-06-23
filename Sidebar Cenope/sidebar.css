@@ -14,14 +14,15 @@ body {
 
 #div_listado_unidades{
   width: calc(100vw - 320px);
-  height: 20vh;
+  height: 135px;
+  margin-top: 5px;
   color: black;
   text-decoration: none;
 }
 
 
 #infosidebar {
-  height: calc(75vh - 20px);
+  height: calc(100vh - 205px);
   background-color: white;
   padding: 8px 24px;
   overflow: auto;
@@ -477,7 +478,8 @@ div.leaflet-sidebar {
   padding-left: 0px;
   padding-top: 0px;
   width: 50vw;
-  height: calc(80vh - 65px);
+  /*height: calc(80vh - 65px);*/
+  height: calc(100vh - 205px);
   padding-right: 0px;
 }
 

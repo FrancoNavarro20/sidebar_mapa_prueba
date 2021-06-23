@@ -370,12 +370,16 @@ function mostrar_marcadores(cod_uni) {
         },
         onEachFeature: function (feature, layer) {
           layer._leaflet_id = feature.properties.cod_uni;
+          arma = "";
+          if (feature.properties.arma!="") {
+            arma = "<div style='font-size: 12px;'>Arma/Servicio: " + feature.properties.arma + "</div>" ;
+          }
           layer.bindPopup(
-            '<b style="font-size: 14px;"><img src="./img/Escudo_del_Ejército_Argentino.png" style="width: 24px; height: 24px"/> ' +
-              feature.properties.fdc +
-              "<br><b>Nombre</b>: " +
+            '<div><b style="font-size: 14px;"><img src="./img/Escudo_del_Ejército_Argentino.png" style="width: 24px; height: 24px"/> ' +
               feature.properties.fna +
-              "<br><a href=# onclick=masInfo('" + feature.properties.cod_uni +"')>Más información</a>"
+              "</b></div><div style='font-size: 12px;'>" + feature.properties.localidad + "</div>" +
+              arma +
+              "<div><a href=# onclick=masInfo('" + feature.properties.cod_uni +"')>Más información</a></div>"
           );
         },
         filter: function (feature) {
@@ -411,16 +415,9 @@ function masInfo(info) {
   //alert ("Cod Uni: "+cod_uni);
   document.getElementById("div_elem_mapa_seleccionado").innerHTML =
     //   "ID: " +
-    "<div><center><img src='./img/Escudo_del_Ejército_Argentino.png' style='max-width: 15%; height: auto;'/></center></div>" +
-    '<div style="text-align: center; padding-top: 10px; margin-bottom: 5px; text-transform: uppercase; font-size: 22px; font-weight: bold;">' +
+    '<div style="text-align: center; padding-top: 0px; margin-bottom: 5px; text-transform: uppercase; font-size: 22px; font-weight: bold;">' +
     uniInfo.feature.properties.fna +
-    "</div>" +
-    "<div style='text-align: center; background-color:#eeeeee; min-height: 30px; margin-top:5px; font-size:14px;'>" +
-    "<div class='row'>" +
-    "<div class='col-md-6' style='font-weight:bold; padding: 5px; text-align:left;'>Localidad</div>" +
-    "<div class='col-md-6' style='text-transform: uppercase; padding: 5px; text-align:left;'>" + uniInfo.feature.properties.localidad + "</div>" +
-    "<div class='col-md-6' style='font-weight:bold; padding: 5px; text-align:left;'>Arma</div>" +
-    "<div class='col-md-6' style='text-transform: uppercase; padding: 5px; text-align:left;'>" + uniInfo.feature.properties.arma + "</div></div></div>";
+    "</div>";
   $("#div_elem_menu_seleccionado").hide();
   $("#div_elem_mapa_seleccionado").show();
   // showSidebar();
