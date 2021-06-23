@@ -375,11 +375,9 @@ function mostrar_marcadores(cod_uni) {
             arma = "<div style='font-size: 12px;'>Arma/Servicio: " + feature.properties.arma + "</div>" ;
           }
           layer.bindPopup(
-            '<div><b style="font-size: 14px;"><img src="./img/ejercito.svg" style="width: 24px; height: 24px"/> ' +
-              feature.properties.fna +
-              "</b></div><div style='font-size: 12px;'>" + feature.properties.localidad + "</div>" +
-              arma +
-              "<div><a href=# onclick=masInfo('" + feature.properties.cod_uni +"')>Más información</a></div>"
+            '<div><b style="font-size: 14px;">' + feature.properties.fna +
+              "</b></div><div style='font-size: 10px; padding-top: 3px;'>" + feature.properties.localidad + "</div>" +
+              "<div style='font-size: 12px; padding-top: 3px;'><a href=# onclick=masInfo('" + feature.properties.cod_uni +"')>Más información</a></div>"
           );
         },
         filter: function (feature) {
@@ -397,9 +395,14 @@ function mostrar_marcadores(cod_uni) {
       }
       //$(".owl-carousel").trigger('refresh.owl.carousel');
       for (var i = 0; i < ejercito.getLayers().length; i++) {  
-        $('.owl-carousel').owlCarousel().trigger('add.owl.carousel', "<a href='#'><div class='owl-item'><div class='item' onmouseover=mostrarUnidadesZoom('"+ejercito.getLayers()[i].feature.properties.cod_uni+ "') onclick=masInfo('"+ejercito.getLayers()[i].feature.properties.cod_uni+ "')><center><img src='./img/ejercito.svg' style='max-width: 50%; height: auto; padding-bottom: 5px;'/></center><div style='padding-top: 3px; margin-bottom: 20px; text-align: center; height: 25px; -webkit-line-clamp: 2; -webkit-box-orient: vertical; display: -webkit-box; line-height: 1.3rem;'>"+ejercito.getLayers()[i].feature.properties.fna+ "</div></div></div></a>").trigger('refresh.owl.carousel');
+        escudo = "<div class='col-md-4' style='background-color: #D9D9D9; border: 1px solid #D9D9D9; border-radius: 10px 0px 0px 10px; vertical-align: middle; text-align: left; padding: 0px;'><img src='./img/ejercito.svg' style='width: 100%;'/></div>";
+        nombre_unidad = "<div style='height: 35px; overflow:hidden; text-overflow: ellipsis; font-weight: bold; font-size: 14px; text-align: left; -webkit-line-clamp: 2; -webkit-box-orient: vertical; display: -webkit-box; line-height: 1.1rem;'>" + ejercito.getLayers()[i].feature.properties.fna + "</div>";
+        localidad = "<div style='height: 30px; overflow:hidden; text-overflow: ellipsis; font-weight: normal; font-size: 10px; padding-top: 3px; padding-bottom: 0px; -webkit-line-clamp: 2; -webkit-box-orient: vertical; display: -webkit-box; line-height: 0.8rem;'>" + ejercito.getLayers()[i].feature.properties.localidad + "</div>";
+        unidad = "<div class='col-md-8 sector_unidad' style='border: 1px solid #D9D9D9; border-radius: 0px 10px 10px 0px; padding: 5px;'>"+ nombre_unidad + localidad + "</div>";
+        item = "<div class='item row' onmouseover=mostrarUnidadesZoom('" + ejercito.getLayers()[i].feature.properties.cod_uni+ "') onclick=masInfo('" + ejercito.getLayers()[i].feature.properties.cod_uni+ "')>" + escudo + unidad + "</div>";
+        $('.owl-carousel').owlCarousel().trigger('add.owl.carousel', "<a href='#'><div class='owl-item'>" + item + "</div></a>").trigger('refresh.owl.carousel');
       }
-      $('div.item').click(function () {       
+      $('.sector_unidad').click(function () {       
         $('.click-unis').removeClass('click-unis');
         $(this).addClass('click-unis');     
       });
@@ -420,15 +423,23 @@ function masInfo(info) {
     "</div>";
   $("#div_elem_menu_seleccionado").hide();
   $("#div_elem_mapa_seleccionado").show();
+
+  var coords = ejercito._layers[info]._latlng;
+  map.setView(coords, 14);
+  _fireEventOnMarkerOrVisibleParentCluster(ejercito._layers[info], "mouseover");
+  ejercito._layers[info].openPopup();
+  
   // showSidebar();
   graficosSidebar();
 }
 
 function mostrarUnidadesZoom(id) {
+  /*
   var coords = ejercito._layers[id]._latlng;
   map.setView(coords, 14);
   _fireEventOnMarkerOrVisibleParentCluster(ejercito._layers[id], "mouseover");
   ejercito._layers[id].openPopup();
+  */
 }
 
 function _fireEventOnMarkerOrVisibleParentCluster(unidad, eventName) {

@@ -12,17 +12,8 @@ body {
   margin-left: 320px;
 }
 
-#div_listado_unidades{
-  width: calc(100vw - 320px);
-  height: 135px;
-  margin-top: 5px;
-  color: black;
-  text-decoration: none;
-}
-
-
 #infosidebar {
-  height: calc(100vh - 205px);
+  height: calc(100vh - 157px);
   background-color: white;
   padding: 8px 24px;
   overflow: auto;
@@ -47,21 +38,26 @@ body {
   border-radius: 16px;
   cursor: pointer;
 } */
+
+#div_listado_unidades{
+  width: calc(100vw - 320px);
+  height: 87px;
+  margin-top: 5px;
+  color: black;
+  text-decoration: none;
+}
   
 #div_listado_unidades .item{
   background: white;
-  padding: 5px;
-  padding-bottom: 10px;
-  padding-top: 7px;
-  margin: 5px;
-  width: 140px;
-  height: 120px;
+  padding: 0px;
+  
+  margin: 0px;
+  /*width: 140px;*/
+  height: 80px;
   color: black;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  border: 1px solid #D9D9D9;
-  border-radius: 7px;
-  text-align: center;
+  text-align: left;
 }
 
 .carousel-wrapper {
@@ -73,9 +69,8 @@ body {
 }
 
 .owl-nav > div {
-  
   position: absolute;
-  top: 35%;
+  top: 17%;
   color: #cdcbcd;
 }
 
@@ -479,7 +474,7 @@ div.leaflet-sidebar {
   padding-top: 0px;
   width: 50vw;
   /*height: calc(80vh - 65px);*/
-  height: calc(100vh - 205px);
+  height: calc(100vh - 157px);
   padding-right: 0px;
 }
 
@@ -892,11 +887,9 @@ li.hoveado_areas {
   background-color: rgb(131, 131, 131);
 }
 
-#div_listado_unidades .click-unis{
-  background-color: lightgray;
-  color: white;
+.click-unis{
+  background-color: #D9D9D9;
 }
-
 
 /*Alto de los elemetos*/
 
