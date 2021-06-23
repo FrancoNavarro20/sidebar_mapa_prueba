@@ -262,7 +262,7 @@ var EjercitoSvg = L.Icon.extend({
     shadowUrl: null,
     iconAnchor: new L.Point(12, 12),
     iconSize: new L.Point(40, 40),
-    iconUrl: "./img/Escudo_del_Ejército_Argentino.png",
+    iconUrl: "./img/ejercito.svg",
   },
 });
 
@@ -375,7 +375,7 @@ function mostrar_marcadores(cod_uni) {
             arma = "<div style='font-size: 12px;'>Arma/Servicio: " + feature.properties.arma + "</div>" ;
           }
           layer.bindPopup(
-            '<div><b style="font-size: 14px;"><img src="./img/Escudo_del_Ejército_Argentino.png" style="width: 24px; height: 24px"/> ' +
+            '<div><b style="font-size: 14px;"><img src="./img/ejercito.svg" style="width: 24px; height: 24px"/> ' +
               feature.properties.fna +
               "</b></div><div style='font-size: 12px;'>" + feature.properties.localidad + "</div>" +
               arma +
@@ -397,7 +397,7 @@ function mostrar_marcadores(cod_uni) {
       }
       //$(".owl-carousel").trigger('refresh.owl.carousel');
       for (var i = 0; i < ejercito.getLayers().length; i++) {  
-        $('.owl-carousel').owlCarousel().trigger('add.owl.carousel', "<a href='#'><div class='owl-item'><div class='item' onmouseover=mostrarUnidadesZoom('"+ejercito.getLayers()[i].feature.properties.cod_uni+ "') onclick=masInfo('"+ejercito.getLayers()[i].feature.properties.cod_uni+ "')><center><img src='./img/Escudo_del_Ejército_Argentino.png' style='max-width: 50%; height: auto; padding-bottom: 5px;'/></center><div style='padding-top: 3px; margin-bottom: 20px; text-align: center; height: 25px; -webkit-line-clamp: 2; -webkit-box-orient: vertical; display: -webkit-box; line-height: 1.3rem;'>"+ejercito.getLayers()[i].feature.properties.fna+ "</div></div></div></a>").trigger('refresh.owl.carousel');
+        $('.owl-carousel').owlCarousel().trigger('add.owl.carousel', "<a href='#'><div class='owl-item'><div class='item' onmouseover=mostrarUnidadesZoom('"+ejercito.getLayers()[i].feature.properties.cod_uni+ "') onclick=masInfo('"+ejercito.getLayers()[i].feature.properties.cod_uni+ "')><center><img src='./img/ejercito.svg' style='max-width: 50%; height: auto; padding-bottom: 5px;'/></center><div style='padding-top: 3px; margin-bottom: 20px; text-align: center; height: 25px; -webkit-line-clamp: 2; -webkit-box-orient: vertical; display: -webkit-box; line-height: 1.3rem;'>"+ejercito.getLayers()[i].feature.properties.fna+ "</div></div></div></a>").trigger('refresh.owl.carousel');
       }
       $('div.item').click(function () {       
         $('.click-unis').removeClass('click-unis');
