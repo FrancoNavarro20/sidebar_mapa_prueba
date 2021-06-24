@@ -12,7 +12,20 @@ if (!isset($data->cod_uni) || $data->cod_uni=="") {
 }
 
 if ($data->cod_uni=="TODOS") {
-  $query_por_grados = "SELECT p.peso_grado,p.grado,COUNT(*) AS cant_grado FROM personal p GROUP BY p.peso_grado,p.grado";
+  // $query_por_grados = "SELECT p.peso_grado,p.grado,COUNT(*) AS cant_grado FROM personal p GROUP BY p.peso_grado,p.grado";
+  $query_por_grados = "SELECT peso_grado,grado,sum(cant_grado) cant_grado
+  FROM (
+  SELECT p.peso_grado peso_grado,p.grado grado,COUNT(*) AS cant_grado FROM personal p 
+  GROUP BY p.cod_unidad,p.peso_grado,p.grado   
+  UNION
+  SELECT p.peso_grado peso_grado,p.grado grado,COUNT(*) AS cant_grado FROM personal p
+  INNER JOIN unidad u ON u.cod_unidad=p.cod_unidad
+  GROUP BY u.cod_unisup,p.peso_grado,p.grado
+  UNION
+  SELECT p.categoria peso_grado, p.grado grado,COUNT(*) AS cant_grado FROM personal_ssvv p 
+  GROUP BY p.cod_unidad,p.grado
+  ) unidades
+  GROUP BY peso_grado,grado";
 } else {
   //$query_por_grados = "SELECT p.peso_grado,p.grado,COUNT(*) AS cant_grado FROM personal p GROUP BY p.cod_unidad,p.peso_grado,p.grado having p.cod_unidad='".$data->cod_uni."'";
 

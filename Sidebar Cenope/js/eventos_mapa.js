@@ -376,7 +376,7 @@ function mostrar_marcadores(cod_uni) {
           }
           layer.bindPopup(
             '<div><b style="font-size: 14px;">' + feature.properties.fna +
-              "</b></div><div style='font-size: 10px; padding-top: 3px;'>" + feature.properties.localidad + "</div>" +
+              "</b></div><div style='font-size: 10px; padding-top: 3px;'>" + (feature.properties.localidad == "null") ? '':feature.properties.localidad + "</div>" +
               "<div style='font-size: 12px; padding-top: 3px;'><a href=# onclick=masInfo('" + feature.properties.cod_uni +"')>Más información</a></div>"
           );
         },
@@ -384,6 +384,7 @@ function mostrar_marcadores(cod_uni) {
           return feature.properties.fdc == "Ejército Argentino";
         },
       });
+      graficosSidebar()
       uni_agrupadas.addLayer(ejercito);
       map.addLayer(uni_agrupadas);
       //$("#div_listado_unidades").html(data.features[0].properties.fna);
