@@ -25,7 +25,8 @@ if ($data->cod_uni=="TODOS") {
   SELECT p.categoria peso_grado, p.grado grado,COUNT(*) AS cant_grado FROM personal_ssvv p 
   GROUP BY p.cod_unidad,p.grado
   ) unidades
-  GROUP BY peso_grado,grado";
+  GROUP BY peso_grado,grado
+  ORDER BY CAST(`peso_grado` AS UNSIGNED),grado";
 } else {
   //$query_por_grados = "SELECT p.peso_grado,p.grado,COUNT(*) AS cant_grado FROM personal p GROUP BY p.cod_unidad,p.peso_grado,p.grado having p.cod_unidad='".$data->cod_uni."'";
 
@@ -44,7 +45,8 @@ if ($data->cod_uni=="TODOS") {
     GROUP BY p.cod_unidad,p.grado
     having p.cod_unidad='".$data->cod_uni."'
     ) unidades
-    GROUP BY peso_grado,grado";
+    GROUP BY peso_grado,grado
+    ORDER BY CAST(`peso_grado` AS UNSIGNED),grado";
 }
 
 
