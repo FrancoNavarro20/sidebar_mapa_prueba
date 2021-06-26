@@ -395,18 +395,44 @@ function mostrar_marcadores(cod_uni) {
         $(".owl-carousel").trigger('remove.owl.carousel', i );
       }
       //$(".owl-carousel").trigger('refresh.owl.carousel');
-      for (var i = 0; i < ejercito.getLayers().length; i++) {  
-        escudo = "<div class='col-md-4' style='background-color: #D9D9D9; border: 1px solid #D9D9D9; border-radius: 10px 0px 0px 10px; vertical-align: middle; text-align: left; padding: 0px;'><img src='./img/ejercito.svg' style='width: 100%;'/></div>";
+      for (var i = 0; i < ejercito.getLayers().length; i++) { 
+        switch (ejercito.getLayers()[i].feature.properties.cod_uni) {
+          case "U3448":
+            imagen_escudo = "<img src='./img/Dir_Grl_Com_Info.svg' style='padding-left:2px; padding-right:2px; width: 100%;'/>";
+            break;
+          case "U2325":
+            imagen_escudo = "<img src='./img/B_Com_602.png' style='padding-left:5px; padding-right:5px; width: 100%;'/>";
+            break;
+          case "U3640":
+            imagen_escudo = "<img src='./img/CIBERDEFENSA_ESCUDO.svg' style='padding-left:2px; padding-right:2px; width: 100%;'/>";
+            break;
+          case "U3639":
+            imagen_escudo = "<img src='./img/CPS.svg' style='padding-left:2px; padding-right:2px; width: 100%;'/>";
+            break;
+          case "U0073":
+          case "U3449":
+            imagen_escudo = "<img src='./img/B_Mant_Com_601.png' style='width: 100%;'/>";
+            break;
+          default:
+            imagen_escudo = "<img src='./img/ejercito.svg' style='width: 100%;'/>";
+            break;
+        }        
+        style_escudo = "background-color: white; border: 1px solid #D9D9D9; border-radius: 10px 0px 0px 10px; vertical-align: middle; text-align: left; padding: 0px;";
+        style_unidad = "background-color: white; border: 1px solid #D9D9D9; border-radius: 0px 10px 10px 0px; padding: 5px;";
+        escudo = "<div class='col-md-4' style='display: flex; align-items: center; justify-content: center;" + style_escudo + "'>" + imagen_escudo + "</div>";
         nombre_unidad = "<div style='height: 35px; overflow:hidden; text-overflow: ellipsis; font-weight: bold; font-size: 14px; text-align: left; -webkit-line-clamp: 2; -webkit-box-orient: vertical; display: -webkit-box; line-height: 1.1rem;'>" + ejercito.getLayers()[i].feature.properties.fna + "</div>";
         localidad = "<div style='height: 30px; overflow:hidden; text-overflow: ellipsis; font-weight: normal; font-size: 10px; padding-top: 3px; padding-bottom: 0px; -webkit-line-clamp: 2; -webkit-box-orient: vertical; display: -webkit-box; line-height: 0.8rem;'>" + ((ejercito.getLayers()[i].feature.properties.localidad == null)?'':ejercito.getLayers()[i].feature.properties.localidad) + "</div>";
-        unidad = "<div class='col-md-8 sector_unidad' style='border: 1px solid #D9D9D9; border-radius: 0px 10px 10px 0px; padding: 5px;'>"+ nombre_unidad + localidad + "</div>";
-        item = "<div class='item row' onmouseover=mostrarUnidadesZoom('" + ejercito.getLayers()[i].feature.properties.cod_uni+ "') onclick=masInfo('" + ejercito.getLayers()[i].feature.properties.cod_uni+ "')>" + escudo + unidad + "</div>";
-        $('.owl-carousel').owlCarousel().trigger('add.owl.carousel', "<a href='#'><div class='owl-item'>" + item + "</div></a>").trigger('refresh.owl.carousel');
+        unidad = "<div class='col-md-8 sector_unidad' style='cursor: pointer; " + style_unidad + "' onmouseover=mostrarUnidadesZoom('" + ejercito.getLayers()[i].feature.properties.cod_uni+ "') onclick=masInfo('" + ejercito.getLayers()[i].feature.properties.cod_uni+ "')>"+ nombre_unidad + localidad + "</div>";
+        item = "<div class='item row'>" + escudo + unidad + "</div>";
+        $('.owl-carousel').owlCarousel().trigger('add.owl.carousel', "<div class='owl-item'>" + item + "</div>").trigger('refresh.owl.carousel');
       }
-      $('.sector_unidad').click(function () {       
-        $('.click-unis').removeClass('click-unis');
+      $('.sector_unidad').on('click',function (e) {       
+        $('.sector_unidad').removeClass('click-unis');
+        //var div_selec = $(e.relatedTarget);
         $(this).addClass('click-unis');     
       });
+      $("#overlay_carousel").hide();
+      $("#div_listado_unidades").delay(100).show();
     }
   });
 }

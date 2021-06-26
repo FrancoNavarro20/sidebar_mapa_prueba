@@ -1,4 +1,6 @@
 function graficosSidebar() {
+  $(".div_pers_cant").hide();
+  $(".overlay").delay(100).show();
   cargarEstadisticasPersonal();
 }
 
@@ -80,6 +82,7 @@ function cargarEstadisticasPersonal() {
         var cant_of_total = cant_of_superiores + cant_of_jefes + cant_of_subalternos;
         var cant_subof_total = cant_subof_superiores + cant_subof_subalternos;
         var cant_soldados_total = cant_sold_operacionales + cant_sold_tecnicos + cant_sold_especialistas;
+
         $("#cant_of_total").html(cant_of_total);
         $("#cant_of_superiores").html(cant_of_superiores);
         $("#cant_of_jefes").html(cant_of_jefes);
@@ -92,6 +95,19 @@ function cargarEstadisticasPersonal() {
         $("#cant_sold_tecnicos").html(cant_sold_tecnicos);
         $("#cant_sold_especialistas").html(cant_sold_especialistas);
         $("#cant_sold_deportistas").html(cant_sold_deportistas);
+
+        if (cod_uni=="TODOS") {
+          $("#btn_ver_oficiales").hide();
+          $("#btn_ver_suboficiales").hide();
+          $("#btn_ver_soldados").hide();
+        } else {
+          $("#btn_ver_oficiales").show();
+          $("#btn_ver_suboficiales").show();
+          $("#btn_ver_soldados").show();
+        }
+
+        $(".overlay").fadeOut();
+        $(".div_pers_cant").delay(100).fadeIn();
         
         chart_personal("chart_oficiales", "Oficiales", datos.oficiales);
         chart_personal("chart_suboficiales", "Suboficiales", datos.suboficiales);
