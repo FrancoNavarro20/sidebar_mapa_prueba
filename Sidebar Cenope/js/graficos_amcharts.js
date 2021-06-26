@@ -106,7 +106,7 @@ function cargarEstadisticasPersonal() {
           $("#btn_ver_soldados").show();
         }
 
-        $(".overlay").fadeOut();
+        $(".overlay").hide();
         $(".div_pers_cant").delay(100).fadeIn();
         
         chart_personal("chart_oficiales", "Oficiales", datos.oficiales);
