@@ -195,10 +195,10 @@ body {
   transition: all 300ms linear;
 }
 .sidebar-capas ul #universidades {
-  border-left: solid 5px RGB(238, 125, 0);
+  /*border-left: solid 5px RGB(238, 125, 0);*/
 }
 .sidebar-capas ul #limite-arg {
-  border-left: solid 5px RGB(64, 191, 239);
+  /*border-left: solid 5px RGB(64, 191, 239);*/
 }
 
 .sidebar-capas ul li:hover {
@@ -230,7 +230,7 @@ body {
   width: 260px;
   top: 65px;
   height: 100%;
-  background: #333333;
+  background: #595959;
   /*transition:all 0.5s linear;*/
   z-index: 1;
   /*overflow: scroll;*/
@@ -280,24 +280,24 @@ body {
 }
 
 #personal {
-  border-left: 5px solid #798dd4;
+  /*border-left: 5px solid #798dd4;*/
 }
 #inteligencia {
-  border-left: 5px solid #79c6d4;
+  /*border-left: 5px solid #79c6d4;*/
 }
 #operaciones {
-  border-left: 5px solid #ca4057;
+  /*border-left: 5px solid #ca4057;*/
 }
 #material {
-  border-left: 5px solid #66cc54;
+  /*border-left: 5px solid #66cc54;*/
 }
 #finanzas {
-  border-left: 5px solid #e7b202;
+  /*border-left: 5px solid #e7b202;*/
 }
 
 .active4 {
   background-color: rgb(131, 131, 131);
-  border-left: 5px solid RGB(174, 201, 11);
+  /*border-left: 5px solid RGB(174, 201, 11);*/
 }
 
 /*.active5 {
@@ -539,23 +539,23 @@ div.leaflet-sidebar {
 
 /*Bordes de los item del ejer-arg*/
 #cond-sup {
-  border-left: 5px solid rgb(123, 123, 211);
+  /*border-left: 5px solid rgb(123, 123, 211);*/
   cursor: pointer;
 }
 
 #fuerza-ope {
-  border-left: 5px solid rgb(1, 161, 189);
+  /*border-left: 5px solid rgb(1, 161, 189);*/
   cursor: pointer;
 }
 #fuerza-sost {
-  border-left: 5px solid rgb(51, 75, 211);
+  /*border-left: 5px solid rgb(51, 75, 211);*/
   cursor: pointer;
 }
 #fuerza-sost_selec {
   background-color: rgb(51, 75, 211);
 }
 #sist-edu {
-  border-left: 5px solid rgb(234, 236, 97);
+  /*border-left: 5px solid rgb(234, 236, 97);*/
   cursor: pointer;
 }
 #fuerza_operativa {
@@ -596,17 +596,17 @@ div.leaflet-sidebar {
 }
 
 #EA-mil {
-  border-left: 5px solid #aec90b;
+  /*border-left: 5px solid #aec90b;*/
   cursor: pointer;
 }
 
 #arm-arg {
-  border-left: 5px solid #ee7d00;
+  /*border-left: 5px solid #ee7d00;*/
   cursor: pointer;
 }
 
 #FFAA {
-  border-left: 5px solid #40bfef;
+  /*border-left: 5px solid #40bfef;*/
   cursor: pointer;
 }
 
@@ -735,7 +735,7 @@ div.leaflet-sidebar {
 }
 
 .pulsado-items {
-  border-left: 10px solid rgb(48, 129, 195);
+  /*border-left: 10px solid rgb(48, 129, 195);*/
   background-color: rgb(95, 91, 91);
 }
 
@@ -777,48 +777,47 @@ div.leaflet-sidebar {
 }
 
 #direc1 {
-  border-left: 5px solid burlywood;
+  /*border-left: 5px solid burlywood;*/
 }
 
 #direc2 {
-  border-left: 5px solid rgb(174, 222, 135);
+  /*border-left: 5px solid rgb(174, 222, 135);*/
 }
 #direc3 {
-  border-left: 5px solid rgb(135, 187, 222);
+  /*border-left: 5px solid rgb(135, 187, 222);*/
 }
 #direc4 {
-  border-left: 5px solid rgb(238, 116, 34);
+  /*border-left: 5px solid rgb(238, 116, 34);*/
 }
 #direc5 {
-  border-left: 5px solid rgb(144, 135, 222);
+  /*border-left: 5px solid rgb(144, 135, 222);*/
 }
 #direc6 {
-  border-left: 5px solid rgb(135, 222, 161);
+  /*border-left: 5px solid rgb(135, 222, 161);*/
 }
 #direc7 {
-  border-left: 5px solid rgb(212, 135, 222);
+  /*border-left: 5px solid rgb(212, 135, 222);*/
 }
 #direc8 {
-  border-left: 5px solid rgb(135, 163, 222);
+  /*border-left: 5px solid rgb(135, 163, 222);*/
 }
 #direc9 {
-  border-left: 5px solid rgb(222, 135, 135);
+  /*border-left: 5px solid rgb(222, 135, 135);*/
 }
 #direc10 {
-  border-left: 5px solid rgb(135, 176, 222);
+  /*border-left: 5px solid rgb(135, 176, 222);*/
 }
 #direc11 {
-  border-left: 5px solid rgb(31, 141, 108);
+  /*border-left: 5px solid rgb(31, 141, 108);*/
 }
 #direc12 {
-  border-left: 5px solid rgb(222, 135, 189);
+  /*border-left: 5px solid rgb(222, 135, 189);*/
 }
-
 #direc13 {
-  border-left: 5px solid rgb(51, 75, 211);
+  /*border-left: 5px solid rgb(51, 75, 211);*/
 }
 #direc14 {
-  border-left: 5px solid rgb(214, 85, 45);
+  /*border-left: 5px solid rgb(214, 85, 45);*/
 }
 
 /*Sub-menu principal de ejercito argentino*/
@@ -843,7 +842,7 @@ div.leaflet-sidebar {
 /*Franco Navarro css Cambios*/
 
 .active-ferrocarril {
-  border-left: 5px solid #40bfef;
+  /*border-left: 5px solid #40bfef;*/
 }
 
 .active-ferrocarril-pulsado {
@@ -853,11 +852,11 @@ div.leaflet-sidebar {
 /*Universidades publicas y privadas*/
 
 #publica-mil {
-  border-left: 5px solid #f18187;
+  /*border-left: 5px solid #f18187;*/
 }
 
 #privada-mil {
-  border-left: 5px solid #81adf8;
+  /*border-left: 5px solid #81adf8;*/
 }
 
 .active-pub {
@@ -880,7 +879,8 @@ li.hoveado_areas {
 }
 
 .click-unis{
-  background-color: #D9D9D9 !important;
+  background-color: #7f7f7f !important;
+  color: white;
 }
 
 /*Alto de los elemetos*/
