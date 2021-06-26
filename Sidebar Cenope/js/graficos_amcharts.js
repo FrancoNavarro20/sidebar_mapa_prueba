@@ -128,6 +128,7 @@ function chart_personal(div_chart,titulo,datos_json) {
 
   // Create chart instance
   var chart = am4core.create(div_chart, am4charts.XYChart);
+  chart.numberFormatter.numberFormat = "#.";
   
 
   // Title
@@ -147,6 +148,8 @@ function chart_personal(div_chart,titulo,datos_json) {
   categoryAxis.dataFields.category = "category";
   categoryAxis.renderer.grid.template.location = 0;
   categoryAxis.renderer.minGridDistance = 30;
+  categoryAxis.renderer.labels.template.valign = "top";
+  categoryAxis.renderer.labels.template.fontSize = 12;
 
   categoryAxis.renderer.labels.template.adapter.add("dy", function(dy, target) {
     if (target.dataItem && target.dataItem.index & 2 == 2) {
@@ -157,6 +160,7 @@ function chart_personal(div_chart,titulo,datos_json) {
 
   var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
   valueAxis.extraMax = 0.11;
+  valueAxis.renderer.labels.template.fontSize = 12;
 
   // Create series
   var series = chart.series.push(new am4charts.ColumnSeries());
@@ -174,4 +178,5 @@ function chart_personal(div_chart,titulo,datos_json) {
   labelBullet.label.verticalCenter = "bottom";
   labelBullet.label.dy = -10;
   labelBullet.label.text = "{values.valueY.workingValue.formatNumber('#.')}";
+  labelBullet.label.fontSize = 12;
 }
