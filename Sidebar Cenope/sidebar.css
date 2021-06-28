@@ -900,8 +900,7 @@ li.hoveado_areas {
   padding: 5px 10px 5px 10px;
 }
 
-.carousel {
+#chart_oficiales, #chart_suboficiales, #chart_soldados {
   margin-top: 20px;
-  height: calc(100vh - 350px);
-  display: flex; align-items: center; justify-content: center;
+  height: calc(100vh - 320px);
 }

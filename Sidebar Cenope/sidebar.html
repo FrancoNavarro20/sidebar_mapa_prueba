@@ -945,7 +945,7 @@
       </div>      
       <div id="infosidebar" style="border-top: 1px solid #D9D9D9;">
         <!-- <i class="fas fa-times cruz-sidebar" onclick="hideSidebar()"></i> -->
-        <div id="div_elem_menu_seleccionado">
+        <div class="row" id="div_elem_menu_seleccionado">
           <div id="div_nombre_elem_seleccionado"></div>
         </div>
         <div class="row" id="div_elem_mapa_seleccionado">
@@ -958,17 +958,16 @@
             Area Personal
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-6">
-            <button type="button" class="btn btn-primary pulsar_elemt_grafic pull-right" style="width: 120px;" data-grafic="datos">Datos</button>
-            <!--<button id="datos_click" type="button" class="btn btn-outline-primary pulsar_elemt_grafic" data-grafic="datos">Datos</button>-->
+        <div class="row" >
+          <div class="col-md-6" style="text-align: right;">
+            <button type="button" class="btn btn-primary pulsar_elemt_grafic" style="width: 120px;" data-grafic="datos">Datos</button>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6" >
             <button type="button" class="btn btn-primary pulsar_elemt_grafic" style="width: 120px;" data-grafic="graficos">Gráficos</button>
           </div>
         </div>
         
-        <div class="carousel slide estilos_fondo_datos" data-ride="carousel">
+        <div id="div_carrousel_datos" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="row elemt_datos" style="text-align: center; padding: 0px; margin-left: 10px; margin-right: 10px;">
@@ -1119,36 +1118,34 @@
               </div>
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-            <span class="" aria-hidden="true"  style="margin-right: 120px;position: absolute;"><i class="fas fa-caret-left" style="font-size: 35px;color: black;"></i></span>
-            <!--<span class="visually-hidden" style="background-color: black;">Previous</span>-->
+          <button class="carousel-control-prev" type="button" data-bs-target="#div_carrousel_datos" data-bs-slide="prev">
+            <span class="" aria-hidden="true"  style="margin-right: 90px;position: absolute;"><i class="fas fa-caret-left" style="font-size: 35px;color: black;"></i></span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-            <span class="" aria-hidden="true"  style="margin-left: 120px;position: absolute;"><i class="fas fa-caret-right" style="font-size: 35px;color: black;"></i></span>
-            <!--<span class="visually-hidden" style="color: black;">Next</span>-->
+          <button class="carousel-control-next" type="button" data-bs-target="#div_carrousel_datos" data-bs-slide="next">
+            <span class="" aria-hidden="true"  style="margin-left: 90px;position: absolute;"><i class="fas fa-caret-right" style="font-size: 35px;color: black;"></i></span>
           </button>
         </div>
          <!--Carrousel - graficos altos-->
          
           
-          <div id="div_graficos" class="carousel slide"
-          data-bs-ride="carousel" style="margin-top: 20px; display: none;" >
+          <div id="div_carrousel_graficos" class="carousel slide"
+          data-bs-ride="carousel" style="display: none;" >
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <div id="chart_oficiales" style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; height: 600px; margin-top: 10px; margin-left: 20px; margin-right: 20px; padding-top: 0px; background-color: white"></div>
+                <div id="chart_oficiales" style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; margin-top: 10px; margin-left: 20px; margin-right: 20px; padding-top: 0px; background-color: white"></div>
               </div>
               <div class="carousel-item">
-                <div class="row" id="chart_suboficiales" style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; height: 600px; margin-top: 10px; margin-left: 20px; margin-right: 20px; padding-top: 0px; background-color: white;"></div>
+                <div class="row" id="chart_suboficiales" style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; margin-top: 10px; margin-left: 20px; margin-right: 20px; padding-top: 0px; background-color: white;"></div>
               </div>
               <div class="carousel-item">
-                <div class="row" id="chart_soldados" style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; height: 600px; margin-top: 10px; margin-left: 20px; margin-right: 20px; padding-top: 0px; background-color: white"></div>
+                <div class="row" id="chart_soldados" style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; margin-top: 10px; margin-left: 20px; margin-right: 20px; padding-top: 0px; background-color: white"></div>
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#div_graficos" data-bs-slide="prev">
-              <span class="" aria-hidden="true"  style="margin-right: 120px;position: absolute;"><i class="fas fa-caret-left" style="font-size: 35px;color: black;"></i></span>
+            <button class="carousel-control-prev" type="button" data-bs-target="#div_carrousel_graficos" data-bs-slide="prev">
+              <span class="" aria-hidden="true"  style="margin-right: 90px;position: absolute;"><i class="fas fa-caret-left" style="font-size: 35px;color: black;"></i></span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#div_graficos" data-bs-slide="next">
-              <span class="" aria-hidden="true"  style="margin-left: 120px;position: absolute;"><i class="fas fa-caret-right" style="font-size: 35px;color: black;"></i></span>
+            <button class="carousel-control-next" type="button" data-bs-target="#div_carrousel_graficos" data-bs-slide="next">
+              <span class="" aria-hidden="true"  style="margin-left: 90px;position: absolute;"><i class="fas fa-caret-right" style="font-size: 35px;color: black;"></i></span>
             </button>
           </div>
          
@@ -1186,6 +1183,12 @@
   $(document).ready(function () {
   //now on button click
   //$('#modal_listado_personal').modal('toggle');
+
+  $('.carousel').each(function(){
+    $(this).carousel({
+        interval: false
+    });
+  });
     
   $('.owl-carousel').owlCarousel({
     loop: false,
@@ -1225,13 +1228,13 @@ $(".pulsar_elemt_grafic").click(function () {
   switch (universidad) {
     case "datos":
       //alert("Alerta de datos");
-      $("#div_graficos").hide('slow');
-      $(".estilos_fondo_datos").show('slow');
+      $("#div_carrousel_graficos").hide('slow');
+      $("#div_carrousel_datos").show('slow');
       break;
     case "graficos":
       //alert("Alerta de graficos");
-      $("#div_graficos").show('slow');
-      $(".estilos_fondo_datos").hide('slow');
+      $("#div_carrousel_graficos").show('slow');
+      $("#div_carrousel_datos").hide('slow');
       break;
     default:
       alert(
