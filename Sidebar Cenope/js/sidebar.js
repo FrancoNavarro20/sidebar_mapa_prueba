@@ -380,3 +380,39 @@ $(".hover_areas ul").on("click", "li", function () {
 //     map.invalidateSize();
 //   }, 1000);
 // }
+
+$('#pers_opc').on('click', function () {
+  $('#carouselPersonal').css("display", "block");
+  $('#carouselIcia').css("display", "none");
+  $('#carouselOps').css("display", "none");
+  $('#carouselMats').css("display", "none");
+  $('#carouselFin').css("display", "none");
+});
+$('#icia_opc').on('click', function () {
+  $('#carouselIcia').css("display", "block");
+  $('#carouselPersonal').css("display", "none");
+  $('#carouselOps').css("display", "none");
+  $('#carouselMats').css("display", "none");
+  $('#carouselFin').css("display", "none");
+});
+$('#ops_opc').on('click', function () {
+  $('#carouselOps').css("display", "block");
+  $('#carouselPersonal').css("display", "none");
+  $('#carouselIcia').css("display", "none");
+  $('#carouselMats').css("display", "none");
+  $('#carouselFin').css("display", "none");
+});
+$('#mats_opc').on('click', function () {
+  $('#carouselMats').css("display", "block");
+  $('#carouselPersonal').css("display", "none");
+  $('#carouselIcia').css("display", "none");
+  $('#carouselOps').css("display", "none");
+  $('#carouselFin').css("display", "none");
+});
+$('#fins_opc').on('click', function () {
+  $('#carouselFin').css("display", "block");
+  $('#carouselPersonal').css("display", "none");
+  $('#carouselIcia').css("display", "none");
+  $('#carouselOps').css("display", "none");
+  $('#carouselMats').css("display", "none");
+});
