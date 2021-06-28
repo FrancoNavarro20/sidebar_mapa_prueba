@@ -380,3 +380,37 @@ $(".hover_areas ul").on("click", "li", function () {
 //     map.invalidateSize();
 //   }, 1000);
 // }
+
+//Botones de los graficos
+$(".pulsar_elemt_grafic").click(function () {
+  //alert("Anda los botones");
+  
+  var origen = $(this);
+  var universidad = origen.data("grafic");
+  switch (universidad) {
+    case "datos":
+      //alert("Alerta de datos");
+      $(".elemt_graficos_mil").hide('slow');
+      $(".elemt_datos").show('slow');
+      $("#boton_datos").addClass("elemt_pulsado_grafic");
+      $("#boton_datos a").addClass("elemt_pulsado_grafic_a");
+      $("#boton_grafic a").removeClass("elemt_pulsado_grafic_a");
+      $("#boton_grafic").removeClass("elemt_pulsado_grafic");
+      break;
+    case "graficos":
+      //alert("Alerta de graficos");
+      $(".elemt_datos").hide('slow');
+      $(".elemt_graficos_mil").show('slow');
+      $("#boton_datos").removeClass("elemt_pulsado_grafic");
+      $("#boton_datos a").removeClass("elemt_pulsado_grafic_a");
+      $("#boton_grafic a").addClass("elemt_pulsado_grafic_a");
+      $("#boton_grafic").addClass("elemt_pulsado_grafic");
+      break;
+    default:
+      alert(
+        "Hubo un error, no se selecciono una universidad pública o privada ."
+      );
+      break;
+  }
+});
+

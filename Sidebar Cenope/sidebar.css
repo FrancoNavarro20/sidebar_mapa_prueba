@@ -47,7 +47,8 @@ body {
   padding-right: 0px;
   width: 50vw;
   /*height: calc(80vh - 65px);*/
-  height: auto;
+  /*height: auto;*/
+  height: 83vh;
 }
 
 #infosidebar {
@@ -891,10 +892,16 @@ li.hoveado_areas {
   transition: all 300ms linear;
   height: 59px;
 }
-/*
-.alto_item_p{
-  line-height: 22px;
-  padding-top: 0px;
-  margin-top: 0px;
+
+#infosidebar .elemt_pulsado_grafic_a{
+  text-decoration: none;
+  background-color: rgb(71, 143, 211);
+  color: white;
+  padding: 5px 10px 5px 10px;
 }
-*/
+
+.carousel {
+  margin-top: 20px;
+  height: calc(100vh - 350px);
+  display: flex; align-items: center; justify-content: center;
+}
