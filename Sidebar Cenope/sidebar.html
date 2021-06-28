@@ -980,7 +980,6 @@
   </div>
   <!--Fin del wrapper-sidebar-->
 
-
   <!--Aca esta el mapa-->
   <div id="contenedor-mapa-div" style="">
     <div id="carousel-wrapper">
@@ -994,17 +993,16 @@
     <div style="display:flex; justify-content:space-between">
       <div id="mapa" style="border-top: 1px solid #D9D9D9;">
         <div id="overlay_mapa" style="text-align: center;">
-          <i class="fa fa-spinner fa-pulse fa-2x" style="margin-top: 220px;"></i>
+          <i class="fa fa-spinner fa-pulse fa-2x" style="margin-top: 200px;"></i>
         </div>
       </div>
       <div id="infosidebar" style="border-top: 1px solid #D9D9D9;">
         <!-- <i class="fas fa-times cruz-sidebar" onclick="hideSidebar()"></i> -->
-        <div id="div_elem_menu_seleccionado">
+        <div class="row" id="div_elem_menu_seleccionado">
           <div id="div_nombre_elem_seleccionado"></div>
         </div>
         <div class="row" id="div_elem_mapa_seleccionado">
-          <div
-            style="text-align: center; padding-top: 0px; margin-bottom: 0px; text-transform: uppercase; font-size: 22px; font-weight: bold;">
+          <div class="col-md-12" style="text-align: center; padding-top: 0px; margin-bottom: 0px; text-transform: uppercase; font-size: 22px; font-weight: bold;">
             Ejercito Argentino
           </div>
         </div>
@@ -1019,7 +1017,7 @@
           <div id="carouselPersonal" class="carousel slide" data-ride="carousel" style="display: none;">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <button class="col-3 btn btn-outline-primary btn-sm">
+                <button class="col-3 btn btn-outline-primary btn-sm" id="datosGraficos">
                   <p>Fuerza Efectiva</p>
                 </button>
               </div>
@@ -1361,119 +1359,205 @@
             </a>
           </div>
         </div>
-
-        <div class="row" style="text-align: center; padding: 0px;">
-          <div class="col-md-6" style="padding: 5px;">
-            <div class="thumbnail"
-              style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; min-height: 180px; background-color: white;">
-              <div style="font-size: 20px;">
-                Oficiales
-              </div>
-              <div class="overlay" style="text-align: center; height: 100px;">
-                <i class="fa fa-spinner fa-pulse fa-2x" style="margin-top: 40px;"></i>
-              </div>
-              <div class="div_pers_cant" style="display: none;">
-                <div style="font-size: 36px; font-weight: 800; color: #125186;">
-                  <span id="cant_of_total"></span>
-                </div>
-                <div style="font-size: 14px;">
-                  Superiores: <span style="color: #125186; font-weight: bold;" id="cant_of_superiores"></span>
-                  Jefes: <span style="color: #125186; font-weight: bold;" id="cant_of_jefes"></span>
-                </div>
-                <div style="font-size: 14px; padding-bottom: 5px;">
-                  Subalternos: <span style="color: #125186; font-weight: bold;" id="cant_of_subalternos"></span>
-                </div>
-                <div style="font-size: 15px; padding-bottom: 5px;">
-                  <button type="button" class="btn btn-outline-primary btn-sm" id="btn_ver_oficiales"
-                    data-personal_listado="Oficiales" data-bs-toggle="modal"
-                    data-bs-target="#modal_listado_personal">Ver listado</button>
-                </div>
-              </div>
-            </div>
+     
+        <div id="muestraGraf" style="display: none; margin-top: 20px;">
+        <div class="row" >
+          <div class="col-md-6" style="text-align: right;">
+            <button type="button" class="btn btn-primary pulsar_elemt_grafic" style="width: 120px;" data-grafic="datos">Datos</button>
           </div>
-          <div class="col-md-6" style="padding: 5px;">
-            <div class="thumbnail"
-              style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; min-height: 180px; background-color: white;">
-              <div style="font-size: 20px;">
-                Suboficiales
-              </div>
-              <div class="overlay" style="text-align: center; height: 100px;">
-                <i class="fa fa-spinner fa-pulse fa-2x" style="margin-top: 40px;"></i>
-              </div>
-              <div class="div_pers_cant" style="display: none;">
-                <div style="font-size: 36px; font-weight: 800; color: #125186;">
-                  <span id="cant_subof_total"></span>
-                </div>
-                <div style="font-size: 14px;">
-                  Superiores: <span style="color: #125186; font-weight: bold;" id="cant_subof_superiores"></span>
-                </div>
-                <div style="font-size: 14px; padding-bottom: 5px;">
-                  Subalternos: <span style="color: #125186; font-weight: bold;" id="cant_subof_subalternos"></span>
-                </div>
-                <div style="font-size: 15px; padding-bottom: 5px;">
-                  <button type="button" class="btn btn-outline-primary btn-sm" id="btn_ver_suboficiales"
-                    data-personal_listado="Suboficiales" data-bs-toggle="modal"
-                    data-bs-target="#modal_listado_personal">Ver listado</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6" style="padding: 5px;">
-            <div class="thumbnail"
-              style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; min-height: 180px; background-color: white;">
-              <div style="font-size: 20px;">
-                Soldados
-              </div>
-              <div class="overlay" style="text-align: center; height: 100px;">
-                <i class="fa fa-spinner fa-pulse fa-2x" style="margin-top: 40px;"></i>
-              </div>
-              <div class="div_pers_cant" style="display: none;">
-                <div style="font-size: 36px; font-weight: 800; color: #125186;">
-                  <span id="cant_sold_total"></span>
-                </div>
-                <div style="font-size: 14px;">
-                  Operacionales: <span style="color: #125186; font-weight: bold;" id="cant_sold_operacionales"></span>
-                  Especialistas: <span style="color: #125186; font-weight: bold;" id="cant_sold_especialistas"></span>
-                </div>
-                <div style="font-size: 14px; padding-bottom: 5px;">
-                  Técnicos: <span style="color: #125186; font-weight: bold;" id="cant_sold_tecnicos"></span>
-                  Deportistas: <span style="color: #125186; font-weight: bold;" id="cant_sold_deportistas"></span>
-                </div>
-                <div style="font-size: 15px; padding-bottom: 5px;">
-                  <button type="button" class="btn btn-outline-primary btn-sm" id="btn_ver_soldados"
-                    data-personal_listado="Soldados" data-bs-toggle="modal" data-bs-target="#modal_listado_personal">Ver
-                    listado</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6" style="padding: 5px;">
-            <div class="thumbnail"
-              style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; min-height: 180px; background-color: white;">
-              <div style="font-size: 20px;">
-                Agentes Civiles
-              </div>
-              <div class="overlay" style="text-align: center; height: 100px;">
-                <i class="fa fa-spinner fa-pulse fa-2x" style="margin-top: 40px;"></i>
-              </div>
-              <div class="div_pers_cant" style="display: none;">
-                <div style="font-size: 36px; font-weight: 800; color: #125186;">
-                  <span id="cant_civiles_total">N/D</span>
-                </div>
-                <div style="font-size: 15px; padding-bottom: 5px;">
-                  <button type="button" style="display: none;" class="btn btn-outline-primary btn-sm"
-                    id="btn_ver_civiles" disabled>Ver listado</button>
-                </div>
-              </div>
-            </div>
+          <div class="col-md-6" >
+            <button type="button" class="btn btn-primary pulsar_elemt_grafic" style="width: 120px;" data-grafic="graficos">Gráficos</button>
           </div>
         </div>
-        <div class="row" id="chart_oficiales"
-          style="height: 350px; margin-top: 10px; padding-top: 0px; background-color: white;"></div>
-        <div class="row" id="chart_suboficiales"
-          style="height: 350px; margin-top: 10px; padding-top: 0px; background-color: white;"></div>
-        <div class="row" id="chart_soldados"
-          style="height: 350px; margin-top: 10px; padding-top: 0px; background-color: white;"></div>
+        
+        <div id="div_carrousel_datos" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active" style="display: block;">
+              <div class="row elemt_datos" style="text-align: center; padding: 0px; margin-left: 10px; margin-right: 10px;">
+                <div class="col-md-6" style="padding: 5px;">
+                  <div class="thumbnail" style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; min-height: 240px; background-color: white;">
+                    <div style="font-size: 20px; text-shadow: 1px 3px 2px rgba(0,0,0,0.3);">
+                      Oficiales
+                    </div>
+                    <div class="overlay" style="text-align: center; height: 180px; display: flex; align-items: center; justify-content: center;">
+                      <i class="fa fa-spinner fa-pulse fa-2x"></i>
+                    </div>
+                    <div class="div_pers_cant" style="display: none;">
+                      <div style="font-size: 36px; font-weight: 800; color: #125186;">
+                        <span id="cant_of_total"></span>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6" style="font-size: 14px; text-align: right; padding: 2px;">
+                          Superiores:
+                        </div>
+                        <div class="col-md-6" style="font-size: 14px; text-align: left; padding: 2px;">
+                          <span style="color: #125186; font-weight: bold;" id="cant_of_superiores"></span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6" style="font-size: 14px; text-align: right; padding: 2px;">
+                        Jefes:
+                        </div>
+                        <div class="col-md-6" style="font-size: 14px; text-align: left; padding: 2px;">
+                          <span style="color: #125186; font-weight: bold;" id="cant_of_jefes"></span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6" style="font-size: 14px; text-align: right; padding: 2px;">
+                          Subalternos:
+                        </div>
+                        <div class="col-md-6" style="font-size: 14px; text-align: left; padding: 2px;">
+                          <span style="color: #125186; font-weight: bold;" id="cant_of_subalternos"></span>
+                        </div>
+                      </div>
+                        <div style="font-size: 15px; padding-bottom: 5px; padding-top: 5px;">
+                          <button type="button" class="btn btn-outline-primary btn-sm" id="btn_ver_oficiales" data-personal_listado="Oficiales" data-bs-toggle="modal" data-bs-target="#modal_listado_personal">Ver listado</button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-6" style="padding: 5px;">
+                  <div class="thumbnail" style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; min-height: 240px; background-color: white;">
+                    <div style="font-size: 20px; text-shadow: 1px 3px 2px rgba(0,0,0,0.3);">
+                      Suboficiales
+                    </div>
+                    <div class="overlay" style="text-align: center; height: 180px; display: flex; align-items: center; justify-content: center;">
+                      <i class="fa fa-spinner fa-pulse fa-2x"></i>
+                    </div>
+                    <div class="div_pers_cant" style="display: none;">
+                      <div style="font-size: 36px; font-weight: 800; color: #125186;">
+                        <span id="cant_subof_total"></span>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6" style="font-size: 14px; text-align: right; padding: 2px;">
+                          Superiores:
+                        </div>
+                        <div class="col-md-6" style="font-size: 14px; text-align: left; padding: 2px;">
+                          <span style="color: #125186; font-weight: bold;" id="cant_subof_superiores"></span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6" style="font-size: 14px; text-align: right; padding: 2px;">
+                        Subalternos:
+                        </div>
+                        <div class="col-md-6" style="font-size: 14px; text-align: left; padding: 2px;">
+                          <span style="color: #125186; font-weight: bold;" id="cant_subof_subalternos"></span>
+                        </div>
+                      </div>
+                      <div style="font-size: 15px; padding-bottom: 5px; padding-top: 5px;">
+                        <button type="button" class="btn btn-outline-primary btn-sm" id="btn_ver_suboficiales" data-personal_listado="Suboficiales" data-bs-toggle="modal" data-bs-target="#modal_listado_personal">Ver listado</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6" style="padding: 5px;" >
+                  <div class="thumbnail" style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; min-height: 240px; background-color: white;">
+                    <div style="font-size: 20px; text-shadow: 1px 3px 2px rgba(0,0,0,0.3);">
+                      Soldados
+                    </div>
+                    <div class="overlay" style="text-align: center; height: 180px; display: flex; align-items: center; justify-content: center;">
+                      <i class="fa fa-spinner fa-pulse fa-2x"></i>
+                    </div>
+                    <div class="div_pers_cant" style="display: none;">
+                      <div style="font-size: 36px; font-weight: 800; color: #125186;">
+                        <span id="cant_sold_total"></span>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6" style="font-size: 14px; text-align: right; padding: 2px;">
+                        Operacionales:
+                        </div>
+                        <div class="col-md-6" style="font-size: 14px; text-align: left; padding: 2px;">
+                          <span style="color: #125186; font-weight: bold;" id="cant_sold_operacionales"></span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6" style="font-size: 14px; text-align: right; padding: 2px;">
+                        Especialistas:
+                        </div>
+                        <div class="col-md-6" style="font-size: 14px; text-align: left; padding: 2px;">
+                          <span style="color: #125186; font-weight: bold;" id="cant_sold_especialistas"></span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6" style="font-size: 14px; text-align: right; padding: 2px;">
+                        Técnicos:
+                        </div>
+                        <div class="col-md-6" style="font-size: 14px; text-align: left; padding: 2px;">
+                          <span style="color: #125186; font-weight: bold;" id="cant_sold_tecnicos"></span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6" style="font-size: 14px; text-align: right; padding: 2px;">
+                          Deportistas:
+                        </div>
+                        <div class="col-md-6" style="font-size: 14px; text-align: left; padding: 2px;">
+                          <span style="color: #125186; font-weight: bold;" id="cant_sold_deportistas"></span>
+                        </div>
+                      </div>
+                      <div style="font-size: 15px; padding-bottom: 5px; padding-top: 5px;">
+                        <button type="button" class="btn btn-outline-primary btn-sm" id="btn_ver_soldados" data-personal_listado="Soldados" data-bs-toggle="modal" data-bs-target="#modal_listado_personal">Ver listado</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6" style="padding: 5px;">
+                  <div class="thumbnail" style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; min-height: 240px; background-color: white;">
+                    <div style="font-size: 20px; text-shadow: 1px 3px 2px rgba(0,0,0,0.3);">
+                      Agentes Civiles
+                    </div>
+                    <div class="overlay" style="text-align: center; height: 180px; display: flex; align-items: center; justify-content: center;">
+                      <i class="fa fa-spinner fa-pulse fa-2x"></i>
+                    </div>
+                    <div class="div_pers_cant" style="display: none;">
+                      <div style="font-size: 36px; font-weight: 800; color: #125186;">
+                        <span id="cant_civiles_total">N/D</span>
+                      </div>
+                      <div style="font-size: 15px; padding-bottom: 5px; padding-top: 5px;">
+                        <button type="button" style="display: none;" class="btn btn-outline-primary btn-sm" id="btn_ver_civiles" disabled>Ver listado</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#div_carrousel_datos" data-bs-slide="prev">
+            <span class="" aria-hidden="true"  style="margin-right: 90px;position: absolute;"><i class="fas fa-caret-left" style="font-size: 35px;color: black;"></i></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#div_carrousel_datos" data-bs-slide="next">
+            <span class="" aria-hidden="true"  style="margin-left: 90px;position: absolute;"><i class="fas fa-caret-right" style="font-size: 35px;color: black;"></i></span>
+          </button>
+        </div>
+         <!--Carrousel - graficos altos-->
+         
+          
+          <div id="div_carrousel_graficos" class="carousel slide" data-ride="carousel" style="display: none;" >
+            <div class="carousel-inner">
+              <div class="carousel-item active" style="justify-content: space-around;">
+                <div class="col-11" id="chart_oficiales" style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; margin-top: 10px; margin-left: 20px; margin-right: 20px; padding-top: 0px; background-color: white"></div>
+              </div>
+              <div class="carousel-item" style="justify-content: space-around;">
+                <div class="row col-11" id="chart_suboficiales" style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; margin-top: 10px; margin-left: 20px; margin-right: 20px; padding-top: 0px; background-color: white;"></div>
+              </div>
+              <div class="carousel-item" style="justify-content: space-around;">
+                <div class="row col-11" id="chart_soldados" style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; margin-top: 10px; margin-left: 20px; margin-right: 20px; padding-top: 0px; background-color: white"></div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-target="#div_carrousel_graficos" data-slide="prev">
+              <span class="" aria-hidden="true"  style="margin-right: 90px;position: absolute;"><i class="fas fa-caret-left" style="font-size: 35px;color: black;"></i></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-target="#div_carrousel_graficos" data-slide="next">
+              <span class="" aria-hidden="true"  style="margin-left: 90px;position: absolute;"><i class="fas fa-caret-right" style="font-size: 35px;color: black;"></i></span>
+            </button>
+          </div>
+        </div>
+
+        </div>
+        <!--
+        <div class="row" id="chart_oficiales" style="height: 350px; margin-top: 10px; padding-top: 0px; background-color: white;"></div>
+        <div class="row" id="chart_suboficiales" style="height: 350px; margin-top: 10px; padding-top: 0px; background-color: white;"></div>
+        <div class="row" id="chart_soldados" style="height: 350px; margin-top: 10px; padding-top: 0px; background-color: white;"></div>
+          -->
       </div>
     </div>
   </div>
@@ -1531,7 +1615,7 @@
         }
       }
     });
-    $('.carousel .carousel-item').each(function () {
+    $('#set .carousel .carousel-item').each(function () {
       var next = $(this).next();
       if (!next.length) {
         next = $(this).siblings(':first');
@@ -1547,5 +1631,40 @@
         next.children(':first-child').clone().appendTo($(this));
       }
     });
+
+  $('.carousel').each(function(){
+    $(this).carousel({
+        interval: false
+    });
   });
-</script>
+    
+});
+
+
+//Botones de los graficos
+$(".pulsar_elemt_grafic").click(function () {
+  //alert("Anda los botones");
+  var origen = $(this);
+  var universidad = origen.data("grafic");
+  switch (universidad) {
+    case "datos":
+      //alert("Alerta de datos");
+      $("#div_carrousel_graficos").hide('slow');
+      $("#div_carrousel_datos").show('slow');
+      break;
+    case "graficos":
+      //alert("Alerta de graficos");
+      $("#div_carrousel_graficos").show('slow');
+      $("#div_carrousel_datos").hide('slow');
+      break;
+    default:
+      alert(
+        "Hubo un error, no se selecciono una universidad pública o privada ."
+      );
+      break;
+  }
+});
+
+
+
+  </script>

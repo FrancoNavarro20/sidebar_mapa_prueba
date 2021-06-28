@@ -401,7 +401,7 @@ function mostrar_marcadores(cod_uni) {
             imagen_escudo = "<img src='./img/Dir_Grl_Com_Info.svg' style='padding-left:2px; padding-right:2px; width: 100%;'/>";
             break;
           case "U2325":
-            imagen_escudo = "<img src='./img/B_Com_602.png' style='padding-left:5px; padding-right:5px; width: 100%;'/>";
+            imagen_escudo = "<img src='./img/B_Com_602.png' style='padding-left:8px; padding-right:8px; width: 100%;'/>";
             break;
           case "U3640":
             imagen_escudo = "<img src='./img/CIBERDEFENSA_ESCUDO.svg' style='padding-left:2px; padding-right:2px; width: 100%;'/>";
@@ -414,7 +414,7 @@ function mostrar_marcadores(cod_uni) {
             imagen_escudo = "<img src='./img/B_Mant_Com_601.png' style='width: 100%;'/>";
             break;
           default:
-            imagen_escudo = "<img src='./img/ejercito.svg' style='width: 100%;'/>";
+            imagen_escudo = "<img src='./img/ejercito.svg' style='padding-left:2px; padding-right:2px; width: 100%;'/>";
             break;
         }        
         style_escudo = "background-color: white; border: 1px solid #D9D9D9; border-radius: 10px 0px 0px 10px; vertical-align: middle; text-align: left; padding: 0px;";

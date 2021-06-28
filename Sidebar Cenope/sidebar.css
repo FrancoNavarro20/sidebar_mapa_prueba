@@ -47,7 +47,8 @@ body {
   padding-right: 0px;
   width: 50vw;
   /*height: calc(80vh - 65px);*/
-  height: auto;
+  /*height: auto;*/
+  height: 83vh;
 }
 
 #infosidebar {
@@ -919,20 +920,20 @@ li.hoveado_areas {
   
 }
 
-.carousel-item {
+#set .carousel-item {
   text-align: center;
   height: 60px;
 }
 
-.carousel-item p{
+#set .carousel-item p{
 display: contents;
 }
 
-.carousel-control-prev-icon {
+#set .carousel-control-prev-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
 }
 
-.carousel-control-next-icon {
+#set .carousel-control-next-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
 
@@ -942,9 +943,21 @@ display: contents;
   height:100%;
 }
 
-.carousel-control-prev {
+#set .carousel-control-prev {
   left: -4vw;
 }
-.carousel-control-next {
+#set .carousel-control-next {
   right: -4vw;
+}
+
+#infosidebar .elemt_pulsado_grafic_a{
+  text-decoration: none;
+  background-color: rgb(71, 143, 211);
+  color: white;
+  padding: 5px 10px 5px 10px;
+}
+
+#chart_oficiales, #chart_suboficiales, #chart_soldados {
+  margin-top: 20px;
+  height: calc(100vh - 320px);
 }
