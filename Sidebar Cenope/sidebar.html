@@ -957,136 +957,105 @@
         <div style="font-size: 20px; margin-top: 0px; margin-bottom: 5px; text-align: center;">
           Area Personal
         </div>
-        <div class="div_elemt_grafic_completo" style="border: 2px solid rgb(158, 158, 158);width: 716px;right: 24px;position: relative;background-color: #fff;">
-          <div id="botones_informacion">
-            <div id="boton_datos">
-              <a id="datos_click" href="#" class="style_a pulsar_elemt_grafic " data-grafic="datos">Datos</a>
-            </div>
-            <div id="boton_grafic" class="elemt_pulsado_grafic">
-              <a id="grafic_click" href="#" class="style_a pulsar_elemt_grafic elemt_pulsado_grafic_a" data-grafic="graficos">Gráficos</a>
-            </div>
-          </div>
-          <div class="row elemt_datos" style="text-align: center; padding: 0px; display: none; height: 530px;">
-            <div class="col-md-6" style="padding: 5px;">
-              <div class="thumbnail" style="padding: 5px; border: 1px solid #6d6d6d; border-radius: 7px; min-height: 200px;width: 300px; margin-left: 30px;margin-top: 25px;background-color: white;">
-                <div style="font-size: 20px;">
-                  Oficiales
-                </div>
-                <div class="overlay" style="text-align: center; height: 100px;">
-                  <i class="fa fa-spinner fa-pulse fa-2x" style="margin-top: 40px;"></i>
-                </div>
-                <div class="div_pers_cant" style="display: none;">
-                  <div style="font-size: 36px; font-weight: 800; color: #125186;">
-                    <span id="cant_of_total"></span>
-                  </div>
-                  <div style="font-size: 14px;">
-                    Superiores: <span style="color: #125186; font-weight: bold;" id="cant_of_superiores"></span>
-                    Jefes: <span style="color: #125186; font-weight: bold;" id="cant_of_jefes"></span>
-                  </div>
-                  <div style="font-size: 14px; padding-bottom: 5px;">
-                    Subalternos: <span style="color: #125186; font-weight: bold;" id="cant_of_subalternos"></span>
-                  </div>
-                  <div style="font-size: 15px; padding-bottom: 5px;">
-                    <button type="button" class="btn btn-outline-primary btn-sm" id="btn_ver_oficiales" data-personal_listado="Oficiales" data-bs-toggle="modal" data-bs-target="#modal_listado_personal">Ver listado</button>
-                  </div>
-                </div>
+        <div class="row" style="text-align: center; padding: 0px;">
+          <div class="col-md-6" style="padding: 5px;">
+            <div class="thumbnail" style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; min-height: 180px; background-color: white;">
+              <div style="font-size: 20px;">
+                Oficiales
               </div>
-            </div>
-            <div class="col-md-6" style="padding: 5px;">
-              <div class="thumbnail" style="padding: 5px; border: 1px solid #6d6d6d; border-radius: 7px; min-height: 200px;width: 300px; margin-right: 30px; margin-top: 25px;background-color: white;">
-                <div style="font-size: 20px;">
-                  Suboficiales
-                </div>
-                <div class="overlay" style="text-align: center; height: 100px;">
-                  <i class="fa fa-spinner fa-pulse fa-2x" style="margin-top: 40px;"></i>
-                </div>
-                <div class="div_pers_cant" style="display: none;">
-                  <div style="font-size: 36px; font-weight: 800; color: #125186;">
-                    <span id="cant_subof_total"></span>
-                  </div>
-                  <div style="font-size: 14px;">
-                    Superiores: <span style="color: #125186; font-weight: bold;" id="cant_subof_superiores"></span>
-                  </div>
-                  <div style="font-size: 14px; padding-bottom: 5px;">
-                    Subalternos: <span style="color: #125186; font-weight: bold;" id="cant_subof_subalternos"></span>
-                  </div>
-                  <div style="font-size: 15px; padding-bottom: 5px;">
-                    <button type="button" class="btn btn-outline-primary btn-sm" id="btn_ver_suboficiales" data-personal_listado="Suboficiales" data-bs-toggle="modal" data-bs-target="#modal_listado_personal">Ver listado</button>
-                  </div>
-                </div>
+              <div class="overlay" style="text-align: center; height: 100px;">
+                <i class="fa fa-spinner fa-pulse fa-2x" style="margin-top: 40px;"></i>
               </div>
-            </div>
-            <div class="col-md-6" style="padding: 5px;">
-              <div class="thumbnail" style="padding: 5px; border: 1px solid #6d6d6d; border-radius: 7px; min-height: 200px;width: 300px; margin-left: 30px; margin-bottom: 50px;background-color: white;">
-                <div style="font-size: 20px;">
-                  Soldados
+              <div class="div_pers_cant" style="display: none;">
+                <div style="font-size: 36px; font-weight: 800; color: #125186;">
+                  <span id="cant_of_total"></span>
                 </div>
-                <div class="overlay" style="text-align: center; height: 100px;">
-                  <i class="fa fa-spinner fa-pulse fa-2x" style="margin-top: 40px;"></i>
+                <div style="font-size: 14px;">
+                  Superiores: <span style="color: #125186; font-weight: bold;" id="cant_of_superiores"></span>
+                  Jefes: <span style="color: #125186; font-weight: bold;" id="cant_of_jefes"></span>
                 </div>
-                <div class="div_pers_cant" style="display: none;">
-                  <div style="font-size: 36px; font-weight: 800; color: #125186;">
-                    <span id="cant_sold_total"></span>
-                  </div>
-                  <div style="font-size: 14px;">
-                    Operacionales: <span style="color: #125186; font-weight: bold;" id="cant_sold_operacionales"></span>
-                    Especialistas: <span style="color: #125186; font-weight: bold;" id="cant_sold_especialistas"></span>
-                  </div>
-                  <div style="font-size: 14px; padding-bottom: 5px;">
-                    Técnicos: <span style="color: #125186; font-weight: bold;" id="cant_sold_tecnicos"></span>
-                    Deportistas: <span style="color: #125186; font-weight: bold;" id="cant_sold_deportistas"></span>
-                  </div>
-                  <div style="font-size: 15px; padding-bottom: 5px;">
-                    <button type="button" class="btn btn-outline-primary btn-sm" id="btn_ver_soldados" data-personal_listado="Soldados" data-bs-toggle="modal" data-bs-target="#modal_listado_personal">Ver listado</button>
-                  </div>
+                <div style="font-size: 14px; padding-bottom: 5px;">
+                  Subalternos: <span style="color: #125186; font-weight: bold;" id="cant_of_subalternos"></span>
                 </div>
-              </div>
-            </div>
-            <div class="col-md-6" style="padding: 5px;">
-              <div class="thumbnail" style="padding: 5px; border: 1px solid #6d6d6d; border-radius: 7px; min-height: 180px;width: 300px; margin-right: 30px;  background-color: white;">
-                <div style="font-size: 20px;">
-                  Agentes Civiles
-                </div>
-                <div class="overlay" style="text-align: center; height: 100px;">
-                  <i class="fa fa-spinner fa-pulse fa-2x" style="margin-top: 40px;"></i>
-                </div>
-                <div class="div_pers_cant" style="display: none;">
-                  <div style="font-size: 36px; font-weight: 800; color: #125186;">
-                    <span id="cant_civiles_total">N/D</span>
-                  </div>
-                  <div style="font-size: 15px; padding-bottom: 5px;">
-                    <button type="button" style="display: none;" class="btn btn-outline-primary btn-sm" id="btn_ver_civiles" disabled>Ver listado</button>
-                  </div>
+                <div style="font-size: 15px; padding-bottom: 5px;">
+                  <button type="button" class="btn btn-outline-primary btn-sm" id="btn_ver_oficiales" data-personal_listado="Oficiales" data-bs-toggle="modal" data-bs-target="#modal_listado_personal">Ver listado</button>
                 </div>
               </div>
             </div>
           </div>
-          <!--Carrousel - graficos altos-->
-          <div id="carouselExampleControls" class="carousel slide elemt_graficos_mil" data-bs-ride="carousel" style="background-color:white;margin-right:25px ;width: 670px;">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="row" id="chart_oficiales" style="height: 530px; width: 670px;margin-right: 15px;margin-top: 10px; padding-top: 0px; background-color: white"></div>
+          <div class="col-md-6" style="padding: 5px;">
+            <div class="thumbnail" style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; min-height: 180px; background-color: white;">
+              <div style="font-size: 20px;">
+                Suboficiales
               </div>
-              <div class="carousel-item">
-                <div class="row" id="chart_suboficiales" style="height: 530px; width: 670px;margin-right: 15px;margin-top: 10px; padding-top: 0px; background-color: white;"></div>
+              <div class="overlay" style="text-align: center; height: 100px;">
+                <i class="fa fa-spinner fa-pulse fa-2x" style="margin-top: 40px;"></i>
               </div>
-              <div class="carousel-item">
-                <div class="row" id="chart_soldados" style="height: 530px; width: 670px;margin-right: 15px;margin-top: 10px; padding-top: 0px; background-color: white"></div>
+              <div class="div_pers_cant" style="display: none;">
+                <div style="font-size: 36px; font-weight: 800; color: #125186;">
+                  <span id="cant_subof_total"></span>
+                </div>
+                <div style="font-size: 14px;">
+                  Superiores: <span style="color: #125186; font-weight: bold;" id="cant_subof_superiores"></span>
+                </div>
+                <div style="font-size: 14px; padding-bottom: 5px;">
+                  Subalternos: <span style="color: #125186; font-weight: bold;" id="cant_subof_subalternos"></span>
+                </div>
+                <div style="font-size: 15px; padding-bottom: 5px;">
+                  <button type="button" class="btn btn-outline-primary btn-sm" id="btn_ver_suboficiales" data-personal_listado="Suboficiales" data-bs-toggle="modal" data-bs-target="#modal_listado_personal">Ver listado</button>
+                </div>
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-              <span class="" aria-hidden="true"  style="margin-right: 80px;position: absolute;"><i class="fas fa-caret-left" style="font-size: 35px;color: black;"></i></span>
-              <!--<span class="visually-hidden" style="background-color: black;">Previous</span>-->
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-              <span class="" aria-hidden="true"  style="margin-left: 80px;position: absolute;"><i class="fas fa-caret-right" style="font-size: 35px;color: black;"></i></span>
-              <!--<span class="visually-hidden" style="color: black;">Next</span>-->
-            </button>
           </div>
-          
+          <div class="col-md-6" style="padding: 5px;">
+            <div class="thumbnail" style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; min-height: 180px; background-color: white;">
+              <div style="font-size: 20px;">
+                Soldados
+              </div>
+              <div class="overlay" style="text-align: center; height: 100px;">
+                <i class="fa fa-spinner fa-pulse fa-2x" style="margin-top: 40px;"></i>
+              </div>
+              <div class="div_pers_cant" style="display: none;">
+                <div style="font-size: 36px; font-weight: 800; color: #125186;">
+                  <span id="cant_sold_total"></span>
+                </div>
+                <div style="font-size: 14px;">
+                  Operacionales: <span style="color: #125186; font-weight: bold;" id="cant_sold_operacionales"></span>
+                  Especialistas: <span style="color: #125186; font-weight: bold;" id="cant_sold_especialistas"></span>
+                </div>
+                <div style="font-size: 14px; padding-bottom: 5px;">
+                  Técnicos: <span style="color: #125186; font-weight: bold;" id="cant_sold_tecnicos"></span>
+                  Deportistas: <span style="color: #125186; font-weight: bold;" id="cant_sold_deportistas"></span>
+                </div>
+                <div style="font-size: 15px; padding-bottom: 5px;">
+                  <button type="button" class="btn btn-outline-primary btn-sm" id="btn_ver_soldados" data-personal_listado="Soldados" data-bs-toggle="modal" data-bs-target="#modal_listado_personal">Ver listado</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6" style="padding: 5px;">
+            <div class="thumbnail" style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; min-height: 180px; background-color: white;">
+              <div style="font-size: 20px;">
+                Agentes Civiles
+              </div>
+              <div class="overlay" style="text-align: center; height: 100px;">
+                <i class="fa fa-spinner fa-pulse fa-2x" style="margin-top: 40px;"></i>
+              </div>
+              <div class="div_pers_cant" style="display: none;">
+                <div style="font-size: 36px; font-weight: 800; color: #125186;">
+                  <span id="cant_civiles_total">N/D</span>
+                </div>
+                <div style="font-size: 15px; padding-bottom: 5px;">
+                  <button type="button" style="display: none;" class="btn btn-outline-primary btn-sm" id="btn_ver_civiles" disabled>Ver listado</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        </div>
-       
+        <div class="row" id="chart_oficiales" style="height: 350px; margin-top: 10px; padding-top: 0px; background-color: white;"></div>
+        <div class="row" id="chart_suboficiales" style="height: 350px; margin-top: 10px; padding-top: 0px; background-color: white;"></div>
+        <div class="row" id="chart_soldados" style="height: 350px; margin-top: 10px; padding-top: 0px; background-color: white;"></div>
+      </div>
     </div>
   </div>
   <!--Fin del mapa-->
