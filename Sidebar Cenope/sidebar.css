@@ -232,7 +232,7 @@ body {
   /*transition:all 0.5s linear;*/
   z-index: 1;
   /*overflow: scroll;*/
-  min-height: calc((100vh - 65px) / 2);
+  min-height: calc(100vh - 65px);
 }
 
 .sidebar-search.active {
@@ -410,7 +410,7 @@ div.leaflet-sidebar {
 /*Prueba de scroll*/
 
 .centrar-1 {
-  min-height: calc((100vh - 65px) / 2);
+  min-height: calc(100vh - 65px);
   width: 100%;
   /*border: 3px solid yellow;*/
   /*border: 1px solid #66cc54;*/
@@ -420,14 +420,14 @@ div.leaflet-sidebar {
 .scroll_A {
   position: absolute;
   overflow: hidden;
-  max-height: calc((100vh - 65px) / 2);
+  max-height: calc(100vh - 65px);
   width: 100%;
 }
 
 .scroll_B {
   position: absolute;
   overflow: hidden;
-  max-height: calc((100vh - 65px) / 2);
+  max-height: calc(100vh - 65px);
   width: 100%;
 }
 
@@ -612,15 +612,15 @@ div.leaflet-sidebar {
   position: absolute;
   left: 60px;
   width: 260px;
-  max-height: calc((100vh - 65px) / 2);
+  max-height: calc(100vh - 65px);
 }
 
 #sub-menu-conduc-sup {
   position: absolute;
   left: 60px;
   width: 260px;
-  max-height: calc((100vh - 65px) / 2);
-  --alto_panel: calc((100vh - 65px) / 2);
+  max-height: calc(100vh - 65px);
+  --alto_panel: calc(100vh - 65px);
 }
 .elem_conducc_sup .div_items_elem,
 .elem_fuerza_oper .div_items_elem,
@@ -648,12 +648,12 @@ div.leaflet-sidebar {
   top: calc(65px + ((100vh - 65px) / 2));
   left: 60px;
   width: 260px;
-  max-height: calc((100vh - 65px) / 2);
+  max-height: calc(100vh - 65px);
 }
 
 .areas_conduccion {
-  top: calc(65px + ((100vh - 65px) / 2));
-  max-height: calc((100vh - 65px) / 2);
+  top: calc(65px + (100vh - 65px));
+  max-height: calc(100vh - 65px);
   width: 100%;
 }
 
