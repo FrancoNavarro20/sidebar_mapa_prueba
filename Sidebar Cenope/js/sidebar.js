@@ -398,21 +398,21 @@ $("#pers_opc").click(function () {
 
 function cargar_carrousel_pers() {
   //console.log("cargar elementos pers");
-  var html = `<div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc item_selec' id='datosGraficos'>Fuerza Efectiva</button></div>
-  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Proyección de Bajas</button></div>
-  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Oficios Judiciales</button></div>
-  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Causas por Género y VIF</button></div>
-  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Control Toxicológico</button></div>
-  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Anexo 27</button></div>
-  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Faltas Disciplinarias</button></div>
-  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Deserción</button></div>
-  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Actuaciones de Justicia Militar</button></div>
-  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Situación de Vivienda</button></div>
-  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Evacuaciones</button></div>
-  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Accidentes</button></div>
-  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Parte de Sanidad</button></div>
-  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Estado Civil</button></div>
-  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Personal Propuesto para Junta de Calificación</button></div>`;
+  var html = `<div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc item_selec' id='datosGraficos'>Fuerza Efectiva</button></div>
+  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Proyección de Bajas</button></div>
+  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Oficios Judiciales</button></div>
+  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Causas por Género y VIF</button></div>
+  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Control Toxicológico</button></div>
+  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Anexo 27</button></div>
+  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Faltas Disciplinarias</button></div>
+  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Deserción</button></div>
+  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Actuaciones de Justicia Militar</button></div>
+  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Situación de Vivienda</button></div>
+  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Evacuaciones</button></div>
+  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Accidentes</button></div>
+  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Parte de Sanidad</button></div>
+  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Estado Civil</button></div>
+  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Personal Propuesto para Junta de Calificación</button></div>`;
   //var html = "<div class='item-area-pers'><button class='btn btn-outline-primary' id='datosGraficos'><p>Fuerza Efectiva</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Proyección de Bajas</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Oficios Judiciales</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Causas por Género y VIF</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Control Toxicológico</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Anexo 27</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Faltas Disciplinarias</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Deserción</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Actuaciones de Justicia Militar</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Situación de Vivienda</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Evacuaciones</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Accidentes</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Parte de Sanidad</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Estado Civil</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Personal Propuesto para Junta de Calificación</p></button></div>";
   
   $("#carouselAreaPers").ready(function () {
@@ -430,21 +430,21 @@ $("#icia_opc").click(function () {
     $(this).addClass("item_selec");
     $("#icia_opc").addClass("elemt_pulsado_grafic");
 
-    var html = `<div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc' id='datosGraficos'>Revista de Material Sensible</button></div>
-  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Estudio de Seguridad</button></div>
-  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Seguridad Humana</button></div>
-  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Cámaras - Instalaciones Sensibles</button></div>
-  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Cámaras - Perímetro</button></div>
-  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Alarmas - Instalaciones Sensibles</button></div>
-  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Rejas en Techo</button></div>
-  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Rejas en Puertas y Ventanas</button></div>
-  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Cerco Perimetral</button></div>
-  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Situación de Vivienda</button></div>
-  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Evacuaciones</button></div>
-  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Vulneraciones</button></div>
-  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Reconocimientos</button></div>
-  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Estado Civil</button></div>
-  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Personal Vinculado a Causas Judiciales</button></div>`;
+    var html = `<div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc' id='datosGraficos'>Revista de Material Sensible</button></div>
+  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Estudio de Seguridad</button></div>
+  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Seguridad Humana</button></div>
+  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Cámaras - Instalaciones Sensibles</button></div>
+  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Cámaras - Perímetro</button></div>
+  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Alarmas - Instalaciones Sensibles</button></div>
+  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Rejas en Techo</button></div>
+  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Rejas en Puertas y Ventanas</button></div>
+  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Cerco Perimetral</button></div>
+  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Situación de Vivienda</button></div>
+  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Evacuaciones</button></div>
+  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Vulneraciones</button></div>
+  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Reconocimientos</button></div>
+  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Estado Civil</button></div>
+  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Personal Vinculado a Causas Judiciales</button></div>`;
 
     $("#carouselAreaPers")
     .trigger("replace.owl.carousel", html)
@@ -509,7 +509,7 @@ $("#fins_opc").click(function () {
 });
 
 function clickAreasPers() {
-  $(".item-area-pers button.btn.btn-primary").on("click", function () {
+  $(".item-area-pers button.btn.btn-secondary").on("click", function () {
     if (!this.hasAttribute("id", "datosGraficos")) {
       $("#muestraGraf").css("display", "none");
     }
