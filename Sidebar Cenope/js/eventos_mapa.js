@@ -424,7 +424,7 @@ function mostrar_marcadores(cod_uni) {
         localidad = "<div style='height: 30px; overflow:hidden; text-overflow: ellipsis; font-weight: normal; font-size: 10px; padding-top: 3px; padding-bottom: 0px; -webkit-line-clamp: 2; -webkit-box-orient: vertical; display: -webkit-box; line-height: 0.8rem;'>" + ((ejercito.getLayers()[i].feature.properties.localidad == null)?'':ejercito.getLayers()[i].feature.properties.localidad) + "</div>";
         unidad = "<div class='col-md-8 sector_unidad' style='cursor: pointer; " + style_unidad + "' onmouseover=mostrarUnidadesZoom('" + ejercito.getLayers()[i].feature.properties.cod_uni+ "') onclick=masInfo('" + ejercito.getLayers()[i].feature.properties.cod_uni+ "')>"+ nombre_unidad + localidad + "</div>";
         item = "<div class='item row'>" + escudo + unidad + "</div>";
-        $('.owl-carousel').owlCarousel().trigger('add.owl.carousel', "<div class='owl-item'>" + item + "</div>").trigger('refresh.owl.carousel');
+        $('#div_listado_unidades.owl-carousel').owlCarousel().trigger('add.owl.carousel', "<div class='owl-item'>" + item + "</div>").trigger('refresh.owl.carousel');
       }
       $('.sector_unidad').on('click',function (e) {       
         $('.sector_unidad').removeClass('click-unis');
