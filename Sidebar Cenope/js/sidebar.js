@@ -414,16 +414,37 @@ $(".pulsar_elemt_grafic").click(function () {
 });
 
 $("#pers_opc").click(function () {
-  var html =
-    "<div class='item-area-pers'><button class='btn btn-outline-primary' id='datosGraficos'><p>Fuerza Efectiva</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Proyección de Bajas</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Oficios Judiciales</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Causas por Género y VIF</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Control Toxicológico</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Anexo 27</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Faltas Disciplinarias</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Deserción</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Actuaciones de Justicia Militar</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Situación de Vivienda</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Evacuaciones</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Accidentes</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Parte de Sanidad</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Estado Civil</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Personal Propuesto para Junta de Calificación</p></button></div>";
-  $("#carouselAreaPers")
-    .trigger("replace.owl.carousel", html)
-    .trigger("refresh.owl.carousel");
+  cargar_carrousel_pers();
+});
+
+function cargar_carrousel_pers() {
+  console.log("cargar elementos pers");
+  var html = `<div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc click-item-area-pers' id='datosGraficos'>Fuerza Efectiva</button></div>
+  <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Proyección de Bajas</button></div>
+  <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Oficios Judiciales</button></div>
+  <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Causas por Género y VIF</button></div>
+  <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Control Toxicológico</button></div>
+  <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Anexo 27</button></div>
+  <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Faltas Disciplinarias</button></div>
+  <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Deserción</button></div>
+  <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Actuaciones de Justicia Militar</button></div>
+  <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Situación de Vivienda</button></div>
+  <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Evacuaciones</button></div>
+  <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Accidentes</button></div>
+  <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Parte de Sanidad</button></div>
+  <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Estado Civil</button></div>
+  <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Personal Propuesto para Junta de Calificación</button></div>`;
+  //var html = "<div class='item-area-pers'><button class='btn btn-outline-primary' id='datosGraficos'><p>Fuerza Efectiva</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Proyección de Bajas</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Oficios Judiciales</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Causas por Género y VIF</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Control Toxicológico</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Anexo 27</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Faltas Disciplinarias</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Deserción</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Actuaciones de Justicia Militar</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Situación de Vivienda</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Evacuaciones</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Accidentes</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Parte de Sanidad</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Estado Civil</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Personal Propuesto para Junta de Calificación</p></button></div>";
+  
+  $("#carouselAreaPers").ready(function () {
+    $("#carouselAreaPers").trigger("replace.owl.carousel", html);
+    $("#carouselAreaPers").trigger("refresh.owl.carousel");
+  });
   $("#datosGraficos").click(function () {
     $("#muestraGraf").css("display", "block");
   });
   clickAreasPers();
-});
+}
 
 $("#icia_opc").click(function () {
   var html =
