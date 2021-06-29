@@ -449,7 +449,8 @@ function cargar_carrousel_pers() {
 $("#icia_opc").click(function () {
   var html =
     '<div class="item-area-pers"><button class="btn btn-outline-primary "><p>Revista de Material Sensible</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Estudio de Seguridad</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Seguridad Humana</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Cámaras - Instalaciones Sensibles</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "> <p>Cámaras - Perímetro</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Alarmas - Instalaciones Sensibles</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Rejas en Techo</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Rejas en Puertas y Ventanas</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Cerco Perimetral</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Vulneraciones</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "> <p>Reconocimientos</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Personal Vinculado a Causas Judiciales</p></button></div>';
-  $("#carouselAreaPers")
+  
+    $("#carouselAreaPers")
     .trigger("replace.owl.carousel", html)
     .trigger("refresh.owl.carousel");
   clickAreasPers();
