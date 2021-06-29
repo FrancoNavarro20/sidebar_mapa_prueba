@@ -458,6 +458,10 @@ function masInfo(info) {
   
   // showSidebar();
   graficosSidebar();
+  cargar_carrousel_pers();
+  $(".btn_areas_conduc").removeClass("item_selec");
+  $("#pers_opc").addClass("item_selec");
+  $("#muestraGraf").css("display", "block");
 }
 
 function mostrarUnidadesZoom(id) {

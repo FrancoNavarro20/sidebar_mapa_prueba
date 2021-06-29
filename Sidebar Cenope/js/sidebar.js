@@ -364,46 +364,23 @@ $(".hover_fuerzas ul").on("click", "li", function () {
   $(this).addClass("hoveado_fuerzas");
 });
 
-// function showSidebar() {
-//$("#infosidebar").addClass("visible");
-//$(".tamanoA").css("width", "calc(100vw - 800px)");
-//window.setTimeout(function () {
-//map.invalidateSize();
-//}, 1000);
-// }
-
-// function hideSidebar() {
-//$("#infosidebar").removeClass("visible");
-//$(".tamanoA").css("width", "calc(100vw - 320px)");
-//window.setTimeout(function () {
-//map.invalidateSize();
-//}, 1000);
-// }
 
 //Botones de los graficos
 $(".pulsar_elemt_grafic").click(function () {
-  //alert("Anda los botones");
+  $(".pulsar_elemt_grafic").removeClass("item_selec");
+  $(this).addClass("item_selec");
+  var origen_btn = $(this).data("grafic");
 
-  var origen = $(this);
-  var universidad = origen.data("grafic");
-  switch (universidad) {
+  switch (origen_btn) {
     case "datos":
       //alert("Alerta de datos");
-      $(".elemt_graficos_mil").hide("slow");
-      $(".elemt_datos").show("slow");
-      $("#boton_datos").addClass("elemt_pulsado_grafic");
-      $("#boton_datos a").addClass("elemt_pulsado_grafic_a");
-      $("#boton_grafic a").removeClass("elemt_pulsado_grafic_a");
-      $("#boton_grafic").removeClass("elemt_pulsado_grafic");
+      $("#div_carrousel_graficos").hide('slow');
+      $("#div_carrousel_datos").show('slow');
       break;
     case "graficos":
       //alert("Alerta de graficos");
-      $(".elemt_datos").hide("slow");
-      $(".elemt_graficos_mil").show("slow");
-      $("#boton_datos").removeClass("elemt_pulsado_grafic");
-      $("#boton_datos a").removeClass("elemt_pulsado_grafic_a");
-      $("#boton_grafic a").addClass("elemt_pulsado_grafic_a");
-      $("#boton_grafic").addClass("elemt_pulsado_grafic");
+      $("#div_carrousel_graficos").show('slow');
+      $("#div_carrousel_datos").hide('slow');
       break;
     default:
       alert(
@@ -415,25 +392,27 @@ $(".pulsar_elemt_grafic").click(function () {
 
 $("#pers_opc").click(function () {
   cargar_carrousel_pers();
+  $(".btn_areas_conduc").removeClass("item_selec");
+  $(this).addClass("item_selec");
 });
 
 function cargar_carrousel_pers() {
-  console.log("cargar elementos pers");
-  var html = `<div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc click-item-area-pers' id='datosGraficos'>Fuerza Efectiva</button></div>
-  <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Proyección de Bajas</button></div>
-  <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Oficios Judiciales</button></div>
-  <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Causas por Género y VIF</button></div>
-  <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Control Toxicológico</button></div>
-  <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Anexo 27</button></div>
-  <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Faltas Disciplinarias</button></div>
-  <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Deserción</button></div>
-  <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Actuaciones de Justicia Militar</button></div>
-  <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Situación de Vivienda</button></div>
-  <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Evacuaciones</button></div>
-  <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Accidentes</button></div>
-  <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Parte de Sanidad</button></div>
-  <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Estado Civil</button></div>
-  <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Personal Propuesto para Junta de Calificación</button></div>`;
+  //console.log("cargar elementos pers");
+  var html = `<div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc item_selec' id='datosGraficos'>Fuerza Efectiva</button></div>
+  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Proyección de Bajas</button></div>
+  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Oficios Judiciales</button></div>
+  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Causas por Género y VIF</button></div>
+  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Control Toxicológico</button></div>
+  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Anexo 27</button></div>
+  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Faltas Disciplinarias</button></div>
+  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Deserción</button></div>
+  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Actuaciones de Justicia Militar</button></div>
+  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Situación de Vivienda</button></div>
+  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Evacuaciones</button></div>
+  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Accidentes</button></div>
+  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Parte de Sanidad</button></div>
+  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Estado Civil</button></div>
+  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Personal Propuesto para Junta de Calificación</button></div>`;
   //var html = "<div class='item-area-pers'><button class='btn btn-outline-primary' id='datosGraficos'><p>Fuerza Efectiva</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Proyección de Bajas</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Oficios Judiciales</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Causas por Género y VIF</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Control Toxicológico</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Anexo 27</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Faltas Disciplinarias</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Deserción</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Actuaciones de Justicia Militar</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Situación de Vivienda</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Evacuaciones</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Accidentes</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Parte de Sanidad</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Estado Civil</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Personal Propuesto para Junta de Calificación</p></button></div>";
   
   $("#carouselAreaPers").ready(function () {
@@ -447,53 +426,97 @@ function cargar_carrousel_pers() {
 }
 
 $("#icia_opc").click(function () {
-  var html =
-    '<div class="item-area-pers"><button class="btn btn-outline-primary "><p>Revista de Material Sensible</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Estudio de Seguridad</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Seguridad Humana</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Cámaras - Instalaciones Sensibles</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "> <p>Cámaras - Perímetro</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Alarmas - Instalaciones Sensibles</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Rejas en Techo</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Rejas en Puertas y Ventanas</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Cerco Perimetral</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Vulneraciones</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "> <p>Reconocimientos</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Personal Vinculado a Causas Judiciales</p></button></div>';
+  $(".btn_areas_conduc").removeClass("item_selec");
+    $(this).addClass("item_selec");
+    $("#icia_opc").addClass("elemt_pulsado_grafic");
+
+    var html = `<div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc' id='datosGraficos'>Revista de Material Sensible</button></div>
+  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Estudio de Seguridad</button></div>
+  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Seguridad Humana</button></div>
+  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Cámaras - Instalaciones Sensibles</button></div>
+  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Cámaras - Perímetro</button></div>
+  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Alarmas - Instalaciones Sensibles</button></div>
+  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Rejas en Techo</button></div>
+  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Rejas en Puertas y Ventanas</button></div>
+  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Cerco Perimetral</button></div>
+  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Situación de Vivienda</button></div>
+  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Evacuaciones</button></div>
+  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Vulneraciones</button></div>
+  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Reconocimientos</button></div>
+  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Estado Civil</button></div>
+  <div class='item-area-pers'><button class='btn btn-primary btn_elem_areas_conduc'>Personal Vinculado a Causas Judiciales</button></div>`;
+
+    $("#carouselAreaPers")
+    .trigger("replace.owl.carousel", html)
+    .trigger("refresh.owl.carousel");
+});
+
+$("#ops_opc").click(function () {
+  $(".btn_areas_conduc").removeClass("item_selec");
+  $(this).addClass("item_selec");
+  
+    var html = `<div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc' id='datosGraficos'>Clase de Cuadros</button></div>
+    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Cursillos</button></div>
+    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Cursos Regulares</button></div>
+    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Ciclos SSVV</button></div>
+    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Ejercicios de Gabinete</button></div>
+    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Ejercicios en el Terreno</button></div>
+    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Simuladores</button></div>
+    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Campo de Instrucción</button></div>
+    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Polígono de Tiro</button></div>
+    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Asignación de Munición para Instrucción (AMI)</button></div>
+    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>MOTE</button></div>
+    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Pruebas de Aptitud Física Básica (PAFB)</button></div>
+    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Pruebas de Aptitud Física Operacional (PAFO)</button></div>
+    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Aptitud Física Individual (AFI)</button></div>
+    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Aptitud Aplicativa al Combate (AAC)</button></div>
+    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Fracción de Reacción ante Catástrofes (FRAC)</button></div>
+    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Organizaciones Militares de Paz (OMP)</button></div>`;
   
     $("#carouselAreaPers")
     .trigger("replace.owl.carousel", html)
     .trigger("refresh.owl.carousel");
-  clickAreasPers();
-});
-
-$("#ops_opc").click(function () {
-  var html =
-    '<div class="item-area-pers"><button class="btn btn-outline-primary "><p>Clase de Cuadros</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Cursillos</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Cursos Regulares</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Ciclos SSVV</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Ejercicios de Gabinete</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Ejercicios en el Terreno</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Simuladores</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Campo de Instrucción</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Polígono de Tiro</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Asignación de Munición para Instrucción (AMI)</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>MOTE</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Pruebas de Aptitud Física Básica (PAFB)</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Pruebas de Aptitud Física Operacional (PAFO)</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Aptitud Física Individual (AFI)</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Aptitud Aplicativa al Combate (AAC)</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Fracción de Reacción ante Catástrofes (FRAC)</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Organizaciones Militares de Paz (OMP)</p></button>';
-  $("#carouselAreaPers")
-    .trigger("replace.owl.carousel", html)
-    .trigger("refresh.owl.carousel");
-  clickAreasPers();
 });
 
 $("#mats_opc").click(function () {
-  var html =
-    '<div class="item-area-pers"><button class="btn btn-outline-primary "><p>Vehículos</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Armamento</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Material de Comunicaciones</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Materiales Generales</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Servicio de Mantenimiento de VVC</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Efectos Clase I</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Efectos Clase II y IV - UCA</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Efectos Clase III</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Barrio Militar</p></button></div>';
-  $("#carouselAreaPers")
+  $(".btn_areas_conduc").removeClass("item_selec");
+  $(this).addClass("item_selec");
+    var html = `<div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc' id='datosGraficos'>Vehículos</button></div>
+    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Armamento</button></div>
+    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Material de Comunicaciones</button></div>
+    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Materiales Generales</button></div>
+    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Servicio de Mantenimiento de VVC</button></div>
+    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Efectos Clase I</button></div>
+    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Efectos Clase II y IV - UCA</button></div>
+    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Efectos Clase III</button></div>
+    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Barrio Militar</button></div>`;
+    
+    $("#carouselAreaPers")
     .trigger("replace.owl.carousel", html)
     .trigger("refresh.owl.carousel");
-  clickAreasPers();
 });
 
 $("#fins_opc").click(function () {
-  var html =
-    '<div class="item-area-pers"><button class="btn btn-outline-primary "><p>Viáticos</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Licitaciones</p></button></div><div class="item-area-pers"><button class="btn btn-outline-primary "><p>Presupuestos</p></button></div>';
-  $("#carouselAreaPers")
+  $(".btn_areas_conduc").removeClass("item_selec");
+  $(this).addClass("item_selec");
+    var html = `<div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc' id='datosGraficos'>Viáticos</button></div>
+    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Licitaciones</button></div>
+    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Presupuestos</button></div>`;
+  
+    $("#carouselAreaPers")
     .trigger("replace.owl.carousel", html)
     .trigger("refresh.owl.carousel");
-  clickAreasPers();
 });
 
 function clickAreasPers() {
-  $(".item-area-pers button.btn.btn-outline-primary").on("click", function () {
-    $(".click-item-area-pers").removeClass("click-item-area-pers");
-    $(this).addClass("click-item-area-pers");
+  $(".item-area-pers button.btn.btn-primary").on("click", function () {
     if (!this.hasAttribute("id", "datosGraficos")) {
       $("#muestraGraf").css("display", "none");
     }
   });
 }
 
-$(".divisiones button.btn.btn-outline-primary").on("click", function () {
-  $(".division-seleccionada").removeClass("division-seleccionada");
-  $(this).addClass("division-seleccionada");
+$(".btn_elem_areas_conduc").click(function () {
+  $(".btn_elem_areas_conduc").removeClass("item_selec");
+  $(this).addClass("item_selec");
 });

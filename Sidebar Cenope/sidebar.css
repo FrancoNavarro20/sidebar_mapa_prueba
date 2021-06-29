@@ -893,13 +893,6 @@ li.hoveado_fuerzas {
 }
 */
 
-#infosidebar .elemt_pulsado_grafic_a {
-  text-decoration: none;
-  background-color: rgb(71, 143, 211);
-  color: white;
-  padding: 5px 10px 5px 10px;
-}
-
 #chart_oficiales,
 #chart_suboficiales,
 #chart_soldados {
@@ -923,10 +916,10 @@ li.hoveado_fuerzas {
   margin-top: 5px;
 }
 
-.click-item-area-pers {
-  color: #fff;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+.item_selec {
+  color: #fff !important;
+  background-color: #0d6efd !important;
+  border-color: #0d6efd !important;
 }
 
 .division-seleccionada {

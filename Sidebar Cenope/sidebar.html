@@ -724,28 +724,24 @@
         </div>
         <div class="divisiones"
           style="font-size: 20px; margin-top: 0px; margin-bottom: 5px; text-align: center; display: flex; justify-content: space-around; padding: 5px 24px;">
-          <button type="button" class="btn btn-sm btn-outline-primary col-2 btn_areas_conduc division-seleccionada" id="pers_opc">Pers</button>
-          <button type="button" class="btn btn-sm btn-outline-primary col-2 btn_areas_conduc" id="icia_opc">Icia</button>
-          <button type="button" class="btn btn-sm btn-outline-primary col-2 btn_areas_conduc" id="ops_opc">Op(s)</button>
-          <button type="button" class="btn btn-sm btn-outline-primary col-2 btn_areas_conduc" id="mats_opc">Mat(s)</button>
-          <button type="button" class="btn btn-sm btn-outline-primary col-2 btn_areas_conduc" id="fins_opc">Fin(s)</button>
+          <button type="button" class="btn btn-sm btn-primary col-2 btn_areas_conduc item_selec" id="pers_opc">Pers</button>
+          <button type="button" class="btn btn-sm btn-primary col-2 btn_areas_conduc" id="icia_opc">Icia</button>
+          <button type="button" class="btn btn-sm btn-primary col-2 btn_areas_conduc" id="ops_opc">Op(s)</button>
+          <button type="button" class="btn btn-sm btn-primary col-2 btn_areas_conduc" id="mats_opc">Mat(s)</button>
+          <button type="button" class="btn btn-sm btn-primary col-2 btn_areas_conduc" id="fins_opc">Fin(s)</button>
         </div>
-        
           <div id="carouselAreaPers" class="owl-carousel owl-theme" style="padding-left: 35px; padding-right: 35px; display: inline-flex;">
           </div>
-
-
-          
-            <div class="row" style="margin-top: 5px; margin-bottom: 10px;">
-              <div class="col-md-6" style="text-align: right;">
-                <button type="button" class="btn btn-sm btn-primary pulsar_elemt_grafic" style="width: 120px;"
-                  data-grafic="datos">Datos</button>
-              </div>
-              <div class="col-md-6">
-                <button type="button" class="btn btn-sm btn-primary pulsar_elemt_grafic" style="width: 120px;"
-                  data-grafic="graficos">Gráficos</button>
-              </div>
+          <div class="row" style="margin-top: 5px; margin-bottom: 10px;">
+            <div class="col-md-6" style="text-align: right;">
+              <button type="button" class="btn btn-sm btn-primary pulsar_elemt_grafic item_selec" style="width: 120px;"
+                data-grafic="datos">Datos</button>
             </div>
+            <div class="col-md-6">
+              <button type="button" class="btn btn-sm btn-primary pulsar_elemt_grafic" style="width: 120px;"
+                data-grafic="graficos">Gráficos</button>
+            </div>
+          </div>
           
           <div id="muestraGraf" >
             <div id="div_carrousel_datos" class="carousel slide" data-ride="carousel">
@@ -1061,29 +1057,5 @@
   $("#datosGraficos").click(function () {
     $("#muestraGraf").css("display", "block");
   });
-  
-  //Botones de los graficos
-  $(".pulsar_elemt_grafic").click(function () {
-    //alert("Anda los botones");
-    var origen = $(this);
-    var universidad = origen.data("grafic");
-    switch (universidad) {
-      case "datos":
-        //alert("Alerta de datos");
-        $("#div_carrousel_graficos").hide('slow');
-        $("#div_carrousel_datos").show('slow');
-        break;
-      case "graficos":
-        //alert("Alerta de graficos");
-        $("#div_carrousel_graficos").show('slow');
-        $("#div_carrousel_datos").hide('slow');
-        break;
-      default:
-        alert(
-          "Hubo un error, no se selecciono una universidad pública o privada ."
-        );
-        break;
-    }
-  });
-  
+    
 </script>
