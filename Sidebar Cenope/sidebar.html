@@ -732,7 +732,7 @@
           <button type="button" class="btn btn-sm btn-outline-secondary btn_areas_conduc" id="fins_opc">Finanzas</button>
         </div>
           <div id="carouselAreaPers" class="owl-carousel owl-theme" style="padding-left: 35px; padding-right: 35px; padding-top: 5px;">
-            <div class="btn_elem_pers onclick='seleccionar_elem(this)' item_selec" id="fuerza_efectiva">Fuerza Efectiva</div>
+            <div class="btn_elem_pers item_selec" onclick='seleccionar_elem(this)' id="fuerza_efectiva">Fuerza Efectiva</div>
             <div class='btn_elem_pers' onclick='seleccionar_elem(this)'>Proyección de Bajas</div>
             <div class='btn_elem_pers' onclick='seleccionar_elem(this)'>Oficios Judiciales</div>
             <div class='btn_elem_pers' onclick='seleccionar_elem(this)'>Causas por Género y VIF</div>
@@ -748,7 +748,7 @@
             <div class='btn_elem_pers' onclick='seleccionar_elem(this)'>Estado Civil</div>
             <div class='btn_elem_pers' onclick='seleccionar_elem(this)'>Personal Propuesto para Junta de Calificación</div>
           </div>
-          <div class="btn-group" role="group" style="margin-top: 5px; margin-bottom: 10px; margin-left: 120px; margin-right: 120px; display: flex; background-color: white;">
+          <div class="btn-group" role="group" style="margin-top: 5px; margin-bottom: 10px; margin-left: 5px; margin-right: 5px; display: flex; background-color: white;">
             <button type="button" class="btn btn-sm btn-outline-primary pulsar_elemt_grafic active"
               data-grafic="datos" id="btn_datos">Datos</button>
             <button type="button" class="btn btn-sm btn-outline-primary pulsar_elemt_grafic"
@@ -760,10 +760,11 @@
               <div class="carousel-inner">
                 <div class="carousel-item active" style="display: block;">
                   <div class="row elemt_datos"
-                    style="text-align: center; padding: 0px; margin-left: 15px; margin-right: 15px;">
-                    <div class="col-md-6" style="padding: 5px;">
+                    style="text-align: center; padding: 0px; margin-left: 5px; margin-right: 5px;">
+                    <div class="col-md-6" style="padding: 7px;">
                       <div class="thumbnail"
                         style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; min-height: 240px; background-color: white;">
+                        <div>
                         <div style="font-size: 20px; text-shadow: 1px 3px 2px rgba(0,0,0,0.3);">
                           Oficiales
                         </div>
@@ -807,7 +808,8 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6" style="padding: 5px;">
+                    </div>
+                    <div class="col-md-6" style="padding: 7px;">
                       <div class="thumbnail"
                         style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; min-height: 240px; background-color: white;">
                         <div style="font-size: 20px; text-shadow: 1px 3px 2px rgba(0,0,0,0.3);">
@@ -845,7 +847,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6" style="padding: 5px;">
+                    <div class="col-md-6" style="padding: 7px;">
                       <div class="thumbnail"
                         style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; min-height: 240px; background-color: white;">
                         <div style="font-size: 20px; text-shadow: 1px 3px 2px rgba(0,0,0,0.3);">
@@ -899,7 +901,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6" style="padding: 5px;">
+                    <div class="col-md-6" style="padding: 7px;">
                       <div class="thumbnail"
                         style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; min-height: 240px; background-color: white;">
                         <div style="font-size: 20px; text-shadow: 1px 3px 2px rgba(0,0,0,0.3);">
@@ -940,18 +942,18 @@
             <div id="div_carrousel_graficos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false" style="display: none;">
               <div class="carousel-inner">
                 <div class="carousel-item active" style="justify-content: space-around;">
-                  <div id="chart_oficiales"
-                    style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; margin-top: 10px; margin-left: 25px; margin-right: 25px; padding-top: 0px; background-color: white">
+                  <div id="chart_oficiales" class="thumbnail"
+                    style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; margin-top: 10px; margin-bottom: 8px; margin-left: 12px; margin-right: 12px; padding-top: 0px; background-color: white">
                   </div>
                 </div>
                 <div class="carousel-item" style="justify-content: space-around;">
-                  <div class="row" id="chart_suboficiales"
-                    style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; margin-top: 10px; margin-left: 25px; margin-right: 25px; padding-top: 0px; background-color: white;">
+                  <div class="row thumbnail" id="chart_suboficiales"
+                    style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; margin-top: 10px; margin-bottom: 8px; margin-left: 12px; margin-right: 12px; padding-top: 0px; background-color: white;">
                   </div>
                 </div>
                 <div class="carousel-item" style="justify-content: space-around;">
-                  <div class="row" id="chart_soldados"
-                    style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; margin-top: 10px; margin-left: 25px; margin-right: 25px; padding-top: 0px; background-color: white">
+                  <div class="row thumbnail" id="chart_soldados"
+                    style="padding: 5px; border: 1px solid #D9D9D9; border-radius: 7px; margin-top: 10px; margin-bottom: 8px; margin-left: 12px; margin-right: 12px; padding-top: 0px; background-color: white">
                   </div>
                 </div>
               </div>
