@@ -723,25 +723,36 @@
             Ejercito Argentino
           </div>
         </div>
-        <div class="divisiones"
-          style="font-size: 20px; margin-top: 0px; margin-bottom: 5px; text-align: center; display: flex; justify-content: space-around; padding: 5px 24px;">
-          <button type="button" class="btn btn-sm btn-secondary col-2 btn_areas_conduc item_selec" id="pers_opc">Pers</button>
-          <button type="button" class="btn btn-sm btn-secondary col-2 btn_areas_conduc" id="icia_opc">Icia</button>
-          <button type="button" class="btn btn-sm btn-secondary col-2 btn_areas_conduc" id="ops_opc">Op(s)</button>
-          <button type="button" class="btn btn-sm btn-secondary col-2 btn_areas_conduc" id="mats_opc">Mat(s)</button>
-          <button type="button" class="btn btn-sm btn-secondary col-2 btn_areas_conduc" id="fins_opc">Fin(s)</button>
+        <div class="btn-group" role="group"
+          style="font-size: 20px; margin-top: 0px; margin-bottom: 5px; margin-left: 5px; margin-right: 5px; display: flex; background-color: white;">
+          <button type="button" class="btn btn-sm btn-outline-secondary btn_areas_conduc active" id="pers_opc">Personal</button>
+          <button type="button" class="btn btn-sm btn-outline-secondary btn_areas_conduc" id="icia_opc">Inteligencia</button>
+          <button type="button" class="btn btn-sm btn-outline-secondary btn_areas_conduc" id="ops_opc">Operaciones</button>
+          <button type="button" class="btn btn-sm btn-outline-secondary btn_areas_conduc" id="mats_opc">Materiales</button>
+          <button type="button" class="btn btn-sm btn-outline-secondary btn_areas_conduc" id="fins_opc">Finanzas</button>
         </div>
-          <div id="carouselAreaPers" class="owl-carousel owl-theme" style="padding-left: 35px; padding-right: 35px; display: inline-flex;">
+          <div id="carouselAreaPers" class="owl-carousel owl-theme" style="padding-left: 35px; padding-right: 35px; padding-top: 5px;">
+            <div class="btn_elem_pers onclick='seleccionar_elem(this)' item_selec" id="fuerza_efectiva">Fuerza Efectiva</div>
+            <div class='btn_elem_pers' onclick='seleccionar_elem(this)'>Proyección de Bajas</div>
+            <div class='btn_elem_pers' onclick='seleccionar_elem(this)'>Oficios Judiciales</div>
+            <div class='btn_elem_pers' onclick='seleccionar_elem(this)'>Causas por Género y VIF</div>
+            <div class='btn_elem_pers' onclick='seleccionar_elem(this)'>Control Toxicológico</div>
+            <div class='btn_elem_pers' onclick='seleccionar_elem(this)'>Anexo 27</div>
+            <div class='btn_elem_pers' onclick='seleccionar_elem(this)'>Faltas Disciplinarias</div>
+            <div class='btn_elem_pers' onclick='seleccionar_elem(this)'>Deserción</div>
+            <div class='btn_elem_pers' onclick='seleccionar_elem(this)'>Actuaciones de Justicia Militar</div>
+            <div class='btn_elem_pers' onclick='seleccionar_elem(this)'>Situación de Vivienda</div>
+            <div class='btn_elem_pers' onclick='seleccionar_elem(this)'>Evacuaciones</div>
+            <div class='btn_elem_pers' onclick='seleccionar_elem(this)'>Accidentes</div>
+            <div class='btn_elem_pers' onclick='seleccionar_elem(this)'>Parte de Sanidad</div>
+            <div class='btn_elem_pers' onclick='seleccionar_elem(this)'>Estado Civil</div>
+            <div class='btn_elem_pers' onclick='seleccionar_elem(this)'>Personal Propuesto para Junta de Calificación</div>
           </div>
-          <div class="row" style="margin-top: 5px; margin-bottom: 10px;">
-            <div class="col-md-6" style="text-align: right;">
-              <button type="button" class="btn btn-sm btn-secondary pulsar_elemt_grafic item_selec" style="width: 120px;"
-                data-grafic="datos">Datos</button>
-            </div>
-            <div class="col-md-6">
-              <button type="button" class="btn btn-sm btn-secondary pulsar_elemt_grafic" style="width: 120px;"
-                data-grafic="graficos">Gráficos</button>
-            </div>
+          <div class="btn-group" role="group" style="margin-top: 5px; margin-bottom: 10px; margin-left: 120px; margin-right: 120px; display: flex; background-color: white;">
+            <button type="button" class="btn btn-sm btn-outline-primary pulsar_elemt_grafic active"
+              data-grafic="datos" id="btn_datos">Datos</button>
+            <button type="button" class="btn btn-sm btn-outline-primary pulsar_elemt_grafic"
+              data-grafic="graficos" id="btn_graficos">Gráficos</button>
           </div>
           
           <div id="muestraGraf" >
@@ -990,7 +1001,6 @@
   $(document).ready(function () {
     //now on button click
     //$('#modal_listado_personal').modal('toggle');
-    cargar_carrousel_pers();
 
     $("#div_listado_unidades").owlCarousel({
       loop: false,
@@ -1035,7 +1045,7 @@
         600: {
           items: 2
         },
-        1600: {
+        960: {
           items: 3
         },
         1800: {
@@ -1046,17 +1056,6 @@
         }
       }
     });    
-  });
-
-  $(".item-area-pers button.btn.btn-outline-primary").on("click", function () {
-    $(".click-item-area-pers").removeClass("click-item-area-pers");
-    $(this).addClass("click-item-area-pers");
-    if (!this.hasAttribute("id", "datosGraficos")) {
-      $("#muestraGraf").css("display", "none");
-    }
-  });
-  $("#datosGraficos").click(function () {
-    $("#muestraGraf").css("display", "block");
   });
     
 </script>

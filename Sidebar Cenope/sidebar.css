@@ -900,11 +900,15 @@ li.hoveado_fuerzas {
   height: calc(100vh - 420px);
 }
 
-.item-area-pers button {
-  height: 5rem;
-  width: 155px;
+.btn_elem_pers, .btn_elem_icia, .btn_elem_op, .btn_elem_mat, .btn_elem_fin {
+  height: 4rem;
   text-align: center;
-  word-break: break-word;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  border: 1px solid #D9D9D9;
+  border-radius: 10px 10px 10px 10px;
+  background-color: white;
+  font-size: 14px;
 }
 
 .btn {
@@ -938,12 +942,7 @@ li.hoveado_fuerzas {
   margin-right: 0;
 }
 
-.btn_elem_areas_conduc {
-  background-color: white; border: 1px solid #D9D9D9; border-radius: 10px 10px 10px 10px; color: black;
-  font-size: 14px;
-}
-
-.btn_areas_conduc, .pulsar_elemt_grafic {
+.btn_areas_conduc {
   background-color: white; border: 1px solid #D9D9D9; color: black;
   font-size: 14px;
 }

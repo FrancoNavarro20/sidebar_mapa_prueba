@@ -384,7 +384,7 @@ function mostrar_marcadores(cod_uni) {
           return feature.properties.fdc == "Ejército Argentino";
         },
       });
-      graficosSidebar()
+      graficosSidebar();
       uni_agrupadas.addLayer(ejercito);
       map.addLayer(uni_agrupadas);
       //$("#div_listado_unidades").html(data.features[0].properties.fna);
@@ -433,6 +433,12 @@ function mostrar_marcadores(cod_uni) {
       });
       $("#overlay_carousel").hide();
       $("#div_listado_unidades").delay(100).show();
+
+      cargar_carrousel_pers();
+      $(".btn_areas_conduc").removeClass("active");
+      $("#pers_opc").addClass("active");
+      $("#btn_graficos").removeClass("active");
+      $("#btn_datos").addClass("active");
     }
   });
 }
@@ -458,10 +464,11 @@ function masInfo(info) {
   
   // showSidebar();
   graficosSidebar();
+  $(".btn_areas_conduc").removeClass("active");
+  $("#pers_opc").addClass("active");
+  $("#btn_graficos").removeClass("active");
+  $("#btn_datos").addClass("active");
   cargar_carrousel_pers();
-  $(".btn_areas_conduc").removeClass("item_selec");
-  $("#pers_opc").addClass("item_selec");
-  $("#muestraGraf").css("display", "block");
 }
 
 function mostrarUnidadesZoom(id) {

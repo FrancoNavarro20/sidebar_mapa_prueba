@@ -215,11 +215,6 @@ $(".ejer-items").click(function () {
 
   map.removeLayer(ejercito);
   mostrar_marcadores(cod_uni);
-  graficosSidebar();
-
-  //map.setView([lat,lon],zoom);
-  //if (!sidebar.isVisible())
-  // showSidebar();
 });
 
 /*Inicio de panel principal (Conduccion Superior,Fuerza Operativa,Fuerza de Sostenimiento,Sistema Educ)*/
@@ -367,8 +362,8 @@ $(".hover_fuerzas ul").on("click", "li", function () {
 
 //Botones de los graficos
 $(".pulsar_elemt_grafic").click(function () {
-  $(".pulsar_elemt_grafic").removeClass("item_selec");
-  $(this).addClass("item_selec");
+  $(".pulsar_elemt_grafic").removeClass("active");
+  $(this).addClass("active");
   var origen_btn = $(this).data("grafic");
 
   switch (origen_btn) {
@@ -390,133 +385,143 @@ $(".pulsar_elemt_grafic").click(function () {
   }
 });
 
+$(".btn_areas_conduc").click(function () {
+  $(".btn_areas_conduc").removeClass("active");
+  $(this).addClass("active");
+});
+
 $("#pers_opc").click(function () {
   cargar_carrousel_pers();
-  $(".btn_areas_conduc").removeClass("item_selec");
-  $(this).addClass("item_selec");
 });
 
 function cargar_carrousel_pers() {
-  //console.log("cargar elementos pers");
-  var html = `<div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc item_selec' id='datosGraficos'>Fuerza Efectiva</button></div>
-  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Proyección de Bajas</button></div>
-  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Oficios Judiciales</button></div>
-  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Causas por Género y VIF</button></div>
-  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Control Toxicológico</button></div>
-  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Anexo 27</button></div>
-  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Faltas Disciplinarias</button></div>
-  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Deserción</button></div>
-  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Actuaciones de Justicia Militar</button></div>
-  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Situación de Vivienda</button></div>
-  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Evacuaciones</button></div>
-  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Accidentes</button></div>
-  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Parte de Sanidad</button></div>
-  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Estado Civil</button></div>
-  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Personal Propuesto para Junta de Calificación</button></div>`;
-  //var html = "<div class='item-area-pers'><button class='btn btn-outline-primary' id='datosGraficos'><p>Fuerza Efectiva</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Proyección de Bajas</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Oficios Judiciales</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Causas por Género y VIF</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Control Toxicológico</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Anexo 27</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Faltas Disciplinarias</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Deserción</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Actuaciones de Justicia Militar</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Situación de Vivienda</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Evacuaciones</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Accidentes</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Parte de Sanidad</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Estado Civil</p></button></div><div class='item-area-pers'><button class='btn btn-outline-primary '><p>Personal Propuesto para Junta de Calificación</p></button></div>";
-  
+  var html = `<div class="btn_elem_pers" id="fuerza_efectiva">Fuerza Efectiva</div>
+  <div class='btn_elem_pers'>Proyección de Bajas</div>
+  <div class='btn_elem_pers'>Oficios Judiciales</div>
+  <div class='btn_elem_pers'>Causas por Género y VIF</div>
+  <div class='btn_elem_pers'>Control Toxicológico</div>
+  <div class='btn_elem_pers'>Anexo 27</div>
+  <div class='btn_elem_pers'>Faltas Disciplinarias</div>
+  <div class='btn_elem_pers'>Deserción</div>
+  <div class='btn_elem_pers'>Actuaciones de Justicia Militar</div>
+  <div class='btn_elem_pers'>Situación de Vivienda</div>
+  <div class='btn_elem_pers'>Evacuaciones</div>
+  <div class='btn_elem_pers'>Accidentes</div>
+  <div class='btn_elem_pers'>Parte de Sanidad</div>
+  <div class='btn_elem_pers'>Estado Civil</div>
+  <div class='btn_elem_pers'>Personal Propuesto para Junta de Calificación</div>`;
+  $("#carouselAreaPers").trigger("replace.owl.carousel", html);
+  $("#carouselAreaPers").trigger("refresh.owl.carousel");
   $("#carouselAreaPers").ready(function () {
-    $("#carouselAreaPers").trigger("replace.owl.carousel", html);
-    $("#carouselAreaPers").trigger("refresh.owl.carousel");
-  });
-  $("#datosGraficos").click(function () {
-    $("#muestraGraf").css("display", "block");
+    $(".btn_elem_pers").on("click", function () {
+      //console.log("item seleccionado");
+      $(".btn_elem_pers").removeClass("item_selec");
+      $(this).addClass("item_selec");
+    });
   });
   clickAreasPers();
 }
 
+function seleccionar_elem (elem) {
+  $(".btn_elem_pers").removeClass("item_selec");
+  $(elem).addClass("item_selec");
+}
+
 $("#icia_opc").click(function () {
-  $(".btn_areas_conduc").removeClass("item_selec");
-    $(this).addClass("item_selec");
-    $("#icia_opc").addClass("elemt_pulsado_grafic");
+  var html = `<div class='btn_elem_icia' id='datosGraficos'>Revista de Material Sensible</div>
+  <div class='btn_elem_icia'>Estudio de Seguridad</div>
+  <div class='btn_elem_icia'>Seguridad Humana</div>
+  <div class='btn_elem_icia'>Cámaras - Instalaciones Sensibles</div>
+  <div class='btn_elem_icia'>Cámaras - Perímetro</div>
+  <div class='btn_elem_icia'>Alarmas - Instalaciones Sensibles</div>
+  <div class='btn_elem_icia'>Rejas en Techo</div>
+  <div class='btn_elem_icia'>Rejas en Puertas y Ventanas</div>
+  <div class='btn_elem_icia'>Cerco Perimetral</div>
+  <div class='btn_elem_icia'>Situación de Vivienda</div>
+  <div class='btn_elem_icia'>Evacuaciones</div>
+  <div class='btn_elem_icia'>Vulneraciones</div>
+  <div class='btn_elem_icia'>Reconocimientos</div>
+  <div class='btn_elem_icia'>Estado Civil</div>
+  <div class='btn_elem_icia'>Personal Vinculado a Causas Judiciales</div>`;
+  
+  $("#carouselAreaPers").trigger("replace.owl.carousel", html);
+  $("#carouselAreaPers").trigger("refresh.owl.carousel");
 
-    var html = `<div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc' id='datosGraficos'>Revista de Material Sensible</button></div>
-  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Estudio de Seguridad</button></div>
-  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Seguridad Humana</button></div>
-  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Cámaras - Instalaciones Sensibles</button></div>
-  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Cámaras - Perímetro</button></div>
-  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Alarmas - Instalaciones Sensibles</button></div>
-  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Rejas en Techo</button></div>
-  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Rejas en Puertas y Ventanas</button></div>
-  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Cerco Perimetral</button></div>
-  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Situación de Vivienda</button></div>
-  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Evacuaciones</button></div>
-  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Vulneraciones</button></div>
-  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Reconocimientos</button></div>
-  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Estado Civil</button></div>
-  <div class='item-area-pers'><button class='btn btn-secondary btn_elem_areas_conduc'>Personal Vinculado a Causas Judiciales</button></div>`;
-
-    $("#carouselAreaPers")
-    .trigger("replace.owl.carousel", html)
-    .trigger("refresh.owl.carousel");
+  $("#carouselAreaPers").ready(function () {
+    $(".btn_elem_icia").on("click", function () {
+      //console.log("item seleccionado");
+      $(".btn_elem_icia").removeClass("item_selec");
+      $(this).addClass("item_selec");
+    });
+  });
 });
 
 $("#ops_opc").click(function () {
-  $(".btn_areas_conduc").removeClass("item_selec");
-  $(this).addClass("item_selec");
-  
-    var html = `<div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc' id='datosGraficos'>Clase de Cuadros</button></div>
-    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Cursillos</button></div>
-    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Cursos Regulares</button></div>
-    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Ciclos SSVV</button></div>
-    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Ejercicios de Gabinete</button></div>
-    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Ejercicios en el Terreno</button></div>
-    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Simuladores</button></div>
-    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Campo de Instrucción</button></div>
-    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Polígono de Tiro</button></div>
-    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Asignación de Munición para Instrucción (AMI)</button></div>
-    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>MOTE</button></div>
-    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Pruebas de Aptitud Física Básica (PAFB)</button></div>
-    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Pruebas de Aptitud Física Operacional (PAFO)</button></div>
-    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Aptitud Física Individual (AFI)</button></div>
-    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Aptitud Aplicativa al Combate (AAC)</button></div>
-    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Fracción de Reacción ante Catástrofes (FRAC)</button></div>
-    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Organizaciones Militares de Paz (OMP)</button></div>`;
-  
-    $("#carouselAreaPers")
-    .trigger("replace.owl.carousel", html)
-    .trigger("refresh.owl.carousel");
+  var html = `<div class='btn_elem_op' id='datosGraficos'>Clase de Cuadros</div>
+  <div class='btn_elem_op'>Cursillos</div>
+  <div class='btn_elem_op'>Cursos Regulares</div>
+  <div class='btn_elem_op'>Ciclos SSVV</div>
+  <div class='btn_elem_op'>Ejercicios de Gabinete</div>
+  <div class='btn_elem_op'>Ejercicios en el Terreno</div>
+  <div class='btn_elem_op'>Simuladores</div>
+  <div class='btn_elem_op'>Campo de Instrucción</div>
+  <div class='btn_elem_op'>Polígono de Tiro</div>
+  <div class='btn_elem_op'>Asignación de Munición para Instrucción (AMI)</div>
+  <div class='btn_elem_op'>MOTE</div>
+  <div class='btn_elem_op'>Pruebas de Aptitud Física Básica (PAFB)</div>
+  <div class='btn_elem_op'>Pruebas de Aptitud Física Operacional (PAFO)</div>
+  <div class='btn_elem_op'>Aptitud Física Individual (AFI)</div>
+  <div class='btn_elem_op'>Aptitud Aplicativa al Combate (AAC)</div>
+  <div class='btn_elem_op'>Fracción de Reacción ante Catástrofes (FRAC)</div>
+  <div class='btn_elem_op'>Organizaciones Militares de Paz (OMP)</div>`;
+  $("#carouselAreaPers").trigger("replace.owl.carousel", html);
+  $("#carouselAreaPers").trigger("refresh.owl.carousel");
+  $("#carouselAreaPers").ready(function () {
+    $(".btn_elem_op").on("click", function () {
+      $(".btn_elem_op").removeClass("item_selec");
+      $(this).addClass("item_selec");
+    });
+  });
 });
 
 $("#mats_opc").click(function () {
-  $(".btn_areas_conduc").removeClass("item_selec");
-  $(this).addClass("item_selec");
-    var html = `<div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc' id='datosGraficos'>Vehículos</button></div>
-    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Armamento</button></div>
-    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Material de Comunicaciones</button></div>
-    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Materiales Generales</button></div>
-    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Servicio de Mantenimiento de VVC</button></div>
-    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Efectos Clase I</button></div>
-    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Efectos Clase II y IV - UCA</button></div>
-    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Efectos Clase III</button></div>
-    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Barrio Militar</button></div>`;
-    
-    $("#carouselAreaPers")
-    .trigger("replace.owl.carousel", html)
-    .trigger("refresh.owl.carousel");
+  var html = `<div class='btn_elem_mat' id='datosGraficos'>Vehículos</div>
+  <div class='btn_elem_mat'>Armamento</div>
+  <div class='btn_elem_mat'>Material de Comunicaciones</div>
+  <div class='btn_elem_mat'>Materiales Generales</div>
+  <div class='btn_elem_mat'>Servicio de Mantenimiento de VVC</div>
+  <div class='btn_elem_mat'>Efectos Clase I</div>
+  <div class='btn_elem_mat'>Efectos Clase II y IV - UCA</div>
+  <div class='btn_elem_mat'>Efectos Clase III</div>
+  <div class='btn_elem_mat'>Barrio Militar</div>`;
+  $("#carouselAreaPers").trigger("replace.owl.carousel", html);
+  $("#carouselAreaPers").trigger("refresh.owl.carousel");
+  $("#carouselAreaPers").ready(function () {
+    $(".btn_elem_mat").on("click", function () {
+      $(".btn_elem_mat").removeClass("item_selec");
+      $(this).addClass("item_selec");
+    });
+  });
 });
 
 $("#fins_opc").click(function () {
-  $(".btn_areas_conduc").removeClass("item_selec");
-  $(this).addClass("item_selec");
-    var html = `<div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc' id='datosGraficos'>Viáticos</button></div>
-    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Licitaciones</button></div>
-    <div class='item-area-pers'><button class='btn btn-outline-primary btn_elem_areas_conduc'>Presupuestos</button></div>`;
-  
-    $("#carouselAreaPers")
-    .trigger("replace.owl.carousel", html)
-    .trigger("refresh.owl.carousel");
+  var html = `<div class='btn_elem_fin' id='datosGraficos'>Viáticos</div>
+  <div class='btn_elem_fin'>Licitaciones</div>
+  <div class='btn_elem_fin'>Presupuestos</div>`;
+  $("#carouselAreaPers").trigger("replace.owl.carousel", html);
+  $("#carouselAreaPers").trigger("refresh.owl.carousel");
+  $("#carouselAreaPers").ready(function () {
+    $(".btn_elem_fin").on("click", function () {
+      $(".btn_elem_fin").removeClass("item_selec");
+      $(this).addClass("item_selec");
+    });
+  });
 });
 
 function clickAreasPers() {
-  $(".item-area-pers button.btn.btn-secondary").on("click", function () {
-    if (!this.hasAttribute("id", "datosGraficos")) {
-      $("#muestraGraf").css("display", "none");
-    }
-  });
+  $(".btn_elem_pers").removeClass("item_selec");
+  $("#fuerza_efectiva").addClass("item_selec");
+  $("#div_carrousel_graficos").hide('slow');
+  $("#div_carrousel_datos").show('slow');
 }
 
-$(".btn_elem_areas_conduc").click(function () {
-  $(".btn_elem_areas_conduc").removeClass("item_selec");
-  $(this).addClass("item_selec");
-});
