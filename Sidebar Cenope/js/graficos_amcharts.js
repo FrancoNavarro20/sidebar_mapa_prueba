@@ -100,10 +100,12 @@ function cargarEstadisticasPersonal() {
           $("#btn_ver_oficiales").hide();
           $("#btn_ver_suboficiales").hide();
           $("#btn_ver_soldados").hide();
+          $("#div_civiles").css("height", "155px");
         } else {
           $("#btn_ver_oficiales").show();
           $("#btn_ver_suboficiales").show();
           $("#btn_ver_soldados").show();
+          $("#div_civiles").css("height", "184px");
         }
 
         $(".overlay").hide();

@@ -57,6 +57,7 @@ body {
 }
 
 #div_listado_unidades {
+  background-color: white;
   width: calc(100vw - 320px);
   min-height: 95px;
   padding-top: 5px;
@@ -66,7 +67,7 @@ body {
 }
 
 #div_listado_unidades .item {
-  background-color: #f5f3f4;
+  background-color: white;
   padding: 0px;
   margin: 0px;
   /*width: 140px;*/
@@ -446,6 +447,7 @@ div.leaflet-sidebar {
   font-size: 18px;
   padding-top: 2px;
   font-weight: bold;
+  border-right: 1px solid #D9D9D9;
 }
 
 .sidebar-search .scroll_A::-webkit-scrollbar {
@@ -509,7 +511,7 @@ div.leaflet-sidebar {
 #title-ejer-arg {
   height: 30px;
   padding-top: 2px;
-  background-color: #aec90b;
+  background-color: #0D6EFD;
   align-items: center;
 }
 #title-ejer-arg a {
@@ -550,14 +552,14 @@ div.leaflet-sidebar {
   cursor: pointer;
 }
 #fuerza-sost_selec {
-  background-color: rgb(51, 75, 211);
+  background-color: #62A1FE;
 }
 #sist-edu {
   /*border-left: 5px solid rgb(234, 236, 97);*/
   cursor: pointer;
 }
 #fuerza_operativa {
-  background-color: #01a1bd;
+  background-color: #62A1FE;
 }
 
 #tit_fuer_oper_elem1 {
@@ -577,10 +579,7 @@ div.leaflet-sidebar {
   background-color: #d37b7b;
 }
 #sistema_educativo {
-  background-color: #eaec61;
-}
-#sistema_educativo p {
-  color: black;
+  background-color: #62A1FE;
 }
 
 .crossicon-fuerza_oper_gub,
@@ -745,7 +744,7 @@ div.leaflet-sidebar {
 }
 
 #sub-menu-conduc-sup #cond-sup {
-  background-color: rgb(123, 123, 211);
+  background-color: #62A1FE;
 }
 
 #sub-menu-conduc-sup #crossicon-conduc {
@@ -873,8 +872,13 @@ li.hoveado_fuerzas {
 }
 
 .click-unis {
-  background-color: #5C636A !important;
-  color: white;
+  background-color: #0D6EFD !important;
+  color: white !important;
+}
+
+button.btn-sm {
+  padding-left: 10px;
+  padding-right:10px;
 }
 
 /*Alto de los elemetos*/
@@ -908,7 +912,7 @@ li.hoveado_fuerzas {
   display: flex; align-items: center; justify-content: center;
   cursor: pointer;
   border: 1px solid #D9D9D9;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 3px 3px 3px 3px;
   background-color: white;
   font-size: 14px;
 }
@@ -929,8 +933,8 @@ li.hoveado_fuerzas {
 
 .item_selec {
   color: #fff !important;
-  background-color: #5C636A !important;
-  border-color: #5C636A !important;
+  background-color: #6C757D !important;
+  border-color: #6C757D !important;
 }
 
 .division-seleccionada {
