@@ -342,6 +342,12 @@ $("#bt-lim-intern").click(function () {
   $(this).toggleClass("active-ferrocarril-pulsado");
 });
 
+$("#zonas_responsabilidad_br_EA").click(function () {
+  $(this).toggleClass("active-ferrocarril-pulsado");
+});
+
+
+
 /*Estilo universidades publicas*/
 $("#privada-mil").click(function () {
   $(this).toggleClass("active-priv");
