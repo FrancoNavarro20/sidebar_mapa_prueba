@@ -375,7 +375,7 @@ function mostrar_marcadores(cod_uni) {
             arma = "<div style='font-size: 12px;'>Arma/Servicio: " + feature.properties.arma + "</div>" ;
           }
           layer.bindPopup(
-            '<div><b style="font-size: 14px; color: #0D6EFD">' + feature.properties.fna +
+            '<div><b style="font-size: 14px; color: #0D6EFD;">' + feature.properties.fna +
               "</b></div><div style='font-size: 10px; padding-top: 3px;'>" + ((feature.properties.localidad == null)?'':feature.properties.localidad) + "</div>" +
               "<div style='font-size: 12px; padding-top: 3px;'><a href=# onclick=masInfo('" + feature.properties.cod_uni +"')>Más información</a></div>"
           );

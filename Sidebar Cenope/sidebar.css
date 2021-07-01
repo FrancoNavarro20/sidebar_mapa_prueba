@@ -46,14 +46,14 @@ body {
   padding-left: 0px;
   padding-right: 0px;
   width: 50vw;
-  height: calc(100vh - 160px);
+  height: calc(100vh - 153px);
 }
 
 #infosidebar {
   margin: 0%;
   overflow: auto;
   width: 50vw;
-  max-height: calc(100vh - 160px);
+  max-height: calc(100vh - 153px);
 }
 
 #div_listado_unidades {
@@ -99,13 +99,14 @@ body {
 .sidebar {
   height: 100%;
   width: 60px;
-  background-color: rgb(17, 17, 17);
+  background-color: #0D6EFD;
+  border-right: 1px solid white;
   transition: 0.5s;
   overflow-x: hidden;
   padding-top: 60px;
   white-space: nowrap;
   position: absolute;
-  top: 65px;
+  top: 58px;
   z-index: 0;
 }
 .sidebar ul {
@@ -132,7 +133,7 @@ body {
 }
 
 .sidebar li a .pulsado {
-  color: #f1f1f1;
+  color: white;
 }
 
 .sidebar li a .fa-caret-left {
@@ -142,26 +143,26 @@ body {
 }
 .sidebar li a #triangle2 {
   position: absolute;
-  left: 47px;
+  left: 46px;
   top: 152px;
   padding-left: 4px;
-  color: rgb(255, 255, 255);
+  color: white;
 }
 
 .sidebar li a #triangle4 {
   position: absolute;
-  left: 47px;
+  left: 46px;
   top: 246px;
   padding-left: 4px;
-  color: rgb(255, 255, 255);
+  color: white;
 }
 
 .sidebar li a #triangle3 {
   position: absolute;
-  left: 47px;
+  left: 46px;
   top: 55px;
   padding-left: 4px;
-  color: rgb(255, 255, 255);
+  color: white;
   display: block;
 }
 
@@ -169,7 +170,7 @@ body {
   position: absolute;
   left: 60px;
   width: 260px;
-  top: 65px;
+  top: 58px;
   height: 100%;
   background: #333333;
   /*transition:all 0.5s linear;*/
@@ -190,7 +191,7 @@ body {
 /*Elementos li*/
 .sidebar-capas ul li {
   padding: 8px 8px 8px 8px;
-  border-bottom: 1px solid rgb(83, 83, 83);
+  border-bottom: 1px solid #C3CBC8;
   transition: all 300ms linear;
 }
 .sidebar-capas ul #universidades {
@@ -227,13 +228,13 @@ body {
   position: absolute;
   left: 60px;
   width: 260px;
-  top: 65px;
+  top: 58px;
   height: 100%;
   background: #595959;
   /*transition:all 0.5s linear;*/
   z-index: 1;
   /*overflow: scroll;*/
-  min-height: calc(100vh - 65px);
+  min-height: calc(100vh - 58px);
 }
 
 .sidebar-search.active {
@@ -249,7 +250,7 @@ body {
 /*Elementos li*/
 .sidebar-search ul li {
   padding: 8px 8px 8px 8px;
-  border-bottom: 1px solid rgb(83, 83, 83);
+  border-bottom: 1px solid #C3CBC8;
   transition: all 300ms linear;
   height: 50px;
 }
@@ -411,7 +412,7 @@ div.leaflet-sidebar {
 /*Prueba de scroll*/
 
 .centrar-1 {
-  min-height: calc(100vh - 65px);
+  min-height: calc(100vh - 58px);
   width: 100%;
   /*border: 3px solid yellow;*/
   /*border: 1px solid #66cc54;*/
@@ -421,20 +422,20 @@ div.leaflet-sidebar {
 .scroll_A {
   position: absolute;
   overflow: hidden;
-  max-height: calc(100vh - 65px);
+  max-height: calc(100vh - 58px);
   width: 100%;
 }
 
 .scroll_B {
   position: absolute;
   overflow: hidden;
-  max-height: calc(100vh - 65px);
+  max-height: calc(100vh - 58px);
   width: 100%;
 }
 
 .scroll_C {
   position: absolute;
-  height: calc(100vh - 65px);
+  height: calc(100vh - 58px);
   width: 100%;
 }
 
@@ -611,15 +612,15 @@ div.leaflet-sidebar {
   position: absolute;
   left: 60px;
   width: 260px;
-  max-height: calc(100vh - 65px);
+  max-height: calc(100vh - 58px);
 }
 
 #sub-menu-conduc-sup {
   position: absolute;
   left: 60px;
   width: 260px;
-  max-height: calc(100vh - 65px);
-  --alto_panel: calc(100vh - 65px);
+  max-height: calc(100vh - 58px);
+  --alto_panel: calc(100vh - 58px);
 }
 .elem_conducc_sup .div_items_elem,
 .elem_fuerza_oper .div_items_elem,
@@ -644,15 +645,15 @@ div.leaflet-sidebar {
 .areas_material,
 .areas_finanzas {
   position: absolute;
-  top: calc(65px + ((100vh - 65px) / 2));
+  top: calc(58px + ((100vh - 58px) / 2));
   left: 60px;
   width: 260px;
-  max-height: calc(100vh - 65px);
+  max-height: calc(100vh - 58px);
 }
 
 .areas_conduccion {
-  top: calc(65px + (100vh - 65px));
-  max-height: calc(100vh - 65px);
+  top: calc(58px + (100vh - 58px));
+  max-height: calc(100vh - 58px);
   width: 100%;
 }
 
@@ -885,7 +886,7 @@ button.btn-sm {
 
 .sidebar-search ul .alto_item {
   padding: 8px 8px 8px 8px;
-  border-bottom: 1px solid rgb(83, 83, 83);
+  border-bottom: 1px solid #C3CBC8;
   transition: all 300ms linear;
   height: 59px;
 }
