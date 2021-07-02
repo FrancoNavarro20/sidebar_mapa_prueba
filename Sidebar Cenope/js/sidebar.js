@@ -80,7 +80,7 @@ $(".areas_finanzas").hide();
 $("#search").on("click", function () {
   //Apagar color de botones del sidebar principal
   $(".sidebar-search-info").hide(); // esconder sub-menu del boton de lupa
-  $("#sub-menu-search").show();
+  $("#sub-menu-ejer-arg").show();
   $(".sidebar-search").toggleClass("active"); //aparecer y desaparecer sidebar
   $(".sidebar-capas").removeClass("active");
 
@@ -222,6 +222,7 @@ $(".ejer-items").click(function () {
 //Cerrar ejer-arg principal
 $("#crossicon-ejer").click(function () {
   $("#sub-menu-ejer-arg").hide();
+  $("#sub-menu-search").show();
 });
 
 /*abrir ejer-arg principal*/
