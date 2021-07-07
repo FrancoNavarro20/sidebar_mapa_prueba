@@ -46,14 +46,14 @@ body {
   padding-left: 0px;
   padding-right: 0px;
   width: 50vw;
-  height: calc(100vh - 185px);
+  height: calc(100vh - 183px);
 }
 
 #infosidebar {
   margin: 0%;
   overflow: auto;
   width: 50vw;
-  max-height: calc(100vh - 185px);
+  max-height: calc(100vh - 183px);
 }
 
 #div_listado_unidades {

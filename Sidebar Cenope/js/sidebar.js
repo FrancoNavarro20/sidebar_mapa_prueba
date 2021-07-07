@@ -203,11 +203,7 @@ $(".ejer-items").click(function () {
     elem_selec = $(this).data("nombre_elem");
     div_sup =
       "<center><img src='./img/Escudo_del_Ejército_Argentino.png' style='max-width: 15%; height: auto;'/></center>";
-    $("#div_nombre_elem_seleccionado").html(
-      '<div style="font-size: 22px; font-weight: bold; text-align: center; padding-top: 5px; margin-bottom: 0px;">' +
-        elem_selec +
-        "</div>"
-    );
+    $("#div_nombre_elem_seleccionado").html(elem_selec);
   }
   $("#div_elem_mapa_seleccionado").hide();
   $("#div_elem_menu_seleccionado").show();
