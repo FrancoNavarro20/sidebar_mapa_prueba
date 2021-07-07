@@ -17,7 +17,7 @@ $("#modal_listado_personal").on("show.bs.modal", function (e) {
   modal.find("#modal_titulo_listado").html("Listado de " + personal_listado);
   $.ajax({
     data: "cod_uni=" + cod_uni + " & tipo_personal=" + personal_listado,
-    url: "datos_area_personal.php", // Url to which the request is send
+    url: "datos_area_personal_nuevo.php", // Url to which the request is send
     //url: "./geojson/data_unidades_ea.geojson",// Url to which the request is send
     type: "POST", // Type of request to be send, called as method
     cache: true, // To unable request pages to be cached
@@ -209,10 +209,8 @@ $(".ejer-items").click(function () {
         "</div>"
     );
   }
-
   $("#div_elem_mapa_seleccionado").hide();
   $("#div_elem_menu_seleccionado").show();
-
   map.removeLayer(ejercito);
   mostrar_marcadores(cod_uni);
 });

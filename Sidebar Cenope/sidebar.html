@@ -300,30 +300,25 @@
           <li id="direc1" class="ejer-items click_fuer_oper_elem1">
             <p>FDR</p>
           </li>
-          <li id="direc2" class="ejer-items click_fuer_oper_elem2">
+          <li id="direc2" class="ejer-items click_fuer_oper_elem2" data-cod_uni="U2058" data-nombre_elem="DE 1" data-lat="-40" data-lon="-46" data-zoom="4">
             <p>DE 1</p>
           </li>
           <li id="direc3" class="ejer-items click_fuer_oper_elem3">
             <p>DE 3</p>
           </li>
-          <li id="direc4" class="ejer-items" data-cod_uni="U2363" data-nombre_elem="AE" data-lat="-40" data-lon="-46"
-            data-zoom="4">
+          <li id="direc4" class="ejer-items" data-cod_uni="U2363" data-nombre_elem="AE" data-lat="-40" data-lon="-46" data-zoom="4">
             <p>AE</p>
           </li>
-          <li id="direc5" class="ejer-items" data-cod_uni="U2843" data-nombre_elem="Jef Agr A Camp 601" data-lat="-40"
-            data-lon="-46" data-zoom="4">
+          <li id="direc5" class="ejer-items" data-cod_uni="U2843" data-nombre_elem="Jef Agr A Camp 601" data-lat="-40" data-lon="-46" data-zoom="4">
             <p>Jef Agr A Camp 601</p>
           </li>
-          <li id="direc6" class="ejer-items" data-cod_uni="U2317" data-nombre_elem="Jef Agr AA Ej 601 - Ec"
-            data-lat="-40" data-lon="-46" data-zoom="4">
+          <li id="direc6" class="ejer-items" data-cod_uni="U2317" data-nombre_elem="Jef Agr AA Ej 601 - Ec" data-lat="-40" data-lon="-46" data-zoom="4">
             <p>Jef Agr AA Ej 601 - Ec</p>
           </li>
-          <li id="direc7" class="ejer-items" data-cod_uni="U3494" data-nombre_elem="Jef Agr Ing 601" data-lat="-40"
-            data-lon="-46" data-zoom="4">
+          <li id="direc7" class="ejer-items" data-cod_uni="U3494" data-nombre_elem="Jef Agr Ing 601" data-lat="-40" data-lon="-46" data-zoom="4">
             <p>Jef Agr Ing 601</p>
           </li>
-          <li id="direc8" class="ejer-items" data-cod_uni="U2603" data-nombre_elem="Jef Agr Com 601" data-lat="-40"
-            data-lon="-46" data-zoom="4">
+          <li id="direc8" class="ejer-items" data-cod_uni="U2603" data-nombre_elem="Jef Agr Com 601" data-lat="-40" data-lon="-46" data-zoom="4">
             <p>Jef Agr Com 601</p>
           </li>
         </div>
@@ -697,6 +692,15 @@
   <!--Aca esta el mapa-->
   <div id="contenedor-mapa-div" style="">
     <div id="carousel-wrapper">
+      <div class="row" id="div_elem_menu_seleccionado" style="color: #0D6EFD;">
+        <div id="div_nombre_elem_seleccionado"></div>
+      </div>
+      <div class="row" id="div_elem_mapa_seleccionado" style="color: #0D6EFD;">
+        <div class="col-md-12"
+          style="text-align: center; padding-top: 0px; margin-bottom: 0px; text-transform: uppercase; font-size: 22px; font-weight: bold;">
+          Ejercito Argentino
+        </div>
+      </div>
       <div id="overlay_carousel" style="text-align: center; min-height: 95px;">
         <i class="fa fa-spinner fa-pulse fa-2x" style="margin-top: 30px;"></i>
       </div>
@@ -712,15 +716,6 @@
       </div>
       <div id="infosidebar" style="border-top: 3px solid #0D6EFD; background-color: white;">
         <!-- <i class="fas fa-times cruz-sidebar" onclick="hideSidebar()"></i> -->
-        <div class="row" id="div_elem_menu_seleccionado" style="color: #0D6EFD;">
-          <div id="div_nombre_elem_seleccionado"></div>
-        </div>
-        <div class="row" id="div_elem_mapa_seleccionado" style="color: #0D6EFD;">
-          <div class="col-md-12"
-            style="text-align: center; padding-top: 0px; margin-bottom: 0px; text-transform: uppercase; font-size: 22px; font-weight: bold;">
-            Ejercito Argentino
-          </div>
-        </div>
         <div style="background-color: #595959; padding-top:10px;">
         <div class="btn-group" role="group"
           style="font-size: 20px; margin-top: 0px; margin-bottom: 5px; display: flex;">

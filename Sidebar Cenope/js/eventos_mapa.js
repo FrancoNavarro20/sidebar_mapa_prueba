@@ -355,7 +355,7 @@ $("#arm-arg").click(function () {
 function mostrar_marcadores(cod_uni) {
   $.ajax({
     data: { cod_uni: cod_uni },
-    url: "database.php", // Url to which the request is send
+    url: "database_nuevo.php", // Url to which the request is send
     //url: "./geojson/data_unidades_ea.geojson",        // Url to which the request is send
     type: "POST", // Type of request to be send, called as method
     cache: true, // To unable request pages to be cached
@@ -370,10 +370,6 @@ function mostrar_marcadores(cod_uni) {
         },
         onEachFeature: function (feature, layer) {
           layer._leaflet_id = feature.properties.cod_uni;
-          arma = "";
-          if (feature.properties.arma!="") {
-            arma = "<div style='font-size: 12px;'>Arma/Servicio: " + feature.properties.arma + "</div>" ;
-          }
           layer.bindPopup(
             '<div><b style="font-size: 14px; color: #0D6EFD;">' + feature.properties.fna +
               "</b></div><div style='font-size: 10px; padding-top: 3px;'>" + ((feature.properties.localidad == null)?'':feature.properties.localidad) + "</div>" +
@@ -416,7 +412,7 @@ function mostrar_marcadores(cod_uni) {
           default:
             imagen_escudo = "<img src='./img/ejercito.svg' style='padding-left:2px; padding-right:2px; width: 100%;'/>";
             break;
-        }        
+        }
         style_escudo = "background-color: white; border: 1px solid #0D6EFD; border-right: 0px; border-radius: 4px 0px 0px 4px; vertical-align: middle; text-align: left; padding: 0px;";
         style_unidad = "background-color: white; border: 1px solid #0D6EFD; border-radius: 0px 4px 4px 0px; padding: 5px;";
         escudo = "<div class='col-md-4' style='display: flex; align-items: center; justify-content: center;" + style_escudo + "'>" + imagen_escudo + "</div>";
@@ -448,13 +444,14 @@ function masInfo(info) {
   cod_uni = uniInfo.feature.properties.cod_uni;
   cod_unisup = uniInfo.feature.properties.cod_unisup;
   //alert ("Cod Uni: "+cod_uni);
+  /*
   document.getElementById("div_elem_mapa_seleccionado").innerHTML =
-    //   "ID: " +
     '<div style="text-align: center; padding-top: 0px; margin-bottom: 5px; text-transform: uppercase; font-size: 22px; font-weight: bold;">' +
     uniInfo.feature.properties.fna +
     "</div>";
   $("#div_elem_menu_seleccionado").hide();
   $("#div_elem_mapa_seleccionado").show();
+  */
 
   var coords = ejercito._layers[info]._latlng;
   map.setView(coords, 14);

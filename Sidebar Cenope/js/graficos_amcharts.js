@@ -7,15 +7,15 @@ function graficosSidebar() {
 function cargarEstadisticasPersonal() {
   console.log(cod_uni);
   let post_fields = {
-      cod_uni : cod_uni
+    cod_uni : cod_uni
   }
-  fetch("datos_area_personal_grados.php", {
-      method: 'POST',
-      headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(post_fields),
+  fetch("datos_area_personal_grados_nuevo.php", {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(post_fields),
   })
   .then(
     function(response) {

@@ -49,7 +49,7 @@ while ($columna = mysqli_fetch_array($result_todos))
             <?php echo $columna['arma']; ?>
         </td>
         <td style="text-align:left;">
-            <?php echo  $columna['apellido']." ".$columna['nombre']; ?>
+            <?php echo strtoupper($columna['apellido'])." ".ucwords($columna['nombre']); ?>
         </td>
         <td style="text-align:center;">
             <?php echo $columna['dni']; ?>
