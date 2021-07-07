@@ -10,7 +10,7 @@ if (!isset($_POST['cod_uni']) || $_POST['cod_uni']=="") {
 }
 ?>
 
-<table class="table table-hover">
+<table id="tabla_personal" class="table table-hover">
     <thead>
         <th style="text-align:center;">Destino</th>
         <th style="text-align:center;">Grado</th>
@@ -95,7 +95,18 @@ while ($columna = mysqli_fetch_array($resultado))
 }
 ?>
   </tbody>
-</table
+</table>
+<script>
+  $("#div_modal_listado_personal #tabla_personal").ready( function () {
+    $('#tabla_personal').DataTable({
+      
+      "language": {
+        "url": "https://cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json"
+      }
+    });
+  });
+</script>
+
 <?php
 mysqli_close($conexion);
 ?>

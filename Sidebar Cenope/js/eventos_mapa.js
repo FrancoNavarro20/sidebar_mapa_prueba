@@ -521,3 +521,9 @@ function _clusterContainsMarker(cluster, unidad) {
   // Say if we found a cluster or nothing.
   return !!currentLayer;
 }
+
+/*
+$("#search").on("click", function () {
+  mostrar_marcadores();
+});
+*/

@@ -182,3 +182,9 @@ function chart_personal(div_chart,titulo,datos_json) {
   labelBullet.label.text = "{values.valueY.workingValue.formatNumber('#.')}";
   labelBullet.label.fontSize = 12;
 }
+/*
+$("#search").on("click", function () {
+
+  mostrar_marcadores("TODOS");
+  graficosSidebar(); 
+});*/

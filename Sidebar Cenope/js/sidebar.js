@@ -88,6 +88,9 @@ $("#search").on("click", function () {
   $("#search i").addClass("pulsado"); //pintar y despintar boton
   $("#capas i").removeClass("pulsado");
   $("#capas #triangle2").hide();
+
+  
+
 });
 
 //Click unidades militares
@@ -525,4 +528,5 @@ function clickAreasPers() {
   $("#div_carrousel_graficos").hide('slow');
   $("#div_carrousel_datos").show('slow');
 }
+
 
