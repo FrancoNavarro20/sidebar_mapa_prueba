@@ -98,14 +98,15 @@ while ($columna = mysqli_fetch_array($resultado))
 </table>
 <script>
   $("#div_modal_listado_personal #tabla_personal").ready( function () {
-    $('#tabla_personal').DataTable({
+    $('#tabla_personal').DataTable({ 
       columnDefs:[{
             targets: "_all",
             sortable: false
         }],
       "language": {
         "url": "https://cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json"
-      }
+      },
+      "aaSorting": []
     });
   });
 </script>
