@@ -46,14 +46,14 @@ body {
   padding-left: 0px;
   padding-right: 0px;
   width: 50vw;
-  height: calc(100vh - 183px);
+  height: calc(100vh - 211px);
 }
 
 #infosidebar {
   margin: 0%;
   overflow: auto;
   width: 50vw;
-  max-height: calc(100vh - 183px);
+  max-height: calc(100vh - 211px);
 }
 
 #div_listado_unidades {
@@ -70,30 +70,26 @@ body {
   background-color: white;
   padding: 0px;
   margin: 0px;
-  /*width: 140px;*/
-  height: 80px;
+  /*width: 140px;
+  height: 80px;*/
   color: black;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   text-align: left;
 }
 
-.owl-nav > div {
-  position: absolute;
-  top: 22%;
-  color: #cdcbcd;
-}
-
-.owl-nav i {
-  font-size: 30px;
-}
-
 .owl-nav .owl-prev {
   left: 0px;
+  position: absolute;
+  top: 25%;
+  background-color: transparent;
 }
 
 .owl-nav .owl-next {
   right: 0px;
+  position: absolute;
+  top: 25%;
+  background-color: transparent;
 }
 
 .sidebar {
@@ -873,7 +869,7 @@ li.hoveado_fuerzas {
 }
 
 .click-unis {
-  background-color: #0D6EFD !important;
+  background-color: rgb(131, 131, 131) !important;
   color: white !important;
 }
 

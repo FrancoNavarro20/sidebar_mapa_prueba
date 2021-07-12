@@ -394,7 +394,7 @@ function mostrar_marcadores(cod_uni) {
       for (var i = 0; i < ejercito.getLayers().length; i++) { 
         switch (ejercito.getLayers()[i].feature.properties.cod_uni) {
           case "U3448":
-            imagen_escudo = "<img src='./img/Dir_Grl_Com_Info.svg' style='padding-left:2px; padding-right:2px; width: 100%;'/>";
+            imagen_escudo = "<img src='./img/Dir_Grl_Com_Info.svg' style='padding-left:3px; padding-right:3px; width: 100%;'/>";
             break;
           case "U2325":
             imagen_escudo = "<img src='./img/B_Com_602.png' style='padding-left:8px; padding-right:8px; width: 100%;'/>";
@@ -413,13 +413,19 @@ function mostrar_marcadores(cod_uni) {
             imagen_escudo = "<img src='./img/ejercito.svg' style='padding-left:2px; padding-right:2px; width: 100%;'/>";
             break;
         }
-        style_escudo = "background-color: white; border: 1px solid #0D6EFD; border-right: 0px; border-radius: 4px 0px 0px 4px; vertical-align: middle; text-align: left; padding: 0px;";
-        style_unidad = "background-color: white; border: 1px solid #0D6EFD; border-radius: 0px 4px 4px 0px; padding: 5px;";
+        style_escudo = "background-color: white; border: 1px solid #595959; border-right: 0px; border-radius: 4px 0px 0px 4px; vertical-align: middle; text-align: left; padding: 0px;";
+        style_unidad = "background-color: white; border: 1px solid #595959; border-radius: 0px 4px 4px 0px; padding: 5px;";
         escudo = "<div class='col-md-4' style='display: flex; align-items: center; justify-content: center;" + style_escudo + "'>" + imagen_escudo + "</div>";
         nombre_unidad = "<div class='nombre_unidad' style='height: 35px; overflow:hidden; text-overflow: ellipsis; font-weight: bold; font-size: 14px; text-align: left; -webkit-line-clamp: 2; -webkit-box-orient: vertical; display: -webkit-box; line-height: 1.1rem;'>" + ejercito.getLayers()[i].feature.properties.fna + "</div>";
         localidad = "<div style='height: 30px; color:black; overflow:hidden; text-overflow: ellipsis; font-weight: normal; font-size: 10px; padding-top: 3px; padding-bottom: 0px; -webkit-line-clamp: 2; -webkit-box-orient: vertical; display: -webkit-box; line-height: 0.8rem;'>" + ((ejercito.getLayers()[i].feature.properties.localidad == null)?'':ejercito.getLayers()[i].feature.properties.localidad) + "</div>";
-        unidad = "<div class='col-md-8 sector_unidad' style='cursor: pointer; color:#0D6EFD;" + style_unidad + "' onmouseover=mostrarUnidadesZoom('" + ejercito.getLayers()[i].feature.properties.cod_uni+ "') onclick=masInfo('" + ejercito.getLayers()[i].feature.properties.cod_uni+ "')>"+ nombre_unidad + localidad + "</div>";
+        unidad = "<div class='col-md-8 sector_unidad' style='cursor: pointer; color:#595959;" + style_unidad + "' onmouseover=mostrarUnidadesZoom('" + ejercito.getLayers()[i].feature.properties.cod_uni+ "') onclick=masInfo('" + ejercito.getLayers()[i].feature.properties.cod_uni+ "')>"+ nombre_unidad + localidad + "</div>";
         item = "<div class='item row'>" + escudo + unidad + "</div>";
+
+        unidad = "<div class='col-md-12 sector_unidad text-center' style='cursor: pointer; width:150px; padding-top: 5px; color: #595959;' onmouseover=mostrarUnidadesZoom('" + ejercito.getLayers()[i].feature.properties.cod_uni+ "') onclick=masInfo('" + ejercito.getLayers()[i].feature.properties.cod_uni+ "')>";
+        //unidad = unidad + "<span class='fa-stack fa-2x' style='color: #F1F3F4;'><i class='fa fa-circle fa-stack-2x'></i><i class='fa fa-database fa-stack-1x' style='color: #ffffff;'></i></span>";
+        unidad = unidad + "<span class='fa-stack fa-2x' style='color: #F1F3F4;'><i>" + imagen_escudo + "</i></span>";
+        unidad = unidad + "<div style='padding-top:10px; padding-bottom:3px; text-overflow: ellipsis; line-height: 1; -webkit-line-clamp: 2; -webkit-box-orient: vertical; display: -webkit-box; line-height: 1.1rem;'>" + ejercito.getLayers()[i].feature.properties.fna + "</div></div>";
+        item = "<div class='item text-center row'>" + unidad + "</div>";
         $('#div_listado_unidades.owl-carousel').owlCarousel().trigger('add.owl.carousel', "<div class='owl-item'>" + item + "</div>").trigger('refresh.owl.carousel');
       }
       $('.sector_unidad').on('click',function (e) {       
