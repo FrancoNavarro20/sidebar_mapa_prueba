@@ -186,6 +186,14 @@ $("#EA-mil").click(function () {
   $(this).data("clicks", !clicks);
 });
 
+$("#btn_mostrar_mapa").click(function () {
+  if ($(this).html()=="Ocultar Mapa") {
+    $(this).html("Mostrar Mapa");
+  } else {
+    $(this).html("Ocultar Mapa");
+  }
+});
+
 $(".items_areas_conduccion").click(function () {
   //();
   // if (!sidebar.isVisible()) showSidebar();
