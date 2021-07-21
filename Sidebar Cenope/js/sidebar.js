@@ -64,6 +64,7 @@ $("#sub-menu-conduc-sup").hide();
 $(".elem_fuerza_oper").hide();
 $(".elem_fuerza_sostenim").hide();
 $(".elem_sist_educ").hide();
+$(".elem_extra_fuerza").hide();
 $(".elem_fuerza_oper_gub").hide();
 $(".elem_fuerza_oper_guc").hide();
 
@@ -253,8 +254,16 @@ $(".click_sist_educ").click(function () {
   $(".elem_sist_educ").show();
 });
 
+$(".click_extra_fuerza").click(function () {
+  $(".elem_extra_fuerza").show();
+});
+
 $(".crossicon-sist_educ").click(function () {
   $(".elem_sist_educ").hide();
+});
+
+$(".crossicon-extra_fuerza").click(function () {
+  $(".elem_extra_fuerza").hide();
 });
 
 /*Fin de panel principal (Conduccion Superior,Fuerza Operativa,Fuerza de Sostenimiento,Sistema Educ)*/

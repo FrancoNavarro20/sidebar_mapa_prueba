@@ -26,12 +26,12 @@ $consulta = "SELECT concat(COALESCE(u.cod_unidad,''),'/',COALESCE(rtrim(u.abrevi
   ,COALESCE(u3.cod_unidad,''),'/',COALESCE(rtrim(u3.abreviatura),''),'/',COALESCE(rtrim(u3.localidad),''),'/',COALESCE(u3.lat,''),'/',COALESCE(u3.lon,''),','
   ,COALESCE(u4.cod_unidad,''),'/',COALESCE(rtrim(u4.abreviatura),''),'/',COALESCE(rtrim(u4.localidad),''),'/',COALESCE(u4.lat,''),'/',COALESCE(u4.lon,''),','
   ,COALESCE(u5.cod_unidad,''),'/',COALESCE(rtrim(u5.abreviatura),''),'/',COALESCE(rtrim(u5.localidad),''),'/',COALESCE(u5.lat,''),'/',COALESCE(u5.lon,'')) as result FROM unidad u
-  LEFT JOIN unidad AS u2 ON u2.cod_unisup = u.cod_unidad AND (u2.cod_unidad like 'U%' OR u2.cod_unidad like 'X%' OR u2.cod_unidad like 'Y%')
-  LEFT JOIN unidad AS u3 ON u3.cod_unisup = u2.cod_unidad AND (u3.cod_unidad like 'U%' OR u3.cod_unidad like 'X%' OR u3.cod_unidad like 'Y%')
-  LEFT JOIN unidad AS u4 ON u4.cod_unisup = u3.cod_unidad AND (u4.cod_unidad like 'U%' OR u4.cod_unidad like 'X%' OR u4.cod_unidad like 'Y%')
-  LEFT JOIN unidad AS u5 ON u5.cod_unisup = u4.cod_unidad AND (u5.cod_unidad like 'U%' OR u5.cod_unidad like 'X%' OR u5.cod_unidad like 'Y%')
+  LEFT JOIN unidad AS u2 ON u2.cod_unisup = u.cod_unidad AND (u2.cod_unidad like 'U%' OR u2.cod_unidad like 'X%' OR u2.cod_unidad like 'Y%' OR u2.cod_unidad like 'Z%')
+  LEFT JOIN unidad AS u3 ON u3.cod_unisup = u2.cod_unidad AND (u3.cod_unidad like 'U%' OR u3.cod_unidad like 'X%' OR u3.cod_unidad like 'Y%' OR u3.cod_unidad like 'Z%')
+  LEFT JOIN unidad AS u4 ON u4.cod_unisup = u3.cod_unidad AND (u4.cod_unidad like 'U%' OR u4.cod_unidad like 'X%' OR u4.cod_unidad like 'Y%' OR u4.cod_unidad like 'Z%')
+  LEFT JOIN unidad AS u5 ON u5.cod_unisup = u4.cod_unidad AND (u5.cod_unidad like 'U%' OR u5.cod_unidad like 'X%' OR u5.cod_unidad like 'Y%' OR u5.cod_unidad like 'Z%')
   WHERE u.cod_unidad='".$_POST['cod_uni']."' 
-  AND (u.cod_unidad like 'U%' OR u.cod_unidad like 'X%' OR u.cod_unidad like 'Y%')
+  AND (u.cod_unidad like 'U%' OR u.cod_unidad like 'X%' OR u.cod_unidad like 'Y%' OR u.cod_unidad like 'Z%')
   order by u.abreviatura desc";
 
 $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
