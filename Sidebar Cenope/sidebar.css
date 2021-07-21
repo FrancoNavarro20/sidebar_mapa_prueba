@@ -510,6 +510,7 @@ div.leaflet-sidebar {
   padding-top: 2px;
   background-color: #F6B50E;
   align-items: center;
+  color: black;
 }
 #title-ejer-arg a {
   text-decoration: none;
