@@ -416,7 +416,7 @@ $("#pers_opc").click(function () {
 });
 
 function cargar_carrousel_pers() {
-  var html = `<div class="btn_elem_pers btn btn-outline-secondary" id="fuerza_efectiva">Fuerza Efectiva</div>
+  var html = `<div class="btn_elem_pers btn btn-outline-secondary active" id="fuerza_efectiva">Fuerza Efectiva</div>
   <div class='btn_elem_pers btn btn-outline-secondary'>Proyección de Bajas</div>
   <div class='btn_elem_pers btn btn-outline-secondary'>Oficios Judiciales</div>
   <div class='btn_elem_pers btn btn-outline-secondary'>Causas por Género y VIF</div>
@@ -433,6 +433,7 @@ function cargar_carrousel_pers() {
   <div class='btn_elem_pers btn btn-outline-secondary'>Personal Propuesto para Junta de Calificación</div>`;
   $("#carouselAreaPers").trigger("replace.owl.carousel", html);
   $("#carouselAreaPers").trigger("refresh.owl.carousel");
+  /*
   $("#carouselAreaPers").ready(function () {
     $(".btn_elem_pers").on("click", function () {
       //console.log("item seleccionado");
@@ -440,6 +441,7 @@ function cargar_carrousel_pers() {
       $(this).addClass("item_selec");
     });
   });
+  */
   clickAreasPers();
 }
 
@@ -449,7 +451,7 @@ function seleccionar_elem (elem) {
 }
 
 $("#icia_opc").click(function () {
-  var html = `<div class='btn_elem_icia btn btn-outline-secondary' id='datosGraficos'>Revista de Material Sensible</div>
+  var html = `<div class='btn_elem_icia btn btn-outline-secondary active' id='datosGraficos'>Revista de Material Sensible</div>
   <div class='btn_elem_icia btn btn-outline-secondary'>Estudio de Seguridad</div>
   <div class='btn_elem_icia btn btn-outline-secondary'>Seguridad Humana</div>
   <div class='btn_elem_icia btn btn-outline-secondary'>Cámaras - Instalaciones Sensibles</div>
@@ -478,7 +480,7 @@ $("#icia_opc").click(function () {
 });
 
 $("#ops_opc").click(function () {
-  var html = `<div class='btn_elem_op btn btn-outline-secondary' id='datosGraficos'>Clase de Cuadros</div>
+  var html = `<div class='btn_elem_op btn btn-outline-secondary active' id='datosGraficos'>Clase de Cuadros</div>
   <div class='btn_elem_op btn btn-outline-secondary'>Cursillos</div>
   <div class='btn_elem_op btn btn-outline-secondary'>Cursos Regulares</div>
   <div class='btn_elem_op btn btn-outline-secondary'>Ciclos SSVV</div>
@@ -506,7 +508,7 @@ $("#ops_opc").click(function () {
 });
 
 $("#mats_opc").click(function () {
-  var html = `<div class='btn_elem_mat btn btn-outline-secondary' id='datosGraficos'>Vehículos</div>
+  var html = `<div class='btn_elem_mat btn btn-outline-secondary active' id='datosGraficos'>Vehículos</div>
   <div class='btn_elem_mat btn btn-outline-secondary'>Armamento</div>
   <div class='btn_elem_mat btn btn-outline-secondary'>Material de Comunicaciones</div>
   <div class='btn_elem_mat btn btn-outline-secondary'>Materiales Generales</div>
@@ -526,7 +528,7 @@ $("#mats_opc").click(function () {
 });
 
 $("#fins_opc").click(function () {
-  var html = `<div class='btn_elem_fin btn btn-outline-secondary' id='datosGraficos'>Viáticos</div>
+  var html = `<div class='btn_elem_fin btn btn-outline-secondary active' id='datosGraficos'>Viáticos</div>
   <div class='btn_elem_fin btn btn-outline-secondary'>Licitaciones</div>
   <div class='btn_elem_fin btn btn-outline-secondary'>Presupuestos</div>`;
   $("#carouselAreaPers").trigger("replace.owl.carousel", html);
@@ -540,8 +542,8 @@ $("#fins_opc").click(function () {
 });
 
 function clickAreasPers() {
-  $(".btn_elem_pers").removeClass("item_selec");
-  $("#fuerza_efectiva").addClass("item_selec");
+  //$(".btn_elem_pers").removeClass("item_selec");
+  //$("#fuerza_efectiva").addClass("item_selec");
   $("#div_carrousel_graficos").hide('slow');
   $("#div_carrousel_datos").show('slow');
 }

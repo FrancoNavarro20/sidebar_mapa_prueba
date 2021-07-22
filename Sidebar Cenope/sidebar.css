@@ -918,8 +918,8 @@ button.btn-sm {
   border: 1px solid #D9D9D9;
   border-radius: 3px 3px 3px 3px;
   background-color: #595959;
-  */
   color: white;
+  */
   font-size: 14px;
 }
 
@@ -938,7 +938,7 @@ button.btn-sm {
 }
 
 .item_selec {
-  background-color: rgb(131, 131, 131) !important;
+  /*background-color: rgb(131, 131, 131) !important;*/
 }
 
 .division-seleccionada {
